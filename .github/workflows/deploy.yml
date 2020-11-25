@@ -1,20 +1,24 @@
-name: Deploy to Firebase
+name: Firebase Deploy
 
-# Controls when the action will run. 
 on:
-  push:
-    branches: [ main ]
+    push:
+        branches:
+            - main
 
 jobs:
-  firebase-deploy:
-    runs-on: ubuntu-latest
-    steps:      
-      - name: Checkout the repository
-        uses: actions/checkout@master
-      
-      - name: Deploy to Firebase
-        uses: w9jds/firebase-action@master
-        with:
-          args: deploy --only hosting
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+    firebase-deploy:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@master
+            - uses: actions/setup-node@master
+              with:
+                  node-version: '12.x'        
+            - run: cd client && npm ci
+            - run: cd client && npm run build
+            - uses: w9jds/firebase-action@master
+              with:
+                  args: deploy --only hosting
+              env:
+                  FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+                  PROJECT_PATH: ./client
