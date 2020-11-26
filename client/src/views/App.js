@@ -54,18 +54,21 @@ function App() {
             <a
               target='_blank'
               href='https://bit.ly/TEDxNITRclub-tech-inductions'
+              rel='noopener noreferrer'
             >
               <button className={classes.button}>Technical</button>
             </a>
             <a
               target='_blank'
               href='https://bit.ly/TEDxNITRclub-design-inductions'
+              rel='noopener noreferrer'
             >
               <button className={classes.button}>Design</button>
             </a>
             <a
               target='_blank'
               href='https://bit.ly/TEDxNITRclub-management-inductions'
+              rel='noopener noreferrer'
             >
               <button className={classes.button}>Management</button>
             </a>
