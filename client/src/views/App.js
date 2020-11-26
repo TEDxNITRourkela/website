@@ -30,9 +30,14 @@ function App() {
             The form will remain open till{' '}
             <span className={classes.textBold}>30th Nov, 2020 11:59 PM</span>{' '}
             and there will be no late submissions. <br /> If you have any
-            queries whatsoever feel free to contact:{' '}
-            <span className={classes.textBold}>Abel</span> and{' '}
-            <span className={classes.textBold}>Rutaj</span>
+            queries whatsoever feel free to mail at:{' '}
+            <a
+              className={classes.textBold}
+              href='mailto:contact-us@tedxnitrourkela.com'
+              style={{ '&:hover': { textDecoration: 'underline' } }}
+            >
+              contact-us@tedxnitrourkela.com
+            </a>
           </h3>
 
           <h3 className={classes.text}>
