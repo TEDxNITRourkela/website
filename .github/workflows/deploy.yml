@@ -18,7 +18,7 @@ jobs:
             - run: cd client && npm run build
             - uses: w9jds/firebase-action@master
               with:
-                  args: deploy --only hosting:livestream
+                  args: deploy --only hosting
               env:
                   FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
                   PROJECT_PATH: ./client
