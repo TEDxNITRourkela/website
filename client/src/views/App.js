@@ -40,9 +40,9 @@ function App() {
             </a>
           </h3>
 
-          <h3 className={classes.text}>
+          {/* <h3 className={classes.text}>
             *(unless it's due to unavoidable circumstances)
-          </h3>
+          </h3> */}
         </div>
 
         <div className={classes.buttonsContainer}>
