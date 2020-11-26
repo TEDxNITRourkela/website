@@ -1,11 +1,11 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
-import svg from '../assets/logo.svg';
-import leftCenter from '../assets/leftCenter.svg';
-import rightCenter from '../assets/rightCenter.svg';
-import leftTriangle from '../assets/leftTriangle.svg';
-import rightTriangle from '../assets/rightTriangle.svg';
+import svg from '../assets/img/logo.svg';
+import leftCenter from '../assets/img/leftCenter.svg';
+import rightCenter from '../assets/img/rightCenter.svg';
+import leftTriangle from '../assets/img/leftTriangle.svg';
+import rightTriangle from '../assets/img/rightTriangle.svg';
 
 function App() {
   const classes = useStyles();
@@ -83,6 +83,8 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     position: 'relative',
+    overflowX: 'hidden',
+    overflowY: 'auto',
   },
   container: {
     width: 'auto',
@@ -95,6 +97,10 @@ const useStyles = makeStyles((theme) => ({
   logo: {
     marginBottom: 80,
     marginTop: 50,
+    width: '40%',
+    [theme.breakpoints.down('xs')]: {
+      width: '65%',
+    },
   },
   content: {
     width: '70%',
@@ -102,6 +108,9 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    [theme.breakpoints.down('xs')]: {
+      width: '85%',
+    },
   },
   text: {
     fontSize: 18,
@@ -110,6 +119,9 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: '300',
     marginTop: 20,
     color: '#fff',
+    [theme.breakpoints.down('xs')]: {
+      fontSize: 14,
+    },
   },
   textBold: {
     fontSize: 18,
@@ -118,6 +130,9 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: '700',
     marginTop: 20,
     color: '#fff',
+    [theme.breakpoints.down('xs')]: {
+      fontSize: 14,
+    },
   },
   buttonsContainer: {
     marginTop: 50,
@@ -125,7 +140,10 @@ const useStyles = makeStyles((theme) => ({
   },
   buttons: {
     [theme.breakpoints.down('xs')]: {
-      display: 'column',
+      flexDirection: 'column',
+      alignItems: 'space-around',
+      justifyContent: 'center',
+      marginTop: 40,
     },
     display: 'flex',
     justifyContent: 'space-around',
@@ -146,6 +164,10 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       backgroundColor: '#FF2B06',
       color: '#fff',
+    },
+    [theme.breakpoints.down('xs')]: {
+      margin: 10,
+      padding: 10,
     },
   },
   leftCenter: {
