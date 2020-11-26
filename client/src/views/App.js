@@ -46,9 +46,24 @@ function App() {
           </h3>
 
           <div className={classes.buttons}>
-            <button className={classes.button}>Technical</button>
-            <button className={classes.button}>Design</button>
-            <button className={classes.button}>Management</button>
+            <a
+              target='_blank'
+              href='https://bit.ly/TEDxNITRclub-tech-inductions'
+            >
+              <button className={classes.button}>Technical</button>
+            </a>
+            <a
+              target='_blank'
+              href='https://bit.ly/TEDxNITRclub-design-inductions'
+            >
+              <button className={classes.button}>Design</button>
+            </a>
+            <a
+              target='_blank'
+              href='https://bit.ly/TEDxNITRclub-management-inductions'
+            >
+              <button className={classes.button}>Management</button>
+            </a>
           </div>
         </div>
       </div>
