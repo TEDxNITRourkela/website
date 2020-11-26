@@ -23,7 +23,7 @@ function App() {
           </h3>
 
           <h3 className={classes.textBold}>
-            If you think you got what it takes, fill out the gived form*.
+            If you think you got what it takes, fill out the given form.
           </h3>
 
           <h3 className={classes.text}>
