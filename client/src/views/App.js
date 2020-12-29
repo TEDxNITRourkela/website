@@ -1,7 +1,11 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
-import horizontalRectange from '../assets/img/v1/horizontal_rectangle.svg';
+import vector from '../assets/img/v1/vector.svg';
+import network from '../assets/img/v1/network.svg';
+import leftSemi from '../assets/img/v1/left_semi.svg';
+import rightSemi from '../assets/img/v1/right_semi.svg';
+import verticalRectangle from '../assets/img/v1/vertical_rectangle.svg';
 import logo from '../assets/img/logo.svg';
 
 function App() {
@@ -23,6 +27,25 @@ function App() {
       >
         Contact Us
       </a>
+
+      <img className={`${classes.vector} `} src={vector} alt='vector' />
+      <img className={`${classes.network} `} src={network} alt='network' />
+      <img className={`${classes.leftSemi} `} src={leftSemi} alt='leftSemi' />
+      <img
+        className={`${classes.rightSemi} `}
+        src={rightSemi}
+        alt='rightSemi'
+      />
+      <img
+        className={`${classes.verticalRectangle} `}
+        src={verticalRectangle}
+        alt='vertical rectangle'
+      />
+      <img
+        className={`${classes.verticalRectangle} ${classes.leftside}`}
+        src={verticalRectangle}
+        alt='vertical rectangle'
+      />
     </div>
   );
 }
@@ -48,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: 150,
+    marginBottom: 70,
   },
   logo: {
     marginBottom: 30,
@@ -67,7 +90,8 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Zilla Slab, serif',
     letterSpacing: 3,
     [theme.breakpoints.down('xs')]: {
-      fontSize: 14,
+      fontSize: 12,
+      letterSpacing: 2,
     },
   },
   date: {
@@ -100,6 +124,56 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 24,
     [theme.breakpoints.down('xs')]: {
       fontSize: 20,
+    },
+  },
+  vector: {
+    position: 'absolute',
+    top: 0,
+    zIndex: 10,
+    margin: 0,
+    [theme.breakpoints.down('xs')]: {
+      width: '250%',
+    },
+  },
+  network: {
+    position: 'absolute',
+    top: 100,
+    zIndex: 0,
+    width: '40%',
+    [theme.breakpoints.down('xs')]: {
+      width: '80%',
+    },
+  },
+  leftSemi: {
+    position: 'absolute',
+    top: '55%',
+    left: 0,
+    zIndex: 10,
+    [theme.breakpoints.down('xs')]: {
+      width: '18%',
+    },
+  },
+  rightSemi: {
+    position: 'absolute',
+    top: '55%',
+    right: 0,
+    zIndex: 10,
+    [theme.breakpoints.down('xs')]: {
+      width: '18%',
+    },
+  },
+  verticalRectangle: {
+    position: 'absolute',
+    top: 0,
+    right: 0,
+    height: '95%',
+    zIndex: 0,
+  },
+  leftside: {
+    left: 0,
+    display: 'none',
+    [theme.breakpoints.down('xs')]: {
+      display: 'inline',
     },
   },
 }));
