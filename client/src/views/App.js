@@ -1,11 +1,13 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 import vector from '../assets/img/v1/vector.svg';
 import network from '../assets/img/v1/network.svg';
 import leftSemi from '../assets/img/v1/left_semi.svg';
 import rightSemi from '../assets/img/v1/right_semi.svg';
 import verticalRectangle from '../assets/img/v1/vertical_rectangle.svg';
+import horizontalRectangle from '../assets/img/v1/horizontal_rectangle.svg';
 import logo from '../assets/img/logo.svg';
 
 function App() {
@@ -21,12 +23,12 @@ function App() {
         <h2 className={classes.date}>13th March 2021</h2>
       </div>
 
-      <a
+      {/* <a
         className={classes.contactUs}
         href='mailto:contact-us@tedxnitrourkela.com'
       >
         Contact Us
-      </a>
+      </a> */}
 
       <img className={`${classes.vector} `} src={vector} alt='vector' />
       <img className={`${classes.network} `} src={network} alt='network' />
@@ -45,6 +47,22 @@ function App() {
         className={`${classes.verticalRectangle} ${classes.leftside}`}
         src={verticalRectangle}
         alt='vertical rectangle'
+      />
+      <img
+        className={`${classes.horizontalRectangle} ${classes.left}`}
+        src={horizontalRectangle}
+        alt='horizontal rectangle'
+      />
+      <img
+        className={`${classes.horizontalRectangle} ${classes.right}`}
+        src={horizontalRectangle}
+        alt='horizontal rectangle'
+      />
+
+      <MessengerCustomerChat
+        pageId='201042233253912'
+        appId='424924968660862'
+        themeColor='#FF2B06'
       />
     </div>
   );
@@ -175,5 +193,15 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('xs')]: {
       display: 'inline',
     },
+  },
+  horizontalRectangle: {
+    position: 'absolute',
+    top: 0,
+  },
+  left: {
+    left: 0,
+  },
+  right: {
+    right: 0,
   },
 }));
