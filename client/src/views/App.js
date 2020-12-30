@@ -1,7 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import { Grid } from '@material-ui/core';
 import MessengerCustomerChat from 'react-messenger-customer-chat';
-import Countdown , {zeroPad} from "react-countdown";
+import Countdown, { zeroPad } from 'react-countdown';
 
 import vector from '../assets/img/v1/vector.svg';
 import network from '../assets/img/v1/network.svg';
@@ -9,19 +10,38 @@ import leftSemi from '../assets/img/v1/left_semi.svg';
 import rightSemi from '../assets/img/v1/right_semi.svg';
 import verticalRectangle from '../assets/img/v1/vertical_rectangle.svg';
 import horizontalRectangle from '../assets/img/v1/horizontal_rectangle.svg';
-import logo from '../assets/img/logo.svg';
-import { Grid } from '@material-ui/core';
+import logo from '../assets/img/logo.png';
 
 function App() {
   const classes = useStyles();
+
   const renderer = ({ days, hours, minutes, completed }) => {
     if (completed) {
-      return ;
+      return;
     } else {
       return (
-        <span className = {classes.counter}>
-          {zeroPad(days)}:{zeroPad(hours)}:{zeroPad(minutes)}
-        </span>
+        <div className={classes.counterContainer}>
+          <div className={classes.counterSubContainer}>
+            <span className={classes.counter}>{zeroPad(days)}:</span>
+            <span
+              className={`${classes.counterLabel} ${classes.shiftLeftDays}`}
+            >
+              Days
+            </span>
+          </div>
+          <div className={classes.counterSubContainer}>
+            <span className={classes.counter}>{zeroPad(hours)}:</span>
+            <span
+              className={`${classes.counterLabel} ${classes.shiftLeftHours}`}
+            >
+              Hours
+            </span>
+          </div>
+          <div className={classes.counterSubContainer}>
+            <span className={classes.counter}>{zeroPad(minutes)}</span>
+            <span className={classes.counterLabel}>Minutes</span>
+          </div>
+        </div>
       );
     }
   };
@@ -34,13 +54,8 @@ function App() {
         <img className={classes.logo} src={logo} alt='Logo' />
 
         <h2 className={classes.date}>13th March 2021</h2>
-        
-      <Countdown date={"2021-03-13T00:00:00"} renderer={renderer} />
-      <Grid container justify = 'center' className={classes.rowContainer}>
-        <Grid item><span className={classes.days}>Days</span></Grid>
-        <Grid item><span className={classes.hours}>Hours</span></Grid>
-        <Grid item><span className={classes.minutes}>Minutes</span></Grid>
-      </Grid>
+
+        <Countdown date={'2021-03-13T00:00:00'} renderer={renderer} />
       </div>
 
       {/* <a
@@ -84,8 +99,6 @@ function App() {
         appId='424924968660862'
         themeColor='#FF2B06'
       />
-
-      
     </div>
   );
 }
@@ -105,34 +118,24 @@ const useStyles = makeStyles((theme) => ({
     overflowY: 'auto',
   },
   container: {
-    width: 'auto',
+    width: '35%',
     height: 'auto',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: '230px',
+    marginTop: '170px',
     [theme.breakpoints.down('xs')]: {
-      marginTop: '0px',
-    },
-  },
-  rowContainer: {
-    display: 'flex',
-    width: '436px',
-    justifyContent: 'space-between',
-    textAlign: 'center',
-    [theme.breakpoints.down('xs')]: {
-      position: 'relative',
-      width: '196px',
-      top: '50px',
+      width: '100%',
+      marginTop: '30px',
     },
   },
   logo: {
     marginBottom: 30,
     marginTop: 20,
-    width: '82%',
+    width: '85%',
     [theme.breakpoints.down('xs')]: {
-      width: '75%',
+      width: '77%',
     },
   },
   content: {
@@ -140,12 +143,12 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     color: 'rgba(255,255,255, 0.5)',
     fontWeight: 'bold',
-    fontSize: 14,
+    fontSize: 15,
     fontFamily: 'Zilla Slab, serif',
     letterSpacing: 3,
     [theme.breakpoints.down('xs')]: {
       fontSize: 12,
-      letterSpacing: 2,
+      letterSpacing: 1,
     },
   },
   date: {
@@ -222,6 +225,9 @@ const useStyles = makeStyles((theme) => ({
     right: 0,
     height: '95%',
     zIndex: 0,
+    [theme.breakpoints.down('xs')]: {
+      top: '-10px',
+    },
   },
   leftside: {
     left: 0,
@@ -236,68 +242,66 @@ const useStyles = makeStyles((theme) => ({
   },
   left: {
     left: 0,
+    [theme.breakpoints.down('xs')]: {
+      display: 'none',
+    },
   },
   right: {
     right: 0,
+    [theme.breakpoints.down('xs')]: {
+      display: 'none',
+    },
   },
-  counter : {
-    marginTop: '60px',
+  counterContainer: {
+    display: 'flex',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    width: '100%',
+    marginTop: 80,
+    [theme.breakpoints.down('xs')]: {
+      width: '55%',
+      marginTop: 100,
+    },
+  },
+  counterSubContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    width: '33%',
+  },
+  counter: {
     color: '#FFFFFF',
-    fontFamily: "Digital",
+    fontFamily: 'Digital',
     fontWeight: 'normal',
     fontSize: '120px',
     lineHeight: '120px',
-    display: 'flex',
-    alignItems: 'center',
-    textAlign: 'right',
     textShadow: '0px 0px 6px #0078BC',
     [theme.breakpoints.down('xs')]: {
-      position: 'relative',
-      top: '40px',
       fontSize: '50px',
-      lineHeight: '22px',
+      lineHeight: '50px',
     },
   },
-  days : {
-    marginLeft: '30px',
+  counterLabel: {
     fontFamily: 'Zilla Slab',
     fontStyle: 'normal',
     fontWeight: 'bold',
     fontSize: '24px',
     lineHeight: '29px',
     color: '#FF2B06',
-    textAlign:'right',
     [theme.breakpoints.down('xs')]: {
       marginLeft: '16px',
       fontSize: '12px',
-      lineHeight: '14px',
+      lineHeight: '20px',
     },
   },
-  hours : {
-    fontFamily: 'Zilla Slab',
-    fontStyle: 'normal',
-    fontWeight: 'bold',
-    fontSize: '24px',
-    lineHeight: '29px',
-    color: '#FF2B06',
-    [theme.breakpoints.down('xs')]: {
-      marginLeft: '25px',
-      fontSize: '12px',
-      lineHeight: '14px',
-    },
+  shiftLeftHours: {
+    marginRight: 30,
   },
-  minutes : {
-    fontFamily: 'Zilla Slab',
-    fontStyle: 'normal',
-    fontWeight: 'bold',
-    fontSize: '24px',
-    lineHeight: '29px',
-    color: '#FF2B06',
+  shiftLeftDays: {
+    marginRight: 50,
     [theme.breakpoints.down('xs')]: {
-      marginRight: '12px',
-      marginLeft: '24px',
-      fontSize: '12px',
-      lineHeight: '14px',
+      marginRight: '40px',
     },
   },
 }));
