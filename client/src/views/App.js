@@ -4,7 +4,7 @@ import createBrowserHistory from '../config/history';
 
 import Home from './Home';
 import Inductions from './Inductions';
-// import Error from './Error'
+import Error from './Error';
 
 const areWeInducting = false;
 
@@ -20,9 +20,9 @@ function App() {
             <Inductions />
           </Route>
         )}
-        {/* <Route path="*">
-        <Error />
-      </Route> */}
+        <Route path='*'>
+          <Error />
+        </Route>
       </Switch>
     </Router>
   );
