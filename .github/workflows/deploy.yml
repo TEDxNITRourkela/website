@@ -13,9 +13,9 @@ jobs:
             - uses: actions/checkout@master
             - uses: actions/setup-node@master
               with:
-                  node-version: '12.x'        
-            - run: cd client && npm ci
-            - run: cd client && npm run build
+                  node-version: '14.x'        
+            - run: cd client && yarn install --frozen-lockfile
+            - run: cd client && yarn build
             - uses: w9jds/firebase-action@master
               with:
                   args: deploy --only hosting
