@@ -1,4 +1,4 @@
-name: Firebase Development Deploy
+name: Firebase Staging Deploy
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
       - "client/**"
 
 jobs:
-  firebase-dev-deploy:
+  firebase-stage-deploy:
     name: Firebase Development Deploy
     runs-on: ubuntu-latest
     steps:
