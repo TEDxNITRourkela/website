@@ -1,12 +1,12 @@
 {
-	"hosting": {
-		"public": "./client/build",
-		"site": "tedx-nitrourkela",
-		"ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-		"appAssociation": "AUTO",
-		"rewrites": [
-			{ "source": "/u/**", "dynamicLinks": true },
-			{ "source": "/social/**", "dynamicLinks": true }
-		]
-	}
+  "hosting": {
+    "public": "./client/build",
+    "site": "tedx-nitrourkela",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "appAssociation": "AUTO",
+    "rewrites": [
+      { "source": "/u/**", "dynamicLinks": true },
+      { "source": "/social/**", "dynamicLinks": true }
+    ]
+  }
 }

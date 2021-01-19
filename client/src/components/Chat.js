@@ -25,8 +25,7 @@ function Chat() {
       class='fb-customerchat'
       attribution='install_email'
       page_id='201042233253912'
-      theme_color='#FF2B06'
-    ></div>
+      theme_color='#FF2B06'></div>
   );
 }
 

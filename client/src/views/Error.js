@@ -12,8 +12,7 @@ function Error() {
         height: window.innerHeight,
         width: '100%',
         backgroundColor: '#000000',
-      }}
-    >
+      }}>
       <img
         style={{
           width: 350,

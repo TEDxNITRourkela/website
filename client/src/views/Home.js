@@ -11,99 +11,6 @@ import verticalRectangle from '../assets/img/v1/vertical_rectangle.svg';
 import horizontalRectangle from '../assets/img/v1/horizontal_rectangle.svg';
 import logo from '../assets/img/logo.png';
 
-function App() {
-  const classes = useStyles();
-
-  const renderer = ({ days, hours, minutes, completed }) => {
-    if (completed) {
-      return;
-    } else {
-      return (
-        <div className={classes.counterContainer}>
-          <div className={classes.counterSubContainer}>
-            <span className={classes.counter}>{zeroPad(days)}:</span>
-            <span
-              className={`${classes.counterLabel} ${classes.shiftLeftDays}`}
-            >
-              Days
-            </span>
-          </div>
-          <div className={classes.counterSubContainer}>
-            <span className={classes.counter}>{zeroPad(hours)}:</span>
-            <span
-              className={`${classes.counterLabel} ${classes.shiftLeftHours}`}
-            >
-              Hours
-            </span>
-          </div>
-          <div className={classes.counterSubContainer}>
-            <span className={classes.counter}>{zeroPad(minutes)}</span>
-            <span className={classes.counterLabel}>Minutes</span>
-          </div>
-        </div>
-      );
-    }
-  };
-
-  return (
-    <div className={classes.screen}>
-      <div className={classes.container}>
-        <h2 className={classes.content}>TECHNOLOGY . ENTERTAINMENT . DESIGN</h2>
-
-        <img className={classes.logo} src={logo} alt='Logo' />
-
-        <h2 className={classes.date}>13th March 2021</h2>
-
-        <Countdown date={'2021-03-13T00:00:00'} renderer={renderer} />
-      </div>
-
-      {/* <a
-        className={classes.contactUs}
-        href='mailto:contact-us@tedxnitrourkela.com'
-      >
-        Contact Us
-      </a> */}
-
-      <img className={`${classes.vector} `} src={vector} alt='vector' />
-      <img className={`${classes.network} `} src={network} alt='network' />
-      <img className={`${classes.leftSemi} `} src={leftSemi} alt='leftSemi' />
-      <img
-        className={`${classes.rightSemi} `}
-        src={rightSemi}
-        alt='rightSemi'
-      />
-      <img
-        className={`${classes.verticalRectangle} `}
-        src={verticalRectangle}
-        alt='vertical rectangle'
-      />
-      <img
-        className={`${classes.verticalRectangle} ${classes.leftside}`}
-        src={verticalRectangle}
-        alt='vertical rectangle'
-      />
-      <img
-        className={`${classes.horizontalRectangle} ${classes.left}`}
-        src={horizontalRectangle}
-        alt='horizontal rectangle'
-      />
-      <img
-        className={`${classes.horizontalRectangle} ${classes.right}`}
-        src={horizontalRectangle}
-        alt='horizontal rectangle'
-      />
-
-      <MessengerCustomerChat
-        pageId='201042233253912'
-        appId='424924968660862'
-        themeColor='#FF2B06'
-      />
-    </div>
-  );
-}
-
-export default App;
-
 const useStyles = makeStyles((theme) => ({
   screen: {
     width: '100%',
@@ -304,3 +211,93 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
+
+function App() {
+  const classes = useStyles();
+
+  const renderer = ({ days, hours, minutes, completed }) => {
+    if (!completed) {
+      return (
+        <div className={classes.counterContainer}>
+          <div className={classes.counterSubContainer}>
+            <span className={classes.counter}>{zeroPad(days)}:</span>
+            <span
+              className={`${classes.counterLabel} ${classes.shiftLeftDays}`}>
+              Days
+            </span>
+          </div>
+          <div className={classes.counterSubContainer}>
+            <span className={classes.counter}>{zeroPad(hours)}:</span>
+            <span
+              className={`${classes.counterLabel} ${classes.shiftLeftHours}`}>
+              Hours
+            </span>
+          </div>
+          <div className={classes.counterSubContainer}>
+            <span className={classes.counter}>{zeroPad(minutes)}</span>
+            <span className={classes.counterLabel}>Minutes</span>
+          </div>
+        </div>
+      );
+    }
+    return null;
+  };
+
+  return (
+    <div className={classes.screen}>
+      <div className={classes.container}>
+        <h2 className={classes.content}>TECHNOLOGY . ENTERTAINMENT . DESIGN</h2>
+
+        <img className={classes.logo} src={logo} alt='Logo' />
+
+        <h2 className={classes.date}>13th March 2021</h2>
+
+        <Countdown date='2021-03-13T00:00:00' renderer={renderer} />
+      </div>
+
+      {/* <a
+        className={classes.contactUs}
+        href='mailto:contact-us@tedxnitrourkela.com'
+      >
+        Contact Us
+      </a> */}
+
+      <img className={`${classes.vector} `} src={vector} alt='vector' />
+      <img className={`${classes.network} `} src={network} alt='network' />
+      <img className={`${classes.leftSemi} `} src={leftSemi} alt='leftSemi' />
+      <img
+        className={`${classes.rightSemi} `}
+        src={rightSemi}
+        alt='rightSemi'
+      />
+      <img
+        className={`${classes.verticalRectangle} `}
+        src={verticalRectangle}
+        alt='vertical rectangle'
+      />
+      <img
+        className={`${classes.verticalRectangle} ${classes.leftside}`}
+        src={verticalRectangle}
+        alt='vertical rectangle'
+      />
+      <img
+        className={`${classes.horizontalRectangle} ${classes.left}`}
+        src={horizontalRectangle}
+        alt='horizontal rectangle'
+      />
+      <img
+        className={`${classes.horizontalRectangle} ${classes.right}`}
+        src={horizontalRectangle}
+        alt='horizontal rectangle'
+      />
+
+      <MessengerCustomerChat
+        pageId='201042233253912'
+        appId='424924968660862'
+        themeColor='#FF2B06'
+      />
+    </div>
+  );
+}
+
+export default App;
