@@ -1,10 +1,12 @@
 {
-  "hosting": {
-    "public": "./client/build",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
-  }
+	"hosting": {
+		"public": "./client/build",
+		"site": "tedx-nitrourkela",
+		"ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+		"appAssociation": "AUTO",
+		"rewrites": [
+			{ "source": "/u/**", "dynamicLinks": true },
+			{ "source": "/social/**", "dynamicLinks": true }
+		]
+	}
 }
