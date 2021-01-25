@@ -1,28 +1,40 @@
 import React from 'react';
-import { Router, Route, Switch } from 'react-router-dom';
-import createBrowserHistory from '../config/history';
 
-import Home from './Home';
-import Inductions from './Inductions';
-import Error from './Error';
+// Libraries
+import { Router, Route, Switch, Redirect } from 'react-router-dom';
+import Loadable from 'react-loadable';
 
-const areWeInducting = false;
+// Components
+import ActivityIndicator from '../components/shared/ActivityIndicator';
+
+// Helpers
+import createBrowserHistory from '../helpers/history';
+
+// Asynchronous Loading of Pages in different chunks
+const AsyncHome = Loadable({
+  loader: () => import('./Home'),
+  loading: ActivityIndicator,
+});
+
+// Function to check the Authenticated status.
+const isAuthenticated = () => {
+  // Check the authentication state as per your way of authentication i.e. jwt, sessions, etc
+};
+
+// Use this Route component for authenticated Routes.
+const PrivateRoute = ({ component: Component, ...rest }) => (
+  <Route
+    {...rest}
+    render={(props) => (isAuthenticated() ? <Component {...props} /> : <Redirect to='/login' />)}
+  />
+);
 
 function App() {
   return (
     <Router history={createBrowserHistory}>
       <Switch>
-        <Route path='/' exact>
-          <Home />
-        </Route>
-        {areWeInducting && (
-          <Route path='/inductions' exact>
-            <Inductions />
-          </Route>
-        )}
-        <Route path='*'>
-          <Error />
-        </Route>
+        <Route path='/' exact component={AsyncHome} />
+        <Redirect to='/' />
       </Switch>
     </Router>
   );
