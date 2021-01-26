@@ -1,7 +1,7 @@
 {
-  "name": "react-boilerplate",
+  "name": "tedxnitrourkela-web-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "TEDxNITRourkela Public WebApp",
   "main": "index.js",
   "scripts": {
     "build:dev": "webpack --env development",
@@ -11,9 +11,21 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage --colors"
   },
-  "keywords": [],
+  "keywords": [
+    "react",
+    "website",
+    "firebase",
+    "ted",
+    "webapp",
+    "tedx",
+    "nit",
+    "nitr",
+    "rourkela",
+    "rkl",
+    "nitrourkela",
+    "tedxnitrourkela"
+  ],
   "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@babel/polyfill": "^7.12.1",
