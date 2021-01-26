@@ -28,6 +28,7 @@ module.exports = (env) => {
   const HTMLPlugin = new HtmlWebpackPlugin({
     template: 'template.html',
     chunksSortMode: 'none',
+    favicon: './src/assets/img/favicon.ico',
   });
 
   // Building Webpack
