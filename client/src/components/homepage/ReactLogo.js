@@ -1,4 +1,5 @@
 import React from 'react';
+import { Typography } from '@material-ui/core';
 
 function ReactLogo() {
   return (
@@ -10,7 +11,7 @@ function ReactLogo() {
         height: '100vh',
       }}
     >
-      <h1>Welcome to React Template</h1>
+      <Typography variant='h1'>Welcome to React Template</Typography>
     </div>
   );
 }

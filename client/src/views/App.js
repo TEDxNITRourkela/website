@@ -3,40 +3,39 @@ import React from 'react';
 // Libraries
 import { Router, Route, Switch, Redirect } from 'react-router-dom';
 import Loadable from 'react-loadable';
+import { ThemeProvider } from '@material-ui/core/styles';
+import { CssBaseline } from '@material-ui/core';
 
 // Components
 import ActivityIndicator from '../components/shared/ActivityIndicator';
 
 // Helpers
-import createBrowserHistory from '../helpers/history';
+import createBrowserHistory from '../utils/history';
 
-// Asynchronous Loading of Pages in different chunks
-const AsyncHome = Loadable({
-  loader: () => import('./Home'),
-  loading: ActivityIndicator,
-});
+// Theme
+import theme from '../config/theme';
 
-// Function to check the Authenticated status.
-const isAuthenticated = () => {
-  // Check the authentication state as per your way of authentication i.e. jwt, sessions, etc
-};
+const AsyncRoute = (route) =>
+  Loadable({
+    loader: () => import(`${route}`),
+    loading: ActivityIndicator,
+  });
 
-// Use this Route component for authenticated Routes.
-const PrivateRoute = ({ component: Component, ...rest }) => (
-  <Route
-    {...rest}
-    render={(props) => (isAuthenticated() ? <Component {...props} /> : <Redirect to='/login' />)}
-  />
-);
+const AsyncHome = AsyncRoute('./Home');
 
 function App() {
   return (
-    <Router history={createBrowserHistory}>
-      <Switch>
-        <Route path='/' exact component={AsyncHome} />
-        <Redirect to='/' />
-      </Switch>
-    </Router>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+
+      <Router history={createBrowserHistory}>
+        <Switch>
+          <Route path='/' exact component={AsyncHome} />
+
+          <Redirect to='/' />
+        </Switch>
+      </Router>
+    </ThemeProvider>
   );
 }
 
