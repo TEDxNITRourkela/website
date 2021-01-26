@@ -9,6 +9,7 @@ import { CssBaseline } from '@material-ui/core';
 // Components
 import ActivityIndicator from '../components/shared/ActivityIndicator';
 import Navbar from '../components/marginals/Navbar';
+import Footer from '../components/marginals/Footer';
 
 // Helpers
 import createBrowserHistory from '../utils/history';
@@ -38,6 +39,7 @@ function App() {
 
           <Redirect to='/' />
         </Switch>
+        <Footer />
       </Router>
     </ThemeProvider>
   );

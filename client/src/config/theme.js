@@ -25,7 +25,8 @@ const theme = createMuiTheme({
       red: '#FF2B06',
       lightGrey: '#D2DAE1',
       mediumGrey: 'rgba(48, 51, 60, 0.35)',
-      darkGrey: 'rgba(48, 51, 60, 0.35)',
+      darkGrey: 'rgba(48, 51, 60, 0.55)',
+      offWhite: '#F8F8F8',
     },
     grey: {
       100: '#F2F2F2',
@@ -47,7 +48,7 @@ const theme = createMuiTheme({
     divider: 'rgba(0, 0, 0, 0.2)',
     background: {
       default: '#1A1A1A',
-      paper: '#FAFAFA',
+      paper: '#F8F8F8',
     },
     action: {
       active: 'rgba(0, 0, 0, 0.54)',
