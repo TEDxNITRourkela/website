@@ -36,6 +36,7 @@ function App() {
 
           <Redirect to='/' />
         </Switch>
+        {/* </Navbar> */}
       </Router>
     </ThemeProvider>
   );
