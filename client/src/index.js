@@ -6,9 +6,19 @@ import Root from './Root';
 
 import('./index.css');
 
-ReactDOM.render(
-  <Root>
-    <App />
-  </Root>,
-  document.querySelector('#root'),
-);
+import configureFirebase from './config/firebase';
+
+console.log(process.env.TRIAL);
+
+configureFirebase()
+  .then(() => {
+    ReactDOM.render(
+      <Root>
+        <App />
+      </Root>,
+      document.querySelector('#root'),
+    );
+  })
+  .catch((error) => {
+    console.log('Firebase Initialization Error: ', error);
+  });
