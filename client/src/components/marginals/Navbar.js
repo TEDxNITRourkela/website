@@ -5,34 +5,9 @@ import { Link } from 'react-router-dom';
 
 // Assets
 import logo from '../../assets/img/logo.png';
+import { tabs } from '../../assets/placeholder/common';
 
 const drawerWidth = 250;
-const tabs = [
-  {
-    name: 'About',
-    link: '/about',
-  },
-  {
-    name: 'Events',
-    link: '/events',
-  },
-  {
-    name: 'Speakers',
-    link: '/speakers',
-  },
-  {
-    name: 'Partners',
-    link: '/partners',
-  },
-  {
-    name: 'Participate',
-    link: '/participate',
-  },
-  {
-    name: 'Our Community',
-    link: '/community',
-  },
-];
 
 function Navbar({ window, children }) {
   const classes = useStyles();
