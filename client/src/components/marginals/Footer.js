@@ -13,7 +13,7 @@ function Footer() {
     <div className={classes.root}>
       <Container className={classes.container}>
         <div className={classes.row1}>
-          <Link>
+          <Link to='/' style={{ display: 'flex', justifyContent: 'center' }}>
             <img className={classes.logoDark} src={logoDark} alt='TEDxNITRourkela' />
           </Link>
 
@@ -90,12 +90,18 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     height: '265px',
     backgroundColor: theme.palette.background.paper,
+    [theme.breakpoints.down('md')]: {
+      height: 'auto',
+    },
   },
   container: {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
     height: '100%',
+    [theme.breakpoints.down('md')]: {
+      flexDirection: 'column',
+    },
   },
   row1: {
     width: '40%',
@@ -103,10 +109,18 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    [theme.breakpoints.down('md')]: {
+      marginTop: 50,
+      width: '100%',
+    },
   },
   logoDark: {
     width: 390,
     height: 'auto',
+    [theme.breakpoints.down('md')]: {
+      width: '80%',
+      maxWidth: 390,
+    },
   },
   primaryText: {
     width: 390,
@@ -116,6 +130,11 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Helvetica',
     marginTop: '30px',
     paddingLeft: 10,
+    [theme.breakpoints.down('md')]: {
+      width: '80%',
+      alignText: 'center',
+      maxWidth: 390,
+    },
   },
   secondaryText: {
     width: 390,
@@ -125,12 +144,20 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Helvetica',
     marginTop: '5px',
     paddingLeft: 10,
+    [theme.breakpoints.down('md')]: {
+      width: '80%',
+      alignText: 'center',
+      maxWidth: 390,
+    },
   },
   row2: {
     width: '25%',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    [theme.breakpoints.down('md')]: {
+      display: 'none',
+    },
   },
   row2column1: {
     minWidth: '40%',
@@ -162,13 +189,26 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
+    [theme.breakpoints.down('md')]: {
+      width: '100%',
+      maxWidth: 390,
+      margin: '50px auto',
+    },
   },
   contact: {
     width: '70%',
+    [theme.breakpoints.down('md')]: {
+      width: '100%',
+      textAlign: 'center',
+    },
   },
   email: {
     width: '70%',
     fontWeight: 'normal',
+    [theme.breakpoints.down('md')]: {
+      width: '100%',
+      textAlign: 'center',
+    },
   },
   iconsContainer: {
     width: '70%',
@@ -177,6 +217,9 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     marginTop: 50,
     paddingRight: 30,
+    [theme.breakpoints.down('md')]: {
+      width: '100%',
+    },
   },
   icon: {
     color: theme.palette.secondary.darkGrey,
