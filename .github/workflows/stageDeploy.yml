@@ -23,7 +23,7 @@ jobs:
         run: cd client && yarn install --frozen-lockfile
 
       - name: Build React WebApp
-        run: cd client && yarn build
+        run: cd client && yarn build:prod
 
       - name: Deploy to Firebase
         uses: FirebaseExtended/action-hosting-deploy@v0
