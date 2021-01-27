@@ -61,9 +61,10 @@ jobs:
               repo: context.repo.repo,
               body: "Prettier Response:\n ${{ steps.prettier_run.outputs.prettier_output }}"
             })
+            const cmdoutput = require(`${process.env.GITHUB_WORKSPACE}/prettier.txt`)
             github.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: "Prettier Response:\n $(cat prettier.txt)"
+              body: `Prettier Response:\n ${cmdoutput}`
             })
