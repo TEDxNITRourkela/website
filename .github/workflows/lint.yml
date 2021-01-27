@@ -48,6 +48,8 @@ jobs:
         run: |
           echo "::set-output name=prettier_output::$(npx prettier --list-different .)"
           echo "$(npx prettier --list-different . > prettier.txt)"
+          echo "$(pwd)"
+          echo "$(ls -al)"
 
       - name: Comment on PR
         if: contains(${{ steps.prettier_run.outputs.prettier_output }}, '.');
@@ -62,6 +64,7 @@ jobs:
               body: "Prettier Response:\n ${{ steps.prettier_run.outputs.prettier_output }}"
             })
             const cmdoutput = require(`${process.env.GITHUB_WORKSPACE}/prettier.txt`)
+            console.log(cmdoutput)
             github.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
