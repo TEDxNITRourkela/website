@@ -46,8 +46,10 @@ jobs:
       - name: Run Prettier
         id: prettier_run
         run: |
-          echo "::set-output name=prettier_output::$(npx prettier --list-different .)"
+          echo "::set-output name=prettier_output::$(npx prettier --list-different .)" > prettier.txt
           npx prettier --list-different . > prettier.txt
+          exit 0
+
       - name: Comment on PR
         if: contains(${{ steps.prettier_run.outputs.prettier_output }}, '.');
         uses: actions/github-script@v3
