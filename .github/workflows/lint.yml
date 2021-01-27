@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: "14"
 
-      - name: Install ESLint
+      - name: Install Dependencies
         run: cp client/package.json ./ && yarn install
 
       - name: Run ESLint
@@ -55,12 +55,6 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            github.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: "Prettier Response:\n ${{ steps.prettier_run.outputs.prettier_output }}"
-            })
             const fs = require('fs')
             const cmdoutput = fs.readFileSync(`${process.env.GITHUB_WORKSPACE}/prettier.txt`)
             console.log(cmdoutput)
