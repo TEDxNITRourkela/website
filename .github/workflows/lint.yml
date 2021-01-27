@@ -46,7 +46,13 @@ jobs:
       - name: Run Prettier
         id: prettier_run
         run: |
-          echo "::set-output name=prettier_output::$(npx prettier --list-different .)"
+          cmdoutput=$(npx prettier --list-different .)
+          echo $cmdoutput
+          cmdoutput="${cmdoutput//'%'/'%25'}"
+          cmdoutput="${cmdoutput//$'\n'/'%0A'}"
+          cmdoutput="${cmdoutput//$'\r'/'%0D'}"
+          echo $cmdoutput
+          echo "::set-output name=prettier_output::$cmdoutput"
 
       - name: Comment on PR
         if: contains(${{ steps.prettier_run.outputs.prettier_output }}, '.');
