@@ -46,11 +46,8 @@ jobs:
       - name: Run Prettier
         id: prettier_run
         run: |
-          echo "$(cmdoutput=$(npx prettier --list-different .))"
-          echo "$(cmdoutput="${cmdoutput//'%'/'%25'})"
-          echo "$(cmdoutput="${cmdoutput//$'\n'/'%0A'})"
-          echo "$(cmdoutput="${cmdoutput//$'\r'/'%0D'})"
-          echo "::set-output name=prettier_output::$cmdoutput"
+          echo "::set-output name=prettier_output::$(npx prettier --list-different .)"
+          echo "$(npx prettier --list-different . > prettier.txt)"
 
       - name: Comment on PR
         if: contains(${{ steps.prettier_run.outputs.prettier_output }}, '.');
@@ -62,5 +59,11 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: 'Prettier Response:\n${{ steps.prettier_run.outputs.prettier_output }}'
+              body: "Prettier Response:\n ${{ steps.prettier_run.outputs.prettier_output }}"
+            })
+            github.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: "Prettier Response:\n $(cat prettier.txt)"
             })
