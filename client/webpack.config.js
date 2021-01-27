@@ -2,8 +2,12 @@ const path = require('path');
 const webpack = require('webpack');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+  .BundleAnalyzerPlugin;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const dotenv = require('dotenv').config({
+  path: path.join(__dirname, '.env'),
+});
 
 module.exports = (env) => {
   console.log('WEBPACK ENV: ', env);
@@ -29,6 +33,10 @@ module.exports = (env) => {
     template: 'template.html',
     chunksSortMode: 'none',
     favicon: './src/assets/img/favicon.ico',
+  });
+
+  const DefinePlugin = new webpack.DefinePlugin({
+    'process.env': dotenv.parsed,
   });
 
   // Building Webpack
@@ -67,7 +75,7 @@ module.exports = (env) => {
     ],
   };
 
-  config.plugins = [CleanPlugin, AnalyzerPlugin, HTMLPlugin];
+  config.plugins = [CleanPlugin, AnalyzerPlugin, HTMLPlugin, DefinePlugin];
 
   config.module = {
     rules: [

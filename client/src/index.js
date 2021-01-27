@@ -8,8 +8,6 @@ import('./index.css');
 
 import configureFirebase from './config/firebase';
 
-console.log(process.env.TRIAL);
-
 configureFirebase()
   .then(() => {
     ReactDOM.render(
