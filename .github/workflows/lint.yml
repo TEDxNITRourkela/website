@@ -11,7 +11,15 @@ jobs:
     if: github.event.review.state == 'approved'
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: "14"
+
+      - name: Install ESLint
+        run: npm install eslint
 
       - name: Run ESLint
         uses: reviewdog/action-eslint@v1
