@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 
-import { Typography, Hidden, Drawer, ListItem, makeStyles } from '@material-ui/core';
+import {
+  Typography,
+  Hidden,
+  Drawer,
+  ListItem,
+  makeStyles,
+} from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
 // Assets
@@ -9,7 +15,7 @@ import { tabs } from '../../assets/placeholder/common';
 
 const drawerWidth = 250;
 
-function Navbar({ window, children }) {
+function Navbar({ window }) {
   const classes = useStyles();
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -17,11 +23,19 @@ function Navbar({ window, children }) {
     setMobileOpen(!mobileOpen);
   };
 
-  const container = window !== undefined ? () => window().document.body : undefined;
+  const container =
+    window !== undefined ? () => window().document.body : undefined;
 
   return (
     <div className={classes.root}>
-      <i className={`${classes.menu} fas fa-bars`} onClick={handleDrawerToggle} />
+      <i
+        className={`${classes.menu} fas fa-bars`}
+        onClick={handleDrawerToggle}
+        onKeyDown={handleDrawerToggle}
+        role='button'
+        tabIndex='0'
+        aria-label='Menu Button'
+      />
 
       <Link to='/' className={classes.logoContainer}>
         <img className={classes.logo} src={logo} alt='TEDxNITRourkela' />

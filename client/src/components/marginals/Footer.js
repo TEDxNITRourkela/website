@@ -14,7 +14,11 @@ function Footer() {
       <Container className={classes.container}>
         <div className={classes.row1}>
           <Link to='/' style={{ display: 'flex', justifyContent: 'center' }}>
-            <img className={classes.logoDark} src={logoDark} alt='TEDxNITRourkela' />
+            <img
+              className={classes.logoDark}
+              src={logoDark}
+              alt='TEDxNITRourkela'
+            />
           </Link>
 
           <Typography className={classes.primaryText} variant='body2'>

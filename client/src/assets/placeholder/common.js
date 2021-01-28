@@ -24,3 +24,5 @@ export const tabs = [
     link: '/community',
   },
 ];
+
+export const temporary = [];

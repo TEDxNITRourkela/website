@@ -4,9 +4,9 @@ import ReactDOM from 'react-dom';
 import App from './views/App';
 import Root from './Root';
 
-import('./index.css');
-
 import configureFirebase from './config/firebase';
+
+import('./index.css');
 
 configureFirebase()
   .then(() => {
