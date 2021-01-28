@@ -1,30 +1,47 @@
 import React from 'react';
-import { Router, Route, Switch } from 'react-router-dom';
-import createBrowserHistory from '../config/history';
 
-import Home from './Home';
-import Inductions from './Inductions';
-import Error from './Error';
+// Libraries
+import { Router, Route, Switch, Redirect } from 'react-router-dom';
+import Loadable from 'react-loadable';
+import { ThemeProvider } from '@material-ui/core/styles';
+import { CssBaseline } from '@material-ui/core';
 
-const areWeInducting = false;
+// Components
+import ActivityIndicator from '../components/shared/ActivityIndicator';
+import Navbar from '../components/marginals/Navbar';
+import Footer from '../components/marginals/Footer';
+
+// Helpers
+import createBrowserHistory from '../utils/history';
+
+// Theme
+import theme from '../config/theme';
+
+const AsyncRoute = (route) =>
+  Loadable({
+    loader: () => import(`${route}`),
+    loading: ActivityIndicator,
+  });
+
+const AsyncHome = AsyncRoute('./Home');
+const AsyncLoader = AsyncRoute('../components/shared/ActivityIndicator');
 
 function App() {
   return (
-    <Router history={createBrowserHistory}>
-      <Switch>
-        <Route path='/' exact>
-          <Home />
-        </Route>
-        {areWeInducting && (
-          <Route path='/inductions' exact>
-            <Inductions />
-          </Route>
-        )}
-        <Route path='*'>
-          <Error />
-        </Route>
-      </Switch>
-    </Router>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+
+      <Router history={createBrowserHistory}>
+        <Navbar />
+        <Switch>
+          <Route path='/' exact component={AsyncHome} />
+          <Route path='/loader' exact component={AsyncLoader} />
+
+          <Redirect to='/' />
+        </Switch>
+        <Footer />
+      </Router>
+    </ThemeProvider>
   );
 }
 

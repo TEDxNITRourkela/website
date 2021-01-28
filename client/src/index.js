@@ -1,8 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import './index.css';
-
 import App from './views/App';
+import Root from './Root';
 
-ReactDOM.render(<App />, document.querySelector('#root'));
+import configureFirebase from './config/firebase';
+
+import('./index.css');
+
+configureFirebase()
+  .then(() => {
+    ReactDOM.render(
+      <Root>
+        <App />
+      </Root>,
+      document.querySelector('#root'),
+    );
+  })
+  .catch((error) => {
+    console.log('Firebase Initialization Error: ', error);
+  });

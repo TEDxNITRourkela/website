@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "./client/build",
+    "public": "./client/dist",
     "site": "tedx-nitrourkela",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "appAssociation": "AUTO",
