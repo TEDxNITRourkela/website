@@ -1,12 +1,15 @@
 import React from 'react';
 
-import { ReactLogo } from '../components/homepage';
+import  Index  from '../components/homepage/index';
+import  Content  from '../components/homepage/content';
+import Subscribe from '../components/homepage/subscribe';
 
 function Home() {
   return (
     <div>
-      <ReactLogo />
-      <ReactLogo />
+      <Index />
+      <Content />
+      <Subscribe />
     </div>
   );
 }
