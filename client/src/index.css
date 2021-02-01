@@ -18,6 +18,13 @@ body {
 	line-height: 1.7;
 	box-sizing: border-box;
 	background-color: #181818;
+	overflow-x: hidden;
+	-ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+body::-webkit-scrollbar {
+	display: none;
 }
 
 li,

@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { Typography , Grid } from '@material-ui/core';
+import { Typography, Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
-import Counter from "./counter";
+import Counter from './counter';
 
 import telp1 from '../../assets/img/homepage/tellipse1.png';
 import telp2 from '../../assets/img/homepage/tellipse2.png';
@@ -18,7 +18,7 @@ import mouse from '../../assets/img/homepage/mouse.png';
 import logo from '../../assets/img/logo.png';
 
 function Index() {
-    const classes = useStyles();
+  const classes = useStyles();
   return (
     <div className={`${classes.wrapper}`}>
       <div className={`${classes.container}`}>
@@ -32,12 +32,14 @@ function Index() {
         <Counter />
         <Grid
           container
-          direction="column"
-          justify="space-between"
-          alignItems="center"
+          direction='column'
+          justify='space-between'
+          alignItems='center'
           className={`${classes.scroll}`}
         >
-          <Grid item><img src={mouse} alt='Mouse' /></Grid>
+          <Grid item>
+            <img src={mouse} alt='Mouse' />
+          </Grid>
           <Grid item>
             <Typography variant='body1' className={`${classes.scrContent}`}>
               Scroll Down
@@ -61,56 +63,56 @@ function Index() {
 export default Index;
 
 const useStyles = makeStyles((theme) => ({
-    wrapper: {
-        position: 'relative',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    container: {
-        height: 'auto',
-        marginTop: '220px',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    content: {
-        color: theme.palette.common.white,
-        opacity: 0.2,
-        fontFamily: 'Zilla Slab',
-        letterSpacing: 3,
-    },
-    logo: {
-        marginTop: '20px',
-        marginBottom: '30px',
-        width: '30%',
-    },
-    topic: {
-        marginTop: '10px',
-        marginBottom: '20px',
-        fontSize: '48px',
-        fontWeight: theme.typography.fontWeightBold,
-        color: theme.palette.common.white,
-        fontFamily: 'zila slab',
-    },
-    scroll: {
-      marginBottom: '50px',
-    },
-    scrContent: {
-      color: theme.palette.common.white,
-      fontFamily: 'Helvetica',
-      fontWeight: 400,
-    },
-    telp: {
-        position: 'absolute',
-        top: '100px',
-        right: '0px',
-    },
-    belp: {
-        position: 'absolute',
-        bottom: '0px',
-        left: '0px',
-    },
+  wrapper: {
+    position: 'relative',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  container: {
+    height: 'calc(100% - 100px)',
+    minHeight: '100vh',
+    marginTop: '100px',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  content: {
+    color: theme.palette.common.white,
+    opacity: 0.2,
+    fontFamily: 'Zilla Slab',
+    letterSpacing: 3,
+  },
+  logo: {
+    marginTop: '20px',
+    marginBottom: '30px',
+    width: '30%',
+  },
+  topic: {
+    marginTop: '10px',
+    marginBottom: '20px',
+    fontSize: '48px',
+    fontWeight: theme.typography.fontWeightBold,
+    color: theme.palette.common.white,
+    fontFamily: 'zila slab',
+  },
+  scroll: {
+    marginBottom: '50px',
+  },
+  scrContent: {
+    color: theme.palette.common.white,
+    fontFamily: 'Helvetica',
+    fontWeight: 400,
+  },
+  telp: {
+    position: 'absolute',
+    top: '100px',
+    right: '0px',
+  },
+  belp: {
+    position: 'absolute',
+    bottom: '0px',
+    left: '0px',
+  },
 }));
-
