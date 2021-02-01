@@ -28,6 +28,10 @@ function Navbar({ window }) {
 
   return (
     <div className={classes.root}>
+      <Link to='/' className={classes.logoContainer}>
+        <img className={classes.logo} src={logo} alt='TEDxNITRourkela' />
+      </Link>
+
       <i
         className={`${classes.menu} fas fa-bars`}
         onClick={handleDrawerToggle}
@@ -36,10 +40,6 @@ function Navbar({ window }) {
         tabIndex='0'
         aria-label='Menu Button'
       />
-
-      <Link to='/' className={classes.logoContainer}>
-        <img className={classes.logo} src={logo} alt='TEDxNITRourkela' />
-      </Link>
 
       <div className={classes.tabsContainer}>
         {tabs.map(({ link, name }) => (
@@ -55,7 +55,7 @@ function Navbar({ window }) {
         <Drawer
           container={container}
           variant='temporary'
-          anchor='left'
+          anchor='right'
           open={mobileOpen}
           onClose={handleDrawerToggle}
           classes={{
@@ -96,12 +96,10 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     zIndex: 1,
     [theme.breakpoints.down('sm')]: {
-      justifyContent: 'flex-start',
-      paddingLeft: 30,
+      justifyContent: 'space-between',
     },
     [theme.breakpoints.up('sm')]: {
       justifyContent: 'space-between',
-      paddingLeft: 30,
     },
   },
   logoContainer: {
@@ -141,6 +139,7 @@ const useStyles = makeStyles((theme) => ({
   },
   menu: {
     color: '#fff',
+    marginLeft: '50px',
     [theme.breakpoints.up('md')]: {
       display: 'none',
     },
