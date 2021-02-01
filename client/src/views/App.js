@@ -24,6 +24,7 @@ const AsyncRoute = (route) =>
   });
 
 const AsyncHome = AsyncRoute('./Home');
+const AsyncAbout = AsyncRoute('./About.js');
 const AsyncLoader = AsyncRoute('../components/shared/ActivityIndicator');
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
         <Navbar />
         <Switch>
           <Route path='/' exact component={AsyncHome} />
+          <Route path='/about' exact component={AsyncAbout} />
           <Route path='/loader' exact component={AsyncLoader} />
 
           <Redirect to='/' />
