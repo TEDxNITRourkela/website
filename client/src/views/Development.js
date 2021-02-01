@@ -3,15 +3,13 @@ import React from 'react';
 // Libraries
 import { Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-
-// Components
-import Counter from './Counter';
+import { Link } from 'react-router-dom';
 
 // Assets
-import mouse from '../../assets/img/gifs/scrollDown.gif';
-import topRight from '../../assets/img/homepage/topRight.png';
-import bottomLeft from '../../assets/img/homepage/bottomLeft.png';
-import logo from '../../assets/img/logo.png';
+import topRight from '../assets/img/homepage/topRight.png';
+import bottomLeft from '../assets/img/homepage/bottomLeft.png';
+import logo from '../assets/img/logo.png';
+import peak from '../assets/img/gifs/peak.gif';
 
 function Index() {
   const classes = useStyles();
@@ -26,14 +24,18 @@ function Index() {
         <Typography variant='h1' className={classes.topic}>
           &#8220; Learning from the past &#8221;
         </Typography>
-        <Counter />
 
-        <div className={classes.scrollDown}>
-          <img src={mouse} alt='Mouse' className={classes.scrollIcon} />
-          <Typography variant='body1' className={classes.scrContent}>
-            Scroll Down
-          </Typography>
-        </div>
+        <img className={classes.commingSoon} src={peak} alt='Comming Soon' />
+        <Typography variant='h2' className={classes.commingSoonContent}>
+          This page is under development.
+        </Typography>
+
+        <Link to='/'>
+          {/** eslint-disable-next-line */}
+          <button type='button' className={classes.button}>
+            Go to Home
+          </button>
+        </Link>
       </div>
 
       <img className={`${classes.topRight} `} src={topRight} alt='ellipse' />
@@ -89,14 +91,6 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.common.white,
     fontFamily: 'zila slab',
   },
-  scroll: {
-    marginBottom: '50px',
-  },
-  scrContent: {
-    color: theme.palette.common.white,
-    fontFamily: 'Helvetica',
-    fontWeight: 400,
-  },
   topRight: {
     position: 'absolute',
     top: '100px',
@@ -115,18 +109,31 @@ const useStyles = makeStyles((theme) => ({
       height: 'auto',
     },
   },
-  scrollDown: {
-    position: 'absolute',
-    bottom: 20,
-    width: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
+  commingSoon: {
+    width: 220,
+    height: 220,
+    marginTop: 60,
+    [theme.breakpoints.down('sm')]: {
+      width: 170,
+      height: 170,
+    },
   },
-  scrollIcon: {
-    width: 36,
-    height: 36,
-    marginBottom: 10,
+  commingSoonContent: {
+    marginBottom: 20,
+    marginTop: 20,
+    color: '#ffffff',
+    fontFamily: 'Zilla Slab',
+  },
+  button: {
+    border: '1px solid #FF2B06',
+    borderRadius: '6px',
+    backgroundColor: '#1a1a1a',
+    padding: '10px 20px',
+    color: '#ffffff',
+    marginBottom: 80,
+    '&:hover': {
+      backgroundColor: '#FF2B06',
+      cursor: 'pointer',
+    },
   },
 }));

@@ -4,7 +4,7 @@ import { Typography, Container, makeStyles } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
 // assets
-import logoDark from '../../assets/img/logo_dark.png';
+import logo from '../../assets/img/logo.png';
 
 function Footer() {
   const classes = useStyles();
@@ -16,7 +16,7 @@ function Footer() {
           <Link to='/' style={{ display: 'flex', justifyContent: 'center' }}>
             <img
               className={classes.logoDark}
-              src={logoDark}
+              src={logo}
               alt='TEDxNITRourkela'
             />
           </Link>
@@ -75,11 +75,21 @@ function Footer() {
           </Typography>
 
           <div className={classes.iconsContainer}>
-            <i className={`${classes.icon} fab fa-facebook-f`} />
-            <i className={`${classes.icon} fab fa-twitter`} />
-            <i className={`${classes.icon} fab fa-youtube`} />
-            <i className={`${classes.icon} fab fa-linkedin-in`} />
-            <i className={`${classes.icon} fab fa-instagram`} />
+            <a href='https://www.facebook.com/tedxnitrourkela/'>
+              <i className={`${classes.icon} fab fa-facebook-f`} />
+            </a>
+            <a href='https://twitter.com/tedxnitr'>
+              <i className={`${classes.icon} fab fa-twitter`} />
+            </a>
+            <a href='https://www.ted.com/tedx/events/41324'>
+              <i className={`${classes.icon} fab fa-youtube`} />
+            </a>
+            <a href='https://in.linkedin.com/company/tedxnitrourkela'>
+              <i className={`${classes.icon} fab fa-linkedin-in`} />
+            </a>
+            <a href='https://www.instagram.com/tedxnitrourkela/'>
+              <i className={`${classes.icon} fab fa-instagram`} />
+            </a>
           </div>
         </div>
       </Container>
@@ -93,7 +103,8 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
     height: '265px',
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: theme.palette.background.default,
+    borderTop: '1px solid rgba(255,255,255,0.4)',
     [theme.breakpoints.down('md')]: {
       height: 'auto',
     },
@@ -130,7 +141,7 @@ const useStyles = makeStyles((theme) => ({
     width: 390,
     alignText: 'left',
     fontWeight: 'bold',
-    color: theme.palette.primary,
+    color: theme.palette.common.white,
     fontFamily: 'Helvetica',
     marginTop: '30px',
     paddingLeft: 10,
@@ -144,7 +155,7 @@ const useStyles = makeStyles((theme) => ({
     width: 390,
     alignText: 'left',
     fontWeight: 'normal',
-    color: theme.palette.primary,
+    color: theme.palette.common.white,
     fontFamily: 'Helvetica',
     marginTop: '5px',
     paddingLeft: 10,
@@ -184,7 +195,7 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     fontWeight: 'bold',
     fontFamily: 'helvetica',
-    color: theme.palette.primary.main,
+    color: theme.palette.common.white,
     alignText: 'left',
   },
   row3: {
@@ -201,6 +212,7 @@ const useStyles = makeStyles((theme) => ({
   },
   contact: {
     width: '70%',
+    color: theme.palette.common.white,
     [theme.breakpoints.down('md')]: {
       width: '100%',
       textAlign: 'center',
@@ -209,6 +221,7 @@ const useStyles = makeStyles((theme) => ({
   email: {
     width: '70%',
     fontWeight: 'normal',
+    color: theme.palette.common.white,
     [theme.breakpoints.down('md')]: {
       width: '100%',
       textAlign: 'center',
@@ -217,7 +230,7 @@ const useStyles = makeStyles((theme) => ({
   iconsContainer: {
     width: '70%',
     display: 'flex',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     alignItems: 'center',
     marginTop: 50,
     paddingRight: 30,
@@ -226,7 +239,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   icon: {
-    color: theme.palette.secondary.darkGrey,
-    // margin: '10px 15px'
+    color: theme.palette.common.white,
+    margin: '10px 15px',
   },
 }));

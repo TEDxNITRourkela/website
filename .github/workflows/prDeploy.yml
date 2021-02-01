@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node v14
         uses: actions/setup-node@master
         with:
-          node-version: "14.x"
+          node-version: '14.x'
 
       - name: Install Dependencies
         run: cd client && yarn install --frozen-lockfile
@@ -27,7 +27,14 @@ jobs:
       - name: Deploy to Firebase
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: "${{ secrets.GITHUB_TOKEN }}"
-          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}'
           projectId: tedx-nitrourkela
           expires: 14d
+
+      - name: removelabel
+        uses: buildsville/add-remove-label@v1
+        with:
+          token: ${{secrets.GITHUB_TOKEN}}
+          label: create-live-preview
+          type: remove

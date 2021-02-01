@@ -1,16 +1,18 @@
 import React from 'react';
 
-import  Index  from '../components/homepage/index';
-import  Content  from '../components/homepage/content';
-import Subscribe from '../components/homepage/subscribe';
+import Index from '../components/homepage/index';
+import Content from '../components/homepage/Content';
+import Subscribe from '../components/homepage/Subscription';
+import Partners from '../components/homepage/Partners';
 
 function Home() {
   return (
-    <div>
+    <>
       <Index />
       <Content />
       <Subscribe />
-    </div>
+      <Partners />
+    </>
   );
 }
 
