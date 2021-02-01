@@ -89,8 +89,14 @@ const useStyles = makeStyles((theme) => ({
   },
   shiftLeftHours: {
     marginRight: 30,
+    [theme.breakpoints.down('sm')]: {
+      marginRight: 10,
+    },
   },
   shiftLeftDays: {
     marginRight: 50,
+    [theme.breakpoints.down('sm')]: {
+      marginRight: 20,
+    },
   },
 }));

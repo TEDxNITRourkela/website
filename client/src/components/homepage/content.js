@@ -5,10 +5,8 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import { CONTENT } from '../../assets/placeholder/homepage';
 
-import poly1 from '../../assets/img/homepage/polygon1.png';
-import poly2 from '../../assets/img/homepage/polygon2.png';
-import poly3 from '../../assets/img/homepage/polygon3.png';
-import poly4 from '../../assets/img/homepage/polygon4.png';
+// Assets
+import polygon from '../../assets/img/homepage/polygon.png';
 import logo from '../../assets/img/logo_dark.png';
 
 function Content() {
@@ -21,10 +19,7 @@ function Content() {
             What is
           </Typography>
           <img className={classes.logo} src={logo} alt='Logo' />
-          <img className={classes.tpoly} src={poly1} alt='' />
-          <img className={classes.bpoly} src={poly2} alt='' />
-          <img className={classes.bpoly} src={poly3} alt='' />
-          <img className={classes.tpoly} src={poly4} alt='' />
+          <img className={classes.tpoly} src={polygon} alt='Polygon' />
         </Grid>
         <Grid item md={7} className={`${classes.contentWrapper}`}>
           <Typography variant='body2' className={`${classes.content}`}>
