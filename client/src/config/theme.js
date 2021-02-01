@@ -132,6 +132,10 @@ const theme = createMuiTheme({
       fontWeight: 500,
       fontSize: '1rem',
       lineHeight: '1.25rem',
+      '@media (max-width:600px)': {
+        fontSize: '0.85rem',
+        lineHeight: '1.25rem',
+      },
     },
   },
   shape: {

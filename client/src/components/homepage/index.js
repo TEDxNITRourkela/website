@@ -70,6 +70,9 @@ const useStyles = makeStyles((theme) => ({
     opacity: 0.2,
     fontFamily: 'Zilla Slab',
     letterSpacing: 3,
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '0.75rem',
+    },
   },
   logo: {
     marginTop: '20px',

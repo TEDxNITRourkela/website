@@ -9,22 +9,52 @@ import topLeftPolygon from '../../assets/img/homepage/topLeftPolygon.png';
 // eslint-disable-next-line
 import bottomRightPolygon from '../../assets/img/homepage/bottomRightPolygon.png';
 import logo from '../../assets/img/logo.png';
+import darkLogo from '../../assets/img/logo_dark.png';
 import { CONTENT } from '../../assets/placeholder/homepage';
 
-function Content() {
+function Content({ type = 'Dark' }) {
   const classes = useStyles();
 
+  const styles =
+    type === 'Dark'
+      ? {
+          containerBackground: '#181818',
+          titleBackground: '#181818',
+          logo,
+          text: '#ffffff',
+        }
+      : {
+          containerBackground: '#ffffff',
+          titleBackground: '#D2DAE1',
+          logo: darkLogo,
+          text: '#000000',
+        };
+
   return (
-    <div className={classes.container}>
-      <div className={classes.titleContainer}>
-        <Typography variant='h1' className={classes.question}>
+    <div
+      className={classes.container}
+      style={{ backgroundColor: styles.containerBackground }}
+    >
+      <div
+        className={classes.titleContainer}
+        style={{ backgroundColor: styles.titleBackground }}
+      >
+        <Typography
+          variant='h1'
+          className={classes.question}
+          style={{ color: styles.text }}
+        >
           What is
         </Typography>
-        <img className={classes.logo} src={logo} alt='Logo' />
+        <img className={classes.logo} src={styles.logo} alt='Logo' />
       </div>
 
       <div className={classes.contentContainer}>
-        <Typography variant='body2' className={classes.content}>
+        <Typography
+          variant='body2'
+          className={classes.content}
+          style={{ color: styles.text }}
+        >
           {CONTENT.content}
         </Typography>
       </div>
