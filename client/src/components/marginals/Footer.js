@@ -230,7 +230,7 @@ const useStyles = makeStyles((theme) => ({
   iconsContainer: {
     width: '70%',
     display: 'flex',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     alignItems: 'center',
     marginTop: 50,
     paddingRight: 30,
@@ -240,6 +240,6 @@ const useStyles = makeStyles((theme) => ({
   },
   icon: {
     color: theme.palette.common.white,
-    // margin: '10px 15px'
+    margin: '10px 15px',
   },
 }));

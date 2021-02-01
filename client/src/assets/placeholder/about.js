@@ -1,5 +1,6 @@
 /* eslint-disable */
 import people from '../img/about/people.png';
+import profile from '../img/about/defaultprofile.png';
 
 export const ABOUT = Object.freeze({
   SECTION: {
@@ -17,5 +18,51 @@ export const ABOUT = Object.freeze({
         'A TEDx event, similar to its international counterpart, is a local gathering where live TED-like talks and performances are shared with the community. TEDx events are fully planned and coordinated independently, on a community-by-community basis, thus providing a platform for pioneers and deep thinkers from all walks of life to showcase their ideas.',
       IMG: people,
     },
+  },
+  TEAM: {
+    ROW1: [
+      {
+        NAME: 'Abel Mathew',
+        IMG: profile,
+        DESIGNATION: 'Co-Organizer',
+      },
+      {
+        NAME: 'Rutaj Dash',
+        IMG: profile,
+        DESIGNATION: 'Co-Organizer',
+      },
+    ],
+    ROW2: [
+      {
+        NAME: 'Umme Salma',
+        IMG: profile,
+        DESIGNATION: 'Curator',
+      },
+      {
+        NAME: 'Leo Rodriguez',
+        IMG: profile,
+        DESIGNATION: 'Asst-Curator',
+      },
+      {
+        NAME: 'Rama Krushna',
+        IMG: profile,
+        DESIGNATION: 'Design Head',
+      },
+      {
+        NAME: 'Ritesh Patil',
+        IMG: profile,
+        DESIGNATION: 'Tech Director',
+      },
+      {
+        NAME: 'Ekta Gambhir',
+        IMG: profile,
+        DESIGNATION: 'Management Head',
+      },
+      {
+        NAME: 'Lalitha Manaswini',
+        IMG: profile,
+        DESIGNATION: 'Asst-Management Head',
+      },
+    ],
   },
 });
