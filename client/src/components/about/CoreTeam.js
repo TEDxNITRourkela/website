@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
     margin: '20px 0',
     display: 'flex',
     flexWrap: 'wrap',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     alignItems: 'center',
   },
 }));
