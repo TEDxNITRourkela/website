@@ -88,11 +88,13 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '20px',
     marginBottom: '30px',
     width: '30%',
+    [theme.breakpoints.down('sm')]: {
+      width: '80%',
+    },
   },
   topic: {
     marginTop: '10px',
     marginBottom: '20px',
-    fontSize: '48px',
     fontWeight: theme.typography.fontWeightBold,
     color: theme.palette.common.white,
     fontFamily: 'zila slab',
@@ -109,10 +111,18 @@ const useStyles = makeStyles((theme) => ({
     position: 'absolute',
     top: '100px',
     right: '0px',
+    [theme.breakpoints.down('sm')]: {
+      width: '30%',
+      height: 'auto',
+    },
   },
   belp: {
     position: 'absolute',
     bottom: '0px',
     left: '0px',
+    [theme.breakpoints.down('sm')]: {
+      width: '30%',
+      height: 'auto',
+    },
   },
 }));
