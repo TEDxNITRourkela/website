@@ -85,6 +85,7 @@ export default Navbar;
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
+    maxWidth: window.innerWidth,
     height: '100px',
     position: 'fixed',
     top: 0,

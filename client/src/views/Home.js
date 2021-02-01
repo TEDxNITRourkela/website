@@ -6,11 +6,11 @@ import Subscribe from '../components/homepage/subscribe';
 
 function Home() {
   return (
-    <div>
+    <>
       <Index />
       <Content />
       <Subscribe />
-    </div>
+    </>
   );
 }
 

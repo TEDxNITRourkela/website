@@ -25,7 +25,7 @@ const theme = createMuiTheme({
       red: '#FF2B06',
       lightGrey: '#D2DAE1',
       mediumGrey: 'rgba(48, 51, 60, 0.35)',
-      darkGrey: 'rgba(48, 51, 60, 0.55)',
+      darkGrey: '#181818',
       offWhite: '#F8F8F8',
     },
     grey: {
@@ -98,8 +98,8 @@ const theme = createMuiTheme({
     h2: {
       fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
       fontWeight: 600,
-      fontSize: '1.5rem',
-      lineHeight: '2rem',
+      fontSize: '2.25rem',
+      lineHeight: '2.5rem',
       '@media (max-width:600px)': {
         fontSize: '1.25rem',
         lineHeight: '1.75rem',
