@@ -7,6 +7,7 @@ import InfoSection from '../components/about/InfoSection';
 import Content from '../components/homepage/Content';
 import CoreTeam from '../components/about/CoreTeam';
 import Team from '../components/about/Team';
+import FAQ from '../components/about/FAQ';
 
 // Assets
 import { ABOUT } from '../assets/placeholder/about';
@@ -21,6 +22,7 @@ function About() {
       <Content type='light' />
       <CoreTeam />
       <Team />
+      <FAQ />
     </div>
   );
 }
