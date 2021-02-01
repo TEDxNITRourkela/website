@@ -5,7 +5,7 @@ import { Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 // Components
-import Counter from './counter';
+import Counter from './Counter';
 
 // Assets
 import mouse from '../../assets/img/homepage/mouse.png';
