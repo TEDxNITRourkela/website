@@ -64,5 +64,143 @@ export const ABOUT = Object.freeze({
         DESIGNATION: 'Asst-Management Head',
       },
     ],
+    TECH: [
+      {
+        NAME: 'Ritesh Patil',
+        IMG: profile,
+        DESIGNATION: 'Tech Director',
+      },
+      {
+        NAME: 'Ritesh Patil',
+        IMG: profile,
+        DESIGNATION: 'Tech Director',
+      },
+      {
+        NAME: 'Ritesh Patil',
+        IMG: profile,
+        DESIGNATION: 'Tech Director',
+      },
+    ],
+    DESIGN: [
+      {
+        NAME: 'Rama Krushna',
+        IMG: profile,
+        DESIGNATION: 'Design Head',
+      },
+      {
+        NAME: 'Rama Krushna',
+        IMG: profile,
+        DESIGNATION: 'Design Head',
+      },
+      {
+        NAME: 'Rama Krushna',
+        IMG: profile,
+        DESIGNATION: 'Design Head',
+      },
+    ],
+    MANAGEMENT: [
+      {
+        NAME: 'Ekta Gambhir',
+        IMG: profile,
+        DESIGNATION: 'Management Head',
+      },
+      {
+        NAME: 'Lalitha Manaswini',
+        IMG: profile,
+        DESIGNATION: 'Asst-Management Head',
+      },
+      {
+        NAME: 'Ekta Gambhir',
+        IMG: profile,
+        DESIGNATION: 'Management Head',
+      },
+      {
+        NAME: 'Lalitha Manaswini',
+        IMG: profile,
+        DESIGNATION: 'Asst-Management Head',
+      },
+      {
+        NAME: 'Ekta Gambhir',
+        IMG: profile,
+        DESIGNATION: 'Management Head',
+      },
+      {
+        NAME: 'Lalitha Manaswini',
+        IMG: profile,
+        DESIGNATION: 'Asst-Management Head',
+      },
+      {
+        NAME: 'Ekta Gambhir',
+        IMG: profile,
+        DESIGNATION: 'Management Head',
+      },
+      {
+        NAME: 'Lalitha Manaswini',
+        IMG: profile,
+        DESIGNATION: 'Asst-Management Head',
+      },
+    ],
+    CURATION: [
+      {
+        NAME: 'Umme Salma',
+        IMG: profile,
+        DESIGNATION: 'Curator',
+      },
+      {
+        NAME: 'Leo Rodriguez',
+        IMG: profile,
+        DESIGNATION: 'Asst-Curator',
+      },
+      {
+        NAME: 'Umme Salma',
+        IMG: profile,
+        DESIGNATION: 'Curator',
+      },
+      {
+        NAME: 'Leo Rodriguez',
+        IMG: profile,
+        DESIGNATION: 'Asst-Curator',
+      },
+      {
+        NAME: 'Umme Salma',
+        IMG: profile,
+        DESIGNATION: 'Curator',
+      },
+      {
+        NAME: 'Leo Rodriguez',
+        IMG: profile,
+        DESIGNATION: 'Asst-Curator',
+      },
+      {
+        NAME: 'Umme Salma',
+        IMG: profile,
+        DESIGNATION: 'Curator',
+      },
+      {
+        NAME: 'Leo Rodriguez',
+        IMG: profile,
+        DESIGNATION: 'Asst-Curator',
+      },
+      {
+        NAME: 'Umme Salma',
+        IMG: profile,
+        DESIGNATION: 'Curator',
+      },
+      {
+        NAME: 'Leo Rodriguez',
+        IMG: profile,
+        DESIGNATION: 'Asst-Curator',
+      },
+      {
+        NAME: 'Umme Salma',
+        IMG: profile,
+        DESIGNATION: 'Curator',
+      },
+      {
+        NAME: 'Leo Rodriguez',
+        IMG: profile,
+        DESIGNATION: 'Asst-Curator',
+      },
+    ],
   },
 });

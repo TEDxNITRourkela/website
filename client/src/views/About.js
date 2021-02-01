@@ -6,6 +6,7 @@ import { makeStyles } from '@material-ui/core';
 import InfoSection from '../components/about/InfoSection';
 import Content from '../components/homepage/Content';
 import CoreTeam from '../components/about/CoreTeam';
+import Team from '../components/about/Team';
 
 // Assets
 import { ABOUT } from '../assets/placeholder/about';
@@ -19,6 +20,7 @@ function About() {
       <InfoSection direction='left-right' DATA={ABOUT.SECTION.TWO} />
       <Content type='light' />
       <CoreTeam />
+      <Team />
     </div>
   );
 }
