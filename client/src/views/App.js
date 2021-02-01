@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Libraries
-import { Router, Route, Switch, Redirect } from 'react-router-dom';
+import { Router, Route, Switch } from 'react-router-dom';
 import Loadable from 'react-loadable';
 import { ThemeProvider } from '@material-ui/core/styles';
 import { CssBaseline } from '@material-ui/core';
@@ -26,6 +26,7 @@ const AsyncRoute = (route) =>
 const AsyncHome = AsyncRoute('./Home');
 const AsyncAbout = AsyncRoute('./About.js');
 const AsyncLoader = AsyncRoute('../components/shared/ActivityIndicator');
+const AsyncDevelopment = AsyncRoute('./Development.js');
 
 function App() {
   return (
@@ -39,7 +40,7 @@ function App() {
           <Route path='/about' exact component={AsyncAbout} />
           <Route path='/loader' exact component={AsyncLoader} />
 
-          <Redirect to='/' />
+          <Route path='*' component={AsyncDevelopment} />
         </Switch>
         <Footer />
       </Router>
