@@ -88,10 +88,12 @@ const useStyles = makeStyles((theme) => ({
     height: '100px',
     position: 'fixed',
     top: 0,
+    background: 'none',
     backgroundColor: theme.palette.background.default,
     display: 'flex',
     justifyContent: 'space-around',
     alignItems: 'center',
+    zIndex: 1,
     [theme.breakpoints.down('sm')]: {
       justifyContent: 'flex-start',
       paddingLeft: 30,
