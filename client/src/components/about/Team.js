@@ -19,6 +19,7 @@ const STAGE = {
 
 function Team() {
   const [stage, setStage] = useState(STAGE.DESIGN);
+  // const [inProp, setInProp] = useState(true);
   const classes = useStyles(stage);
 
   // Helpers
@@ -138,7 +139,6 @@ function Team() {
           {stage}
         </Typography>
         <div className={classes.wrapperContainer}>{renderTeam()}</div>
-
         <img src={polygon} alt='Polygon' className={classes.polygon} />
       </div>
     </Container>
@@ -163,7 +163,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   navContainer: {
-    width: '30%',
+    width: '25%',
     [theme.breakpoints.down('sm')]: {
       width: '90%',
     },
@@ -171,7 +171,7 @@ const useStyles = makeStyles((theme) => ({
   teamContainer: {
     minHeight: 200,
     height: '100%',
-    width: '50%',
+    width: '70%',
     backgroundColor: '#D2DAE1',
     padding: 30,
     position: 'relative',
@@ -208,7 +208,5 @@ const useStyles = makeStyles((theme) => ({
     top: 0,
     right: 0,
     width: '70%',
-    // background: 'rgba(48, 51, 60, 0.35)',
-    // mixBlendMode: 'multiply',
   },
 }));

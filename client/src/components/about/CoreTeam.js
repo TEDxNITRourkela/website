@@ -17,7 +17,7 @@ function About() {
         Team
       </Typography>
 
-      <div className={classes.row}>
+      <div className={classes.row} style={{ justifyContent: 'center' }}>
         {ABOUT.TEAM.ROW1.map((member) => (
           <Profile key={member.NAME} member={member} />
         ))}
@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
     margin: '20px 0',
     display: 'flex',
     flexWrap: 'wrap',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     alignItems: 'center',
   },
 }));

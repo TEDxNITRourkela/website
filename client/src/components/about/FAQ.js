@@ -12,6 +12,7 @@ import {
 
 // Assets
 import { ABOUT } from '../../assets/placeholder/about';
+import circles from '../../assets/img/homepage/circles.png';
 
 const CustomAccordion = withStyles({
   root: {
@@ -98,7 +99,8 @@ function FAQ() {
 
   return (
     <div className={classes.root}>
-      <Container>{renderAccordion()}</Container>
+      <img src={circles} alt='Circles' className={classes.circles} />
+      <Container className={classes.container}>{renderAccordion()}</Container>
     </div>
   );
 }
@@ -109,7 +111,10 @@ const useStyles = makeStyles(() => ({
   root: {
     width: '100%',
     minHeight: '100px',
-    margin: '40px auto',
+    margin: '30px auto',
+    position: 'relative',
+    overflow: 'hidden',
+    zIndex: '0',
   },
   firstAccordion: {
     borderTopLeftRadius: 10,
@@ -121,5 +126,18 @@ const useStyles = makeStyles(() => ({
   },
   typography: {
     fontFamily: 'Zilla Slab',
+  },
+  container: {
+    zIndex: '10',
+    margin: '80px auto',
+  },
+  circles: {
+    transform: 'translate(-50%, -50%)',
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    width: '100%',
+    height: 'auto',
+    zIndex: '0',
   },
 }));
