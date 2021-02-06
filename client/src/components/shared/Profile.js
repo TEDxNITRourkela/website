@@ -58,6 +58,7 @@ const useStyles = makeStyles((theme) => ({
   },
   designation: {
     fontStyle: 'italic',
+    textAlign: 'center',
     color: ({ dark }) =>
       dark ? theme.palette.common.white : theme.palette.common.black,
   },

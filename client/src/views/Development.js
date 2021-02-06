@@ -61,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
     // width: '100%',
   },
   container: {
-    marginTop: '100px',
+    marginTop: '120px',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -89,7 +89,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '20px',
     fontWeight: theme.typography.fontWeightBold,
     color: theme.palette.common.white,
-    fontFamily: 'zila slab',
+    fontFamily: 'Zilla Slab',
   },
   topRight: {
     position: 'absolute',
@@ -112,7 +112,7 @@ const useStyles = makeStyles((theme) => ({
   commingSoon: {
     width: 220,
     height: 220,
-    marginTop: 60,
+    marginTop: 40,
     [theme.breakpoints.down('sm')]: {
       width: 170,
       height: 170,
@@ -130,7 +130,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#1a1a1a',
     padding: '10px 20px',
     color: '#ffffff',
-    marginBottom: 80,
+    marginBottom: 60,
     '&:hover': {
       backgroundColor: '#FF2B06',
       cursor: 'pointer',

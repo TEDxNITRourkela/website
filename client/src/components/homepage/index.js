@@ -87,7 +87,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '20px',
     fontWeight: theme.typography.fontWeightBold,
     color: theme.palette.common.white,
-    fontFamily: 'zila slab',
+    fontFamily: 'Zilla Slab',
   },
   scroll: {
     marginBottom: '50px',
