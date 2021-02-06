@@ -1,32 +1,6 @@
 /* eslint-disable */
 import people from '../img/about/people.png';
 import profile from '../img/about/defaultprofile.png';
-import Rutaj from '../img/about/profile/RutajDash.jpeg';
-import Abel from '../img/about/profile/AbelMathew.jpeg';
-import Ritesh from '../img/about/profile/tech/RiteshPatil.jpeg';
-import Ajibesh from '../img/about/profile/tech/AjibeshMohapatra.jpeg';
-import Sashi from '../img/about/profile/tech/SashiKantBharati.jpeg';
-import Rama from '../img/about/profile/design/RamaKrushna.jpeg';
-import Sambit from '../img/about/profile/design/SambitPradhan.jpeg';
-import Sourav from '../img/about/profile/design/SouravPriyadarsi.jpeg';
-import Prithvi from '../img/about/profile/design/PrithvirajNaik.jpeg';
-import Ekta from '../img/about/profile/management/EktaGambhir.jpeg';
-import Lalitha from '../img/about/profile/management/LalithaManaswini.jpeg';
-import Ankit from '../img/about/profile/management/AnkitRoutray.jpeg';
-import Ankita from '../img/about/profile/management/AnkitaSareen.jpeg';
-import Asutosh from '../img/about/profile/management/AsutoshMishra.jpeg';
-import Mayank from '../img/about/profile/management/MayankMishra.jpeg';
-import Pratyush from '../img/about/profile/management/PratyushNayak.jpeg';
-import Roshan from '../img/about/profile/management/RoshanAnduri.jpeg';
-import Sobhit from '../img/about/profile/management/SobhitParki.jpeg';
-import Spandan from '../img/about/profile/management/SpandanPatra.jpeg';
-import Umme from '../img/about/profile/curation/UmmeSalma.jpeg';
-import Leo from '../img/about/profile/curation/LeoRaphaelRodrigues.jpeg';
-import Aswathy from '../img/about/profile/curation/AswathyRajendran.jpeg';
-import Krishnanshu from '../img/about/profile/curation/KrishnansuSharma.jpeg';
-import Lokesh from '../img/about/profile/curation/LokeshJain.jpeg';
-import Prabhanshu from '../img/about/profile/curation/PrabhanshuChaturvedi.jpeg';
-import Shrey from '../img/about/profile/curation/ShreyJha.jpeg';
 
 const SECTION = Object.freeze({
   ONE: {
@@ -49,172 +23,172 @@ const TEAM = Object.freeze({
   ROW1: [
     {
       NAME: 'Abel Mathew',
-      IMG: Abel,
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/AbelMathew.jpeg',
       DESIGNATION: 'Co-Organizer',
     },
     {
       NAME: 'Rutaj Dash',
-      IMG: Rutaj,
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/RutajDash.jpeg',
       DESIGNATION: 'Co-Organizer',
     },
   ],
   ROW2: [
     {
       NAME: 'Umme Salma',
-      IMG: Umme,
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/curation/UmmeSalma.jpeg',
       DESIGNATION: 'Curator',
     },
     {
       NAME: 'Leo Rodriguez',
-      IMG: Leo,
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/curation/LeoRaphaelRodrigues.jpeg',
       DESIGNATION: 'Asst-Curator',
     },
     {
       NAME: 'Rama Krushna',
-      IMG: Rama,
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/design/RamaKrushna.jpeg',
       DESIGNATION: 'Design Head',
     },
     {
       NAME: 'Ritesh Patil',
-      IMG: Ritesh,
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/technical/RiteshPatil.jpeg',
       DESIGNATION: 'Tech Director',
     },
     {
       NAME: 'Ekta Gambhir',
-      IMG: Ekta,
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/EktaGambhir.jpeg',
       DESIGNATION: 'Management Head',
     },
     {
       NAME: 'Lalitha Manaswini',
-      IMG: Lalitha,
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/LalithaManaswini.jpeg',
       DESIGNATION: 'Asst-Management Head',
     },
   ],
   TECH: [
     {
       NAME: 'Ritesh Patil',
-      IMG: Ritesh,
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/technical/RiteshPatil.jpeg',
       DESIGNATION: 'Tech Director',
     },
     {
       NAME: 'Ajibesh Mohapatra',
-      IMG: Ajibesh,
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/technical/AjibeshMohapatra.jpeg',
       DESIGNATION: 'Tech Team Member',
     },
     {
       NAME: 'Shashi Kant Bharati',
-      IMG: Sashi,
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/technical/SashiKantBharati.jpeg',
       DESIGNATION: 'Tech Team Member',
     },
   ],
   DESIGN: [
     {
       NAME: 'Rama Krushna',
-      IMG: Rama,
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/design/RamaKrushna.jpeg',
       DESIGNATION: 'Design Head',
     },
     {
       NAME: 'Sourav Priyadarsi',
-      IMG: Sourav,
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/design/SouravPriyadarsi.jpeg',
       DESIGNATION: 'Design Team Member',
     },
     {
       NAME: 'Sambit Kumar Pradhan',
-      IMG: Sambit,
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/design/SambitPradhan.jpeg',
       DESIGNATION: 'Design Team Member',
     },
     {
       NAME: 'Prithviraj Naik',
-      IMG: Prithvi,
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/design/PrithvirajNaik.jpeg',
       DESIGNATION: 'Design Team Member',
     },
   ],
   MANAGEMENT: [
     {
       NAME: 'Ekta Gambhir',
-      IMG: Ekta,
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/EktaGambhir.jpeg',
       DESIGNATION: 'Management Head',
     },
     {
       NAME: 'Lalitha Manaswini',
-      IMG: Lalitha,
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/LalithaManaswini.jpeg',
       DESIGNATION: 'Asst-Management Head',
     },
     {
       NAME: 'Ankit Routray',
-      IMG: Ankit,
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/AnkitRoutray.jpeg',
       DESIGNATION: 'Management Team Member',
     },
     {
       NAME: 'Ankita Sareen',
-      IMG: Ankita,
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/AnkitaSareen.jpeg',
       DESIGNATION: 'Management Team Member',
     },
     {
       NAME: 'Asutosh Mishra',
-      IMG: Asutosh,
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/AsutoshMishra.jpeg',
       DESIGNATION: 'Management Team Member',
     },
     {
       NAME: 'Mayank Mishra',
-      IMG: Mayank,
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/MayankMishra.jpeg',
       DESIGNATION: 'Management Team Member',
     },
     {
       NAME: 'Pratyush Kumar Nayak',
-      IMG: Pratyush,
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/PratyushNayak.jpeg',
       DESIGNATION: 'Management Team Member',
     },
     {
       NAME: 'Roshan Anduri',
-      IMG: Roshan,
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/RoshanAnduri.jpeg',
       DESIGNATION: 'Management Team Member',
     },
     {
       NAME: 'Sobhit Parki',
-      IMG: Sobhit,
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/SobhitParki.jpeg',
       DESIGNATION: 'Management Team Member',
     },
     {
       NAME: 'Spandan Patra',
-      IMG: Spandan,
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/SpandanPatra.jpeg',
       DESIGNATION: 'Management Team Member',
     },
   ],
   CURATION: [
     {
       NAME: 'Umme Salma',
-      IMG: Umme,
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/curation/UmmeSalma.jpeg',
       DESIGNATION: 'Curator',
     },
     {
       NAME: 'Leo Rodriguez',
-      IMG: Leo,
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/curation/LeoRaphaelRodrigues.jpeg',
       DESIGNATION: 'Asst-Curator',
     },
     {
       NAME: 'Aswathy Rajendran',
-      IMG: Aswathy,
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/curation/AswathyRajendran.jpeg',
       DESIGNATION: 'Curation Team Member',
     },
     {
       NAME: 'Krishnanshu Sharma',
-      IMG: Krishnanshu,
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/curation/KrishnansuSharma.jpeg',
       DESIGNATION: 'Curation Team Member',
     },
     {
       NAME: 'Lokesh Jain',
-      IMG: Lokesh,
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/curation/LokeshJain.jpeg',
       DESIGNATION: 'Curation Team Member',
     },
     {
       NAME: 'Prabhanshu Chaturvedi',
-      IMG: Prabhanshu,
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/curation/PrabhanshuChaturvedi.jpeg',
       DESIGNATION: 'Curation Team Member',
     },
     {
       NAME: 'Shrey Jha',
-      IMG: Shrey,
+      IMG: 'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/curation/ShreyJha.jpeg',
       DESIGNATION: 'Curation Team Member',
     },
   ],
