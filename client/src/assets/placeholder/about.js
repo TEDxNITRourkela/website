@@ -228,44 +228,43 @@ const TEAM = Object.freeze({
 
 const FAQ = [
   {
-    QUESTION: 'This is a Question?',
+    QUESTION: 'Who are the speakers for TEDxNITRourkela?',
     ANSWER:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam consequatur, laborum temporibus debitis itaque doloremque cumque modi veritatis odit quia obcaecati, libero repellat distinctio ab error quos nisi sint eum.',
+      'We’re still working towards curating a fantastic experience for all of you. Feel free to keep an eye on our social media channels!',
   },
   {
-    QUESTION: 'This is a Question?',
+    QUESTION: 'Who’s organizing the event?',
     ANSWER:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam consequatur, laborum temporibus debitis itaque doloremque cumque modi veritatis odit quia obcaecati, libero repellat distinctio ab error quos nisi sint eum.',
+      'We’re a group of students at NIT Rourkela who feel passionate about the TED mission, “Ideas Worth Spreading.”',
   },
   {
-    QUESTION: 'This is a Question?',
+    QUESTION: 'Will it be an online event?',
     ANSWER:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam consequatur, laborum temporibus debitis itaque doloremque cumque modi veritatis odit quia obcaecati, libero repellat distinctio ab error quos nisi sint eum.',
+      'Yes, due to the pandemic, our event will take place virtually on the Airmeet platform.',
   },
   {
-    QUESTION: 'This is a Question?',
+    QUESTION: 'How can I attend the event?',
     ANSWER:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam consequatur, laborum temporibus debitis itaque doloremque cumque modi veritatis odit quia obcaecati, libero repellat distinctio ab error quos nisi sint eum.',
+      'Due to the pandemic, our event will take place virtually on the Airmeet platform. Tickets will be available on our website.',
   },
   {
-    QUESTION: 'This is a Question?',
-    ANSWER:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam consequatur, laborum temporibus debitis itaque doloremque cumque modi veritatis odit quia obcaecati, libero repellat distinctio ab error quos nisi sint eum.',
+    QUESTION: 'What is the price of a single ticket?',
+    ANSWER: 'We are pricing the registration tickets at Rs. 500/-',
   },
   {
-    QUESTION: 'This is a Question?',
+    QUESTION: 'Why should I attend the event if it’s only virtual?',
     ANSWER:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam consequatur, laborum temporibus debitis itaque doloremque cumque modi veritatis odit quia obcaecati, libero repellat distinctio ab error quos nisi sint eum.',
+      'Great question! While all our speakers’ talks will be live-streamed on YouTube, the live event will include premium content and interactive experiences that will only be made available via the live event, such as musical performances, stand-ups, and more.',
   },
   {
-    QUESTION: 'This is a Question?',
+    QUESTION: 'How do I register for regular updates about TEDxNITRourkela?',
     ANSWER:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam consequatur, laborum temporibus debitis itaque doloremque cumque modi veritatis odit quia obcaecati, libero repellat distinctio ab error quos nisi sint eum.',
+      'You can register for our newsletter or follow us on our social media handles.',
   },
   {
-    QUESTION: 'This is a Question?',
+    QUESTION: 'Do TEDx speakers or organizers get paid?',
     ANSWER:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam consequatur, laborum temporibus debitis itaque doloremque cumque modi veritatis odit quia obcaecati, libero repellat distinctio ab error quos nisi sint eum.',
+      'No. TEDx events are entirely a volunteer endeavor to bring the best together under one roof.',
   },
 ];
 
