@@ -70,9 +70,11 @@ function Footer() {
           <Typography className={classes.contact} variant='h3'>
             Contact Us:
           </Typography>
-          <Typography className={classes.email} variant='body1'>
-            info@tedxnitrourkela
-          </Typography>
+          <a href='mailto:info@tedxnitrourkela.com'>
+            <Typography className={classes.email} variant='body1'>
+              info@tedxnitrourkela.com
+            </Typography>
+          </a>
 
           <div className={classes.iconsContainer}>
             <a href='https://www.facebook.com/tedxnitrourkela/'>

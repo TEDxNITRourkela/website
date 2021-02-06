@@ -66,6 +66,7 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.11.3",
+    "copy-webpack-plugin": "6.2.1",
     "dotenv": "^8.2.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",

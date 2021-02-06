@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const dotenv = require('dotenv').config({
   path: path.join(__dirname, '.env'),
@@ -31,11 +32,15 @@ module.exports = (env) => {
   const HTMLPlugin = new HtmlWebpackPlugin({
     template: 'template.html',
     chunksSortMode: 'none',
-    favicon: './src/assets/img/favicon.ico',
+    favicon: './src/assets/static/favicon.ico',
   });
 
   const DefinePlugin = new webpack.DefinePlugin({
     'process.env': dotenv.parsed,
+  });
+
+  const CopyPlugin = new CopyWebpackPlugin({
+    patterns: [{ from: './src/assets/static', to: '.' }],
   });
 
   // Building Webpack
@@ -74,7 +79,13 @@ module.exports = (env) => {
     ],
   };
 
-  config.plugins = [CleanPlugin, AnalyzerPlugin, HTMLPlugin, DefinePlugin];
+  config.plugins = [
+    CleanPlugin,
+    AnalyzerPlugin,
+    HTMLPlugin,
+    CopyPlugin,
+    DefinePlugin,
+  ];
 
   config.module = {
     rules: [

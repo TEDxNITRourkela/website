@@ -1,6 +1,6 @@
 /* eslint-disable */
 import people from '../img/about/people.png';
-import profile from '../img/about/defaultprofile.png';
+// import profile from '../img/about/defaultprofile.png';
 
 const SECTION = Object.freeze({
   ONE: {
@@ -23,227 +23,248 @@ const TEAM = Object.freeze({
   ROW1: [
     {
       NAME: 'Abel Mathew',
-      IMG: profile,
-      DESIGNATION: 'Co-Organizer',
+      IMG:
+        'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/AbelMathew.jpeg',
+      DESIGNATION: 'Organizer',
     },
     {
       NAME: 'Rutaj Dash',
-      IMG: profile,
+      IMG:
+        'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/RutajDash.jpeg',
       DESIGNATION: 'Co-Organizer',
     },
   ],
   ROW2: [
     {
       NAME: 'Umme Salma',
-      IMG: profile,
+      IMG:
+        'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/curation/UmmeSalma.jpeg',
       DESIGNATION: 'Curator',
     },
     {
-      NAME: 'Leo Rodriguez',
-      IMG: profile,
-      DESIGNATION: 'Asst-Curator',
+      NAME: 'Leo R. Rodrigues',
+      IMG:
+        'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/curation/LeoRaphaelRodrigues.jpeg',
+      DESIGNATION: 'Associate Curator',
     },
     {
       NAME: 'Rama Krushna',
-      IMG: profile,
-      DESIGNATION: 'Design Head',
+      IMG:
+        'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/design/RamaKrushna.jpeg',
+      DESIGNATION: 'Chief Designer',
     },
     {
       NAME: 'Ritesh Patil',
-      IMG: profile,
+      IMG:
+        'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/technical/RiteshPatil.jpeg',
       DESIGNATION: 'Tech Director',
     },
     {
       NAME: 'Ekta Gambhir',
-      IMG: profile,
-      DESIGNATION: 'Management Head',
+      IMG:
+        'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/EktaGambhir.jpeg',
+      DESIGNATION: 'Managing Director',
     },
     {
       NAME: 'Lalitha Manaswini',
-      IMG: profile,
-      DESIGNATION: 'Asst-Management Head',
+      IMG:
+        'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/LalithaManaswini.jpeg',
+      DESIGNATION: 'Deputy Managing Director',
     },
   ],
   TECH: [
     {
       NAME: 'Ritesh Patil',
-      IMG: profile,
+      IMG:
+        'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/technical/RiteshPatil.jpeg',
       DESIGNATION: 'Tech Director',
     },
     {
-      NAME: 'Ritesh Patil',
-      IMG: profile,
-      DESIGNATION: 'Tech Director',
+      NAME: 'Ajibesh Mohapatra',
+      IMG:
+        'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/technical/AjibeshMohapatra.jpeg',
+      DESIGNATION: 'Technical Team Member',
     },
     {
-      NAME: 'Ritesh Patil',
-      IMG: profile,
-      DESIGNATION: 'Tech Director',
+      NAME: 'Shashi Kant Bharti',
+      IMG:
+        'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/technical/SashiKantBharati.jpeg',
+      DESIGNATION: 'Technical Team Member',
     },
   ],
   DESIGN: [
     {
-      NAME: 'Rama Krushna',
-      IMG: profile,
-      DESIGNATION: 'Design Head',
+      NAME: 'Rama Krushna Behera',
+      IMG:
+        'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/design/RamaKrushna.jpeg',
+      DESIGNATION: 'Chief Designer',
     },
     {
-      NAME: 'Rama Krushna',
-      IMG: profile,
-      DESIGNATION: 'Design Head',
+      NAME: 'Sourav Priyadarsi',
+      IMG:
+        'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/design/SouravPriyadarsi.jpeg',
+      DESIGNATION: 'Design Team Member',
     },
     {
-      NAME: 'Rama Krushna',
-      IMG: profile,
-      DESIGNATION: 'Design Head',
+      NAME: 'Sambit Kumar Pradhan',
+      IMG:
+        'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/design/SambitPradhan.jpeg',
+      DESIGNATION: 'Design Team Member',
+    },
+    {
+      NAME: 'Prithviraj Naik',
+      IMG:
+        'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/design/PrithvirajNaik.jpeg',
+      DESIGNATION: 'Design Team Member',
     },
   ],
   MANAGEMENT: [
     {
       NAME: 'Ekta Gambhir',
-      IMG: profile,
-      DESIGNATION: 'Management Head',
+      IMG:
+        'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/EktaGambhir.jpeg',
+      DESIGNATION: 'Managing Director',
     },
     {
       NAME: 'Lalitha Manaswini',
-      IMG: profile,
-      DESIGNATION: 'Asst-Management Head',
+      IMG:
+        'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/LalithaManaswini.jpeg',
+      DESIGNATION: 'Deputy Managing Director',
     },
     {
-      NAME: 'Ekta Gambhir',
-      IMG: profile,
-      DESIGNATION: 'Management Head',
+      NAME: 'Ankit Routray',
+      IMG:
+        'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/AnkitRoutray.jpeg',
+      DESIGNATION: 'Management Team Member',
     },
     {
-      NAME: 'Lalitha Manaswini',
-      IMG: profile,
-      DESIGNATION: 'Asst-Management Head',
+      NAME: 'Ankita Sareen',
+      IMG:
+        'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/AnkitaSareen.jpeg',
+      DESIGNATION: 'Management Team Member',
     },
     {
-      NAME: 'Ekta Gambhir',
-      IMG: profile,
-      DESIGNATION: 'Management Head',
+      NAME: 'Asutosh Mishra',
+      IMG:
+        'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/AsutoshMishra.jpeg',
+      DESIGNATION: 'Management Team Member',
     },
     {
-      NAME: 'Lalitha Manaswini',
-      IMG: profile,
-      DESIGNATION: 'Asst-Management Head',
+      NAME: 'Mayank Mishra',
+      IMG:
+        'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/MayankMishra.jpeg',
+      DESIGNATION: 'Management Team Member',
     },
     {
-      NAME: 'Ekta Gambhir',
-      IMG: profile,
-      DESIGNATION: 'Management Head',
+      NAME: 'Pratyush Kumar Nayak',
+      IMG:
+        'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/PratyushNayak.jpeg',
+      DESIGNATION: 'Management Team Member',
     },
     {
-      NAME: 'Lalitha Manaswini',
-      IMG: profile,
-      DESIGNATION: 'Asst-Management Head',
+      NAME: 'Roshan Anduri',
+      IMG:
+        'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/RoshanAnduri.jpeg',
+      DESIGNATION: 'Management Team Member',
+    },
+    {
+      NAME: 'Shobhit Parki',
+      IMG:
+        'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/SobhitParki.jpeg',
+      DESIGNATION: 'Management Team Member',
+    },
+    {
+      NAME: 'Spandan Patra',
+      IMG:
+        'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/SpandanPatra.jpeg',
+      DESIGNATION: 'Management Team Member',
     },
   ],
   CURATION: [
     {
       NAME: 'Umme Salma',
-      IMG: profile,
+      IMG:
+        'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/curation/UmmeSalma.jpeg',
       DESIGNATION: 'Curator',
     },
     {
-      NAME: 'Leo Rodriguez',
-      IMG: profile,
-      DESIGNATION: 'Asst-Curator',
+      NAME: 'Leo R.. Rodrigues',
+      IMG:
+        'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/curation/LeoRaphaelRodrigues.jpeg',
+      DESIGNATION: 'Associate Curator',
     },
     {
-      NAME: 'Umme Salma',
-      IMG: profile,
-      DESIGNATION: 'Curator',
+      NAME: 'Aswathy Rajendran',
+      IMG:
+        'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/curation/AswathyRajendran.jpeg',
+      DESIGNATION: 'Curation Team Member',
     },
     {
-      NAME: 'Leo Rodriguez',
-      IMG: profile,
-      DESIGNATION: 'Asst-Curator',
+      NAME: 'Krishnanshu Sharma',
+      IMG:
+        'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/curation/KrishnansuSharma.jpeg',
+      DESIGNATION: 'Curation Team Member',
     },
     {
-      NAME: 'Umme Salma',
-      IMG: profile,
-      DESIGNATION: 'Curator',
+      NAME: 'Lokesh Jain',
+      IMG:
+        'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/curation/LokeshJain.jpeg',
+      DESIGNATION: 'Curation Team Member',
     },
     {
-      NAME: 'Leo Rodriguez',
-      IMG: profile,
-      DESIGNATION: 'Asst-Curator',
+      NAME: 'Prabhanshu Chaturvedi',
+      IMG:
+        'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/curation/PrabhanshuChaturvedi.jpeg',
+      DESIGNATION: 'Curation Team Member',
     },
     {
-      NAME: 'Umme Salma',
-      IMG: profile,
-      DESIGNATION: 'Curator',
-    },
-    {
-      NAME: 'Leo Rodriguez',
-      IMG: profile,
-      DESIGNATION: 'Asst-Curator',
-    },
-    {
-      NAME: 'Umme Salma',
-      IMG: profile,
-      DESIGNATION: 'Curator',
-    },
-    {
-      NAME: 'Leo Rodriguez',
-      IMG: profile,
-      DESIGNATION: 'Asst-Curator',
-    },
-    {
-      NAME: 'Umme Salma',
-      IMG: profile,
-      DESIGNATION: 'Curator',
-    },
-    {
-      NAME: 'Leo Rodriguez',
-      IMG: profile,
-      DESIGNATION: 'Asst-Curator',
+      NAME: 'Shrey Jha',
+      IMG:
+        'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/curation/ShreyJha.jpeg',
+      DESIGNATION: 'Curation Team Member',
     },
   ],
 });
 
 const FAQ = [
   {
-    QUESTION: 'This is a Question?',
+    QUESTION: 'Who are the speakers for TEDxNITRourkela?',
     ANSWER:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam consequatur, laborum temporibus debitis itaque doloremque cumque modi veritatis odit quia obcaecati, libero repellat distinctio ab error quos nisi sint eum.',
+      'We’re still working towards curating a fantastic experience for all of you. Feel free to keep an eye on our social media channels!',
   },
   {
-    QUESTION: 'This is a Question?',
+    QUESTION: 'Who’s organizing the event?',
     ANSWER:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam consequatur, laborum temporibus debitis itaque doloremque cumque modi veritatis odit quia obcaecati, libero repellat distinctio ab error quos nisi sint eum.',
+      'We’re a group of students at NIT Rourkela who feel passionate about the TED mission, “Ideas Worth Spreading.”',
   },
   {
-    QUESTION: 'This is a Question?',
+    QUESTION: 'Will it be an online event?',
     ANSWER:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam consequatur, laborum temporibus debitis itaque doloremque cumque modi veritatis odit quia obcaecati, libero repellat distinctio ab error quos nisi sint eum.',
+      'Yes, due to the pandemic, our event will take place virtually on the Airmeet platform.',
   },
   {
-    QUESTION: 'This is a Question?',
+    QUESTION: 'How can I attend the event?',
     ANSWER:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam consequatur, laborum temporibus debitis itaque doloremque cumque modi veritatis odit quia obcaecati, libero repellat distinctio ab error quos nisi sint eum.',
+      'Due to the pandemic, our event will take place virtually on the Airmeet platform. Tickets will be available on our website.',
   },
   {
-    QUESTION: 'This is a Question?',
-    ANSWER:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam consequatur, laborum temporibus debitis itaque doloremque cumque modi veritatis odit quia obcaecati, libero repellat distinctio ab error quos nisi sint eum.',
+    QUESTION: 'What is the price of a single ticket?',
+    ANSWER: 'We are pricing the registration tickets at Rs. 500/-',
   },
   {
-    QUESTION: 'This is a Question?',
+    QUESTION: 'Why should I attend the event if it’s only virtual?',
     ANSWER:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam consequatur, laborum temporibus debitis itaque doloremque cumque modi veritatis odit quia obcaecati, libero repellat distinctio ab error quos nisi sint eum.',
+      'Great question! While all our speakers’ talks will be live-streamed on YouTube, the live event will include premium content and interactive experiences that will only be made available via the live event, such as musical performances, stand-ups, and more.',
   },
   {
-    QUESTION: 'This is a Question?',
+    QUESTION: 'How do I register for regular updates about TEDxNITRourkela?',
     ANSWER:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam consequatur, laborum temporibus debitis itaque doloremque cumque modi veritatis odit quia obcaecati, libero repellat distinctio ab error quos nisi sint eum.',
+      'You can register for our newsletter or follow us on our social media handles.',
   },
   {
-    QUESTION: 'This is a Question?',
+    QUESTION: 'Do TEDx speakers or organizers get paid?',
     ANSWER:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam consequatur, laborum temporibus debitis itaque doloremque cumque modi veritatis odit quia obcaecati, libero repellat distinctio ab error quos nisi sint eum.',
+      'No. TEDx events are entirely a volunteer endeavor to bring the best together under one roof.',
   },
 ];
 

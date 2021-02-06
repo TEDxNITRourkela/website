@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 
 import Index from '../components/homepage/index';
@@ -10,8 +11,8 @@ function Home() {
     <>
       <Index />
       <Content />
-      <Subscribe />
-      <Partners />
+      {/* <Subscribe />
+      <Partners /> */}
     </>
   );
 }
