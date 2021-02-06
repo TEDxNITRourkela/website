@@ -24,7 +24,7 @@ import Umme from '../img/about/profile/curation/UmmeSalma.jpeg';
 import Leo from '../img/about/profile/curation/LeoRaphaelRodrigues.jpeg';
 import Aswathy from '../img/about/profile/curation/AswathyRajendran.jpeg';
 import Krishnanshu from '../img/about/profile/curation/KrishnansuSharma.jpeg';
-import Lokesh from '../img/about/profile/curation/Lokeshjain.jpeg';
+import Lokesh from '../img/about/profile/curation/LokeshJain.jpeg';
 import Prabhanshu from '../img/about/profile/curation/PrabhanshuChaturvedi.jpeg';
 import Shrey from '../img/about/profile/curation/ShreyJha.jpeg';
 
