@@ -16,6 +16,7 @@ const SECTION = Object.freeze({
     CONTENT:
       'A TEDx event, similar to its international counterpart, is a local gathering where live TED-like talks and performances are shared with the community. TEDx events are fully planned and coordinated independently, on a community-by-community basis, thus providing a platform for pioneers and deep thinkers from all walks of life to showcase their ideas.',
     IMG: people,
+    LINK: 'https://www.ted.com/tedx/events/41324',
   },
 });
 

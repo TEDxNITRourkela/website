@@ -5,7 +5,7 @@ import { Typography, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 // Assets
-import topLeftEllipse from '../../assets/img/homepage/topLeftEllipse.png';
+import bottomRight from '../../assets/img/homepage/bottomRight.png';
 
 function Subscribe() {
   const [email, setEmail] = useState('');
@@ -21,8 +21,8 @@ function Subscribe() {
   return (
     <div className={classes.container}>
       <img
-        src={topLeftEllipse}
-        alt='Top Left Ellipse'
+        src={bottomRight}
+        alt='Bottom Left Ellipse'
         className={classes.img}
       />
 
@@ -67,8 +67,8 @@ const useStyles = makeStyles((theme) => ({
   },
   img: {
     position: 'absolute',
-    top: 0,
-    left: 0,
+    top: -50,
+    right: 0,
   },
   heading: {
     color: theme.palette.common.white,

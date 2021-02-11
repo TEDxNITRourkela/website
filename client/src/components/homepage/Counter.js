@@ -39,7 +39,7 @@ function Counter() {
 
   return (
     <div>
-      <Countdown date='2021-03-13T00:00:00' renderer={renderer} />
+      <Countdown date='2021-03-13T10:30:00Z' renderer={renderer} />
     </div>
   );
 }

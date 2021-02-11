@@ -108,7 +108,7 @@ const useStyles = makeStyles((theme) => ({
   },
   bottomLeft: {
     position: 'absolute',
-    bottom: '0px',
+    bottom: '-140px',
     left: '0px',
     [theme.breakpoints.down('sm')]: {
       width: '30%',
