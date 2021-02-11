@@ -26,8 +26,9 @@ const AsyncRoute = (route) =>
 const AsyncHome = AsyncRoute('./Home');
 const AsyncAbout = AsyncRoute('./About');
 const AsyncPartner = AsyncRoute('./Partner');
-const AsyncLoader = AsyncRoute('../components/shared/ActivityIndicator');
+const AsyncSpeakers = AsyncRoute('./GuestSpeakers.js');
 const AsyncDevelopment = AsyncRoute('./Development.js');
+const AsyncLoader = AsyncRoute('../components/shared/ActivityIndicator');
 
 function App() {
   return (
@@ -40,8 +41,9 @@ function App() {
           <Route path='/' exact component={AsyncHome} />
           <Route path='/about' exact component={AsyncAbout} />
           <Route path='/partners' exact component={AsyncPartner} />
-          <Route path='/loader' exact component={AsyncLoader} />
+          <Route path='/speakers' exact component={AsyncSpeakers} />
 
+          <Route path='/loader' exact component={AsyncLoader} />
           <Route component={AsyncDevelopment} />
         </Switch>
         <Footer />
