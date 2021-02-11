@@ -77,11 +77,12 @@ export default GuestCard;
 const useStyles = makeStyles(() => ({
   root: {
     height: 350,
-    width: 280,
+    width: 250,
     backgroundColor: 'transparent',
     borderRadius: '8px',
     perspective: '600px',
     overflow: 'hidden',
+    margin: 15,
   },
   card: {
     width: '100%',

@@ -4,9 +4,9 @@ import { makeStyles, Container } from '@material-ui/core';
 
 // Components
 import GuestCard from '../components/speakers/GuestCard';
-import defaultSpeaker from '../assets/img/guests/defaultGuest.png';
 
 // Assets
+import { GUESTS } from '../assets/placeholder/speakers';
 
 function About() {
   const classes = useStyles();
@@ -15,35 +15,17 @@ function About() {
     <Container className={classes.root}>
       <h1>guest speaker page</h1>
 
-      <GuestCard
-        name='John Doe'
-        // eslint-disable-next-line
-        description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur dolores iure possimus vitae eveniet reprehenderit dicta neque natus laudantium, itaque labore hic quaerat recusandae cumque quis omnis molestias enim impedit?'
-        shortDescription='Design Guru'
-        image={defaultSpeaker}
-        links={[
-          {
-            link: '',
-            link_type: 'fab fa-linkedin-in',
-            link_name: 'linkedin',
-          },
-          {
-            link: '',
-            link_type: 'fab fa-twitter',
-            link_name: 'twitter',
-          },
-          {
-            link: '',
-            link_type: 'fab fa-instagram',
-            link_name: 'instagram',
-          },
-          {
-            link: '',
-            link_type: 'fab fa-facebook-f',
-            link_name: 'facebook',
-          },
-        ]}
-      />
+      <div className={classes.guestsContainer}>
+        {GUESTS.map(({ name, description, shortDescription, image, links }) => (
+          <GuestCard
+            name={name}
+            description={description}
+            shortDescription={shortDescription}
+            image={image}
+            links={links}
+          />
+        ))}
+      </div>
     </Container>
   );
 }
@@ -56,5 +38,13 @@ const useStyles = makeStyles(() => ({
     height: 'calc(100% - 100px)',
     minHeight: '100vh',
     marginTop: '100px',
+  },
+  guestsContainer: {
+    width: '100%',
+    height: '100%',
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 }));
