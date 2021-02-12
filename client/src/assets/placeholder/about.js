@@ -1,5 +1,6 @@
 /* eslint-disable */
 import people from '../img/about/people.png';
+import ted from '../img/about/ted.jpg';
 // import profile from '../img/about/defaultprofile.png';
 
 const SECTION = Object.freeze({
@@ -7,16 +8,16 @@ const SECTION = Object.freeze({
     QUESTION: 'What is',
     HIGHLIGHT: 'TED',
     CONTENT:
-      "TED is a global community, welcoming people from every discipline and culture who seek a deeper understanding of the world around them. The organisation believes in the power of ideas, ideas that can change attitudes, lives and, ultimately, the world. The aim is to build a clearinghouse of free knowledge from the world's most inspired thinkers — and a community of curious minds to engage with ideas, both online and at TED and TEDx events around the world, all year long. TED Conferences see attendee counts of over a hundred thousand.",
-    IMG: people,
+      "TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California 30 years ago, TED has grown to support its mission with multiple initiatives. The two annual TED Conferences invite the world's leading thinkers and doers to speak for 18 minutes or less. Many of these talks are then made available, free, at TED.com. TED speakers have included Bill Gates, Jane Goodall, Elizabeth Gilbert, Sir Richard Branson, Nandan Nilekani, Philippe Starck, Ngozi Okonjo-Iweala, Sal Khan and Daniel Kahneman.\n The annual TED Conference takes place each spring in Vancouver, British Columbia. TED's media initiatives include TED.com, where new TED Talks are posted daily; TED Translators, which provides subtitles and interactive transcripts as well as translations from volunteers worldwide; the educational initiative TED-Ed. TED has established The Audacious Project that takes a collaborative approach to funding ideas with the potential to create change at thrilling scale; TEDx, which supports individuals or groups in hosting local, self- organized TED-style events around the world, and the TED Fellows program, helping world-changing innovators from around the globe to amplify the impact of their remarkable projects and activities.\nFollow TED on Twitter at http://twitter.com/TEDTalks, or on Facebook at http://www.facebook.com/TED.",
+    IMG: ted,
   },
   TWO: {
     QUESTION: 'What is',
     HIGHLIGHT: 'TEDx',
     CONTENT:
-      'A TEDx event, similar to its international counterpart, is a local gathering where live TED-like talks and performances are shared with the community. TEDx events are fully planned and coordinated independently, on a community-by-community basis, thus providing a platform for pioneers and deep thinkers from all walks of life to showcase their ideas.',
+      'In the spirit of ideas worth spreading, TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. At a TEDx event, TED Talks video and live speakers combine to spark deep discussion and connection. These local, self-organized events are branded TEDx, where x = independently organized TED event. The TED Conference provides general guidance for the TEDx program, but individual TEDx events are self-organized. (Subject to certain rules and regulations.)',
     IMG: people,
-    LINK: 'https://www.ted.com/tedx/events/41324',
+    LINK: 'https://www.ted.com/tedx',
   },
 });
 

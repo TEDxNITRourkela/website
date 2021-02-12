@@ -86,14 +86,14 @@ const useStyles = makeStyles((theme) => ({
   },
   imgContainer: {
     margin: '30px',
-    width: '60%',
+    width: '50%',
     [theme.breakpoints.down('md')]: {
       width: '90%',
     },
   },
   contentContainer: {
     margin: '30px',
-    width: '40%',
+    width: '50%',
     [theme.breakpoints.down('md')]: {
       width: '90%',
     },

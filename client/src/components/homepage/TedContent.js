@@ -4,43 +4,35 @@ import React from 'react';
 import { Typography, Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
-function Content({ DATA, big }) {
+// Placeholder
+import { CONTENT } from '../../assets/placeholder/homepage';
+
+function TedContent() {
   const classes = useStyles();
 
-  const renderImageContainer = (
-    <Grid item md={6} xs={12} className={classes.titleContainer}>
-      <Typography variant='h1' className={classes.question}>
-        {DATA.title}
-      </Typography>
-      <img className={classes.logo} src={DATA.logo} alt='Logo' />
-    </Grid>
-  );
-
-  const renderContentContainer = (
-    <Grid item md={6} xs={12} className={classes.contentContainer}>
-      <Typography variant='body2' className={classes.content}>
-        {DATA.content}
-      </Typography>
-      <a href={DATA.link} className={classes.link}>
-        <Typography variant='body2'>{DATA.linkText}</Typography>
-      </a>
-    </Grid>
-  );
-
   return (
-    <div
-      className={classes.container}
-      style={{ minHeight: big ? '350px' : '300px' }}
-    >
+    <div className={classes.container}>
       <Grid container>
-        {renderImageContainer}
-        {renderContentContainer}
+        <Grid item md={6} xs={12} className={classes.titleContainer}>
+          <Typography variant='h1' className={classes.question}>
+            {CONTENT.TWO.title}
+          </Typography>
+          <img className={classes.logo} src={CONTENT.TWO.logo} alt='Logo' />
+        </Grid>
+        <Grid item md={6} xs={12} className={classes.contentContainer}>
+          <Typography variant='body2' className={classes.content}>
+            {CONTENT.TWO.content}
+          </Typography>
+          <a href={CONTENT.TWO.link} className={classes.link}>
+            <Typography variant='body2'>{CONTENT.TWO.linkText}</Typography>
+          </a>
+        </Grid>
       </Grid>
     </div>
   );
 }
 
-export default Content;
+export default TedContent;
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -55,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
   },
   question: {
-    width: '70%',
+    width: '40%',
     float: 'left',
     color: theme.palette.common.white,
     fontFamily: 'Zilla Slab',
@@ -64,7 +56,8 @@ const useStyles = makeStyles((theme) => ({
     opacity: 0.5,
   },
   logo: {
-    width: '70%',
+    width: '40%',
+    float: 'left',
     marginBottom: 30,
   },
   contentContainer: {

@@ -20,7 +20,7 @@ function About() {
     <div className={classes.root}>
       <InfoSection direction='right-left' first DATA={ABOUT.SECTION.ONE} />
       <InfoSection direction='left-right' DATA={ABOUT.SECTION.TWO} link />
-      <Content DATA={CONTENT} />
+      <Content DATA={CONTENT.ONE} big />
       <CoreTeam />
       <Team />
       <FAQ />
