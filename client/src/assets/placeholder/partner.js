@@ -1,41 +1,30 @@
 /* eslint-disable max-len */
-import Facebook from '../img/partners/Facebook.png';
-import Adobe from '../img/partners/Adobe.png';
-import Netflix from '../img/partners/Netflix.png';
-import Google from '../img/partners/Google.png';
-import Microsoft from '../img/partners/Microsoft.png';
 import logo from '../img/logo.png';
 
 export const PARTNER = Object.freeze({
   ZERO: {
     title: 'Our Benefactors',
-    partners: [Facebook, Adobe, Microsoft, Netflix, Google],
+    partners: [],
   },
   ONE: {
     title: 'Our Patrons',
-    partners: [Facebook, Adobe, Microsoft, Netflix, Google],
+    partners: [],
   },
   TWO: {
     title: 'Our Supporters',
-    partners: [Facebook, Adobe, Microsoft, Netflix, Google],
+    partners: [],
   },
   THREE: {
     title: 'Our Associates',
-    partners: [Facebook, Adobe, Microsoft, Netflix, Google],
+    partners: [],
   },
   FOUR: {
     title: 'Our TEDx Partners',
     partners: [
-      Facebook,
-      Adobe,
-      Microsoft,
-      Netflix,
-      Google,
-      Microsoft,
-      Facebook,
-      Google,
-      Adobe,
-      Netflix,
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/parters/tedx/everwall.png',
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/parters/tedx/flickr.png',
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/parters/tedx/mailchimp.pmg',
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/parters/tedx/shutterstock.png',
     ],
   },
   CONTENT: {
