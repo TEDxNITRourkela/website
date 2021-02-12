@@ -22,5 +22,9 @@ const useStyles = makeStyles((theme) => ({
       marginTop: theme.spacing(2),
     },
     zIndex: 1000,
+    height: window.innerHeight,
+    // marginTop: '100px',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 }));
