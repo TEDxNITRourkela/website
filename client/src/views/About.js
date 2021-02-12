@@ -4,13 +4,14 @@ import { makeStyles } from '@material-ui/core';
 
 // Components
 import InfoSection from '../components/about/InfoSection';
-import Content from '../components/homepage/Content';
+import Content from '../components/shared/Content';
 import CoreTeam from '../components/about/CoreTeam';
 import Team from '../components/about/Team';
 import FAQ from '../components/about/FAQ';
 
 // Assets
 import { ABOUT } from '../assets/placeholder/about';
+import { CONTENT } from '../assets/placeholder/homepage';
 
 function About() {
   const classes = useStyles();
@@ -18,8 +19,8 @@ function About() {
   return (
     <div className={classes.root}>
       <InfoSection direction='right-left' first DATA={ABOUT.SECTION.ONE} />
-      <InfoSection direction='left-right' DATA={ABOUT.SECTION.TWO} />
-      <Content type='light' />
+      <InfoSection direction='left-right' DATA={ABOUT.SECTION.TWO} link />
+      <Content DATA={CONTENT.ONE} big />
       <CoreTeam />
       <Team />
       <FAQ />

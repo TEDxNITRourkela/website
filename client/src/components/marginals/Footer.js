@@ -83,7 +83,7 @@ function Footer() {
             <a href='https://twitter.com/tedxnitr'>
               <i className={`${classes.icon} fab fa-twitter`} />
             </a>
-            <a href='https://www.ted.com/tedx/events/41324'>
+            <a href='https://www.youtube.com/channel/UCsY55AEkwUHJnbc6TLRB-7g'>
               <i className={`${classes.icon} fab fa-youtube`} />
             </a>
             <a href='https://in.linkedin.com/company/tedxnitrourkela'>

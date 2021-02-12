@@ -30,6 +30,11 @@
       "src": "/favicon-32x32.png",
       "sizes": "32x32",
       "type": "image/png"
+    },
+    {
+      "src": "/logo-1536x1536.png",
+      "sizes": "1536x1536",
+      "type": "image/png"
     }
   ],
   "shortcuts": [

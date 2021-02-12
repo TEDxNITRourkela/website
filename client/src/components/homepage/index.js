@@ -24,7 +24,7 @@ function Index() {
         </Typography>
         <img className={classes.logo} src={logo} alt='Logo' />
         <Typography variant='h1' className={classes.topic}>
-          &#8220; Learning from the past &#8221;
+          &#8220;Learning from the Past&#8221;
         </Typography>
         <Counter />
 
@@ -108,7 +108,7 @@ const useStyles = makeStyles((theme) => ({
   },
   bottomLeft: {
     position: 'absolute',
-    bottom: '0px',
+    bottom: '-140px',
     left: '0px',
     [theme.breakpoints.down('sm')]: {
       width: '30%',
