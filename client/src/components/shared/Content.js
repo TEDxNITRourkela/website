@@ -1,14 +1,14 @@
 import React from 'react';
 
 // Libraries
-import { Typography , Grid } from '@material-ui/core';
+import { Typography, Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 // Assets
 import logo from '../../assets/img/logo.png';
 import darkLogo from '../../assets/img/logo_dark.png';
 
-function Content({ type = 'Dark' , DATA }) {
+function Content({ type = 'Dark', DATA }) {
   const classes = useStyles();
 
   const styles =
@@ -43,14 +43,12 @@ function Content({ type = 'Dark' , DATA }) {
           >
             {DATA.content}
           </Typography>
-          <a 
-            href={DATA.link} 
+          <a
+            href={DATA.link}
             className={classes.link}
-            style={{ color: styles.text }} 
+            style={{ color: styles.text }}
           >
-            <Typography variant='body2'>
-              {DATA.linkText}
-            </Typography>
+            <Typography variant='body2'>{DATA.linkText}</Typography>
           </a>
         </Grid>
       </Grid>
@@ -110,7 +108,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Roboto',
     fontSize: '16px',
     lineHeight: '18.75px',
-    textDecoration: 'underline' ,
+    textDecoration: 'underline',
     marginBottom: 30,
     [theme.breakpoints.down('sm')]: {
       width: '80%',

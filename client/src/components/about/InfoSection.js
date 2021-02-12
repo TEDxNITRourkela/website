@@ -6,7 +6,7 @@ import { makeStyles, Typography, Container } from '@material-ui/core';
 import topLeft from '../../assets/img/about/topLeft.png';
 import bottomRight from '../../assets/img/about/bottomRight.png';
 
-function About({ direction, first, DATA , link }) {
+function About({ direction, first, DATA, link }) {
   const classes = useStyles();
 
   const renderImgContainer = (
@@ -20,18 +20,18 @@ function About({ direction, first, DATA , link }) {
       <Typography variant='h2' className={classes.question}>
         {DATA.QUESTION}
         {/* eslint-disable-next-line */}
-          <span className={classes.highlight}> {DATA.HIGHLIGHT}</span>
+        <span className={classes.highlight}> {DATA.HIGHLIGHT}</span>
       </Typography>
       <Typography variant='body2' className={classes.content}>
         {DATA.CONTENT}
       </Typography>
-      { link && (
-      <a href={DATA.LINK}>
-        <Typography variant='body2' className={classes.link}>
-          Learn More
-        </Typography>
-      </a>
-)}
+      {link && (
+        <a href={DATA.LINK}>
+          <Typography variant='body2' className={classes.link}>
+            Learn More
+          </Typography>
+        </a>
+      )}
     </div>
   );
 
