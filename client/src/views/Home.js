@@ -15,7 +15,7 @@ function Home() {
       <Index />
       <TedContent />
       <Content DATA={CONTENT.ONE} />
-      <Subscribe />
+      {/* <Subscribe /> */}
       {/* <Partners /> */}
     </>
   );
