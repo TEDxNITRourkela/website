@@ -130,7 +130,7 @@ const useStyles = makeStyles(() => ({
     fontWeight: '700',
     fontSize: '24px',
     lineHeight: '29px',
-    marginTop: 15,
+    marginTop: 20,
   },
   frontDescription: {
     width: '90%',

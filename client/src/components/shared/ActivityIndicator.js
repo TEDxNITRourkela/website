@@ -15,16 +15,11 @@ function ActivityIndicator() {
 
 export default ActivityIndicator;
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     width: '100%',
-    '& > * + *': {
-      marginTop: theme.spacing(2),
-    },
     zIndex: 1000,
-    height: window.innerHeight,
-    // marginTop: '100px',
-    justifyContent: 'center',
-    alignItems: 'center',
+    height: window.innerHeight - 265 - 100,
+    marginTop: 100,
   },
 }));

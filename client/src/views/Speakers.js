@@ -3,7 +3,7 @@ import React from 'react';
 import { makeStyles, Container } from '@material-ui/core';
 
 // Components
-import GuestCard from '../components/speakers/GuestCard';
+import GuestCard from '../components/speakers/SpeakerCard';
 
 // Assets
 import { GUESTS } from '../assets/placeholder/speakers';
@@ -15,7 +15,7 @@ function About() {
   return (
     <>
       <Container className={classes.root}>
-        <h1 className={classes.title}>Guest Speakers</h1>
+        <h1 className={classes.title}>Speakers & Performers</h1>
 
         <div className={classes.guestsContainer}>
           {GUESTS.map(
