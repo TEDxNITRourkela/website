@@ -4,7 +4,7 @@ import { Typography, Container, makeStyles } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
 // assets
-import logo from '../../assets/img/logo.png';
+import { LOGOS } from '../../assets/img/logos';
 
 function Footer() {
   const classes = useStyles();
@@ -16,7 +16,7 @@ function Footer() {
           <Link to='/' style={{ display: 'flex', justifyContent: 'center' }}>
             <img
               className={classes.logoDark}
-              src={logo}
+              src={LOGOS.TEDxNITRourkela.LIGHT}
               alt='TEDxNITRourkela'
             />
           </Link>

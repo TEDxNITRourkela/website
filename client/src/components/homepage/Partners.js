@@ -3,10 +3,7 @@ import React from 'react';
 import { makeStyles, Typography } from '@material-ui/core';
 
 // assets
-// import mailchimp from '../../assets/img/partners/mailchimp.png';
-// import flickr from '../../assets/img/partners/flickr.png';
-// import shutterstock from '../../assets/img/partners/shutterstock.png';
-// import everwall from '../../assets/img/partners/everwall.png';
+// import { PARTNERS } from '../../assets/img/pages';
 
 function Partners() {
   const classes = useStyles();
@@ -18,10 +15,20 @@ function Partners() {
       </Typography>
 
       <div className={classes.partners}>
-        {/* <img src={mailchimp} alt='mailchimp' className={classes.logo} />
-        <img src={shutterstock} alt='mailchimp' className={classes.logo} />
-        <img src={everwall} alt='mailchimp' className={classes.logo} />
-        <img src={flickr} alt='mailchimp' className={classes.logo} /> */}
+        {/* 
+        <img src={PARTNERS.EVERWALL} alt='everwall' className={classes.logo} />
+        <img src={PARTNERS.FLICKR} alt='flickr' className={classes.logo} />
+        <img
+          src={PARTNERS.MAILCHIMP}
+          alt='mailchimp'
+          className={classes.logo}
+        />
+        <img
+          src={PARTNERS.SHUTTERSTOCK}
+          alt='shutterstock'
+          className={classes.logo}
+        /> 
+        */}
       </div>
     </div>
   );

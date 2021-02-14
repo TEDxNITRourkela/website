@@ -10,8 +10,8 @@ import {
 import { Link } from 'react-router-dom';
 
 // Assets
-import logo from '../../assets/img/logo.png';
 import { tabs } from '../../assets/placeholder/common';
+import { LOGOS } from '../../assets/img/logos';
 
 const drawerWidth = 250;
 
@@ -29,7 +29,11 @@ function Navbar({ window }) {
   return (
     <div className={classes.root}>
       <Link to='/' className={classes.logoContainer}>
-        <img className={classes.logo} src={logo} alt='TEDxNITRourkela' />
+        <img
+          className={classes.logo}
+          src={LOGOS.TEDxNITRourkela.LIGHT}
+          alt='TEDxNITRourkela'
+        />
       </Link>
 
       <i

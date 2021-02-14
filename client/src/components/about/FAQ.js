@@ -12,7 +12,7 @@ import {
 
 // Assets
 import { ABOUT } from '../../assets/placeholder/about';
-import circles from '../../assets/img/homepage/circles.png';
+import { GRAPHICS } from '../../assets/img/graphics';
 
 const CustomAccordion = withStyles({
   root: {
@@ -99,7 +99,7 @@ function FAQ() {
 
   return (
     <div className={classes.root}>
-      <img src={circles} alt='Circles' className={classes.circles} />
+      <img src={GRAPHICS.CIRCLES} alt='Circles' className={classes.circles} />
       <Container className={classes.container}>{renderAccordion()}</Container>
     </div>
   );

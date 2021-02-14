@@ -1,5 +1,7 @@
 /* eslint-disable */
-import defaultImage from '../img/guests/defaultGuest.png';
+import { SPEAKERS } from '../img/pages';
+
+const defaultImage = SPEAKERS.DEFAULT_SPEAKER;
 
 export const GUESTS = [
   {

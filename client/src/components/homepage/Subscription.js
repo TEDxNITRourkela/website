@@ -5,7 +5,7 @@ import { Typography, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 // Assets
-import bottomRight from '../../assets/img/homepage/bottomRight.png';
+import { GRAPHICS } from '../../assets/img/graphics';
 
 function Subscribe() {
   const [email, setEmail] = useState('');
@@ -21,7 +21,7 @@ function Subscribe() {
   return (
     <div className={classes.container}>
       <img
-        src={bottomRight}
+        src={GRAPHICS.BOTTOM_RIGHT}
         alt='Bottom Left Ellipse'
         className={classes.img}
       />

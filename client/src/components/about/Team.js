@@ -8,7 +8,7 @@ import Profile from '../shared/Profile';
 
 // Assets
 import { ABOUT } from '../../assets/placeholder/about';
-import polygon from '../../assets/img/homepage/topLeftPolygon.png';
+import { GRAPHICS } from '../../assets/img/graphics';
 
 const STAGE = {
   DESIGN: 'Design Team',
@@ -139,7 +139,11 @@ function Team() {
           {stage}
         </Typography>
         <div className={classes.wrapperContainer}>{renderTeam()}</div>
-        <img src={polygon} alt='Polygon' className={classes.polygon} />
+        <img
+          src={GRAPHICS.TOP_LEFT_POLYGON}
+          alt='Polygon'
+          className={classes.polygon}
+        />
       </div>
     </Container>
   );
