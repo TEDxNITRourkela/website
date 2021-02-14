@@ -8,6 +8,8 @@ import { CssBaseline } from '@material-ui/core';
 
 // Components
 import ActivityIndicator from '../components/shared/ActivityIndicator';
+import ScrollToTopOnMount from '../components/shared/ScrollToTopOnMount';
+import ScrollToTop from '../components/shared/ScrollToTop';
 import Navbar from '../components/marginals/Navbar';
 import Footer from '../components/marginals/Footer';
 
@@ -26,8 +28,9 @@ const AsyncRoute = (route) =>
 const AsyncHome = AsyncRoute('./Home');
 const AsyncAbout = AsyncRoute('./About');
 const AsyncPartner = AsyncRoute('./Partner');
-const AsyncLoader = AsyncRoute('../components/shared/ActivityIndicator');
+const AsyncSpeakers = AsyncRoute('./Speakers.js');
 const AsyncDevelopment = AsyncRoute('./Development.js');
+const AsyncLoader = AsyncRoute('../components/shared/ActivityIndicator');
 
 function App() {
   return (
@@ -35,15 +38,20 @@ function App() {
       <CssBaseline />
 
       <Router history={createBrowserHistory}>
+        <ScrollToTopOnMount />
         <Navbar />
+
         <Switch>
           <Route path='/' exact component={AsyncHome} />
           <Route path='/about' exact component={AsyncAbout} />
           <Route path='/partners' exact component={AsyncPartner} />
-          <Route path='/loader' exact component={AsyncLoader} />
+          <Route path='/speakers' exact component={AsyncSpeakers} />
 
-          <Route component={AsyncDevelopment} />
+          <Route path='/loader' exact component={AsyncLoader} />
+          <Route path='*' component={AsyncDevelopment} />
         </Switch>
+
+        <ScrollToTop />
         <Footer />
       </Router>
     </ThemeProvider>

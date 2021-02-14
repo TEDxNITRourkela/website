@@ -107,6 +107,7 @@ const useStyles = makeStyles((theme) => ({
     height: '265px',
     backgroundColor: theme.palette.background.default,
     borderTop: '1px solid rgba(255,255,255,0.4)',
+    marginTop: 50,
     [theme.breakpoints.down('md')]: {
       height: 'auto',
     },

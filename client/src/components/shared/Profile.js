@@ -34,8 +34,8 @@ export default Image;
 
 const useStyles = makeStyles((theme) => ({
   imgContainer: {
-    width: ({ small }) => (small ? 120 : 180),
-    height: ({ small }) => (small ? 150 : 220),
+    width: ({ small }) => (small ? 110 : 180),
+    height: ({ small }) => (small ? 140 : 220),
     margin: '0px 5px',
     display: 'flex',
     flexDirection: 'column',
