@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet';
 
 // Component
 import Partners from '../components/partner/Partners';
-import Content from '../components/shared/Content';
+import ContentBanner from '../components/shared/ContentBanner';
 
 // Placeholder
 import { PARTNER } from '../assets/placeholder/partner';
@@ -23,7 +23,7 @@ function Partner() {
       {/* <Partners DATA={PARTNER.TWO} /> */}
       {/* <Partners DATA={PARTNER.THREE} /> */}
       <Partners DATA={PARTNER.FOUR} />
-      <Content DATA={PARTNER.CONTENT} big />
+      <ContentBanner DATA={PARTNER.CONTENT} wrapContainer />
     </>
   );
 }

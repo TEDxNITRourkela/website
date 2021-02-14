@@ -106,7 +106,7 @@ export default Footer;
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
-    height: '265px',
+    height: '365px',
     backgroundColor: theme.palette.background.default,
     borderTop: '1px solid rgba(255,255,255,0.4)',
     marginTop: 50,
