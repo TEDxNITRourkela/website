@@ -6,10 +6,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 
 // Assets
-import topRight from '../assets/img/homepage/topRight.png';
-import bottomLeft from '../assets/img/homepage/bottomLeft.png';
-import logo from '../assets/img/logo.png';
-import peak from '../assets/img/gifs/peak.gif';
+import { LOGOS } from '../assets/img/logos';
+import { GRAPHICS } from '../assets/img/graphics';
+import { GIFS } from '../assets/img/gifs';
 
 function Index() {
   const classes = useStyles();
@@ -20,12 +19,20 @@ function Index() {
         <Typography variant='body2' className={classes.content}>
           TECHNOLOGY . ENTERTAINMENT . DESIGN
         </Typography>
-        <img className={classes.logo} src={logo} alt='Logo' />
+        <img
+          className={classes.logo}
+          src={LOGOS.TEDxNITRourkela.LIGHT}
+          alt='Logo'
+        />
         <Typography variant='h1' className={classes.topic}>
           &#8220;Learning from the Past&#8221;
         </Typography>
 
-        <img className={classes.commingSoon} src={peak} alt='Comming Soon' />
+        <img
+          className={classes.commingSoon}
+          src={GIFS.PEAK}
+          alt='Comming Soon'
+        />
         <Typography variant='h2' className={classes.commingSoonContent}>
           This page is under development.
         </Typography>
@@ -38,10 +45,14 @@ function Index() {
         </Link>
       </div>
 
-      <img className={`${classes.topRight} `} src={topRight} alt='ellipse' />
+      <img
+        className={`${classes.topRight} `}
+        src={GRAPHICS.TOP_RIGHT}
+        alt='ellipse'
+      />
       <img
         className={`${classes.bottomLeft} `}
-        src={bottomLeft}
+        src={GRAPHICS.BOTTOM_LEFT}
         alt='ellipse'
       />
     </div>

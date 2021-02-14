@@ -3,8 +3,8 @@ import React from 'react';
 // Libraries
 import { makeStyles, Container } from '@material-ui/core';
 
-// image
-import topLeft from '../../assets/img/partners/topLeft.png';
+// Assets
+import { GRAPHICS } from '../../assets/img/graphics';
 
 function Partner({ DATA, first }) {
   const classes = useStyles();
@@ -22,7 +22,7 @@ function Partner({ DATA, first }) {
 
   return (
     <Container style={{ marginTop: first ? '150px' : '120px' }}>
-      <img src={topLeft} alt='ellipses' className={classes.image} />
+      <img src={GRAPHICS.TOP_LEFT} alt='ellipses' className={classes.image} />
       {renderPartnerContainer}
     </Container>
   );

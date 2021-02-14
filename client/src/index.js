@@ -24,3 +24,10 @@ configureFirebase()
     // eslint-disable-next-line
     console.log('Firebase Initialization Error: ', error);
   });
+
+// ReactDOM.render(
+//   <Root>
+//     <App />
+//   </Root>,
+//   document.querySelector('#root'),
+// );

@@ -1,19 +1,25 @@
 import React from 'react';
 
 import { makeStyles, Container } from '@material-ui/core';
+import { Helmet } from 'react-helmet';
 
 // Components
 import GuestCard from '../components/speakers/SpeakerCard';
 
 // Assets
 import { GUESTS } from '../assets/placeholder/speakers';
-import topLeft from '../assets/img/homepage/topLeft2.png';
+import { GRAPHICS } from '../assets/img/graphics';
 
 function About() {
   const classes = useStyles();
 
   return (
     <>
+      <Helmet>
+        <title>TEDxNITRourkela | Speakers</title>
+        <meta name='title' content='TEDxNITRourkela | Partners' />
+      </Helmet>
+
       <Container className={classes.root}>
         <h1 className={classes.title}>Speakers & Performers</h1>
 
@@ -31,7 +37,7 @@ function About() {
           )}
         </div>
       </Container>
-      <img src={topLeft} alt='top left' className={classes.topLeft} />
+      <img src={GRAPHICS.TOP_LEFT} alt='top left' className={classes.topLeft} />
     </>
   );
 }

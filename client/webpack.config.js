@@ -10,6 +10,7 @@ const dotenv = require('dotenv').config({
 });
 
 module.exports = (env) => {
+  // eslint-disable-next-line
   console.log('WEBPACK ENV: ', env);
 
   // Variables

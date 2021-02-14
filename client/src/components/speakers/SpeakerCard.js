@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 
 // Libraries
@@ -21,12 +22,12 @@ function GuestCard({ name, description, image, shortDescription, links }) {
       <div className={cardStyle}>
         <div className={`${classes.common} ${classes.front}`}>
           <img src={image} alt={name} className={classes.image} />
-          <Typography className={classes.frontName} variant='h3'>
+          {/* <Typography className={classes.frontName} variant='h3'>
             {name}
           </Typography>
           <Typography className={classes.frontDescription} variant='body1'>
             {shortDescription}
-          </Typography>
+          </Typography> */}
           {showFront && (
             <i
               className={`${classes.flipSymbol} fas fa-info-circle`}

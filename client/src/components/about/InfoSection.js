@@ -3,8 +3,7 @@ import React from 'react';
 // Libraries
 import { makeStyles, Typography, Container } from '@material-ui/core';
 
-import topLeft from '../../assets/img/about/topLeft.png';
-import bottomRight from '../../assets/img/about/bottomRight.png';
+import { GRAPHICS } from '../../assets/img/graphics';
 
 function About({ direction, first, DATA, link }) {
   const classes = useStyles();
@@ -40,8 +39,12 @@ function About({ direction, first, DATA, link }) {
       className={classes.root}
       style={{ marginTop: first ? '100px' : '50px' }}
     >
-      <img src={topLeft} alt='eliipses' className={classes.image1} />
-      <img src={bottomRight} alt='eliipses' className={classes.image2} />
+      <img src={GRAPHICS.TOP_LEFT} alt='ellipses' className={classes.image1} />
+      <img
+        src={GRAPHICS.BOTTOM_RIGHT}
+        alt='ellipses'
+        className={classes.image2}
+      />
       {direction === 'left-right' ? (
         <>
           {renderImgContainer}

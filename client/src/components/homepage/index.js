@@ -8,10 +8,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import Counter from './Counter';
 
 // Assets
-import mouse from '../../assets/img/gifs/scrollDown.gif';
-import topRight from '../../assets/img/homepage/topRight.png';
-import bottomLeft from '../../assets/img/homepage/bottomLeft.png';
-import logo from '../../assets/img/logo.png';
+import { GIFS } from '../../assets/img/gifs';
+import { GRAPHICS } from '../../assets/img/graphics';
+import { LOGOS } from '../../assets/img/logos';
 
 function Index() {
   const classes = useStyles();
@@ -22,24 +21,36 @@ function Index() {
         <Typography variant='body2' className={classes.content}>
           TECHNOLOGY . ENTERTAINMENT . DESIGN
         </Typography>
-        <img className={classes.logo} src={logo} alt='Logo' />
+        <img
+          className={classes.logo}
+          src={LOGOS.TEDxNITRourkela.LIGHT}
+          alt='Logo'
+        />
         <Typography variant='h1' className={classes.topic}>
           &#8220;Learning from the Past&#8221;
         </Typography>
         <Counter />
 
         <div className={classes.scrollDown}>
-          <img src={mouse} alt='Mouse' className={classes.scrollIcon} />
+          <img
+            src={GIFS.SCROLL_DOWN}
+            alt='Mouse'
+            className={classes.scrollIcon}
+          />
           <Typography variant='body1' className={classes.scrContent}>
             Scroll Down
           </Typography>
         </div>
       </div>
 
-      <img className={`${classes.topRight} `} src={topRight} alt='ellipse' />
+      <img
+        className={`${classes.topRight} `}
+        src={GRAPHICS.TOP_RIGHT}
+        alt='ellipse'
+      />
       <img
         className={`${classes.bottomLeft} `}
-        src={bottomLeft}
+        src={GRAPHICS.BOTTOM_LEFT}
         alt='ellipse'
       />
     </div>

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import defaultImage from '../img/guests/defaultGuest.png';
+import { SPEAKERS } from '../img/pages';
 
 export const GUESTS = [
   {
@@ -7,7 +7,7 @@ export const GUESTS = [
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae, sequi amet. Quidem ea laborum facere asperiores, voluptate earum eius doloremque quod? Dolores distinctio delectus at obcaecati vel alias corporis cumque.',
     shortDescription: 'Design Guru',
-    image: defaultImage,
+    image: SPEAKERS.SILHOUETTE.ONE,
     links: [
       {
         link: '',
@@ -36,7 +36,7 @@ export const GUESTS = [
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae, sequi amet. Quidem ea laborum facere asperiores, voluptate earum eius doloremque quod? Dolores distinctio delectus at obcaecati vel alias corporis cumque.',
     shortDescription: 'Design Guru',
-    image: defaultImage,
+    image: SPEAKERS.SILHOUETTE.TWO,
     links: [
       {
         link: '',
@@ -65,7 +65,7 @@ export const GUESTS = [
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae, sequi amet. Quidem ea laborum facere asperiores, voluptate earum eius doloremque quod? Dolores distinctio delectus at obcaecati vel alias corporis cumque.',
     shortDescription: 'Design Guru',
-    image: defaultImage,
+    image: SPEAKERS.SILHOUETTE.THREE,
     links: [
       {
         link: '',
@@ -94,7 +94,7 @@ export const GUESTS = [
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae, sequi amet. Quidem ea laborum facere asperiores, voluptate earum eius doloremque quod? Dolores distinctio delectus at obcaecati vel alias corporis cumque.',
     shortDescription: 'Design Guru',
-    image: defaultImage,
+    image: SPEAKERS.SILHOUETTE.FOUR,
     links: [
       {
         link: '',
@@ -123,7 +123,7 @@ export const GUESTS = [
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae, sequi amet. Quidem ea laborum facere asperiores, voluptate earum eius doloremque quod? Dolores distinctio delectus at obcaecati vel alias corporis cumque.',
     shortDescription: 'Design Guru',
-    image: defaultImage,
+    image: SPEAKERS.SILHOUETTE.FIVE,
     links: [
       {
         link: '',
@@ -152,7 +152,7 @@ export const GUESTS = [
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae, sequi amet. Quidem ea laborum facere asperiores, voluptate earum eius doloremque quod? Dolores distinctio delectus at obcaecati vel alias corporis cumque.',
     shortDescription: 'Design Guru',
-    image: defaultImage,
+    image: SPEAKERS.SILHOUETTE.SIX,
     links: [
       {
         link: '',
@@ -181,7 +181,7 @@ export const GUESTS = [
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae, sequi amet. Quidem ea laborum facere asperiores, voluptate earum eius doloremque quod? Dolores distinctio delectus at obcaecati vel alias corporis cumque.',
     shortDescription: 'Design Guru',
-    image: defaultImage,
+    image: SPEAKERS.SILHOUETTE.SEVEN,
     links: [
       {
         link: '',
@@ -210,7 +210,7 @@ export const GUESTS = [
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae, sequi amet. Quidem ea laborum facere asperiores, voluptate earum eius doloremque quod? Dolores distinctio delectus at obcaecati vel alias corporis cumque.',
     shortDescription: 'Design Guru',
-    image: defaultImage,
+    image: SPEAKERS.SILHOUETTE.EIGHT,
     links: [
       {
         link: '',
