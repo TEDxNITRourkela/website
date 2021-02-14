@@ -56,5 +56,7 @@ const useStyles = makeStyles((theme) => ({
   sponsor: {
     margin: '15px 35px',
     opacity: 0.5,
+    width: 200,
+    height: 'auto',
   },
 }));
