@@ -32,39 +32,52 @@ function Footer() {
         </div>
 
         <div className={classes.row2}>
-          <div className={classes.row2column1}>
-            <Link to='/about' className={classes.linkContainer}>
-              <Typography variant='body1' className={classes.link}>
-                About
-              </Typography>
-            </Link>
-            <Link to='/events' className={classes.linkContainer}>
-              <Typography variant='body1' className={classes.link}>
-                Events
-              </Typography>
-            </Link>
-            <Link to='/speakers' className={classes.linkContainer}>
-              <Typography variant='body1' className={classes.link}>
-                Speakers
-              </Typography>
-            </Link>
+          <div className={classes.row2row1}>
+            <div className={classes.row2column1}>
+              <Link to='/about' className={classes.linkContainer}>
+                <Typography variant='body1' className={classes.link}>
+                  About
+                </Typography>
+              </Link>
+              <Link to='/events' className={classes.linkContainer}>
+                <Typography variant='body1' className={classes.link}>
+                  Events
+                </Typography>
+              </Link>
+              <Link to='/speakers' className={classes.linkContainer}>
+                <Typography variant='body1' className={classes.link}>
+                  Speakers
+                </Typography>
+              </Link>
+            </div>
+            <div className={classes.row2column2}>
+              <Link to='/partners' className={classes.linkContainer}>
+                <Typography variant='body1' className={classes.link}>
+                  Partners
+                </Typography>
+              </Link>
+              <Link to='/participate' className={classes.linkContainer}>
+                <Typography variant='body1' className={classes.link}>
+                  Participate
+                </Typography>
+              </Link>
+              <Link to='/community' className={classes.linkContainer}>
+                <Typography variant='body1' className={classes.link}>
+                  Our Community
+                </Typography>
+              </Link>
+            </div>
           </div>
-          <div className={classes.row2column2}>
-            <Link to='/partners' className={classes.linkContainer}>
-              <Typography variant='body1' className={classes.link}>
-                Partners
-              </Typography>
-            </Link>
-            <Link to='/participate' className={classes.linkContainer}>
-              <Typography variant='body1' className={classes.link}>
-                Participate
-              </Typography>
-            </Link>
-            <Link to='/community' className={classes.linkContainer}>
-              <Typography variant='body1' className={classes.link}>
-                Our Community
-              </Typography>
-            </Link>
+
+          <div className={classes.row2row2}>
+            <Typography className={classes.addressTitle} variant='body1'>
+              {/* eslint-disable-next-line */}
+              Address{' '}
+            </Typography>
+            <Typography className={classes.address} variant='body2'>
+              Student Activity Centre, Sector 1, National Institute of
+              Technology, Rourkela. Odisha-India PIN:769008
+            </Typography>
           </div>
         </div>
 
@@ -125,9 +138,10 @@ const useStyles = makeStyles((theme) => ({
   },
   row1: {
     width: '40%',
+    minHeight: '200px',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     alignItems: 'center',
     [theme.breakpoints.down('md')]: {
       marginTop: 50,
@@ -171,7 +185,15 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   row2: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    flexDirection: 'column',
     width: '25%',
+    minHeight: '200px',
+  },
+  row2row1: {
+    width: '100%',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -198,17 +220,34 @@ const useStyles = makeStyles((theme) => ({
   },
   link: {
     width: '100%',
-    fontWeight: 'bold',
+    fontWeight: '400',
     fontFamily: 'helvetica',
     color: theme.palette.common.white,
     alignText: 'left',
   },
+  row2row2: {
+    width: '85%',
+    marginTop: '10px',
+  },
+  addressTitle: {
+    color: 'white',
+    marginTop: 10,
+    fontWeight: '600',
+    fontFamily: 'Helvetica',
+  },
+  address: {
+    color: 'white',
+    marginTop: 5,
+    fontWeight: '400',
+    fontFamily: 'Helvetica',
+  },
   row3: {
     width: '25%',
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     alignItems: 'center',
     flexDirection: 'column',
+    minHeight: '200px',
     [theme.breakpoints.down('md')]: {
       width: '100%',
       maxWidth: 390,
@@ -216,7 +255,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   contact: {
-    width: '70%',
+    width: '75%',
     color: theme.palette.common.white,
     [theme.breakpoints.down('md')]: {
       width: '100%',
