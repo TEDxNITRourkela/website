@@ -18,6 +18,8 @@ function Footer() {
               className={classes.logoDark}
               src={LOGOS.TEDxNITRourkela.LIGHT}
               alt='TEDxNITRourkela'
+              decoding='auto'
+              loading='eager'
             />
           </Link>
 

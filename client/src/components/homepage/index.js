@@ -8,7 +8,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Counter from './Counter';
 
 // Assets
-import { GIFS } from '../../assets/img/gifs';
+import { VIDEOS } from '../../assets/img/gifs';
 import { GRAPHICS } from '../../assets/img/graphics';
 import { LOGOS } from '../../assets/img/logos';
 
@@ -25,6 +25,8 @@ function Index() {
           className={classes.logo}
           src={LOGOS.TEDxNITRourkela.LIGHT}
           alt='Logo'
+          decoding='auto'
+          loading='eager'
         />
         <Typography variant='h1' className={classes.topic}>
           &#8220;Learning from the Past&#8221;
@@ -32,11 +34,10 @@ function Index() {
         <Counter />
 
         <div className={classes.scrollDown}>
-          <img
-            src={GIFS.SCROLL_DOWN}
-            alt='Mouse'
-            className={classes.scrollIcon}
-          />
+          <video autoPlay loop muted playsinline className={classes.scrollIcon}>
+            <source src={VIDEOS.SCROLL_DOWN} type='video/mp4' />
+          </video>
+
           <Typography variant='body1' className={classes.scrContent}>
             Scroll Down
           </Typography>

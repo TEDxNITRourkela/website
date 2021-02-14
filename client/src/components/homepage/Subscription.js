@@ -24,6 +24,8 @@ function Subscribe() {
         src={GRAPHICS.BOTTOM_RIGHT}
         alt='Bottom Left Ellipse'
         className={classes.img}
+        decoding='auto'
+        loading='eager'
       />
 
       <Typography variant='h2' className={`${classes.heading}`}>

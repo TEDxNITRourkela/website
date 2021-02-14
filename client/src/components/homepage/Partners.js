@@ -14,22 +14,36 @@ function Partners() {
         Partners
       </Typography>
 
-      <div className={classes.partners}>
-        {/* 
-        <img src={PARTNERS.EVERWALL} alt='everwall' className={classes.logo} />
-        <img src={PARTNERS.FLICKR} alt='flickr' className={classes.logo} />
+      {/* <div className={classes.partners}>
+        <img
+          src={PARTNERS.EVERWALL}
+          alt='everwall'
+          className={classes.logo}
+          decoding='auto'
+          loading='eager'
+        />
+        <img
+          src={PARTNERS.FLICKR}
+          alt='flickr'
+          className={classes.logo}
+          decoding='auto'
+          loading='eager'
+        />
         <img
           src={PARTNERS.MAILCHIMP}
           alt='mailchimp'
           className={classes.logo}
+          decoding='auto'
+          loading='eager'
         />
         <img
           src={PARTNERS.SHUTTERSTOCK}
           alt='shutterstock'
           className={classes.logo}
-        /> 
-        */}
-      </div>
+          decoding='auto'
+          loading='eager'
+        />
+      </div> */}
     </div>
   );
 }

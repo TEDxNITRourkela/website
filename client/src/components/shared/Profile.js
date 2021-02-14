@@ -16,7 +16,13 @@ const Image = ({
   return (
     <div className={classes.imgContainer}>
       <div className={classes.img}>
-        <img className={classes.img} src={member.IMG} alt={member.NAME} />
+        <img
+          className={classes.img}
+          src={member.IMG}
+          alt={member.NAME}
+          decoding='auto'
+          loading='eager'
+        />
       </div>
       <Typography variant={small ? 'body2' : 'body1'} className={classes.name}>
         {limitString(member.NAME, 22)}

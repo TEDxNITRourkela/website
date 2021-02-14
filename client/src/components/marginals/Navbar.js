@@ -33,6 +33,8 @@ function Navbar({ window }) {
           className={classes.logo}
           src={LOGOS.TEDxNITRourkela.LIGHT}
           alt='TEDxNITRourkela'
+          decoding='auto'
+          loading='eager'
         />
       </Link>
 
