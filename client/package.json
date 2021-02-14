@@ -12,7 +12,8 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage --colors",
     "lint:fix": "eslint --fix '**/*.js'",
-    "format": "prettier --write '**/*.js'"
+    "format": "prettier --write '**/*.js'",
+    "deploy:preview": "yarn build:prod && cd ../ && firebase hosting:channel:deploy prod_build"
   },
   "keywords": [
     "react",

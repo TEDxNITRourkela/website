@@ -71,8 +71,43 @@
       integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
       crossorigin="anonymous"
     />
+
+    <!-- Initial Loading Styles -->
+    <style>
+      body {
+        background-color: #1a1a1a;
+      }
+
+      .initial-load-container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      /* #root {
+        width: 100%;
+        height: 100vh;
+      } */
+
+      .logo {
+        width: 300px;
+        height: auto;
+      }
+
+      .loading-gif {
+        margin-bottom: 50px;
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div class="initial-load-container">
+        <img src="./src/assets/img/logo.png" alt="TEDxNITRourkela Logo" class="logo">
+        <img src="./src/assets/img/loading.gif" alt="TEDxNITRourkela Loading" class="loading-gif">
+      </div>
+    </div>
   </body>
 </html>
