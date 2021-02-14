@@ -8,6 +8,7 @@ import { CssBaseline } from '@material-ui/core';
 
 // Components
 import ActivityIndicator from '../components/shared/ActivityIndicator';
+import ScrollToTop from '../components/shared/ScrollToTop';
 import Navbar from '../components/marginals/Navbar';
 import Footer from '../components/marginals/Footer';
 
@@ -36,6 +37,7 @@ function App() {
       <CssBaseline />
 
       <Router history={createBrowserHistory}>
+        <ScrollToTop />
         <Navbar />
         <Switch>
           <Route path='/' exact component={AsyncHome} />
