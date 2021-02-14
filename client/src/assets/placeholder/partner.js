@@ -23,7 +23,7 @@ export const PARTNER = Object.freeze({
     partners: [
       'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/everwall.png',
       'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/flickr.png',
-      'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/mailchimp.pmg',
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/mailchimp.png',
       'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/shutterstock.png',
     ],
   },
