@@ -191,6 +191,11 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     width: '25%',
     minHeight: '200px',
+    [theme.breakpoints.down('md')]: {
+      width: '90%',
+      minHeight: '100px',
+      marginTop: 20,
+    },
   },
   row2row1: {
     width: '100%',
