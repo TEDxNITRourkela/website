@@ -8,26 +8,26 @@ import configureFirebase, { analytics } from './config/firebase';
 
 import('./index.css');
 
-// configureFirebase()
-//   .then(() => {
-//     ReactDOM.render(
-//       <Root>
-//         <App />
-//       </Root>,
-//       document.querySelector('#root'),
-//     );
-//   })
-//   .then(() => {
-//     analytics();
-//   })
-//   .catch((error) => {
-//     // eslint-disable-next-line
-//     console.log('Firebase Initialization Error: ', error);
-//   });
+configureFirebase()
+  .then(() => {
+    ReactDOM.render(
+      <Root>
+        <App />
+      </Root>,
+      document.querySelector('#root'),
+    );
+  })
+  .then(() => {
+    analytics();
+  })
+  .catch((error) => {
+    // eslint-disable-next-line
+    console.log('Firebase Initialization Error: ', error);
+  });
 
-ReactDOM.render(
-  <Root>
-    <App />
-  </Root>,
-  document.querySelector('#root'),
-);
+// ReactDOM.render(
+//   <Root>
+//     <App />
+//   </Root>,
+//   document.querySelector('#root'),
+// );

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { makeStyles, Container } from '@material-ui/core';
+import { Helmet } from 'react-helmet';
 
 // Components
 import GuestCard from '../components/speakers/SpeakerCard';
@@ -14,6 +15,11 @@ function About() {
 
   return (
     <>
+      <Helmet>
+        <title>TEDxNITRourkela | Speakers</title>
+        <meta name='title' content='TEDxNITRourkela | Partners' />
+      </Helmet>
+
       <Container className={classes.root}>
         <h1 className={classes.title}>Speakers & Performers</h1>
 
