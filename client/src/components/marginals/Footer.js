@@ -139,6 +139,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('md')]: {
       width: '80%',
       maxWidth: 390,
+      maxHeight: 100,
     },
   },
   primaryText: {

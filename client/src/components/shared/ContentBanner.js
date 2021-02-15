@@ -97,6 +97,9 @@ const useStyles = makeStyles((theme) => ({
   img: {
     width: (smallLogo) => (smallLogo ? '40%' : '85%'),
     height: 'auto',
+    [theme.breakpoints.down('sm')]: {
+      maxHeight: 100,
+    },
   },
   question: {
     width: '85%',
