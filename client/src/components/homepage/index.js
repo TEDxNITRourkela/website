@@ -34,7 +34,7 @@ function Index() {
         <Counter />
 
         <div className={classes.scrollDown}>
-          <video autoPlay loop muted playsinline className={classes.scrollIcon}>
+          <video autoPlay loop muted playsInline className={classes.scrollIcon}>
             <source src={VIDEOS.SCROLL_DOWN} type='video/mp4' />
           </video>
 

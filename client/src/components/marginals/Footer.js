@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 // assets
 import { LOGOS } from '../../assets/img/logos';
+import { tabs as TABS } from '../../assets/placeholder/common';
 
 function Footer() {
   const classes = useStyles();
@@ -34,38 +35,22 @@ function Footer() {
         <div className={classes.row2}>
           <div className={classes.row2row1}>
             <div className={classes.row2column1}>
-              <Link to='/about' className={classes.linkContainer}>
-                <Typography variant='body1' className={classes.link}>
-                  About
-                </Typography>
-              </Link>
-              <Link to='/events' className={classes.linkContainer}>
-                <Typography variant='body1' className={classes.link}>
-                  Events
-                </Typography>
-              </Link>
-              <Link to='/speakers' className={classes.linkContainer}>
-                <Typography variant='body1' className={classes.link}>
-                  Speakers
-                </Typography>
-              </Link>
+              {TABS.slice(0, 3).map(({ link, name }) => (
+                <Link key={link} to={link} className={classes.linkContainer}>
+                  <Typography variant='body1' className={classes.link}>
+                    {name}
+                  </Typography>
+                </Link>
+              ))}
             </div>
             <div className={classes.row2column2}>
-              <Link to='/partners' className={classes.linkContainer}>
-                <Typography variant='body1' className={classes.link}>
-                  Partners
-                </Typography>
-              </Link>
-              <Link to='/participate' className={classes.linkContainer}>
-                <Typography variant='body1' className={classes.link}>
-                  Participate
-                </Typography>
-              </Link>
-              <Link to='/community' className={classes.linkContainer}>
-                <Typography variant='body1' className={classes.link}>
-                  Our Community
-                </Typography>
-              </Link>
+              {TABS.slice(3, 6).map(({ link, name }) => (
+                <Link key={link} to={link} className={classes.linkContainer}>
+                  <Typography variant='body1' className={classes.link}>
+                    {name}
+                  </Typography>
+                </Link>
+              ))}
             </div>
           </div>
 
@@ -158,7 +143,7 @@ const useStyles = makeStyles((theme) => ({
   },
   primaryText: {
     width: 390,
-    alignText: 'left',
+    textAlign: 'left',
     fontWeight: 'bold',
     color: theme.palette.common.white,
     fontFamily: 'Helvetica',
@@ -166,21 +151,21 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: 10,
     [theme.breakpoints.down('md')]: {
       width: '80%',
-      alignText: 'center',
+      textAlign: 'center',
       maxWidth: 390,
     },
   },
   secondaryText: {
     width: 390,
-    alignText: 'left',
+    textAlign: 'left',
     fontWeight: 'normal',
     color: theme.palette.common.white,
     fontFamily: 'Helvetica',
     marginTop: '5px',
     paddingLeft: 10,
     [theme.breakpoints.down('md')]: {
-      width: '80%',
-      alignText: 'center',
+      width: '100%',
+      textAlign: 'center',
       maxWidth: 390,
     },
   },
@@ -192,7 +177,7 @@ const useStyles = makeStyles((theme) => ({
     width: '25%',
     minHeight: '200px',
     [theme.breakpoints.down('md')]: {
-      width: '90%',
+      width: '100%',
       minHeight: '100px',
       marginTop: 20,
     },
@@ -233,18 +218,28 @@ const useStyles = makeStyles((theme) => ({
   row2row2: {
     width: '85%',
     marginTop: '10px',
+    [theme.breakpoints.down('md')]: {
+      width: '80%',
+      maxWidth: 390,
+    },
   },
   addressTitle: {
     color: 'white',
     marginTop: 10,
     fontWeight: '600',
     fontFamily: 'Helvetica',
+    [theme.breakpoints.down('md')]: {
+      textAlign: 'center',
+    },
   },
   address: {
     color: 'white',
     marginTop: 5,
     fontWeight: '400',
     fontFamily: 'Helvetica',
+    [theme.breakpoints.down('md')]: {
+      textAlign: 'center',
+    },
   },
   row3: {
     width: '25%',
@@ -257,6 +252,7 @@ const useStyles = makeStyles((theme) => ({
       width: '100%',
       maxWidth: 390,
       margin: '50px auto',
+      minHeight: '100px',
     },
   },
   contact: {
@@ -285,6 +281,8 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: 30,
     [theme.breakpoints.down('md')]: {
       width: '100%',
+      marginTop: 0,
+      paddingRight: 0,
     },
   },
   icon: {

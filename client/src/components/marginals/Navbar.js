@@ -10,7 +10,7 @@ import {
 import { Link } from 'react-router-dom';
 
 // Assets
-import { tabs } from '../../assets/placeholder/common';
+import { tabs as TABS_NAV } from '../../assets/placeholder/common';
 import { LOGOS } from '../../assets/img/logos';
 
 const drawerWidth = 250;
@@ -39,7 +39,7 @@ function Navbar({ window }) {
       </Link>
 
       <i
-        className={`${classes.menu} fas fa-bars`}
+        className={`fas fa-bars ${classes.menu}`}
         onClick={handleDrawerToggle}
         onKeyDown={handleDrawerToggle}
         role='button'
@@ -48,7 +48,7 @@ function Navbar({ window }) {
       />
 
       <div className={classes.tabsContainer}>
-        {tabs.map(({ link, name }) => (
+        {TABS_NAV.slice(0, 3).map(({ link, name }) => (
           <Link className={classes.tabLink} to={link} key={link}>
             <Typography className={classes.tab} variant='body1'>
               {name}
@@ -71,7 +71,7 @@ function Navbar({ window }) {
             keepMounted: true, // Better open performance on mobile.
           }}
         >
-          {tabs.map(({ link, name }) => (
+          {TABS_NAV.slice(0, 3).map(({ link, name }) => (
             <Link className={classes.tabLink} to={link} key={link}>
               <ListItem>
                 <Typography className={classes.tab} variant='body1'>
@@ -91,20 +91,15 @@ export default Navbar;
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
-    maxWidth: window.innerWidth,
     height: '100px',
     position: 'fixed',
     top: 0,
-    background: 'none',
     backgroundColor: theme.palette.background.default,
     display: 'flex',
     justifyContent: 'space-around',
     alignItems: 'center',
     zIndex: 1,
-    [theme.breakpoints.down('sm')]: {
-      justifyContent: 'space-between',
-    },
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.down('md')]: {
       justifyContent: 'space-between',
     },
   },
@@ -126,7 +121,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     marginRight: 50,
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('xs')]: {
       display: 'none',
     },
   },
@@ -145,8 +140,8 @@ const useStyles = makeStyles((theme) => ({
   },
   menu: {
     color: '#fff',
-    marginLeft: '50px',
-    [theme.breakpoints.up('md')]: {
+    marginLeft: 50,
+    [theme.breakpoints.up('sm')]: {
       display: 'none',
     },
   },

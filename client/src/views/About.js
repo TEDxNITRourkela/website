@@ -29,7 +29,12 @@ function About() {
         />
       </Helmet>
 
-      <InfoSection direction='right-left' first DATA={ABOUT.SECTION.ONE} />
+      <InfoSection
+        direction='right-left'
+        first
+        DATA={ABOUT.SECTION.ONE}
+        columnReverse
+      />
       <InfoSection direction='left-right' DATA={ABOUT.SECTION.TWO} link />
       <ContentBanner DATA={CONTENT2.ONE} wrapContainer={false} />
 

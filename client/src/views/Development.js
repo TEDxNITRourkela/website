@@ -28,8 +28,8 @@ function Index() {
           &#8220;Learning from the Past&#8221;
         </Typography>
 
-        <video autoPlay loop muted playsinline className={classes.scrollIcon}>
-          <source src={VIDEOS.SCROLL_DOWN} type='video/mp4' />
+        <video autoPlay loop muted playsInline className={classes.commingSoon}>
+          <source src={VIDEOS.PEAK} type='video/mp4' />
         </video>
         <Typography variant='h2' className={classes.commingSoonContent}>
           This page is under development.

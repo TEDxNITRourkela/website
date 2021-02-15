@@ -57,6 +57,9 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     margin: '50px 0',
     width: '100%',
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'column',
+    },
   },
   column1: {
     width: '50%',
@@ -65,6 +68,11 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'flex-start',
     alignItems: 'center',
     flexDirection: 'column',
+    [theme.breakpoints.down('sm')]: {
+      width: '95%',
+      minHeight: 100,
+      justifyContent: 'center',
+    },
   },
   column2: {
     width: '50%',
@@ -73,9 +81,18 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
+    [theme.breakpoints.down('sm')]: {
+      width: '95%',
+      minHeight: 100,
+      justifyContent: 'center',
+    },
   },
   imgWrapper: {
     width: '85%',
+    [theme.breakpoints.down('sm')]: {
+      display: 'flex',
+      justifyContent: 'center',
+    },
   },
   img: {
     width: (smallLogo) => (smallLogo ? '40%' : '85%'),
@@ -83,11 +100,14 @@ const useStyles = makeStyles((theme) => ({
   },
   question: {
     width: '85%',
-    float: 'left',
+    textAlign: 'left',
     fontFamily: 'Zilla Slab',
     fontWeight: theme.typography.fontWeightBold,
     marginTop: 30,
     opacity: 0.5,
+    [theme.breakpoints.down('sm')]: {
+      textAlign: 'center',
+    },
   },
   content: {
     width: '80%',
@@ -97,6 +117,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 30,
     [theme.breakpoints.down('sm')]: {
       width: '80%',
+      textAlign: 'center',
     },
   },
   link: {
@@ -108,6 +129,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 30,
     [theme.breakpoints.down('sm')]: {
       width: '80%',
+      textAlign: 'center',
     },
   },
 }));
