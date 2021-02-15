@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: `0px 0px 10px ${theme.palette.secondary.main}`,
     borderRadius: '100%',
     position: 'fixed',
-    bottom: 50,
+    bottom: 130,
     right: 50,
     zIndex: 10000,
     display: 'flex',

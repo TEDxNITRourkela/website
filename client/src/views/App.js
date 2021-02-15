@@ -5,6 +5,7 @@ import { Router, Route, Switch } from 'react-router-dom';
 import Loadable from 'react-loadable';
 import { ThemeProvider } from '@material-ui/core/styles';
 import { CssBaseline } from '@material-ui/core';
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 // Components
 import ActivityIndicator from '../components/shared/ActivityIndicator';
@@ -50,6 +51,12 @@ function App() {
           <Route path='/loader' exact component={AsyncLoader} />
           <Route path='*' component={AsyncDevelopment} />
         </Switch>
+
+        <MessengerCustomerChat
+          pageId='201042233253912'
+          appId='424924968660862'
+          themeColor='#FF2B06'
+        />
 
         <ScrollToTop />
         <Footer />
