@@ -98,10 +98,10 @@ function FAQ() {
     ));
 
   return (
-    <div className={classes.root}>
+    <Container className={classes.root}>
       <img src={GRAPHICS.CIRCLES} alt='Circles' className={classes.circles} />
       <Container className={classes.container}>{renderAccordion()}</Container>
-    </div>
+    </Container>
   );
 }
 

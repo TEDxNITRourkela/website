@@ -52,8 +52,9 @@ function GuestCard({ name, description, image, shortDescription, links }) {
           </div>
 
           <div className={classes.linksContainer}>
-            {links.map((link) => (
-              <a key={link.link} href={link.link}>
+            {links.map((link, index) => (
+              // eslint-disable-next-line
+              <a key={`${link.link} ${index}`} href={link.link}>
                 <i className={`${classes.icons} ${link.link_type}`} />
               </a>
             ))}

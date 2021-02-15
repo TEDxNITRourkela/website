@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
   },
   titleContainer: {
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     alignItems: 'center',
     flexDirection: 'column',
   },

@@ -5,8 +5,8 @@ import { makeStyles, Typography, Container } from '@material-ui/core';
 
 import { GRAPHICS } from '../../assets/img/graphics';
 
-function About({ direction, first, DATA, link }) {
-  const classes = useStyles();
+function About({ direction, first, DATA, link, columnReverse = false }) {
+  const classes = useStyles(columnReverse);
 
   const renderImgContainer = (
     <div className={classes.imgContainer}>
@@ -84,7 +84,7 @@ const useStyles = makeStyles((theme) => ({
     minHeight: '300px',
     margin: '30px auto',
     [theme.breakpoints.down('md')]: {
-      flexDirection: 'column',
+      flexDirection: (reverse) => (reverse ? 'column-reverse' : 'column'),
     },
   },
   imgContainer: {

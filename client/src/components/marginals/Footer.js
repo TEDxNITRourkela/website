@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 // assets
 import { LOGOS } from '../../assets/img/logos';
+import { tabs as TABS } from '../../assets/placeholder/common';
 
 function Footer() {
   const classes = useStyles();
@@ -18,6 +19,8 @@ function Footer() {
               className={classes.logoDark}
               src={LOGOS.TEDxNITRourkela.LIGHT}
               alt='TEDxNITRourkela'
+              decoding='auto'
+              loading='eager'
             />
           </Link>
 
@@ -30,39 +33,36 @@ function Footer() {
         </div>
 
         <div className={classes.row2}>
-          <div className={classes.row2column1}>
-            <Link to='/about' className={classes.linkContainer}>
-              <Typography variant='body1' className={classes.link}>
-                About
-              </Typography>
-            </Link>
-            <Link to='/events' className={classes.linkContainer}>
-              <Typography variant='body1' className={classes.link}>
-                Events
-              </Typography>
-            </Link>
-            <Link to='/speakers' className={classes.linkContainer}>
-              <Typography variant='body1' className={classes.link}>
-                Speakers
-              </Typography>
-            </Link>
+          <div className={classes.row2row1}>
+            <div className={classes.row2column1}>
+              {TABS.slice(0, 3).map(({ link, name }) => (
+                <Link key={link} to={link} className={classes.linkContainer}>
+                  <Typography variant='body1' className={classes.link}>
+                    {name}
+                  </Typography>
+                </Link>
+              ))}
+            </div>
+            <div className={classes.row2column2}>
+              {TABS.slice(3, 6).map(({ link, name }) => (
+                <Link key={link} to={link} className={classes.linkContainer}>
+                  <Typography variant='body1' className={classes.link}>
+                    {name}
+                  </Typography>
+                </Link>
+              ))}
+            </div>
           </div>
-          <div className={classes.row2column2}>
-            <Link to='/partners' className={classes.linkContainer}>
-              <Typography variant='body1' className={classes.link}>
-                Partners
-              </Typography>
-            </Link>
-            <Link to='/participate' className={classes.linkContainer}>
-              <Typography variant='body1' className={classes.link}>
-                Participate
-              </Typography>
-            </Link>
-            <Link to='/community' className={classes.linkContainer}>
-              <Typography variant='body1' className={classes.link}>
-                Our Community
-              </Typography>
-            </Link>
+
+          <div className={classes.row2row2}>
+            <Typography className={classes.addressTitle} variant='body1'>
+              {/* eslint-disable-next-line */}
+              Address{' '}
+            </Typography>
+            <Typography className={classes.address} variant='body2'>
+              Student Activity Centre, Sector 1, National Institute of
+              Technology, Rourkela. Odisha-India PIN:769008
+            </Typography>
           </div>
         </div>
 
@@ -104,7 +104,7 @@ export default Footer;
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
-    height: '265px',
+    height: '365px',
     backgroundColor: theme.palette.background.default,
     borderTop: '1px solid rgba(255,255,255,0.4)',
     marginTop: 50,
@@ -123,9 +123,10 @@ const useStyles = makeStyles((theme) => ({
   },
   row1: {
     width: '40%',
+    minHeight: '200px',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     alignItems: 'center',
     [theme.breakpoints.down('md')]: {
       marginTop: 50,
@@ -138,11 +139,12 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('md')]: {
       width: '80%',
       maxWidth: 390,
+      maxHeight: 100,
     },
   },
   primaryText: {
     width: 390,
-    alignText: 'left',
+    textAlign: 'left',
     fontWeight: 'bold',
     color: theme.palette.common.white,
     fontFamily: 'Helvetica',
@@ -150,26 +152,39 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: 10,
     [theme.breakpoints.down('md')]: {
       width: '80%',
-      alignText: 'center',
+      textAlign: 'center',
       maxWidth: 390,
     },
   },
   secondaryText: {
     width: 390,
-    alignText: 'left',
+    textAlign: 'left',
     fontWeight: 'normal',
     color: theme.palette.common.white,
     fontFamily: 'Helvetica',
     marginTop: '5px',
     paddingLeft: 10,
     [theme.breakpoints.down('md')]: {
-      width: '80%',
-      alignText: 'center',
+      width: '100%',
+      textAlign: 'center',
       maxWidth: 390,
     },
   },
   row2: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    flexDirection: 'column',
     width: '25%',
+    minHeight: '200px',
+    [theme.breakpoints.down('md')]: {
+      width: '100%',
+      minHeight: '100px',
+      marginTop: 20,
+    },
+  },
+  row2row1: {
+    width: '100%',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -196,25 +211,53 @@ const useStyles = makeStyles((theme) => ({
   },
   link: {
     width: '100%',
-    fontWeight: 'bold',
+    fontWeight: '400',
     fontFamily: 'helvetica',
     color: theme.palette.common.white,
     alignText: 'left',
   },
+  row2row2: {
+    width: '85%',
+    marginTop: '10px',
+    [theme.breakpoints.down('md')]: {
+      width: '80%',
+      maxWidth: 390,
+    },
+  },
+  addressTitle: {
+    color: 'white',
+    marginTop: 10,
+    fontWeight: '600',
+    fontFamily: 'Helvetica',
+    [theme.breakpoints.down('md')]: {
+      textAlign: 'center',
+    },
+  },
+  address: {
+    color: 'white',
+    marginTop: 5,
+    fontWeight: '400',
+    fontFamily: 'Helvetica',
+    [theme.breakpoints.down('md')]: {
+      textAlign: 'center',
+    },
+  },
   row3: {
     width: '25%',
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     alignItems: 'center',
     flexDirection: 'column',
+    minHeight: '200px',
     [theme.breakpoints.down('md')]: {
       width: '100%',
       maxWidth: 390,
       margin: '50px auto',
+      minHeight: '100px',
     },
   },
   contact: {
-    width: '70%',
+    width: '75%',
     color: theme.palette.common.white,
     [theme.breakpoints.down('md')]: {
       width: '100%',
@@ -239,6 +282,8 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: 30,
     [theme.breakpoints.down('md')]: {
       width: '100%',
+      marginTop: 0,
+      paddingRight: 0,
     },
   },
   icon: {

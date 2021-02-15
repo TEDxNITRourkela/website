@@ -25,8 +25,10 @@ function About() {
 
         <div className={classes.guestsContainer}>
           {GUESTS.map(
-            ({ name, description, shortDescription, image, links }) => (
+            ({ name, description, shortDescription, image, links }, index) => (
               <GuestCard
+                // eslint-disable-next-line
+                key={index}
                 name={name}
                 description={description}
                 shortDescription={shortDescription}

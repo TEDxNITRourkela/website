@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 // Assets
 import { LOGOS } from '../assets/img/logos';
 import { GRAPHICS } from '../assets/img/graphics';
-import { GIFS } from '../assets/img/gifs';
+import { VIDEOS } from '../assets/img/gifs';
 
 function Index() {
   const classes = useStyles();
@@ -28,11 +28,9 @@ function Index() {
           &#8220;Learning from the Past&#8221;
         </Typography>
 
-        <img
-          className={classes.commingSoon}
-          src={GIFS.PEAK}
-          alt='Comming Soon'
-        />
+        <video autoPlay loop muted playsInline className={classes.commingSoon}>
+          <source src={VIDEOS.PEAK} type='video/mp4' />
+        </video>
         <Typography variant='h2' className={classes.commingSoonContent}>
           This page is under development.
         </Typography>

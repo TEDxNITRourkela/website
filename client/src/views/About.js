@@ -5,14 +5,14 @@ import { Helmet } from 'react-helmet';
 
 // Components
 import InfoSection from '../components/about/InfoSection';
-import Content from '../components/shared/Content';
+import ContentBanner from '../components/shared/ContentBanner';
 import CoreTeam from '../components/about/CoreTeam';
 import Team from '../components/about/Team';
 import FAQ from '../components/about/FAQ';
 
 // Assets
 import { ABOUT } from '../assets/placeholder/about';
-import { CONTENT } from '../assets/placeholder/homepage';
+import { CONTENT2 } from '../assets/placeholder/homepage';
 
 function About() {
   const classes = useStyles();
@@ -29,9 +29,15 @@ function About() {
         />
       </Helmet>
 
-      <InfoSection direction='right-left' first DATA={ABOUT.SECTION.ONE} />
+      <InfoSection
+        direction='right-left'
+        first
+        DATA={ABOUT.SECTION.ONE}
+        columnReverse
+      />
       <InfoSection direction='left-right' DATA={ABOUT.SECTION.TWO} link />
-      <Content DATA={CONTENT.ONE} big />
+      <ContentBanner DATA={CONTENT2.ONE} wrapContainer={false} />
+
       <CoreTeam />
       <Team />
       <FAQ />

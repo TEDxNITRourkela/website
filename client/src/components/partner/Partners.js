@@ -14,7 +14,15 @@ function Partner({ DATA, first }) {
       <div className={classes.title}>{DATA.title}</div>
       <div className={classes.partnerContainer}>
         {DATA.partners.map((sponsor) => (
-          <img src={sponsor} alt='Sponsor' className={classes.sponsor} />
+          <a
+            target='_blank'
+            rel='noreferrer'
+            href={sponsor.href}
+            title={sponsor.hrefTitle}
+            key={sponsor.href}
+          >
+            <img src={sponsor.img} alt='Sponsor' className={classes.sponsor} />
+          </a>
         ))}
       </div>
     </div>
