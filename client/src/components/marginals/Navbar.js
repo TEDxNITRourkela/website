@@ -46,7 +46,6 @@ function Navbar({ window }) {
         tabIndex='0'
         aria-label='Menu Button'
       />
-
       <div className={classes.tabsContainer}>
         {TABS_NAV.slice(0, 3).map(({ link, name }) => (
           <Link className={classes.tabLink} to={link} key={link}>
@@ -99,6 +98,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-around',
     alignItems: 'center',
     zIndex: 1,
+    boxShadow: '0px 3px 15px #080808',
     [theme.breakpoints.down('md')]: {
       justifyContent: 'space-between',
     },
