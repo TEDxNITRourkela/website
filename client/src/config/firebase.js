@@ -18,6 +18,7 @@ const configureFirebase = async () => {
       appId: process.env.APPID,
       measurementId: process.env.MEASUREMENTID,
     };
+
     firebase.initializeApp(firebaseConfig);
   }
 };

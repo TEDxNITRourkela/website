@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 // Libraries
 import { Router, Route, Switch } from 'react-router-dom';
@@ -34,13 +34,27 @@ const AsyncDevelopment = AsyncRoute('./Development.js');
 const AsyncLoader = AsyncRoute('../components/shared/ActivityIndicator');
 
 function App() {
+  const [showBoxShadow, setShowBoxShadow] = useState(false);
+
+  const toggleVisibility = () => {
+    if (window.pageYOffset > 100) {
+      setShowBoxShadow(true);
+    } else {
+      setShowBoxShadow(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', toggleVisibility);
+  }, []);
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
 
       <Router history={createBrowserHistory}>
         <ScrollToTopOnMount />
-        <Navbar />
+        <Navbar showBoxShadow={showBoxShadow} />
 
         <Switch>
           <Route path='/' exact component={AsyncHome} />

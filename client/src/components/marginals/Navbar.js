@@ -15,9 +15,9 @@ import { LOGOS } from '../../assets/img/logos';
 
 const drawerWidth = 250;
 
-function Navbar({ window }) {
-  const classes = useStyles();
+function Navbar({ window, showBoxShadow }) {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const classes = useStyles(showBoxShadow);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -98,7 +98,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-around',
     alignItems: 'center',
     zIndex: 1,
-    boxShadow: '0px 3px 15px #080808',
+    boxShadow: (showBoxShadow) => (showBoxShadow ? '0px 3px 15px #080808' : ''),
     [theme.breakpoints.down('md')]: {
       justifyContent: 'space-between',
     },
