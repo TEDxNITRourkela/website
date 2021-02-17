@@ -49,6 +49,7 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     display: 'flex',
     justifyContent: 'center',
+    marginTop: 20,
   },
   root: {
     color: theme.palette.common.white,

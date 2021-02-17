@@ -16,9 +16,9 @@ const PAYMENT_STATUS = {
   INITIATED: 'Payment initiated',
 };
 
-function Tickets() {
+function Tickets({ short }) {
   const { enqueueSnackbar, closeSnackbar } = useSnackbar();
-  const classes = useStyles();
+  const classes = useStyles(short);
 
   const action = (key) => (
     <Button
@@ -103,22 +103,22 @@ function Tickets() {
   );
 }
 
-export default function IntegratedTickets() {
+export default function IntegratedTickets({ short = false }) {
   return (
     <SnackbarProvider maxSnack={3}>
-      <Tickets />
+      <Tickets short={short} />
     </SnackbarProvider>
   );
 }
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    width: '100%',
-    height: '100%',
+    width: (short) => (short ? '70%' : '100%'),
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
+    marginTop: (short) => (short ? '0px' : '120px'),
   },
   ticketContainer: {
     position: 'relative',
@@ -139,8 +139,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#1a1a1a',
     padding: 'auto 20px',
     color: '#ffffff',
-    minWidth: '150px',
-    minHeight: '40px',
+    minWidth: (short) => (short ? '100px' : '150px'),
+    minHeight: (short) => (short ? '30px' : '40px'),
     position: 'absolute',
     bottom: '15%',
     right: '15%',

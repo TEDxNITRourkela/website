@@ -3,6 +3,7 @@ import React from 'react';
 
 // Libraries
 import { makeStyles, Typography } from '@material-ui/core';
+import { Helmet } from 'react-helmet';
 
 // Components
 import Ticket from '../components/tickets/Ticket';
@@ -15,6 +16,11 @@ function Tickets() {
 
   return (
     <div className={classes.root}>
+      <Helmet>
+        <title>TEDxNITRourkela</title>
+        <meta name='title' content='TEDxNITRourkela' />
+      </Helmet>
+
       <img
         className={classes.topLeft}
         src={GRAPHICS.TOP_LEFT}
@@ -38,9 +44,8 @@ export default Tickets;
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
-    height: 'calc(100% - 100px)',
-    minHeight: '90vh',
-    marginTop: '100px',
+    height: 'calc(100vh - 100px)',
+    // marginTop: '100px',
     position: 'relative',
   },
   topLeft: {
@@ -51,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
   terms: {
     color: theme.palette.common.white,
     opacity: '80%',
-    marginBottom: 60,
+    marginBottom: 30,
     marginTop: 15,
     fontSize: '10px',
     textAlign: 'center',
