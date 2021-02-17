@@ -17,7 +17,7 @@ module.exports = (env) => {
 
   // call dotenv and it will return an Object with a parsed key
   const envVars = dotenv.config().parsed;
-  envVars.NODE_ENV = env;
+  // envVars.NODE_ENV = env;
 
   // reduce it to a nice object, the same as before
   const envKeys = Object.keys(envVars).reduce((prev, next) => {
