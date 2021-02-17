@@ -31,7 +31,6 @@ const AsyncAbout = AsyncRoute('./About');
 const AsyncPartner = AsyncRoute('./Partner');
 const AsyncSpeakers = AsyncRoute('./Speakers');
 const AsyncTickets = AsyncRoute('./Tickets');
-const AsyncTickets2 = AsyncRoute('./TicketsV2');
 const AsyncDevelopment = AsyncRoute('./Development.js');
 const AsyncLoader = AsyncRoute('../components/shared/ActivityIndicator');
 
@@ -64,7 +63,6 @@ function App() {
           <Route path='/partners' exact component={AsyncPartner} />
           <Route path='/speakers' exact component={AsyncSpeakers} />
           <Route path='/tickets' exact component={AsyncTickets} />
-          <Route path='/tickets2' exact component={AsyncTickets2} />
 
           <Route path='/loader' exact component={AsyncLoader} />
           <Route path='*' component={AsyncDevelopment} />
