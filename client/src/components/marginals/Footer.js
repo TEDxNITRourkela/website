@@ -5,7 +5,10 @@ import { Link } from 'react-router-dom';
 
 // assets
 import { LOGOS } from '../../assets/img/logos';
-import { tabs as TABS } from '../../assets/placeholder/common';
+import { tabs } from '../../assets/placeholder/common';
+
+const TABS1 = tabs.slice(0, 3);
+const TABS2 = tabs.slice(4, 7);
 
 function Footer() {
   const classes = useStyles();
@@ -35,7 +38,7 @@ function Footer() {
         <div className={classes.row2}>
           <div className={classes.row2row1}>
             <div className={classes.row2column1}>
-              {TABS.slice(0, 3).map(({ link, name }) => (
+              {TABS1.map(({ link, name }) => (
                 <Link key={link} to={link} className={classes.linkContainer}>
                   <Typography variant='body1' className={classes.link}>
                     {name}
@@ -44,7 +47,7 @@ function Footer() {
               ))}
             </div>
             <div className={classes.row2column2}>
-              {TABS.slice(3, 6).map(({ link, name }) => (
+              {TABS2.map(({ link, name }) => (
                 <Link key={link} to={link} className={classes.linkContainer}>
                   <Typography variant='body1' className={classes.link}>
                     {name}
@@ -74,6 +77,20 @@ function Footer() {
             <Typography className={classes.email} variant='body1'>
               info@tedxnitrourkela.com
             </Typography>
+          </a>
+
+          <a
+            className={classes.privacy}
+            href='https://files.tedxnitrourkela.com/Privacy_Policy.pdf'
+          >
+            Privacy Policy
+          </a>
+          <a
+            className={classes.privacy}
+            href='https://files.tedxnitrourkela.com/Tersm_of_Service.pdf'
+            style={{ marginTop: 0 }}
+          >
+            Terms of Service
           </a>
 
           <div className={classes.iconsContainer}>
@@ -289,5 +306,16 @@ const useStyles = makeStyles((theme) => ({
   icon: {
     color: theme.palette.common.white,
     margin: '10px 15px',
+  },
+  privacy: {
+    fontSize: '16px',
+    marginTop: '20px',
+    width: '72%',
+    color: 'white',
+    textAlign: 'left',
+    [theme.breakpoints.down('md')]: {
+      width: '100%',
+      textAlign: 'center',
+    },
   },
 }));

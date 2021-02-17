@@ -42,3 +42,8 @@ export const PARTNERS = Object.freeze({
   SHUTTERSTOCK:
     'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/shutterstock.png',
 });
+
+export const TICKETS = Object.freeze({
+  TICKET:
+    'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1613485164/assets/pages/tickets/Group_609_sfesqd.png',
+});

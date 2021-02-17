@@ -15,9 +15,9 @@ import { LOGOS } from '../../assets/img/logos';
 
 const drawerWidth = 250;
 
-function Navbar({ window }) {
-  const classes = useStyles();
+function Navbar({ window, showBoxShadow }) {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const classes = useStyles(showBoxShadow);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -47,7 +47,7 @@ function Navbar({ window }) {
         aria-label='Menu Button'
       />
       <div className={classes.tabsContainer}>
-        {TABS_NAV.slice(0, 3).map(({ link, name }) => (
+        {TABS_NAV.slice(0, 4).map(({ link, name }) => (
           <Link className={classes.tabLink} to={link} key={link}>
             <Typography className={classes.tab} variant='body1'>
               {name}
@@ -70,7 +70,7 @@ function Navbar({ window }) {
             keepMounted: true, // Better open performance on mobile.
           }}
         >
-          {TABS_NAV.slice(0, 3).map(({ link, name }) => (
+          {TABS_NAV.slice(0, 4).map(({ link, name }) => (
             <Link className={classes.tabLink} to={link} key={link}>
               <ListItem>
                 <Typography className={classes.tab} variant='body1'>
@@ -98,7 +98,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-around',
     alignItems: 'center',
     zIndex: 1,
-    boxShadow: '0px 3px 15px #080808',
+    boxShadow: (showBoxShadow) => (showBoxShadow ? '0px 3px 15px #080808' : ''),
     [theme.breakpoints.down('md')]: {
       justifyContent: 'space-between',
     },

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 // Libraries
 import { Router, Route, Switch } from 'react-router-dom';
@@ -29,24 +29,40 @@ const AsyncRoute = (route) =>
 const AsyncHome = AsyncRoute('./Home');
 const AsyncAbout = AsyncRoute('./About');
 const AsyncPartner = AsyncRoute('./Partner');
-const AsyncSpeakers = AsyncRoute('./Speakers.js');
+const AsyncSpeakers = AsyncRoute('./Speakers');
+const AsyncTickets = AsyncRoute('./Tickets');
 const AsyncDevelopment = AsyncRoute('./Development.js');
 const AsyncLoader = AsyncRoute('../components/shared/ActivityIndicator');
 
 function App() {
+  const [showBoxShadow, setShowBoxShadow] = useState(false);
+
+  const toggleVisibility = () => {
+    if (window.pageYOffset > 100) {
+      setShowBoxShadow(true);
+    } else {
+      setShowBoxShadow(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', toggleVisibility);
+  }, []);
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
 
       <Router history={createBrowserHistory}>
         <ScrollToTopOnMount />
-        <Navbar />
+        <Navbar showBoxShadow={showBoxShadow} />
 
         <Switch>
           <Route path='/' exact component={AsyncHome} />
           <Route path='/about' exact component={AsyncAbout} />
           <Route path='/partners' exact component={AsyncPartner} />
           <Route path='/speakers' exact component={AsyncSpeakers} />
+          <Route path='/tickets' exact component={AsyncTickets} />
 
           <Route path='/loader' exact component={AsyncLoader} />
           <Route path='*' component={AsyncDevelopment} />

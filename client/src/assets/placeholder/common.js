@@ -12,6 +12,10 @@ export const tabs = [
     link: '/partners',
   },
   {
+    name: 'Tickets',
+    link: '/tickets',
+  },
+  {
     name: 'Events',
     link: '/events',
   },
