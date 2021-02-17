@@ -45,5 +45,5 @@ export const PARTNERS = Object.freeze({
 
 export const TICKETS = Object.freeze({
   TICKET:
-    'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1613485164/assets/pages/tickets/Group_609_sfesqd.png',
+    'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1613570090/assets/pages/tickets/Group_609_1_xx35tj.png',
 });
