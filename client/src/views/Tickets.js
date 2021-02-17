@@ -1,4 +1,5 @@
-import React from 'react';
+/* eslint-disable no-undef */
+import React, { useEffect } from 'react';
 
 // Libraries
 import { makeStyles, Typography } from '@material-ui/core';
@@ -9,6 +10,39 @@ import { TICKETS } from '../assets/img/pages';
 
 function Tickets() {
   const classes = useStyles();
+
+  const onPayOpen = () => {};
+  const onPayClose = () => {};
+
+  const onPaySuccess = () => {};
+  const onPayFail = () => {};
+
+  const handlePayment = () => {
+    if (Instamojo) {
+      /* Configuring Handlers */
+      Instamojo.configure({
+        handlers: {
+          onOpen: onPayOpen,
+          onClose: onPayClose,
+          onSuccess: onPaySuccess,
+          onFailure: onPayFail,
+        },
+      });
+
+      Instamojo.open(
+        /* eslint-disable-next-line */
+        'https://www.instamojo.com/@StudentActivityCentre/l934b8e36f56b4793a666ff3a3ae2f959/',
+      );
+    }
+  };
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://js.instamojo.com/v1/checkout.js';
+    script.async = true;
+
+    document.body.appendChild(script);
+  }, []);
 
   return (
     <div className={classes.root}>
@@ -25,7 +59,11 @@ function Tickets() {
           alt='TEDxNITRourkela 2021 Ticket'
         />
 
-        <button type='button' className={classes.button}>
+        <button
+          onClick={handlePayment}
+          type='button'
+          className={classes.button}
+        >
           Buy Now
         </button>
 
@@ -65,6 +103,10 @@ const useStyles = makeStyles((theme) => ({
     width: '65%',
     height: 'auto',
     margin: '50px auto',
+    // backgroundColor: 'white',
+    [theme.breakpoints.down('md')]: {
+      width: '90%',
+    },
   },
   button: {
     border: '1px solid #FF2B06',
