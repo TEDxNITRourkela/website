@@ -106,10 +106,12 @@ function Tickets() {
           Buy Now
         </button>
 
-        <Typography variant='body2' className={classes.terms}>
-          {/* eslint-disable-next-line */}
-          {'* T&Cs Apply'}
-        </Typography>
+        <a href='https://files.tedxnitrourkela.com/Ticket_TnC.pdf'>
+          <Typography variant='body2' className={classes.terms}>
+            {/* eslint-disable-next-line */}
+            {'* T&Cs Apply'}
+          </Typography>
+        </a>
       </div>
     </div>
   );

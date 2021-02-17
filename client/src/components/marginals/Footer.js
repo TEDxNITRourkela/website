@@ -79,6 +79,20 @@ function Footer() {
             </Typography>
           </a>
 
+          <a
+            className={classes.privacy}
+            href='https://files.tedxnitrourkela.com/Privacy_Policy.pdf'
+          >
+            Privacy Policy
+          </a>
+          <a
+            className={classes.privacy}
+            href='https://files.tedxnitrourkela.com/Tersm_of_Service.pdf'
+            style={{ marginTop: 0 }}
+          >
+            Terms of Service
+          </a>
+
           <div className={classes.iconsContainer}>
             <a href='https://www.facebook.com/tedxnitrourkela/'>
               <i className={`${classes.icon} fab fa-facebook-f`} />
@@ -292,5 +306,16 @@ const useStyles = makeStyles((theme) => ({
   icon: {
     color: theme.palette.common.white,
     margin: '10px 15px',
+  },
+  privacy: {
+    fontSize: '16px',
+    marginTop: '20px',
+    width: '72%',
+    color: 'white',
+    textAlign: 'left',
+    [theme.breakpoints.down('md')]: {
+      width: '100%',
+      textAlign: 'center',
+    },
   },
 }));
