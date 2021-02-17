@@ -2,20 +2,59 @@
 import React, { useEffect } from 'react';
 
 // Libraries
-import { makeStyles, Typography } from '@material-ui/core';
+import { makeStyles, Typography, Button } from '@material-ui/core';
+import { SnackbarProvider, useSnackbar } from 'notistack';
 
 // Assets
 import { GRAPHICS } from '../assets/img/graphics';
 import { TICKETS } from '../assets/img/pages';
 
+const PAYMENT_STATUS = {
+  SUCCESS: 'Payment Successful',
+  FAIL: 'Payment Failure',
+  CANCEL: 'Payment Cancelled',
+  UNINITIATED: 'Payment un-initiated',
+  INITIATED: 'Payment initiated',
+};
+
 function Tickets() {
+  const { enqueueSnackbar, closeSnackbar } = useSnackbar();
   const classes = useStyles();
 
-  const onPayOpen = () => {};
-  const onPayClose = () => {};
+  const action = (key) => (
+    <Button
+      onClick={() => {
+        closeSnackbar(key);
+      }}
+    >
+      Dismiss
+    </Button>
+  );
 
-  const onPaySuccess = () => {};
-  const onPayFail = () => {};
+  const onPayOpen = () =>
+    enqueueSnackbar(PAYMENT_STATUS.INITIATED, {
+      variant: 'info',
+      persist: true,
+      action,
+    });
+  const onPayClose = () =>
+    enqueueSnackbar(PAYMENT_STATUS.CANCEL, {
+      variant: 'info',
+      persist: true,
+      action,
+    });
+  const onPaySuccess = () =>
+    enqueueSnackbar(PAYMENT_STATUS.SUCCESS, {
+      variant: 'success',
+      persist: true,
+      action,
+    });
+  const onPayFail = () =>
+    enqueueSnackbar(PAYMENT_STATUS.FAIL, {
+      variant: 'error',
+      persist: true,
+      action,
+    });
 
   const handlePayment = () => {
     if (Instamojo) {
@@ -31,7 +70,7 @@ function Tickets() {
 
       Instamojo.open(
         /* eslint-disable-next-line */
-        'https://www.instamojo.com/@StudentActivityCentre/l934b8e36f56b4793a666ff3a3ae2f959/',
+        'https://www.instamojo.com/@StudentActivityCenter/l2819ae69330f4c8a8ee450758aa6b022/',
       );
     }
   };
@@ -76,7 +115,13 @@ function Tickets() {
   );
 }
 
-export default Tickets;
+export default function IntegratedTickets() {
+  return (
+    <SnackbarProvider maxSnack={3}>
+      <Tickets />
+    </SnackbarProvider>
+  );
+}
 
 const useStyles = makeStyles((theme) => ({
   root: {
