@@ -5,7 +5,8 @@ import { Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 // Components
-import Counter from './Counter';
+// import Counter from './Counter';
+import Ticket from '../tickets/Ticket';
 
 // Assets
 import { VIDEOS } from '../../assets/img/gifs';
@@ -28,10 +29,12 @@ function Index() {
           decoding='auto'
           loading='eager'
         />
-        <Typography variant='h1' className={classes.topic}>
+        <Typography variant='h3' className={classes.topic}>
           &#8220;Learning from the Past&#8221;
         </Typography>
-        <Counter />
+        {/* <Counter /> */}
+
+        <Ticket short />
 
         <div className={classes.scrollDown}>
           <video autoPlay loop muted playsInline className={classes.scrollIcon}>
@@ -78,6 +81,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
   },
   content: {
+    marginTop: '10px',
     color: theme.palette.common.white,
     opacity: 0.2,
     fontFamily: 'Zilla Slab',
@@ -88,15 +92,13 @@ const useStyles = makeStyles((theme) => ({
   },
   logo: {
     marginTop: '20px',
-    marginBottom: '30px',
-    width: '30%',
+    width: '20%',
     [theme.breakpoints.down('sm')]: {
       width: '80%',
     },
   },
   topic: {
     marginTop: '10px',
-    marginBottom: '20px',
     fontWeight: theme.typography.fontWeightBold,
     color: theme.palette.common.white,
     fontFamily: 'Zilla Slab',
