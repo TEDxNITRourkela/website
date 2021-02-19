@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
+// Libraries
 import { makeStyles } from '@material-ui/core';
 import { Helmet } from 'react-helmet';
+
+// Utilities
+import { analytics } from '../config/firebase';
 
 // Components
 import InfoSection from '../components/about/InfoSection';
@@ -16,6 +20,10 @@ import { CONTENT2 } from '../assets/placeholder/homepage';
 
 function About() {
   const classes = useStyles();
+
+  useEffect(() => {
+    analytics().logEvent('About Page Loaded');
+  }, []);
 
   return (
     <div className={classes.root}>

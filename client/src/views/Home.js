@@ -1,9 +1,12 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useEffect } from 'react';
 
 // Libraries
 import { Helmet } from 'react-helmet';
 import { makeStyles } from '@material-ui/core';
+
+// Utilities
+import { analytics } from '../config/firebase';
 
 // Components
 import Index from '../components/homepage/index';
@@ -16,6 +19,10 @@ import { CONTENT2 } from '../assets/placeholder/homepage';
 
 function Home() {
   const classes = useStyles();
+
+  useEffect(() => {
+    analytics().logEvent('Home Page Loaded');
+  }, []);
 
   return (
     <>

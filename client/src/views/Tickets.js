@@ -1,9 +1,12 @@
 /* eslint-disable no-undef */
-import React from 'react';
+import React, { useEffect } from 'react';
 
 // Libraries
 import { makeStyles, Typography } from '@material-ui/core';
 import { Helmet } from 'react-helmet';
+
+// Utilities
+import { analytics } from '../config/firebase';
 
 // Components
 import Ticket from '../components/tickets/Ticket';
@@ -13,6 +16,10 @@ import { GRAPHICS } from '../assets/img/graphics';
 
 function Tickets() {
   const classes = useStyles();
+
+  useEffect(() => {
+    analytics().logEvent('Tickets Page Loaded');
+  }, []);
 
   return (
     <div className={classes.root}>

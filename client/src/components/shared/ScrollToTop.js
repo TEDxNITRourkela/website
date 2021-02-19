@@ -53,24 +53,19 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: `0px 0px 10px ${theme.palette.secondary.main}`,
     borderRadius: '100%',
     position: 'fixed',
-    bottom: 130,
-    right: 50,
+    bottom: 100,
+    right: 25,
     zIndex: 10000,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     [theme.breakpoints.down('sm')]: {
-      width: 40,
-      height: 40,
-      bottom: 45,
-      right: 15,
+      bottom: 100,
+      right: 25,
     },
   },
   icon: {
     color: theme.palette.common.white,
     fontSize: 30,
-    [theme.breakpoints.down('sm')]: {
-      fontSize: 20,
-    },
   },
 }));

@@ -22,13 +22,18 @@ function GuestCard({ name, description, image, shortDescription, links }) {
       <div className={cardStyle}>
         <div className={`${classes.common} ${classes.front}`}>
           <img src={image} alt={name} className={classes.image} />
-          {/* <Typography className={classes.frontName} variant='h3'>
-            {name}
-          </Typography>
-          <Typography className={classes.frontDescription} variant='body1'>
-            {shortDescription}
-          </Typography> */}
-          {showFront && (
+          {name !== 'John Doe' && (
+            <>
+              <Typography className={classes.frontName} variant='h3'>
+                {name}
+              </Typography>
+              <Typography className={classes.frontDescription} variant='body1'>
+                {shortDescription}
+              </Typography>
+            </>
+          )}
+
+          {showFront && name !== 'John Doe' && (
             <i
               className={`${classes.flipSymbol} fas fa-info-circle`}
               onClick={onClick}
@@ -124,13 +129,16 @@ const useStyles = makeStyles(() => ({
     width: '75%',
     height: 'auto',
     minHeight: 200,
+    // boxShadow: '0px 0px 5px #181818',
+    // '-webkit-filter': 'drop-shadow(5px 5px 5px #222)',
+    // filter: 'drop-shadow(5px 5px 5px #222)',
   },
   frontName: {
     width: '90%',
     textAlign: 'center',
     fontFamily: 'Zilla Slab',
     fontWeight: '700',
-    fontSize: '24px',
+    fontSize: '22px',
     lineHeight: '29px',
     marginTop: 20,
   },
@@ -139,17 +147,19 @@ const useStyles = makeStyles(() => ({
     textAlign: 'center',
     fontFamily: 'Helvetica',
     fontWeight: '400',
-    fontSize: '14px',
+    fontSize: '12px',
     lineHeight: '16px',
+    marginTop: 5,
   },
   linksContainer: {
     display: 'flex',
-    justifyContent: 'space-between',
+    justifyContent: 'flex-start',
     alignItems: 'center',
     width: '50%',
   },
   icons: {
     color: 'white',
+    margin: 10,
   },
   infoContainer: {
     height: '85%',

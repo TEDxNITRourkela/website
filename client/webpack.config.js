@@ -1,11 +1,11 @@
 const path = require('path');
-// const webpack = require('webpack');
+const webpack = require('webpack');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const dotenv = require('dotenv');
+const dotenv = require('dotenv');
 
 module.exports = (env) => {
   // eslint-disable-next-line
@@ -15,20 +15,27 @@ module.exports = (env) => {
   const isProduction = env === 'production';
   const isDev = env === 'development';
 
-  // call dotenv and it will return an Object with a parsed key
-  // const envVars = dotenv.config().parsed || {};
-  // envVars.NODE_ENV = env || '';
+  let envVars;
+  if (isProduction) {
+    envVars = {
+      NODE_ENV: env,
+    };
+  } else {
+    // call dotenv and it will return an Object with a parsed key
+    envVars = dotenv.config().parsed || {};
+    envVars.NODE_ENV = env;
+  }
 
   // reduce it to a nice object, the same as before
-  // const envKeys = Object.keys(envVars).reduce((prev, next) => {
-  //   // eslint-disable-next-line
-  //   prev[`process.env.${next}`] = JSON.stringify(envVars[next]);
-  //   return prev;
-  // }, {});
+  const envKeys = Object.keys(envVars).reduce((prev, next) => {
+    // eslint-disable-next-line
+    prev[`process.env.${next}`] = JSON.stringify(envVars[next]);
+    return prev;
+  }, {});
 
   /* ========= Plugins ========= */
   // Maps environment variables from .env file to the project
-  // const DefinePlugin = new webpack.DefinePlugin(envKeys);
+  const DefinePlugin = new webpack.DefinePlugin(envKeys);
 
   // Cleans 'dist' folder everytime before a new build
   const CleanPlugin = new CleanWebpackPlugin({
@@ -92,7 +99,7 @@ module.exports = (env) => {
     AnalyzerPlugin,
     HTMLPlugin,
     CopyPlugin,
-    // DefinePlugin,
+    DefinePlugin,
   ];
 
   config.module = {
