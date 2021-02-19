@@ -29,12 +29,12 @@ export const PARTNER = Object.freeze({
       },
       {
         img: PARTNERS.FLICKR,
-        href: 'https://mailchimp.com',
+        href: 'https://flickr.com',
         hrefTitle: 'Flickr',
       },
       {
         img: PARTNERS.MAILCHIMP,
-        href: 'https://flickr.com',
+        href: 'https://mailchimp.com',
         hrefTitle: 'MailChimp',
       },
       {
