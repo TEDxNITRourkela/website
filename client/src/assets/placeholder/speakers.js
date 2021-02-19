@@ -5,8 +5,8 @@ export const GUESTS = [
   {
     name: 'Ashwathy  Satheesan',
     description:
-      'A graduate of NID Ahemdabad, Ashwathy is passionate about projects dealing with design activism, circular economy & the future. She has won numerous accolades, including National Winner at the prestigious James Dyson Award in 2019. ',
-    shortDescription: 'Design Guru',
+      'A graduate of NID Ahemdabad, Ashwathy is passionate about projects dealing with design activism, circular economy & the future. She has won numerous accolades, including National Winner at the prestigious in 2019',
+    shortDescription: 'Winner | James Dyson Award',
     image: SPEAKERS.SILHOUETTE.ONE,
     links: [
       {
@@ -19,16 +19,11 @@ export const GUESTS = [
         link_type: 'fab fa-instagram',
         link_name: 'instagram',
       },
-      // {
-      //   link: '',
-      //   link_type: 'fab fa-twitter',
-      //   link_name: 'twitter',
-      // },
-      // {
-      //   link: '',
-      //   link_type: 'fab fa-facebook-f',
-      //   link_name: 'facebook',
-      // },
+      {
+        link: 'https://www.behance.net/AshwathySatheesan/',
+        link_type: 'fab fa-behance-square',
+        link_name: 'behance',
+      },
     ],
   },
   {

@@ -33,7 +33,7 @@ function GuestCard({ name, description, image, shortDescription, links }) {
             </>
           )}
 
-          {showFront && (
+          {showFront && name !== 'John Doe' && (
             <i
               className={`${classes.flipSymbol} fas fa-info-circle`}
               onClick={onClick}
