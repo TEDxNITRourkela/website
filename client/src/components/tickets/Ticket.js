@@ -8,6 +8,9 @@ import { SnackbarProvider, useSnackbar } from 'notistack';
 // Assets
 import { TICKETS } from '../../assets/img/pages';
 
+// Utilities
+import { analytics } from '../../config/firebase';
+
 const PAYMENT_STATUS = {
   SUCCESS: 'Payment Successful',
   FAIL: 'Payment Failure',
@@ -66,6 +69,9 @@ function Tickets({ short }) {
           onFailure: onPayFail,
         },
       });
+
+      // Log Button Payment Event
+      analytics().logEvent('Pay Button Clicked');
 
       Instamojo.open(
         /* eslint-disable-next-line */

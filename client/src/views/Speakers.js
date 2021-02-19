@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
+// Libraries
 import { makeStyles, Container } from '@material-ui/core';
 import { Helmet } from 'react-helmet';
 
 // Components
 import GuestCard from '../components/speakers/SpeakerCard';
+
+// Utilities
+import { analytics } from '../config/firebase';
 
 // Assets
 import { GUESTS } from '../assets/placeholder/speakers';
@@ -12,6 +16,10 @@ import { GRAPHICS } from '../assets/img/graphics';
 
 function About() {
   const classes = useStyles();
+
+  useEffect(() => {
+    analytics().logEvent('Speakers Page Loaded');
+  }, []);
 
   return (
     <>
