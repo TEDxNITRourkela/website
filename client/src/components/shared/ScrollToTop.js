@@ -67,8 +67,5 @@ const useStyles = makeStyles((theme) => ({
   icon: {
     color: theme.palette.common.white,
     fontSize: 30,
-    [theme.breakpoints.down('sm')]: {
-      fontSize: 20,
-    },
   },
 }));

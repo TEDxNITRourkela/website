@@ -144,12 +144,13 @@ const useStyles = makeStyles(() => ({
   },
   linksContainer: {
     display: 'flex',
-    justifyContent: 'space-between',
+    justifyContent: 'flex-start',
     alignItems: 'center',
     width: '50%',
   },
   icons: {
     color: 'white',
+    margin: 10,
   },
   infoContainer: {
     height: '85%',

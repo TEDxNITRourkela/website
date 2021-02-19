@@ -14,7 +14,7 @@ export const SPEAKERS = Object.freeze({
     'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1613309710/assets/pages/speakers/defaultGuest_cq4ghg.png',
   SILHOUETTE: {
     ONE:
-      'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1613311434/assets/pages/speakers/silhouettes/Mask_Group-6_hmcoyr.png',
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1613705113/assets/pages/speakers/image_20_rq8ejr.png',
     TWO:
       'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1613311434/assets/pages/speakers/silhouettes/Mask_Group-7_pjxyaw.png',
     THREE:
