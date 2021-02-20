@@ -128,10 +128,7 @@ const useStyles = makeStyles(() => ({
   image: {
     width: '75%',
     height: 'auto',
-    minHeight: 200,
-    // boxShadow: '0px 0px 5px #181818',
-    // '-webkit-filter': 'drop-shadow(5px 5px 5px #222)',
-    // filter: 'drop-shadow(5px 5px 5px #222)',
+    // minHeight: 200,
   },
   frontName: {
     width: '90%',
