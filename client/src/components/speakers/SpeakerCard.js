@@ -5,7 +5,8 @@ import React, { useState } from 'react';
 import { makeStyles, Typography } from '@material-ui/core';
 
 function GuestCard({ name, description, image, shortDescription, links }) {
-  const classes = useStyles();
+  const isSpeaker = name !== 'John Doe';
+  const classes = useStyles(isSpeaker);
   const [showFront, setShowFront] = useState(true);
   const [cardStyle, setCardStyle] = useState(classes.card);
 
@@ -21,8 +22,15 @@ function GuestCard({ name, description, image, shortDescription, links }) {
     <div className={classes.root}>
       <div className={cardStyle}>
         <div className={`${classes.common} ${classes.front}`}>
-          <img src={image} alt={name} className={classes.image} />
-          {name !== 'John Doe' && (
+          {/* <img src={image} alt={name} className={classes.image} /> */}
+          <div
+            className={classes.imgDiv}
+            style={{
+              // eslint-disable-next-line
+              backgroundImage: `linear-gradient(to bottom, transparent, transparent, #232323), url(${image})`,
+            }}
+          />
+          {isSpeaker && (
             <>
               <Typography className={classes.frontName} variant='h3'>
                 {name}
@@ -128,10 +136,15 @@ const useStyles = makeStyles(() => ({
   image: {
     width: '75%',
     height: 'auto',
-    minHeight: 200,
-    // boxShadow: '0px 0px 5px #181818',
-    // '-webkit-filter': 'drop-shadow(5px 5px 5px #222)',
-    // filter: 'drop-shadow(5px 5px 5px #222)',
+    // minHeight: 200,
+  },
+  imgDiv: {
+    width: 190,
+    height: (isSpeaker) => (isSpeaker ? 190 : 230),
+    backgroundColor: '#232323',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
   },
   frontName: {
     width: '90%',
