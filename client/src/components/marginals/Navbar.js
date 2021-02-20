@@ -70,7 +70,7 @@ function Navbar({ window, showBoxShadow }) {
             keepMounted: true, // Better open performance on mobile.
           }}
         >
-          {TABS_NAV.slice(0).map(({ link, name }) => (
+          {TABS_NAV.slice(0, 5).map(({ link, name }) => (
             <Link className={classes.tabLink} to={link} key={link}>
               <ListItem>
                 <Typography className={classes.tab} variant='body1'>
