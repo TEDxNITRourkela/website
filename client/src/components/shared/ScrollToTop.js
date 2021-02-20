@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
     width: 60,
     height: 60,
     backgroundColor: theme.palette.secondary.main,
-    boxShadow: `0px 0px 10px ${theme.palette.secondary.main}`,
+    boxShadow: `0px 0px 10px #000000`,
     borderRadius: '100%',
     position: 'fixed',
     bottom: 100,

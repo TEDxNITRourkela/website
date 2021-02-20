@@ -16,12 +16,12 @@ export const tabs = [
     link: '/tickets',
   },
   {
-    name: 'Events',
-    link: '/events',
+    name: 'Participate',
+    link: '/campus_ambassadors',
   },
   {
-    name: 'Participate',
-    link: '/participate',
+    name: 'Events',
+    link: '/events',
   },
   {
     name: 'Our Community',
