@@ -30,7 +30,7 @@ export const SPEAKERS = Object.freeze({
   },
   SPEAKERS: {
     ONE:
-      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/speakers/image_20_rq8ejr.png',
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/speakers/ashwathy-satheeshan-removebg-preview_100_ycbz30.png',
     TWO:
       'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/speakers/anup_nandy-removebg-preview_hsno3b.png',
   },
