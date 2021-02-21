@@ -38,14 +38,16 @@ function Home() {
       <Index />
       <ContentBanner DATA={CONTENT2.TWO} smallLogo wrapContainer />
       <ContentBanner DATA={CONTENT2.ONE} wrapContainer />
-      <Container className={classes.container}>
+      <Container>
         <Incentives title='Campus Representative Program' />
 
-        <Link to='/campus_ambassadors' className={classes.link}>
-          <button type='button' className={classes.button}>
-            Know More
-          </button>
-        </Link>
+        <div className={classes.container}>
+          <Link to='/campus_ambassadors' className={classes.link}>
+            <button type='button' className={classes.button}>
+              Know More
+            </button>
+          </Link>
+        </div>
       </Container>
 
       {/* <Subscribe /> */}
