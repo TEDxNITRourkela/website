@@ -34,7 +34,9 @@ function ContentBanner({ DATA, smallLogo = false, wrapContainer = false }) {
         ) : (
           <ul style={{ marginLeft: 30 }}>
             {DATA.CONTENT.map((point) => (
-              <li className={classes.content}>{point}</li>
+              <li key={point} className={classes.content}>
+                {point}
+              </li>
             ))}
           </ul>
         )}

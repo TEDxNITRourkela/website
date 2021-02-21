@@ -10,6 +10,7 @@ import { analytics } from '../config/firebase';
 
 // Components
 import Intro from '../components/participate/Intro';
+import Incentives from '../components/participate/Incentives';
 import ContentBanner from '../components/shared/ContentBanner';
 
 // Assets
@@ -33,12 +34,15 @@ function About() {
       <Container>
         <Intro />
         <ContentBanner DATA={PARTICIPATE.BANNER} />
+        <Incentives />
 
-        {/* <ReactTypeformEmbed
-          hideHeaders
-          autoOpen
-          url='https://form.typeform.com/to/sSMmZcrG'
-        /> */}
+        {/* <div style={{ marginTop: 500 }}>
+          <ReactTypeformEmbed
+            hideHeaders
+            autoOpen
+            url='https://form.typeform.com/to/sSMmZcrG'
+          />
+        </div> */}
       </Container>
       <img src={GRAPHICS.TOP_LEFT} alt='top left' className={classes.topLeft} />
     </div>

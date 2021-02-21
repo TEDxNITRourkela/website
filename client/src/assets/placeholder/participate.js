@@ -1,4 +1,8 @@
 /* eslint-disable */
+const createData = (column1, column2, column3, column4, column5, column6) => {
+  return { column1, column2, column3, column4, column5, column6 };
+};
+
 export const PARTICIPATE = Object.freeze({
   INTRO: {
     TITLE: 'Campus Representative',
@@ -13,5 +17,32 @@ export const PARTICIPATE = Object.freeze({
       'This program is an excellent way to develop your Soft Skills',
       'We provide you excellent scope to gain and practice marketing and managerial skills',
     ],
+  },
+  INCENTIVES: {
+    TITLE: 'Incentives',
+    TABLE: {
+      HEADINGS: [
+        'Your designation',
+        'Deputy Campus Representative',
+        'Campus Representative',
+        'Campus Ambassador',
+        'Campus Ambassador',
+        'Campus Ambassador',
+      ],
+      ROWS: [
+        createData('No of referrals', '3+', '7+', '10+', '15+', '20+'),
+        createData('Certificate', '√', '√', '√', '√', '√'),
+        createData('Free Ticket to the event', '-', '-', '√', '√', '√'),
+        createData('Free Merchandise', '-', '-', '-', '√', '√'),
+        createData(
+          'Free Entry to the Next TEDxNITRourkela event',
+          '-',
+          '-',
+          '-',
+          '-',
+          '√',
+        ),
+      ],
+    },
   },
 });
