@@ -130,13 +130,14 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   scrollDown: {
-    position: 'absolute',
-    bottom: 20,
     width: '100%',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    [theme.breakpoints.down('md')]: {
+      marginTop: 10,
+    },
   },
   scrollIcon: {
     width: 36,

@@ -41,7 +41,12 @@ function ContentBanner({ DATA, smallLogo = false, wrapContainer = false }) {
           </ul>
         )}
         {DATA.LINK && (
-          <a href={DATA.LINK} className={classes.link}>
+          <a
+            href={DATA.LINK}
+            className={classes.link}
+            target='_blank'
+            rel='noreferrer'
+          >
             <Typography variant='body2'>{DATA.LINKTEXT}</Typography>
           </a>
         )}

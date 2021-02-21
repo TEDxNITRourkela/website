@@ -23,7 +23,12 @@ function TedContent() {
           <Typography variant='body2' className={classes.content}>
             {CONTENT.TWO.content}
           </Typography>
-          <a href={CONTENT.TWO.link} className={classes.link}>
+          <a
+            href={CONTENT.TWO.link}
+            className={classes.link}
+            target='_blank'
+            rel='noreferrer'
+          >
             <Typography variant='body2'>{CONTENT.TWO.linkText}</Typography>
           </a>
         </Grid>

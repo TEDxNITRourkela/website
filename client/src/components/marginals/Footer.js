@@ -82,31 +82,55 @@ function Footer() {
           <a
             className={classes.privacy}
             href='https://files.tedxnitrourkela.com/Privacy_Policy.pdf'
+            target='_blank'
+            rel='noreferrer'
           >
             Privacy Policy
           </a>
           <a
             className={classes.privacy}
             href='https://files.tedxnitrourkela.com/Tersm_of_Service.pdf'
+            target='_blank'
+            rel='noreferrer'
             style={{ marginTop: 0 }}
           >
             Terms of Service
           </a>
 
           <div className={classes.iconsContainer}>
-            <a href='https://www.facebook.com/tedxnitrourkela/'>
+            <a
+              href='https://www.facebook.com/tedxnitrourkela/'
+              target='_blank'
+              rel='noreferrer'
+            >
               <i className={`${classes.icon} fab fa-facebook-f`} />
             </a>
-            <a href='https://twitter.com/tedxnitr'>
+            <a
+              href='https://twitter.com/tedxnitr'
+              target='_blank'
+              rel='noreferrer'
+            >
               <i className={`${classes.icon} fab fa-twitter`} />
             </a>
-            <a href='https://www.youtube.com/channel/UCsY55AEkwUHJnbc6TLRB-7g'>
+            <a
+              href='https://www.youtube.com/channel/UCsY55AEkwUHJnbc6TLRB-7g'
+              target='_blank'
+              rel='noreferrer'
+            >
               <i className={`${classes.icon} fab fa-youtube`} />
             </a>
-            <a href='https://in.linkedin.com/company/tedxnitrourkela'>
+            <a
+              href='https://in.linkedin.com/company/tedxnitrourkela'
+              target='_blank'
+              rel='noreferrer'
+            >
               <i className={`${classes.icon} fab fa-linkedin-in`} />
             </a>
-            <a href='https://www.instagram.com/tedxnitrourkela/'>
+            <a
+              href='https://www.instagram.com/tedxnitrourkela/'
+              target='_blank'
+              rel='noreferrer'
+            >
               <i className={`${classes.icon} fab fa-instagram`} />
             </a>
           </div>
