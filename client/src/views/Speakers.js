@@ -22,13 +22,13 @@ function About() {
   }, []);
 
   return (
-    <>
+    <div className={classes.root}>
       <Helmet>
         <title>TEDxNITRourkela | Speakers</title>
         <meta name='title' content='TEDxNITRourkela | Partners' />
       </Helmet>
 
-      <Container className={classes.root}>
+      <Container>
         <h1 className={classes.title}>Speakers & Performers</h1>
 
         <div className={classes.guestsContainer}>
@@ -48,19 +48,18 @@ function About() {
         </div>
       </Container>
       <img src={GRAPHICS.TOP_LEFT} alt='top left' className={classes.topLeft} />
-    </>
+    </div>
   );
 }
 
 export default About;
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
-    height: 'calc(100% - 100px)',
-    minHeight: '100vh',
+    minHeight: 'calc(100vh - 100px)',
+    backgroundColor: theme.palette.background.default,
     marginTop: '100px',
-    paddingTop: '50px',
     position: 'relative',
   },
   guestsContainer: {

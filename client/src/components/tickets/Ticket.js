@@ -124,7 +124,8 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
-    marginTop: (short) => (short ? '0px' : '120px'),
+    backgroundColor: theme.palette.background.default,
+    marginTop: (short) => (short ? '0px' : '100px'),
   },
   ticketContainer: {
     position: 'relative',

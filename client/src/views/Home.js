@@ -44,12 +44,12 @@ function Home() {
 
 export default Home;
 
-const useStyles = () => () => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
-    height: 'calc(100% - 100px)',
-    minHeight: '90vh',
+    minHeight: 'calc(100vh - 100px)',
+    backgroundColor: theme.palette.background.default,
     marginTop: '100px',
     position: 'relative',
   },
-});
+}));

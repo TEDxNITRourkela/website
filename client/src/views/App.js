@@ -31,7 +31,7 @@ const AsyncAbout = AsyncRoute('./About');
 const AsyncPartner = AsyncRoute('./Partner');
 const AsyncSpeakers = AsyncRoute('./Speakers');
 const AsyncTickets = AsyncRoute('./Tickets');
-const AsyncCA = AsyncRoute('./CA.js');
+const AsyncCA = AsyncRoute('./Participate.js');
 const Async404 = AsyncRoute('./404.js');
 const AsyncDevelopment = AsyncRoute('./Development.js');
 

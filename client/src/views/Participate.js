@@ -1,12 +1,15 @@
 import React, { useEffect } from 'react';
 
 // Libraries
-import { makeStyles, Container } from '@material-ui/core';
+import { Container, makeStyles } from '@material-ui/core';
 import { Helmet } from 'react-helmet';
-import { ReactTypeformEmbed } from 'react-typeform-embed';
+// import { ReactTypeformEmbed } from 'react-typeform-embed';
 
 // Utilities
 import { analytics } from '../config/firebase';
+
+// Components
+import Intro from '../components/participate/Intro';
 
 // Assets
 import { GRAPHICS } from '../assets/img/graphics';
@@ -19,23 +22,23 @@ function About() {
   }, []);
 
   return (
-    <>
+    <div className={classes.root}>
       <Helmet>
         <title>TEDxNITRourkela | Campus Ambassador</title>
         <meta name='title' content='TEDxNITRourkela | Campus Ambassador' />
       </Helmet>
 
-      <Container className={classes.root}>
-        <div>
-          <ReactTypeformEmbed
-            hideHeaders
-            autoOpen
-            url='https://form.typeform.com/to/sSMmZcrG'
-          />
-        </div>
+      <Container>
+        <Intro />
+
+        {/* <ReactTypeformEmbed
+          hideHeaders
+          autoOpen
+          url='https://form.typeform.com/to/sSMmZcrG'
+        /> */}
       </Container>
       <img src={GRAPHICS.TOP_LEFT} alt='top left' className={classes.topLeft} />
-    </>
+    </div>
   );
 }
 
@@ -45,21 +48,8 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
     minHeight: 'calc(100vh - 100px)',
+    backgroundColor: theme.palette.background.default,
     marginTop: '100px',
-    paddingTop: '50px',
-    position: 'relative',
-    [theme.breakpoints.down('sm')]: {
-      paddingTop: '20px',
-    },
-  },
-  title: {
-    width: '100%',
-    textAlign: 'center',
-    font: 'Zilla Slab',
-    weight: '700',
-    fontSize: '36px',
-    lineHeight: '43px',
-    color: '#ffffff',
   },
   topLeft: {
     position: 'absolute',

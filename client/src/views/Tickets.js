@@ -51,8 +51,10 @@ export default Tickets;
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
-    height: 'calc(100vh - 100px)',
-    // marginTop: '100px',
+    minHeight: 'calc(100vh - 100px)',
+    height: '100%',
+    backgroundColor: theme.palette.background.default,
+    marginTop: '100px',
     position: 'relative',
   },
   topLeft: {
