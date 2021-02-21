@@ -31,9 +31,9 @@ const AsyncAbout = AsyncRoute('./About');
 const AsyncPartner = AsyncRoute('./Partner');
 const AsyncSpeakers = AsyncRoute('./Speakers');
 const AsyncTickets = AsyncRoute('./Tickets');
-const AsyncCA = AsyncRoute('./CA.js');
+const AsyncCA = AsyncRoute('./Participate.js');
+const Async404 = AsyncRoute('./404.js');
 const AsyncDevelopment = AsyncRoute('./Development.js');
-const AsyncLoader = AsyncRoute('../components/shared/ActivityIndicator');
 
 function App() {
   const [showBoxShadow, setShowBoxShadow] = useState(false);
@@ -66,8 +66,12 @@ function App() {
           <Route path='/tickets' exact component={AsyncTickets} />
           <Route path='/campus_ambassadors' exact component={AsyncCA} />
 
-          <Route path='/loader' exact component={AsyncLoader} />
-          <Route path='*' component={AsyncDevelopment} />
+          {/* Under Development */}
+          <Route path='/events' component={AsyncDevelopment} />
+          <Route path='/community' component={AsyncDevelopment} />
+          <Route path='/gallery' component={AsyncDevelopment} />
+
+          <Route path='*' component={Async404} />
         </Switch>
 
         <MessengerCustomerChat

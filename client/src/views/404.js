@@ -29,10 +29,10 @@ function Index() {
         </Typography>
 
         <video autoPlay loop muted playsInline className={classes.commingSoon}>
-          <source src={VIDEOS.PEAK} type='video/mp4' />
+          <source src={VIDEOS.PAGE_NOT_FOUND} type='video/mp4' />
         </video>
         <Typography variant='h2' className={classes.commingSoonContent}>
-          This page is under development.
+          Error: Page not found!
         </Typography>
 
         <Link to='/'>

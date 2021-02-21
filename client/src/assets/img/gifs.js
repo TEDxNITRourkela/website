@@ -6,6 +6,8 @@ export const GIFS = Object.freeze({
     'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/gif/peak_pbtjjb.gif',
   LOADING:
     'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/gif/loading_txy0qs.gif',
+  PAGE_NOT_FOUND:
+    'https://res.cloudinary.com/tedxnitrourkela/video/upload/assets/gif/animation_500_kler8h6f_gthta0.mp4',
 });
 
 export const VIDEOS = Object.freeze({
@@ -15,4 +17,6 @@ export const VIDEOS = Object.freeze({
     'https://res.cloudinary.com/tedxnitrourkela/video/upload/assets/gif/peak_wzuwvd.mp4',
   LOADING:
     'https://res.cloudinary.com/tedxnitrourkela/video/upload/assets/gif/loading_zqfkiz.mp4',
+  PAGE_NOT_FOUND:
+    'https://res.cloudinary.com/tedxnitrourkela/video/upload/assets/gif/animation_500_klesmt8f_ufu16j.mp4',
 });
