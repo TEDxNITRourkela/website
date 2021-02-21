@@ -51,31 +51,31 @@ export const GUESTS = [
     ],
   },
   {
-    name: 'John Doe',
+    name: 'Lisa Russell',
     description:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae, sequi amet. Quidem ea laborum facere asperiores, voluptate earum eius doloremque quod? Dolores distinctio delectus at obcaecati vel alias corporis cumque.',
-    shortDescription: 'Design Guru',
-    image: SPEAKERS.SILHOUETTE.THREE,
+      'Lisa Russell, MPH, is an Emmy-winning filmmaker and art curator. She is a two-time TEDx speaker, Fulbright Specialist and an accomplished presenter along with many other accolades.',
+    shortDescription: 'Winner | Emmy Award 2009',
+    image: SPEAKERS.SPEAKERS.THREE,
     links: [
       {
-        link: '',
+        link: 'https://www.linkedin.com/in/lisarussellfilms/',
         link_type: 'fab fa-linkedin-in',
         link_name: 'linkedin',
       },
       {
-        link: '',
+        link: 'https://twitter.com/lisarusselfilm',
         link_type: 'fab fa-twitter',
         link_name: 'twitter',
       },
       {
-        link: '',
+        link: 'https://www.instagram.com/lisarussellfilm/',
         link_type: 'fab fa-instagram',
         link_name: 'instagram',
       },
       {
-        link: '',
-        link_type: 'fab fa-facebook-f',
-        link_name: 'facebook',
+        link: 'http://lisa-russell-films.squarespace.com/',
+        link_type: 'fab fa-squarespace',
+        link_name: 'squarespace',
       },
     ],
   },
