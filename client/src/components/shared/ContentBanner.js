@@ -25,7 +25,12 @@ function ContentBanner({ DATA, smallLogo = false, wrapContainer = false }) {
         <Typography variant='body2' className={classes.content}>
           {DATA.CONTENT}
         </Typography>
-        <a href={DATA.LINK} className={classes.link}>
+        <a
+          href={DATA.LINK}
+          className={classes.link}
+          target='_blank'
+          rel='noreferrer'
+        >
           <Typography variant='body2'>{DATA.LINKTEXT}</Typography>
         </a>
       </div>
