@@ -47,7 +47,7 @@ function Navbar({ window, showBoxShadow }) {
         aria-label='Menu Button'
       />
       <div className={classes.tabsContainer}>
-        {TABS_NAV.slice(0, 5).map(({ link, name }) => (
+        {TABS_NAV.slice(0, 6).map(({ link, name }) => (
           <Link className={classes.tabLink} to={link} key={link}>
             <Typography className={classes.tab} variant='body1'>
               {name}
