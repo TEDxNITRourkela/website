@@ -13,21 +13,36 @@ function ContentBanner({ DATA, smallLogo = false, wrapContainer = false }) {
           {DATA.TITLE}
         </Typography>
         <div className={classes.imgWrapper}>
-          <img
-            className={classes.img}
-            src={DATA.LOGO}
-            alt='TEDxNITRourkela Logo'
-          />
+          {DATA.LOGO && (
+            <img
+              className={classes.img}
+              src={DATA.LOGO}
+              alt='TEDxNITRourkela Logo'
+            />
+          )}
         </div>
       </div>
 
       <div className={classes.column2}>
-        <Typography variant='body2' className={classes.content}>
-          {DATA.CONTENT}
-        </Typography>
-        <a href={DATA.LINK} className={classes.link}>
-          <Typography variant='body2'>{DATA.LINKTEXT}</Typography>
-        </a>
+        {typeof DATA.CONTENT === 'string' ? (
+          <Typography
+            variant='body2'
+            className={`${classes.content} ${classes.contentOveride}`}
+          >
+            {DATA.CONTENT}
+          </Typography>
+        ) : (
+          <ul style={{ marginLeft: 30 }}>
+            {DATA.CONTENT.map((point) => (
+              <li className={classes.content}>{point}</li>
+            ))}
+          </ul>
+        )}
+        {DATA.LINK && (
+          <a href={DATA.LINK} className={classes.link}>
+            <Typography variant='body2'>{DATA.LINKTEXT}</Typography>
+          </a>
+        )}
       </div>
     </>
   );
@@ -117,12 +132,16 @@ const useStyles = makeStyles((theme) => ({
     width: '80%',
     fontWeight: theme.typography.fontWeightRegular,
     fontFamily: 'Roboto',
-    marginTop: 30,
-    marginBottom: 30,
+    marginTop: 5,
+    marginBottom: 5,
     [theme.breakpoints.down('sm')]: {
       width: '80%',
       textAlign: 'center',
     },
+  },
+  contentOveride: {
+    marginTop: 30,
+    marginBottom: 30,
   },
   link: {
     width: '80%',

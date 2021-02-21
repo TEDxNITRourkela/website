@@ -10,9 +10,11 @@ import { analytics } from '../config/firebase';
 
 // Components
 import Intro from '../components/participate/Intro';
+import ContentBanner from '../components/shared/ContentBanner';
 
 // Assets
 import { GRAPHICS } from '../assets/img/graphics';
+import { PARTICIPATE } from '../assets/placeholder/participate';
 
 function About() {
   const classes = useStyles();
@@ -30,6 +32,7 @@ function About() {
 
       <Container>
         <Intro />
+        <ContentBanner DATA={PARTICIPATE.BANNER} />
 
         {/* <ReactTypeformEmbed
           hideHeaders

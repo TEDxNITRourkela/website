@@ -3,10 +3,10 @@ export const PARTICIPATE = Object.freeze({
   INTRO: {
     TITLE: 'Campus Representative',
     CONTENT:
-      'A partnership with TEDxNITRourkela will bring you a diverse and promising audience, and would also allow you to form an emotional connection with our audience. In addition to this, an invitation to the event will be provided, allowing you to observe and interact with the audience to learn.',
+      'The Campus Representative(CR) Programme is an opportunity for you to be a part of this event as more than just a participant. You will be a point of contact between TEDxNITRourkela and the audience by relaying information about the event to the prospects.',
   },
   BANNER: {
-    TITLE: 'Why be a CR?',
+    TITLE: 'What is Campus Representative Program?',
     CONTENT: [
       'You get learning and mentorship opportunities to upskill your public relations skills',
       'You build fantastic networks as a Campus Representative, as we provide you with the opportunity to work with people from all across the country',
