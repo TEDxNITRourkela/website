@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 // Libraries
 import { Container, makeStyles } from '@material-ui/core';
 import { Helmet } from 'react-helmet';
-// import { ReactTypeformEmbed } from 'react-typeform-embed';
+import { ReactTypeformEmbed } from 'react-typeform-embed';
 
 // Utilities
 import { analytics } from '../config/firebase';
@@ -19,10 +19,13 @@ import { PARTICIPATE } from '../assets/placeholder/participate';
 
 function About() {
   const classes = useStyles();
+  const typeform = useRef();
 
   useEffect(() => {
     analytics().logEvent('Campus Ambassador Page Loaded');
   }, []);
+
+  const openForm = () => typeform.current.typeform.open();
 
   return (
     <div className={classes.root}>
@@ -36,13 +39,21 @@ function About() {
         <ContentBanner DATA={PARTICIPATE.BANNER} />
         <Incentives />
 
-        {/* <div style={{ marginTop: 500 }}>
-          <ReactTypeformEmbed
-            hideHeaders
-            autoOpen
-            url='https://form.typeform.com/to/sSMmZcrG'
-          />
-        </div> */}
+        <ReactTypeformEmbed
+          ref={typeform}
+          hideHeaders
+          url='https://form.typeform.com/to/sSMmZcrG'
+          mode='pop_up'
+          popup
+          autoOpen={false}
+          buttonText='Apply Now!'
+        />
+
+        <div className={classes.buttonContainer}>
+          <button onClick={openForm} type='button' className={classes.button}>
+            Apply Now
+          </button>
+        </div>
       </Container>
       <img src={GRAPHICS.TOP_LEFT} alt='top left' className={classes.topLeft} />
     </div>
@@ -62,5 +73,27 @@ const useStyles = makeStyles((theme) => ({
     position: 'absolute',
     top: 0,
     left: 0,
+  },
+  buttonContainer: {
+    width: '100%',
+    marginTop: '50px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  button: {
+    border: '1px solid #FF2B06',
+    borderRadius: '6px',
+    backgroundColor: '#1a1a1a',
+    padding: 'auto 20px',
+    color: '#ffffff',
+    minWidth: '150px',
+    minHeight: '50px',
+    width: 'auto',
+    fontSize: '16px',
+    '&:hover': {
+      backgroundColor: '#FF2B06',
+      cursor: 'pointer',
+    },
   },
 }));
