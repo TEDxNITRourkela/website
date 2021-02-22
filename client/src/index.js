@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import App from './views/App';
-import Root from './Root';
+import Root from './config/Root';
 
 import configureFirebase, { analytics } from './config/firebase';
 
