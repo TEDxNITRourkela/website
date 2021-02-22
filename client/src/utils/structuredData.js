@@ -36,3 +36,46 @@ export const eventData = {
     availability: 'https://schema.org/InStock',
   },
 };
+
+export const breadcrumbsData = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: '1',
+      name: 'About',
+      item: 'https://tedxnitrourkela.com/about',
+    },
+    {
+      '@type': 'ListItem',
+      position: '2',
+      name: 'Speakers',
+      item: 'https://tedxnitrourkela.com/speakers',
+    },
+    {
+      '@type': 'ListItem',
+      position: '3',
+      name: 'Tickets',
+      item: 'https://tedxnitrourkela.com/tickets',
+    },
+    {
+      '@type': 'ListItem',
+      position: '4',
+      name: 'Campus Representative',
+      item: 'https://tedxnitrourkela.com/campus_ambassadors',
+    },
+    {
+      '@type': 'ListItem',
+      position: '5',
+      name: 'Wall',
+      item: 'https://tedxnitrourkela.com/wall',
+    },
+    {
+      '@type': 'ListItem',
+      position: '5',
+      name: 'Partners',
+      item: 'https://tedxnitrourkela.com/partners',
+    },
+  ],
+};

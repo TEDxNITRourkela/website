@@ -16,7 +16,7 @@ import Navbar from '../components/marginals/Navbar';
 import Footer from '../components/marginals/Footer';
 
 // Structured Datas
-import { eventData } from '../utils/structuredData';
+import { eventData, breadcrumbsData } from '../utils/structuredData';
 
 // Helpers
 import createBrowserHistory from '../utils/history';
@@ -59,6 +59,9 @@ function App() {
     <>
       <Helmet>
         <script type='application/ld+json'>{JSON.stringify(eventData)}</script>
+        <script type='application/ld+json'>
+          {JSON.stringify(breadcrumbsData)}
+        </script>
       </Helmet>
 
       <ThemeProvider theme={theme}>
