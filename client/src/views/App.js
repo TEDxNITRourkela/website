@@ -16,7 +16,12 @@ import Navbar from '../components/marginals/Navbar';
 import Footer from '../components/marginals/Footer';
 
 // Structured Datas
-import { eventData, breadcrumbsData, faqData } from '../utils/structuredData';
+import {
+  eventData,
+  breadcrumbsData,
+  faqData,
+  logoData,
+} from '../utils/structuredData';
 
 // Helpers
 import createBrowserHistory from '../utils/history';
@@ -60,6 +65,7 @@ function App() {
       <Helmet>
         <script type='application/ld+json'>{JSON.stringify(eventData)}</script>
         <script type='application/ld+json'>{JSON.stringify(faqData)}</script>
+        <script type='application/ld+json'>{JSON.stringify(logoData)}</script>
         <script type='application/ld+json'>
           {JSON.stringify(breadcrumbsData)}
         </script>

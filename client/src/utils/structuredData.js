@@ -148,3 +148,11 @@ export const faqData = {
     },
   ],
 };
+
+export const logoData = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  url: 'https://tedxnitrourkela.com/',
+  logo:
+    'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1613306686/assets/logos/logo_dark_oipjvc.png',
+};
