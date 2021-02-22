@@ -79,3 +79,72 @@ export const breadcrumbsData = {
     },
   ],
 };
+
+export const faqData = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Who are the speakers for TEDxNITRourkela?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text:
+          'We’re still working towards curating a fantastic experience for all of you. Feel free to keep an eye on our social media channels! Checkout the list of revealed speakers <a href="https://tedxnitrourkela.com/speakers">here</a>',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Who is organizing the event?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text:
+          'We’re a group of students at NIT Rourkela who feel passionate about the TED mission, “Ideas Worth Spreading.”',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Will the event be an online one?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text:
+          'Yes, due to the pandemic, our event will take place virtually on the Airmeet platform.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How can I attend the event?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text:
+          "Due to the pandemic, our event will take place virtually on the Airmeet platform. Tickets will be available on our <a href='https://tedxnitrourkela.com/tickets'>website</a>.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the price of a single ticket?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'We are pricing the registration tickets at Rs. 500/-',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Why should I attend the event if it is only virtual?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text:
+          'Great question! While all our speakers’ talks will be live-streamed on YouTube, the live event will include premium content and interactive experiences that will only be made available via the live event, such as musical performances, stand-ups, and more.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do TEDx speakers or organizers get paid?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text:
+          'No. TEDx events are entirely a volunteer endeavor to bring the best together under one roof.',
+      },
+    },
+  ],
+};
