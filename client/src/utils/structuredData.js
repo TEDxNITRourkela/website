@@ -20,11 +20,19 @@ export const eventData = {
       '@type': 'Person',
       name: 'Lisa Russell',
     },
+    {
+      '@type': 'Person',
+      name: 'Anup Nandy',
+    },
+    {
+      '@type': 'Person',
+      name: 'Ashwathy Satheesan',
+    },
   ],
   organizer: {
     '@type': 'Organization',
     name: 'TEDxNITRourkela',
-    url: 'https://www.nitrkl.ac.in/',
+    url: 'https://tedxnitrourkela.com/',
   },
   offers: {
     '@type': 'Offer',
