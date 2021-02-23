@@ -31,7 +31,7 @@ function Tickets({ short }) {
     ? `https://www.instamojo.com/@StudentActivityCenter/${referrals[3]}/`
     : /* eslint-disable-next-line */
       'https://www.instamojo.com/@StudentActivityCenter/l2819ae69330f4c8a8ee450758aa6b022/';
-  const imageURL = isReferral ? TICKETS.DISCOUNTED : TICKETS.DISCOUNTED;
+  const imageURL = isReferral ? TICKETS.DISCOUNTED : TICKETS.TICKET;
 
   // Snackbar functions
   const { enqueueSnackbar, closeSnackbar } = useSnackbar();
