@@ -37,7 +37,7 @@ function Product({ imgSrc, title, price, description, paymentLink }) {
         rel='im-new-checkout'
         data-text='Buy'
         // eslint-disable-next-line
-        data-css-style='background:#181818; border:1px solid #FF2B06; color:#ffffff; width:100px; border-radius:8px; padding: 5px'
+        data-css-style='background:#181818; border:1px solid #FF2B06; color:#ffffff; width:100px; border-radius:8px; padding: 5px;  margin-right: 0px'
         data-layout='vertical'
         className={classes.buy}
       />
