@@ -20,6 +20,10 @@ export const tabs = [
     link: '/campus_ambassadors',
   },
   {
+    name: 'Merch',
+    link: '/merchandise',
+  },
+  {
     name: 'Wall',
     link: '/wall',
   },

@@ -108,7 +108,7 @@ const theme = createMuiTheme({
     h3: {
       fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
       fontWeight: 600,
-      fontSize: '1.375rem',
+      fontSize: '1.5rem',
       lineHeight: '1.75rem',
       '@media (max-width:600px)': {
         fontSize: '1.125rem',
