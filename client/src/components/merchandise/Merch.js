@@ -2,7 +2,7 @@ import React from 'react';
 
 import { makeStyles, Typography } from '@material-ui/core';
 
-function Product({ imgSrc, title, price, description, paymentLink }) {
+function Product({ imgSrc, title, price, description, paymentLink, dataID }) {
   const classes = useStyles();
 
   return (
@@ -33,7 +33,7 @@ function Product({ imgSrc, title, price, description, paymentLink }) {
         href={paymentLink}
         data-store-name='studentactivitycenter'
         data-domain='https://studentactivitycenter.stores.instamojo.com'
-        data-id='291144'
+        data-id={dataID}
         rel='im-new-checkout'
         data-text='Buy'
         // eslint-disable-next-line
@@ -50,12 +50,13 @@ export default Product;
 const useStyles = makeStyles(() => ({
   root: {
     width: '360px',
-    minHeight: '400px',
+    height: '550px',
     display: 'flex',
     justifyContent: 'flex-start',
     alignItems: 'center',
     flexDirection: 'column',
     borderRadius: '8px',
+    overflow: 'hidden',
     backgroundColor: '#232323',
     margin: 5,
   },
