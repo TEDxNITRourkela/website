@@ -83,9 +83,14 @@ function App() {
             <Route path='/about' exact component={AsyncAbout} />
             <Route path='/partners' exact component={AsyncPartner} />
             <Route path='/speakers' exact component={AsyncSpeakers} />
-            <Route path='/tickets' exact component={AsyncTickets} />
             <Route path='/campus_ambassadors' exact component={AsyncCA} />
             <Route path='/wall' exact component={AsyncWall} />
+            <Route path='/tickets' exact component={AsyncTickets} />
+            <Route
+              path='/tickets/referrals/:code'
+              exact
+              component={AsyncTickets}
+            />
 
             {/* Under Development */}
             <Route path='/events' component={AsyncDevelopment} />

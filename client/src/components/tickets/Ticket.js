@@ -20,6 +20,20 @@ const PAYMENT_STATUS = {
 };
 
 function Tickets({ short }) {
+  // Logic to determine the type of ticket.
+  const referrals = window.location.pathname.split('/');
+  let isReferral;
+  if (referrals && referrals[1] === 'tickets' && referrals[2] === 'referrals')
+    isReferral = true;
+  else isReferral = false;
+
+  const paymentLink = isReferral
+    ? `https://www.instamojo.com/@StudentActivityCenter/${referrals[3]}/`
+    : /* eslint-disable-next-line */
+      'https://www.instamojo.com/@StudentActivityCenter/l2819ae69330f4c8a8ee450758aa6b022/';
+  const imageURL = isReferral ? TICKETS.DISCOUNTED : TICKETS.TICKET;
+
+  // Snackbar functions
   const { enqueueSnackbar, closeSnackbar } = useSnackbar();
   const classes = useStyles(short);
 
@@ -58,6 +72,7 @@ function Tickets({ short }) {
       action,
     });
 
+  // Main Payment function
   const handlePayment = () => {
     if (Instamojo) {
       /* Configuring Handlers */
@@ -73,10 +88,7 @@ function Tickets({ short }) {
       // Log Button Payment Event
       analytics().logEvent('Pay Button Clicked');
 
-      Instamojo.open(
-        /* eslint-disable-next-line */
-        'https://www.instamojo.com/@StudentActivityCenter/l2819ae69330f4c8a8ee450758aa6b022/',
-      );
+      Instamojo.open(paymentLink);
     }
   };
 
@@ -93,7 +105,7 @@ function Tickets({ short }) {
       <div className={classes.ticketContainer}>
         <img
           className={classes.ticket}
-          src={TICKETS.TICKET}
+          src={imageURL}
           alt='TEDxNITRourkela 2021 Ticket'
         />
 
