@@ -27,20 +27,22 @@ function Product({ imgSrc, title, price, description, paymentLink, dataID }) {
         </Typography>
       </div>
 
-      {/* eslint-disable-next-line */}
-      <a
-        // eslint-disable-next-line
-        href={paymentLink}
-        data-store-name='studentactivitycenter'
-        data-domain='https://studentactivitycenter.stores.instamojo.com'
-        data-id={dataID}
-        rel='im-new-checkout'
-        data-text='Buy'
-        // eslint-disable-next-line
-        data-css-style='background:#181818; border:1px solid #FF2B06; color:#ffffff; width:100px; border-radius:8px; padding: 5px;  margin-right: 0px'
-        data-layout='vertical'
-        className={classes.buy}
-      />
+      <div className={classes.buttonContainer}>
+        {/* eslint-disable-next-line */}
+        <a
+          // eslint-disable-next-line
+          href={paymentLink}
+          data-store-name='studentactivitycenter'
+          data-domain='https://studentactivitycenter.stores.instamojo.com'
+          data-id={dataID}
+          rel='im-new-checkout'
+          data-text='Buy'
+          // eslint-disable-next-line
+          data-css-style='background:#181818; border:1px solid #FF2B06; color:#ffffff; width:100px; border-radius:8px; padding: 5px;  margin-right: 0px'
+          data-layout='vertical'
+          className={classes.buy}
+        />
+      </div>
     </div>
   );
 }
@@ -59,6 +61,7 @@ const useStyles = makeStyles(() => ({
     overflow: 'hidden',
     backgroundColor: '#232323',
     margin: 5,
+    position: 'relative',
   },
   img: {
     width: '100%',
@@ -92,6 +95,10 @@ const useStyles = makeStyles(() => ({
     fontWeight: 'normal',
     color: '#ffffff',
     opacity: 0.5,
+  },
+  buttonContainer: {
+    position: 'absolute',
+    bottom: 10,
   },
   buy: {
     backgroundColor: '#181818',
