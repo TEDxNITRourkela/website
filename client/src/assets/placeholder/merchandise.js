@@ -1,4 +1,7 @@
 /* eslint-disable */
+const createData = (column1, column2, column3) => {
+  return { column1, column2, column3 };
+};
 
 export const MERCH = [
   {
@@ -35,3 +38,17 @@ export const MERCH = [
     dataID: '291810',
   },
 ];
+
+export const SIZE_CHART = Object.freeze({
+  TITLE: 'Size Chart',
+  TABLE: {
+    HEADINGS: ['Size', 'Chest', 'Length'],
+    ROWS: [
+      createData('S', '36', '26'),
+      createData('M', '38', '27'),
+      createData('L', '40', '28'),
+      createData('XL', '42', '29'),
+      createData('XXL', '44', '30'),
+    ],
+  },
+});

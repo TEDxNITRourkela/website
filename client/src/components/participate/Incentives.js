@@ -1,87 +1,25 @@
 import React from 'react';
 
 // Libraries
-import {
-  makeStyles,
-  Typography,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  Paper,
-} from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
+
+// Componentes
+import CustomTable from '../shared/Table';
 
 // Assets
 import { PARTICIPATE } from '../../assets/placeholder/participate';
 
-function Participate({ title = 'Incentives' }) {
+function Participate() {
   const classes = useStyles();
-
-  const rows = PARTICIPATE.INCENTIVES.TABLE.ROWS;
 
   return (
     <div className={classes.root}>
-      <Typography className={classes.title} variant='h2'>
-        {title}
-      </Typography>
-
-      <div className={classes.horizontalLine} />
-
-      <TableContainer className={classes.tableContainer} component={Paper}>
-        <Table className={classes.table} aria-label='incentives table'>
-          <TableHead>
-            <TableRow>
-              {PARTICIPATE.INCENTIVES.TABLE.HEADINGS.map((heading, index) => (
-                <TableCell
-                  // eslint-disable-next-line
-                  key={index}
-                  // eslint-disable-next-line
-                  className={`${classes.tableCell} ${classes.tableCellHeadingRow}`}
-                >
-                  {heading}
-                </TableCell>
-              ))}
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {rows.map((row, index) => (
-              // eslint-disable-next-line
-              <TableRow key={index}>
-                <TableCell
-                  className={
-                    index !== 4
-                      ? `${classes.tableCell} ${classes.tableCellHeadingColumn}`
-                      : // eslint-disable-next-line
-                        `${classes.tableCell} ${classes.tableCellHeadingColumn} ${classes.tableCellLastRow}`
-                  }
-                  component='th'
-                  scope='row'
-                >
-                  {row.column1}
-                </TableCell>
-
-                {['column2', 'column3', 'column4', 'column5', 'column6'].map(
-                  (column) => (
-                    <TableCell
-                      key={column}
-                      className={
-                        index !== 4
-                          ? classes.tableCell
-                          : `${classes.tableCell} ${classes.tableCellLastRow}`
-                      }
-                      align='center'
-                    >
-                      {row[column]}
-                    </TableCell>
-                  ),
-                )}
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
+      <CustomTable
+        title='Incentives'
+        rows={PARTICIPATE.INCENTIVES.TABLE.ROWS}
+        headings={PARTICIPATE.INCENTIVES.TABLE.HEADINGS}
+        columns={['column2', 'column3', 'column4', 'column5', 'column6']}
+      />
     </div>
   );
 }
