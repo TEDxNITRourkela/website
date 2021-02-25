@@ -21,6 +21,7 @@ import {
   breadcrumbsData,
   faqData,
   logoData,
+  merch,
 } from '../utils/structuredData';
 
 // Helpers
@@ -67,6 +68,11 @@ function App() {
         <script type='application/ld+json'>{JSON.stringify(eventData)}</script>
         <script type='application/ld+json'>{JSON.stringify(faqData)}</script>
         <script type='application/ld+json'>{JSON.stringify(logoData)}</script>
+        <script type='application/ld+json'>{JSON.stringify(merch.ONE)}</script>
+        <script type='application/ld+json'>{JSON.stringify(merch.TWO)}</script>
+        <script type='application/ld+json'>
+          {JSON.stringify(merch.THREE)}
+        </script>
         <script type='application/ld+json'>
           {JSON.stringify(breadcrumbsData)}
         </script>
