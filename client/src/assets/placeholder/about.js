@@ -238,9 +238,19 @@ const TEAM = Object.freeze({
 
 const FAQ = [
   {
+    QUESTION: 'What is TEDxNITRourkela?',
+    ANSWER:
+      "TEDxNITRourkela is an independently organized TED event coordinated and curated by a group of NIT Rourkela students. We present people with the opportunity to suggest innovative and efficient ideas to tackle our society's various issues, thus gathering a diverse range of voices from many disciplines that exist to help humanity grow. From essential, radical, and exciting ideas to electrifying performances from performers who are on top of their respective fields, we aspire to deliver to you an experience you would not want to miss.",
+  },
+  {
+    QUESTION: 'When is TEDxNITRourkela being conducted?',
+    ANSWER:
+      'The event is being conducted online on 13th and 14th of March 2021',
+  },
+  {
     QUESTION: 'Who are the speakers for TEDxNITRourkela?',
     ANSWER:
-      'We’re still working towards curating a fantastic experience for all of you. Feel free to keep an eye on our social media channels!',
+      'We’re still working towards curating a fantastic experience for all of you. Feel free to keep an eye on our social media channels! Checkout our speakers section!',
   },
   {
     QUESTION: 'Who’s organizing the event?',

@@ -94,6 +94,24 @@ export const faqData = {
   mainEntity: [
     {
       '@type': 'Question',
+      name: 'What is TEDxNITRourkela?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text:
+          "TEDxNITRourkela is an independently organized TED event coordinated and curated by a group of NIT Rourkela students. We present people with the opportunity to suggest innovative and efficient ideas to tackle our society's various issues, thus gathering a diverse range of voices from many disciplines that exist to help humanity grow. From essential, radical, and exciting ideas to electrifying performances from performers who are on top of their respective fields, we aspire to deliver to you an experience you would not want to miss.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'When is TEDxNITRourkela being conducted?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text:
+          'The event is being conducted online on 13th and 14th of March 2021',
+      },
+    },
+    {
+      '@type': 'Question',
       name: 'Who are the speakers for TEDxNITRourkela?',
       acceptedAnswer: {
         '@type': 'Answer',
@@ -163,4 +181,79 @@ export const logoData = {
   url: 'https://tedxnitrourkela.com/',
   logo:
     'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/logos/logo_dark_oipjvc.png',
+};
+
+export const merch = {
+  ONE: {
+    '@context': 'https://schema.org/',
+    '@type': 'Product',
+    name: 'The NITR@60 Tee',
+    image: [
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/merchandise/NITR_60_1_bkovwe.jpg',
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/merchandise/T-Shirt_Back_LFTP_ddezni.jpg',
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/merchandise/name_white_wz0thk.jpg',
+    ],
+    description:
+      'Flaunt the SEXAGENARION legacy of NITR with this cool NITR@60 Black Tee.',
+    brand: {
+      '@type': 'Brand',
+      name: 'TEDxNITRourkela',
+    },
+    offers: {
+      '@type': 'Offer',
+      url: 'https://tedxnitrourkela.com/merchandise',
+      priceCurrency: 'INR',
+      price: '349',
+      priceValidUntil: '2022-11-20',
+      itemCondition: 'https://schema.org/NewCondition',
+      availability: 'https://schema.org/InStock',
+    },
+  },
+  TWO: {
+    '@context': 'https://schema.org/',
+    '@type': 'Product',
+    name: 'The Class-X of 2021',
+    image: [
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/merchandise/Class_Of_2021_jg3wn4.jpg',
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/merchandise/T-Shirt_Back_LFTP_ddezni.jpg',
+    ],
+    description:
+      'Celebrate your adventurous journey with this classy CLASS OF 2021 Tee, and cherish the wonderful memories.',
+    brand: {
+      '@type': 'Brand',
+      name: 'TEDxNITRourkela',
+    },
+    offers: {
+      '@type': 'Offer',
+      url: 'https://tedxnitrourkela.com/merchandise',
+      priceCurrency: 'INR',
+      price: '399',
+      priceValidUntil: '2022-11-20',
+      itemCondition: 'https://schema.org/NewCondition',
+      availability: 'https://schema.org/InStock',
+    },
+  },
+  THREE: {
+    '@context': 'https://schema.org/',
+    '@type': 'Product',
+    name: 'The X-Treme Tee',
+    image: [
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/merchandise/X_factor_2_muxcy2.jpg',
+    ],
+    description:
+      'Add a WOW factor to your wardrobe with this cool X-TREME Tee, and flaunt that fresh design!',
+    brand: {
+      '@type': 'Brand',
+      name: 'TEDxNITRourkela',
+    },
+    offers: {
+      '@type': 'Offer',
+      url: 'https://tedxnitrourkela.com/merchandise',
+      priceCurrency: 'INR',
+      price: '399',
+      priceValidUntil: '2022-11-20',
+      itemCondition: 'https://schema.org/NewCondition',
+      availability: 'https://schema.org/InStock',
+    },
+  },
 };

@@ -32,6 +32,7 @@ function About() {
       <Helmet>
         <title>TEDxNITRourkela | Campus Ambassador</title>
         <meta name='title' content='TEDxNITRourkela | Campus Ambassador' />
+        <meta name='description' content={PARTICIPATE.INTRO.CONTENT} />
       </Helmet>
 
       <Container>

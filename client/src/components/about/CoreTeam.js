@@ -19,13 +19,13 @@ function About() {
 
       <div className={classes.row} style={{ justifyContent: 'center' }}>
         {ABOUT.TEAM.ROW1.map((member) => (
-          <Profile key={member.NAME} member={member} />
+          <Profile key={`core-team-${member.NAME}`} member={member} />
         ))}
       </div>
 
       <div className={classes.row}>
         {ABOUT.TEAM.ROW2.map((member) => (
-          <Profile key={member.NAME} member={member} />
+          <Profile key={`core-team-${member.NAME}`} member={member} />
         ))}
       </div>
     </Container>

@@ -15,7 +15,7 @@ export const MERCH = [
     tshirtCode: 'nitr60',
   },
   {
-    name: 'The Class-X of 2021 ',
+    name: 'The Class-X of 2021',
     imageUrl:
       'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/merchandise/Class_Of_2021_jg3wn4.jpg',
     description:
