@@ -63,14 +63,12 @@ function Tickets() {
           ))}
         </div>
 
-        <div className={classes.tableContainer}>
-          <CustomTable
-            title={SIZE_CHART.TITLE}
-            rows={SIZE_CHART.TABLE.ROWS}
-            headings={SIZE_CHART.TABLE.HEADINGS}
-            columns={['column2', 'column3']}
-          />
-        </div>
+        <CustomTable
+          title={SIZE_CHART.TITLE}
+          rows={SIZE_CHART.TABLE.ROWS}
+          headings={SIZE_CHART.TABLE.HEADINGS}
+          columns={['column2', 'column3']}
+        />
       </Container>
     </div>
   );
@@ -107,14 +105,5 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     flexWrap: 'wrap',
-  },
-  tableContainer: {
-    minHeight: '250px',
-    color: theme.palette.common.white,
-    display: 'flex',
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-    flexDirection: 'column',
-    marginTop: '30px',
   },
 }));
