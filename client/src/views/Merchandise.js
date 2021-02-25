@@ -63,12 +63,18 @@ function Tickets() {
           ))}
         </div>
 
-        <CustomTable
-          title={SIZE_CHART.TITLE}
-          rows={SIZE_CHART.TABLE.ROWS}
-          headings={SIZE_CHART.TABLE.HEADINGS}
-          columns={['column2', 'column3']}
-        />
+        <Container className={classes.tableContainer}>
+          <CustomTable
+            title={SIZE_CHART.TITLE}
+            rows={SIZE_CHART.TABLE.ROWS}
+            headings={SIZE_CHART.TABLE.HEADINGS}
+            columns={['column2', 'column3']}
+          />
+        </Container>
+
+        <Typography variant='body2' className={classes.measurements}>
+          * all measurements are in inches
+        </Typography>
       </Container>
     </div>
   );
@@ -105,5 +111,21 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     flexWrap: 'wrap',
+  },
+  measurements: {
+    width: '100%',
+    textAlign: 'center',
+    fontFamily: 'Zilla Slab',
+    fontWeight: 'bold',
+    color: '#ffffff',
+    opacity: 0.5,
+    paddingTop: 20,
+    marginBottom: 30,
+  },
+  tableContainer: {
+    width: '50%',
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+    },
   },
 }));

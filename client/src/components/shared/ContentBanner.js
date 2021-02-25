@@ -32,7 +32,7 @@ function ContentBanner({ DATA, smallLogo = false, wrapContainer = false }) {
             {DATA.CONTENT}
           </Typography>
         ) : (
-          <ul style={{ marginLeft: 30 }}>
+          <ul className={classes.orderedList}>
             {DATA.CONTENT.map((point) => (
               <li key={point} className={classes.content}>
                 {point}
@@ -160,6 +160,17 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       width: '80%',
       textAlign: 'center',
+    },
+  },
+  orderedList: {
+    marginLeft: '30px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    flexDirection: 'column',
+    [theme.breakpoints.down('sm')]: {
+      marginLeft: '10px',
+      justifyContent: 'center',
     },
   },
 }));

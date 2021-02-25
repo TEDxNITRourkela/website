@@ -18,7 +18,8 @@ function About({ direction, first, DATA, link, columnReverse = false }) {
     <div className={classes.contentContainer}>
       <Typography variant='h2' className={classes.question}>
         {DATA.QUESTION}
-        <span className={classes.highlight}>{DATA.HIGHLIGHT}</span>
+        {/* eslint-disable-next-line */}
+        <span className={classes.highlight}> {DATA.HIGHLIGHT}</span>
       </Typography>
       <Typography variant='body2' className={classes.content}>
         {DATA.CONTENT}

@@ -87,10 +87,10 @@ const useStyles = makeStyles((theme) => ({
   root: {
     minHeight: '250px',
     color: theme.palette.common.white,
-    // display: 'flex',
-    // justifyContent: 'flex-start',
-    // alignItems: 'center',
-    // flexDirection: 'column',
+    display: 'flex',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    flexDirection: 'column',
     marginTop: '30px',
   },
   title: {
