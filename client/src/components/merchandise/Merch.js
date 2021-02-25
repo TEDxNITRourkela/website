@@ -42,6 +42,7 @@ function Product({ imgSrc, title, price, description, tshirtCode }) {
         mode='pop_up'
         popup
         autoOpen={false}
+        autoClose={100000000}
         buttonText='Buy'
       />
 
