@@ -225,8 +225,9 @@ const useStyles = makeStyles((theme) => ({
   studentContainer: {
     minHeight: '100px',
     marginTop: 20,
+    marginBottom: (short) => (short ? '20px' : '0px'),
     padding: '24px',
-    width: (short) => (short ? '100%' : '90%'),
+    width: '70%',
     backgroundColor: '#232323',
     borderRadius: '16px',
     zIndex: 1,
@@ -235,6 +236,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-between',
     alignItems: 'center',
     [theme.breakpoints.down('xs')]: {
+      width: '80%',
       marginTop: 10,
       minHeight: '120px',
       padding: '12px',
