@@ -14,6 +14,7 @@ export const MERCH = [
     paymentLink:
       'https://studentactivitycenter.stores.instamojo.com/product/291815/the-class-y-2021-tee-tedxnitrourkela/',
     dataID: '291815',
+    tshirtCode: 'classof2021',
   },
   {
     name: 'THE NITR @ 60 TEE',
@@ -25,6 +26,7 @@ export const MERCH = [
     paymentLink:
       'https://studentactivitycenter.stores.instamojo.com/product/291805/the-nitr-60-tee-tedxnitrourkela/',
     dataID: '291805',
+    tshirtCode: 'nitr60',
   },
   {
     name: 'THE X-TREME TEE',
@@ -36,6 +38,7 @@ export const MERCH = [
     paymentLink:
       'https://studentactivitycenter.stores.instamojo.com/product/291810/the-x-treme-tee-tedxnitrourkela/',
     dataID: '291810',
+    tshirtCode: 'xtreme',
   },
 ];
 

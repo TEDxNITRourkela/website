@@ -51,19 +51,16 @@ function Tickets() {
         </Typography>
 
         <div className={classes.productsContainer}>
-          {MERCH.map(
-            ({ name, description, imageUrl, paymentLink, price, dataID }) => (
-              <Product
-                key={paymentLink}
-                title={name}
-                description={description}
-                imgSrc={imageUrl}
-                price={price}
-                paymentLink={paymentLink}
-                dataID={dataID}
-              />
-            ),
-          )}
+          {MERCH.map(({ name, description, imageUrl, price, tshirtCode }) => (
+            <Product
+              key={tshirtCode}
+              title={name}
+              description={description}
+              imgSrc={imageUrl}
+              price={price}
+              tshirtCode={tshirtCode}
+            />
+          ))}
         </div>
 
         <div className={classes.tableContainer}>

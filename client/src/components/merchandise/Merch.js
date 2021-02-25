@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 import { makeStyles, Typography } from '@material-ui/core';
+import { ReactTypeformEmbed } from 'react-typeform-embed';
 
-function Product({ imgSrc, title, price, description, paymentLink, dataID }) {
+function Product({ imgSrc, title, price, description, tshirtCode }) {
   const classes = useStyles();
+  const typeform = useRef();
+
+  const openForm = () => {
+    typeform.current.typeform.open();
+  };
 
   return (
     <div className={classes.root}>
@@ -27,21 +33,22 @@ function Product({ imgSrc, title, price, description, paymentLink, dataID }) {
         </Typography>
       </div>
 
+      <ReactTypeformEmbed
+        ref={typeform}
+        hideHeaders
+        hideFooter
+        // eslint-disable-next-line
+        url={`https://form.typeform.com/to/RbLawI6g?tshirt=${tshirtCode}`}
+        mode='pop_up'
+        popup
+        autoOpen={false}
+        buttonText='Buy'
+      />
+
       <div className={classes.buttonContainer}>
-        {/* eslint-disable-next-line */}
-        <a
-          // eslint-disable-next-line
-          href={paymentLink}
-          data-store-name='studentactivitycenter'
-          data-domain='https://studentactivitycenter.stores.instamojo.com'
-          data-id={dataID}
-          rel='im-new-checkout'
-          data-text='Buy'
-          // eslint-disable-next-line
-          data-css-style='background:#181818; border:1px solid #FF2B06; color:#ffffff; width:100px; border-radius:8px; padding: 5px;  margin-right: 0px'
-          data-layout='vertical'
-          className={classes.buy}
-        />
+        <button onClick={openForm} type='button' className={classes.button}>
+          Buy
+        </button>
       </div>
     </div>
   );
@@ -98,17 +105,24 @@ const useStyles = makeStyles(() => ({
   },
   buttonContainer: {
     position: 'absolute',
-    bottom: 10,
+    bottom: 20,
+    width: '90%',
+    display: 'flex',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
   },
-  buy: {
-    backgroundColor: '#181818',
+  button: {
     border: '1px solid #FF2B06',
+    borderRadius: '6px',
+    backgroundColor: '#1a1a1a',
+    padding: '10px 20px',
     color: '#ffffff',
-    width: '100px',
-    borderRadius: '7px',
-    padding: '5px',
+    minWidth: '100px',
+    width: 'auto',
+    fontSize: '16px',
     '&:hover': {
       backgroundColor: '#FF2B06',
+      cursor: 'pointer',
     },
   },
 }));
