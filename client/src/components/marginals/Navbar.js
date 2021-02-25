@@ -47,7 +47,7 @@ function Navbar({ window, showBoxShadow }) {
         aria-label='Menu Button'
       />
       <div className={classes.tabsContainer}>
-        {TABS_NAV.slice(0, 6).map(({ link, name }) => (
+        {TABS_NAV.slice(0, 7).map(({ link, name }) => (
           <Link className={classes.tabLink} to={link} key={link}>
             <Typography className={classes.tab} variant='body1'>
               {name}
@@ -70,7 +70,7 @@ function Navbar({ window, showBoxShadow }) {
             keepMounted: true, // Better open performance on mobile.
           }}
         >
-          {TABS_NAV.slice(0, 6).map(({ link, name }) => (
+          {TABS_NAV.slice(0, 7).map(({ link, name }) => (
             <Link className={classes.tabLink} to={link} key={link}>
               <ListItem>
                 <Typography className={classes.tab} variant='body1'>

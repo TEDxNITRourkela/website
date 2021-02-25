@@ -40,6 +40,7 @@ const AsyncAbout = AsyncRoute('./About');
 const AsyncPartner = AsyncRoute('./Partner');
 const AsyncSpeakers = AsyncRoute('./Speakers');
 const AsyncTickets = AsyncRoute('./Tickets');
+const AsyncMerchandise = AsyncRoute('./Merchandise.js');
 const AsyncCA = AsyncRoute('./Participate.js');
 const AsyncWall = AsyncRoute('./Wall.js');
 const Async404 = AsyncRoute('./404.js');
@@ -85,6 +86,7 @@ function App() {
             <Route path='/speakers' exact component={AsyncSpeakers} />
             <Route path='/campus_ambassadors' exact component={AsyncCA} />
             <Route path='/wall' exact component={AsyncWall} />
+            <Route path='/merchandise' exact component={AsyncMerchandise} />
             <Route path='/tickets' exact component={AsyncTickets} />
             <Route
               path='/tickets/referrals/:code'
