@@ -37,6 +37,14 @@ function Tickets() {
       <Helmet>
         <title>TEDxNITRourkela</title>
         <meta name='title' content='TEDxNITRourkela' />
+
+        {MERCH.map((product) => (
+          <meta
+            name='description'
+            // eslint-disable-next-line
+            content={`TEDxNITRourkela | Merchandise | ${product.name} | ${product.description}`}
+          />
+        ))}
       </Helmet>
 
       <img

@@ -25,7 +25,14 @@ function About() {
     <div className={classes.root}>
       <Helmet>
         <title>TEDxNITRourkela | Speakers</title>
-        <meta name='title' content='TEDxNITRourkela | Partners' />
+        <meta name='title' content='TEDxNITRourkela | Speakers' />
+
+        {GUESTS.map(({ description, name }) => (
+          <meta
+            name='description'
+            content={`TEDxNITRourkela Speaker | ${name} |${description}`}
+          />
+        ))}
       </Helmet>
 
       <Container>

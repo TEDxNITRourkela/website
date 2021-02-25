@@ -25,7 +25,9 @@ function Tickets() {
     <div className={classes.root}>
       <Helmet>
         <title>TEDxNITRourkela</title>
-        <meta name='title' content='TEDxNITRourkela' />
+        <meta name='title' content='TEDxNITRourkela | Tickets' />
+
+        <meta name='description' content='TEDxNIRourkela 2021 Event Tickets.' />
       </Helmet>
 
       <img

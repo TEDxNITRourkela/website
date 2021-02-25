@@ -24,6 +24,13 @@ function Partner() {
       <Helmet>
         <title>TEDxNITRourkela | Partners</title>
         <meta name='title' content='TEDxNITRourkela | Partners' />
+
+        {PARTNER.FOUR.partners.map(({ hrefTitle }) => (
+          <meta
+            name='description'
+            content={`TEDxNITRourkela | Partner | ${hrefTitle}`}
+          />
+        ))}
       </Helmet>
 
       {/* <Partners DATA={PARTNER.ZERO} /> */}
