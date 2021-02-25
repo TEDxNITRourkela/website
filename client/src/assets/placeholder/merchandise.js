@@ -5,15 +5,6 @@ const createData = (column1, column2, column3) => {
 
 export const MERCH = [
   {
-    name: 'The Class-X of 2021 ',
-    imageUrl:
-      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/merchandise/WhatsApp_Image_2021-02-18_at_10.07_1_oxwb4r.png',
-    description:
-      'Celebrate your adventurous journey with this classy CLASS OF 2021 Tee, and cherish the wonderful memories.',
-    price: '399',
-    tshirtCode: 'classof2021',
-  },
-  {
     name: 'The X-Treme Tee',
     imageUrl:
       'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/merchandise/X_factor_2_muxcy2.jpg',
@@ -24,6 +15,15 @@ export const MERCH = [
       'https://studentactivitycenter.stores.instamojo.com/product/291810/the-x-treme-tee-tedxnitrourkela/',
     dataID: '291810',
     tshirtCode: 'xtreme',
+  },
+  {
+    name: 'The Class-X of 2021 ',
+    imageUrl:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/merchandise/Class_Of_2021_jg3wn4.jpg',
+    description:
+      'Celebrate your adventurous journey with this classy CLASS OF 2021 Tee, and cherish the wonderful memories.',
+    price: '399',
+    tshirtCode: 'classof2021',
   },
   {
     name: 'The NITR @ 60 Tee',
