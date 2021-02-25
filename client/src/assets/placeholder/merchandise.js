@@ -5,16 +5,14 @@ const createData = (column1, column2, column3) => {
 
 export const MERCH = [
   {
-    name: 'The X-Treme Tee',
+    name: 'The NITR @ 60 Tee',
     imageUrl:
-      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/merchandise/X_factor_2_muxcy2.jpg',
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/merchandise/NITR_60_1_bkovwe.jpg',
     description:
-      'Add a WOW factor to your wardrobe with this cool X-TREME Tee, and flaunt that fresh design!',
-    price: '399',
-    paymentLink:
-      'https://studentactivitycenter.stores.instamojo.com/product/291810/the-x-treme-tee-tedxnitrourkela/',
-    dataID: '291810',
-    tshirtCode: 'xtreme',
+      'Flaunt the SEXAGENARION legacy of NITR with this cool NITR@60 Black Tee.',
+    price: '349',
+
+    tshirtCode: 'nitr60',
   },
   {
     name: 'The Class-X of 2021 ',
@@ -26,14 +24,16 @@ export const MERCH = [
     tshirtCode: 'classof2021',
   },
   {
-    name: 'The NITR @ 60 Tee',
+    name: 'The X-Treme Tee',
     imageUrl:
-      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/merchandise/NITR_60_1_bkovwe.jpg',
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/merchandise/X_factor_2_muxcy2.jpg',
     description:
-      'Flaunt the SEXAGENARION legacy of NITR with this cool NITR@60 Black Tee.',
-    price: '349',
-
-    tshirtCode: 'nitr60',
+      'Add a WOW factor to your wardrobe with this cool X-TREME Tee, and flaunt that fresh design!',
+    price: '399',
+    paymentLink:
+      'https://studentactivitycenter.stores.instamojo.com/product/291810/the-x-treme-tee-tedxnitrourkela/',
+    dataID: '291810',
+    tshirtCode: 'xtreme',
   },
 ];
 
