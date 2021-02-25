@@ -1,8 +1,12 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/iframe-has-title */
+/* eslint-disable max-len */
 /* eslint-disable no-undef */
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // Libraries
-import { makeStyles, Button } from '@material-ui/core';
+import { makeStyles, Typography, Button, Modal } from '@material-ui/core';
 import { SnackbarProvider, useSnackbar } from 'notistack';
 
 // Assets
@@ -92,6 +96,34 @@ function Tickets({ short }) {
     }
   };
 
+  const [open, setOpen] = useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const body = (
+    <div className={classes.paper}>
+      <iframe
+        src='https://docs.google.com/forms/d/e/1FAIpQLSclq2nZh3Y0-k5SocFnCZeXY5nJ_vwq6c9dGn8ivOFRV4dW9w/viewform?embedded=true'
+        height='100%'
+        width='100%'
+        frameBorder='0'
+        marginHeight='0'
+        marginWidth='0'
+      >
+        Loading…
+      </iframe>
+      <div onClick={handleClose} className={classes.closeButton}>
+        <i className='fas fa-times' />
+      </div>
+    </div>
+  );
+
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://js.instamojo.com/v1/checkout.js';
@@ -116,6 +148,21 @@ function Tickets({ short }) {
         >
           Buy Now
         </button>
+      </div>
+      <div className={classes.studentContainer}>
+        <Typography variant='h3' className={classes.question}>
+          Are you an NITR student? Apply here!!
+        </Typography>
+        <button
+          onClick={handleOpen}
+          type='button'
+          className={classes.studentButton}
+        >
+          Apply Now
+        </button>
+        <Modal open={open} onClose={handleClose}>
+          {body}
+        </Modal>
       </div>
     </div>
   );
@@ -174,5 +221,66 @@ const useStyles = makeStyles((theme) => ({
       minWidth: '120px',
       minHeight: '40px',
     },
+  },
+  studentContainer: {
+    minHeight: '100px',
+    marginTop: 20,
+    padding: '24px',
+    width: (short) => (short ? '100%' : '90%'),
+    backgroundColor: '#232323',
+    borderRadius: '16px',
+    zIndex: 1,
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    [theme.breakpoints.down('xs')]: {
+      marginTop: 10,
+      minHeight: '120px',
+      padding: '12px',
+      flexDirection: 'column',
+    },
+  },
+  studentButton: {
+    border: '1px solid #FF2B06',
+    borderRadius: '6px',
+    backgroundColor: '#1a1a1a',
+    padding: 'auto 20px',
+    color: '#ffffff',
+    minWidth: (short) => (short ? '100px' : '150px'),
+    minHeight: (short) => (short ? '30px' : '40px'),
+    '&:hover': {
+      backgroundColor: '#FF2B06',
+      cursor: 'pointer',
+    },
+    [theme.breakpoints.down('md')]: {
+      minWidth: '120px',
+      minHeight: '40px',
+    },
+  },
+  question: {
+    textAlign: 'center',
+    fontFamily: 'Zilla Slab',
+    color: 'rgba(255,255,255,0.5)',
+  },
+  paper: {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    outline: 'none',
+    backgroundColor: '#ede7f6',
+    height: '90vh',
+    width: '70vw',
+    padding: '24px',
+    [theme.breakpoints.down('xs')]: {
+      width: '100vw',
+    },
+  },
+  closeButton: {
+    cursor: 'pointer',
+    position: 'absolute',
+    top: 0,
+    right: '4px',
   },
 }));
