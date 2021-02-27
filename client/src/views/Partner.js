@@ -42,7 +42,7 @@ function Partner() {
       {/* <Partners DATA={PARTNER.ZERO} /> */}
       {/* <Partners DATA={PARTNER.ONE} /> */}
       {/* <Partners DATA={PARTNER.TWO} /> */}
-      <Partners DATA={PARTNER.FIVE} />
+      <Partners DATA={PARTNER.FIVE} main />
       <Partners DATA={PARTNER.FOUR} />
       <ContentBanner DATA={PARTNER.CONTENT} wrapContainer />
     </>

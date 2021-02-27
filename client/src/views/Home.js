@@ -40,7 +40,7 @@ function Home() {
       <Index />
       <ContentBanner DATA={CONTENT2.TWO} smallLogo wrapContainer />
       <ContentBanner DATA={CONTENT2.ONE} wrapContainer />
-      <Partners DATA={PARTNER.FIVE} home />
+      <Partners DATA={PARTNER.FIVE} home main />
       <Container>
         <Incentives title='Campus Representative Program' />
 
