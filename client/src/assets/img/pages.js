@@ -35,10 +35,14 @@ export const SPEAKERS = Object.freeze({
       'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/speakers/anup_nandy-removebg-preview_hsno3b.png',
     THREE:
       'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/speakers/lisa-russell-removebg-preview_bfjbup.png',
+    FOUR:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/speakers/pranav_khaitan-removebg-preview_yuzml1.png',
   },
 });
 
 export const PARTNERS = Object.freeze({
+  TATA:
+    'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/tata_steel_wgnvt3.png',
   EVERWALL:
     'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/everwall.png',
   FLICKR:

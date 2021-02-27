@@ -80,31 +80,26 @@ export const GUESTS = [
     ],
   },
   {
-    name: 'John Doe',
+    name: 'Pranav Khaitan',
     description:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae, sequi amet. Quidem ea laborum facere asperiores, voluptate earum eius doloremque quod? Dolores distinctio delectus at obcaecati vel alias corporis cumque.',
-    shortDescription: 'Design Guru',
-    image: SPEAKERS.SILHOUETTE.FOUR,
+      'Pranav Khaitan is a senior engineering lead at Google AI, where he has led various R&D projects like Chrome, Youtube. He was also part of the Nobel Peace Prize-winning team in 2020.',
+    shortDescription: 'Seniour Engineering lead at Google AI',
+    image: SPEAKERS.SPEAKERS.FOUR,
     links: [
       {
-        link: '',
+        link: 'https://www.linkedin.com/in/pranavkhaitan/',
         link_type: 'fab fa-linkedin-in',
         link_name: 'linkedin',
       },
       {
-        link: '',
+        link: 'https://twitter.com/pranavkhaitan',
         link_type: 'fab fa-twitter',
         link_name: 'twitter',
       },
       {
-        link: '',
-        link_type: 'fab fa-instagram',
-        link_name: 'instagram',
-      },
-      {
-        link: '',
-        link_type: 'fab fa-facebook-f',
-        link_name: 'facebook',
+        link: 'https://research.google/people/106395/',
+        link_type: 'fas fa-book',
+        link_name: 'google-scholar',
       },
     ],
   },

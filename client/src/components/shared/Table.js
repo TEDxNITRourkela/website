@@ -91,7 +91,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'flex-start',
     alignItems: 'center',
     flexDirection: 'column',
-    marginTop: '30px',
+    marginTop: '100px',
   },
   title: {
     fontFamily: 'Zilla Slab',

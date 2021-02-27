@@ -6,8 +6,8 @@ import { makeStyles, Container } from '@material-ui/core';
 // Assets
 import { GRAPHICS } from '../../assets/img/graphics';
 
-function Partner({ DATA, first }) {
-  const classes = useStyles();
+function Partner({ DATA, home, main = false }) {
+  const classes = useStyles(main);
 
   const renderPartnerContainer = (
     <div className={classes.wrapper}>
@@ -29,8 +29,14 @@ function Partner({ DATA, first }) {
   );
 
   return (
-    <Container style={{ marginTop: first ? '150px' : '120px' }}>
-      <img src={GRAPHICS.TOP_LEFT} alt='ellipses' className={classes.image} />
+    <Container
+      style={{
+        marginTop: home ? '20px' : '120px',
+      }}
+    >
+      {!home && (
+        <img src={GRAPHICS.TOP_LEFT} alt='ellipses' className={classes.image} />
+      )}
       {renderPartnerContainer}
     </Container>
   );
@@ -63,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
   },
   sponsor: {
     margin: '15px 35px',
-    opacity: 0.5,
+    opacity: (main) => (main ? 1 : 0.5),
     width: 200,
     height: 'auto',
   },
