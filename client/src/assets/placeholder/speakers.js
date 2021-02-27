@@ -83,7 +83,7 @@ export const GUESTS = [
     name: 'Pranav Khaitan',
     description:
       'Pranav Khaitan is a senior engineering lead at Google AI, where he has led various R&D projects like Chrome, Youtube. He was also part of the Nobel Peace Prize-winning team in 2020.',
-    shortDescription: 'Seniour Engineering lead at Google AI',
+    shortDescription: 'Senior Engineering Lead at Google AI',
     image: SPEAKERS.SPEAKERS.FOUR,
     links: [
       {
