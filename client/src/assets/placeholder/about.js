@@ -76,9 +76,9 @@ const TEAM = Object.freeze({
       DESIGNATION: 'Managing Director',
     },
     {
-      NAME: 'Lalitha Manaswini',
+      NAME: 'Shobhit Parki',
       IMG:
-        'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/LalithaManaswini.jpeg',
+        'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/SobhitParki.jpeg',
       DESIGNATION: 'Deputy Managing Director',
     },
   ],
@@ -136,9 +136,9 @@ const TEAM = Object.freeze({
       DESIGNATION: 'Managing Director',
     },
     {
-      NAME: 'Lalitha Manaswini',
+      NAME: 'Shobhit Parki',
       IMG:
-        'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/LalithaManaswini.jpeg',
+        'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/SobhitParki.jpeg',
       DESIGNATION: 'Deputy Managing Director',
     },
     {
@@ -160,6 +160,12 @@ const TEAM = Object.freeze({
       DESIGNATION: 'Management Team Member',
     },
     {
+      NAME: 'Lalitha Manaswini',
+      IMG:
+        'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/LalithaManaswini.jpeg',
+      DESIGNATION: 'Management Team Member',
+    },
+    {
       NAME: 'Mayank Mishra',
       IMG:
         'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/MayankMishra.jpeg',
@@ -175,12 +181,6 @@ const TEAM = Object.freeze({
       NAME: 'Roshan Anduri',
       IMG:
         'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/RoshanAnduri.jpeg',
-      DESIGNATION: 'Management Team Member',
-    },
-    {
-      NAME: 'Shobhit Parki',
-      IMG:
-        'https://res.cloudinary.com/tedxnitrourkela/image/upload/team/management/SobhitParki.jpeg',
       DESIGNATION: 'Management Team Member',
     },
     {

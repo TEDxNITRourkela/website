@@ -31,12 +31,18 @@ function Partner() {
             content={`TEDxNITRourkela | Partner | ${hrefTitle}`}
           />
         ))}
+        {PARTNER.FIVE.partners.map(({ hrefTitle }) => (
+          <meta
+            name='description'
+            content={`TEDxNITRourkela | Partner | ${hrefTitle}`}
+          />
+        ))}
       </Helmet>
 
       {/* <Partners DATA={PARTNER.ZERO} /> */}
       {/* <Partners DATA={PARTNER.ONE} /> */}
       {/* <Partners DATA={PARTNER.TWO} /> */}
-      {/* <Partners DATA={PARTNER.THREE} /> */}
+      <Partners DATA={PARTNER.FIVE} />
       <Partners DATA={PARTNER.FOUR} />
       <ContentBanner DATA={PARTNER.CONTENT} wrapContainer />
     </>
