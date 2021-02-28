@@ -1,12 +1,7 @@
 import firebase from 'firebase/app';
-import 'firebase/firestore';
 import 'firebase/analytics';
 
-// console.log(process.env.NODE_ENV)
 const configureFirebase = async () => {
-  // const response = await fetch('/__/firebase/init.json');
-  // const config = await response.json();
-  // firebase.initializeApp(config);
   if (process.env.NODE_ENV === 'production') {
     const response = await fetch('/__/firebase/init.json');
     const config = await response.json();
@@ -27,6 +22,6 @@ const configureFirebase = async () => {
   }
 };
 
-export const { firestore, analytics } = firebase;
+export const { analytics } = firebase;
 
 export default configureFirebase;

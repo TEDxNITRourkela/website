@@ -20,7 +20,7 @@ export const PARTNER = Object.freeze({
     partners: [],
   },
   FOUR: {
-    title: 'Media Partners',
+    title: 'TEDx Partners',
     partners: [
       {
         img: PARTNERS.EVERWALL,
@@ -45,7 +45,7 @@ export const PARTNER = Object.freeze({
     ],
   },
   FIVE: {
-    title: 'Title Sponsors',
+    title: 'Title Sponsor',
     partners: [
       {
         img: PARTNERS.TATA,

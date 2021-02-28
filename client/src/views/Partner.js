@@ -44,6 +44,7 @@ function Partner() {
       {/* <Partners DATA={PARTNER.TWO} /> */}
       <Partners DATA={PARTNER.FIVE} main />
       <Partners DATA={PARTNER.FOUR} />
+
       <ContentBanner DATA={PARTNER.CONTENT} wrapContainer />
     </>
   );

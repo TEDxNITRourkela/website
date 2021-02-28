@@ -13,7 +13,7 @@ import {
   Paper,
 } from '@material-ui/core';
 
-function CustomTable({ title, rows, headings, columns }) {
+function CustomTable({ title = 'Incentives', rows, headings, columns }) {
   const classes = useStyles();
 
   return (

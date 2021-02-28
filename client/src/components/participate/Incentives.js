@@ -6,10 +6,10 @@ import CustomTable from '../shared/Table';
 // Assets
 import { PARTICIPATE } from '../../assets/placeholder/participate';
 
-function Participate() {
+function Incentives({ title }) {
   return (
     <CustomTable
-      title='Incentives'
+      title={title}
       rows={PARTICIPATE.INCENTIVES.TABLE.ROWS}
       headings={PARTICIPATE.INCENTIVES.TABLE.HEADINGS}
       columns={['column2', 'column3', 'column4', 'column5', 'column6']}
@@ -17,4 +17,4 @@ function Participate() {
   );
 }
 
-export default Participate;
+export default Incentives;

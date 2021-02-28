@@ -5,6 +5,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const BrotliPlugin = require('brotli-webpack-plugin');
 const dotenv = require('dotenv');
 
 module.exports = (env) => {
@@ -44,6 +45,7 @@ module.exports = (env) => {
     dry: false,
   });
 
+  // Plugin to generate a bundle map with sizes
   const AnalyzerPlugin = new BundleAnalyzerPlugin({
     analyzerMode: 'disabled',
   });
@@ -54,8 +56,17 @@ module.exports = (env) => {
     favicon: './src/assets/static/favicon.ico',
   });
 
+  // Plugin to copy assets/static directory to the build
   const CopyPlugin = new CopyWebpackPlugin({
     patterns: [{ from: './src/assets/static', to: '.' }],
+  });
+
+  // Plugin for compression
+  const BrotliWebpackPlugin = new BrotliPlugin({
+    asset: '[path].br[query]',
+    test: /\.(js|css|html|svg)$/,
+    threshold: 0,
+    minRatio: 0.8,
   });
 
   // Building Webpack
@@ -100,6 +111,7 @@ module.exports = (env) => {
     HTMLPlugin,
     CopyPlugin,
     DefinePlugin,
+    BrotliWebpackPlugin,
   ];
 
   config.module = {
@@ -118,7 +130,7 @@ module.exports = (env) => {
         loader: 'html-loader',
       },
       {
-        test: /\.css$/i,
+        test: /\.(css|scss)$/i,
         use: ['style-loader', 'css-loader'],
       },
     ],
@@ -137,7 +149,7 @@ module.exports = (env) => {
     };
 
     config.mode = 'production';
-    config.devtool = 'source-map';
+    config.devtool = '';
   }
 
   if (isDev) {
