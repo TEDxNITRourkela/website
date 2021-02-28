@@ -104,31 +104,36 @@ export const GUESTS = [
     ],
   },
   {
-    name: 'John Doe',
+    name: 'Jeremy Philemon',
     description:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae, sequi amet. Quidem ea laborum facere asperiores, voluptate earum eius doloremque quod? Dolores distinctio delectus at obcaecati vel alias corporis cumque.',
-    shortDescription: 'Design Guru',
-    image: SPEAKERS.SILHOUETTE.FIVE,
+      'Jeremy has been maintaining the covid19india.org website since its initial push to production, giving access to centralized, reliable data presented with clarity and good faith.',
+    shortDescription: 'Maintainer @covid19india.org',
+    image: SPEAKERS.SPEAKERS.FIVE,
     links: [
       {
-        link: '',
+        link: 'https://www.linkedin.com/in/jeremy-philemon-363129121',
         link_type: 'fab fa-linkedin-in',
         link_name: 'linkedin',
       },
       {
-        link: '',
+        link: 'https://twitter.com/jeremyjphilemon',
         link_type: 'fab fa-twitter',
         link_name: 'twitter',
       },
       {
-        link: '',
+        link: 'https://instagram.com/jeremyphilemon/',
         link_type: 'fab fa-instagram',
         link_name: 'instagram',
       },
       {
-        link: '',
+        link: 'https://www.facebook.com/jeremy.philemon',
         link_type: 'fab fa-facebook-f',
         link_name: 'facebook',
+      },
+      {
+        link: 'https://github.com/jeremyphilemon',
+        link_type: 'fab fa-github',
+        link_name: 'github',
       },
     ],
   },
