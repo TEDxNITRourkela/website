@@ -45,48 +45,158 @@ export const eventData = {
   },
 };
 
-export const breadcrumbsData = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    {
-      '@type': 'ListItem',
-      position: '1',
-      name: 'About',
-      item: 'https://tedxnitrourkela.com/about',
-    },
-    {
-      '@type': 'ListItem',
-      position: '2',
-      name: 'Speakers',
-      item: 'https://tedxnitrourkela.com/speakers',
-    },
-    {
-      '@type': 'ListItem',
-      position: '3',
-      name: 'Tickets',
-      item: 'https://tedxnitrourkela.com/tickets',
-    },
-    {
-      '@type': 'ListItem',
-      position: '4',
-      name: 'Campus Representative',
-      item: 'https://tedxnitrourkela.com/campus_ambassadors',
-    },
-    {
-      '@type': 'ListItem',
-      position: '5',
-      name: 'Wall',
-      item: 'https://tedxnitrourkela.com/wall',
-    },
-    {
-      '@type': 'ListItem',
-      position: '5',
-      name: 'Partners',
-      item: 'https://tedxnitrourkela.com/partners',
-    },
-  ],
-};
+export const breadcrumbsData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: '1',
+        name: 'Home',
+        item: 'https://tedxnitrourkela.com/',
+      },
+      {
+        '@type': 'ListItem',
+        position: '2',
+        name: 'About',
+        item: 'https://tedxnitrourkela.com/about',
+      },
+      {
+        '@type': 'ListItem',
+        position: '3',
+        name: 'TED',
+        item: 'https://www.ted.com/about/our-organization',
+      },
+      {
+        '@type': 'ListItem',
+        position: '4',
+        name: 'TEDx',
+        item: 'https://www.ted.com/about/programs-initiatives/tedx-program',
+      },
+      {
+        '@type': 'ListItem',
+        position: '5',
+        name: 'TEDxNITRourkela',
+        item: 'https://www.ted.com/tedx/events/41324',
+      },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: '1',
+        name: 'Home',
+        item: 'https://tedxnitrourkela.com/',
+      },
+      {
+        '@type': 'ListItem',
+        position: '2',
+        name: 'Speakers',
+        item: 'https://tedxnitrourkela.com/speakers',
+      },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: '1',
+        name: 'Home',
+        item: 'https://tedxnitrourkela.com/',
+      },
+      {
+        '@type': 'ListItem',
+        position: '2',
+        name: 'Partners',
+        item: 'https://tedxnitrourkela.com/partners',
+      },
+      {
+        '@type': 'ListItem',
+        position: '3',
+        name: 'Tata Steel',
+        item: 'https://www.tatasteel.com/',
+      },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: '1',
+        name: 'Home',
+        item: 'https://tedxnitrourkela.com/',
+      },
+      {
+        '@type': 'ListItem',
+        position: '2',
+        name: 'Tickets',
+        item: 'https://tedxnitrourkela.com/tickets',
+      },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: '1',
+        name: 'Home',
+        item: 'https://tedxnitrourkela.com/',
+      },
+      {
+        '@type': 'ListItem',
+        position: '2',
+        name: 'Participate',
+        item: 'https://tedxnitrourkela.com/participate',
+      },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: '1',
+        name: 'Home',
+        item: 'https://tedxnitrourkela.com/',
+      },
+      {
+        '@type': 'ListItem',
+        position: '2',
+        name: 'Merchandise',
+        item: 'https://tedxnitrourkela.com/merchandise',
+      },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: '1',
+        name: 'Home',
+        item: 'https://tedxnitrourkela.com/',
+      },
+      {
+        '@type': 'ListItem',
+        position: '2',
+        name: 'Social Wall',
+        item: 'https://tedxnitrourkela.com/wall',
+      },
+    ],
+  },
+];
 
 export const faqData = {
   '@context': 'https://schema.org',
