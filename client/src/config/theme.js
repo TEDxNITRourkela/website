@@ -101,7 +101,7 @@ const theme = createMuiTheme({
       fontSize: '2.25rem',
       lineHeight: '2.5rem',
       '@media (max-width:600px)': {
-        fontSize: '1.25rem',
+        fontSize: '1.50rem',
         lineHeight: '1.75rem',
       },
     },
