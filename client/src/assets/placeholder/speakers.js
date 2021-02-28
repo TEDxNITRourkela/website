@@ -107,7 +107,7 @@ export const GUESTS = [
     name: 'Jeremy Philemon',
     description:
       'Jeremy has been maintaining the covid19india.org website since its initial push to production, giving access to centralized, reliable data presented with clarity and good faith.',
-    shortDescription: 'Maintainer @covid19india.org',
+    shortDescription: 'Maintainer @ covid19india.org',
     image: SPEAKERS.SPEAKERS.FIVE,
     links: [
       {
