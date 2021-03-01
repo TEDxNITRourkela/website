@@ -39,6 +39,8 @@ export const SPEAKERS = Object.freeze({
       'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/speakers/pranav_khaitan-removebg-preview_yuzml1.png',
     FIVE:
       'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/speakers/jimy-removebg-preview_hxqrld.png',
+    SIX:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/speakers/lokesh-removebg-preview_rmxpfx.png',
   },
 });
 
@@ -53,6 +55,8 @@ export const PARTNERS = Object.freeze({
     'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/mailchimp.png',
   SHUTTERSTOCK:
     'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/shutterstock.png',
+  ROURKELA360:
+    'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/SAVE_20190409_182652-removebg-preview_2_sbqqon.png',
 });
 
 export const TICKETS = Object.freeze({

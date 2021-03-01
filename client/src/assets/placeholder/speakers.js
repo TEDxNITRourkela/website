@@ -138,31 +138,26 @@ export const GUESTS = [
     ],
   },
   {
-    name: 'John Doe',
+    name: 'Lokesh K. Gurram',
     description:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae, sequi amet. Quidem ea laborum facere asperiores, voluptate earum eius doloremque quod? Dolores distinctio delectus at obcaecati vel alias corporis cumque.',
-    shortDescription: 'Design Guru',
-    image: SPEAKERS.SILHOUETTE.SIX,
+      'Co-founder at Finshots, a popular and emerging finance bulletin, he is an alumnus of IIT Delhi and one of the few people who truly understand the meaning of building revolutionary services and technology.',
+    shortDescription: 'Co-founder of Ditto by Finshots',
+    image: SPEAKERS.SPEAKERS.SIX,
     links: [
       {
-        link: '',
+        link: 'https://in.linkedin.com/in/lokeshgurram',
         link_type: 'fab fa-linkedin-in',
         link_name: 'linkedin',
       },
       {
-        link: '',
+        link: 'https://twitter.com/lokesh_gurram',
         link_type: 'fab fa-twitter',
         link_name: 'twitter',
       },
       {
-        link: '',
-        link_type: 'fab fa-instagram',
-        link_name: 'instagram',
-      },
-      {
-        link: '',
-        link_type: 'fab fa-facebook-f',
-        link_name: 'facebook',
+        link: 'https://twitter.com/lokesh_gurram',
+        link_type: 'fab fa-quora',
+        link_name: 'quora',
       },
     ],
   },
