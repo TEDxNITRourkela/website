@@ -11,7 +11,7 @@ export const MERCH = [
     description:
       'Flaunt the SEXAGENARION legacy of NITR with this cool NITR@60 Black Tee.',
     price: '349',
-
+    discountedPrice: '299',
     tshirtCode: 'nitr60',
   },
   {
@@ -21,6 +21,7 @@ export const MERCH = [
     description:
       'Celebrate your adventurous journey with this classy CLASS OF 2021 Tee, and cherish the wonderful memories.',
     price: '399',
+    discountedPrice: '349',
     tshirtCode: 'classof2021',
   },
   {
@@ -30,6 +31,7 @@ export const MERCH = [
     description:
       'Add a WOW factor to your wardrobe with this cool X-TREME Tee, and flaunt that fresh design!',
     price: '399',
+    discountedPrice: '349',
     paymentLink:
       'https://studentactivitycenter.stores.instamojo.com/product/291810/the-x-treme-tee-tedxnitrourkela/',
     dataID: '291810',

@@ -20,15 +20,6 @@ function Tickets() {
   const classes = useStyles();
 
   useEffect(() => {
-    const script = document.createElement('script');
-    script.src =
-      'https://manage.instamojo.com/assets/js/pay_button/button.min.js';
-    script.async = true;
-
-    document.body.appendChild(script);
-  }, []);
-
-  useEffect(() => {
     analytics().logEvent('Merchandise Page Loaded');
   }, []);
 
@@ -59,16 +50,26 @@ function Tickets() {
         </Typography>
 
         <div className={classes.productsContainer}>
-          {MERCH.map(({ name, description, imageUrl, price, tshirtCode }) => (
-            <Product
-              key={tshirtCode}
-              title={name}
-              description={description}
-              imgSrc={imageUrl}
-              price={price}
-              tshirtCode={tshirtCode}
-            />
-          ))}
+          {MERCH.map(
+            ({
+              name,
+              description,
+              imageUrl,
+              price,
+              tshirtCode,
+              discountedPrice,
+            }) => (
+              <Product
+                key={tshirtCode}
+                title={name}
+                description={description}
+                imgSrc={imageUrl}
+                price={price}
+                tshirtCode={tshirtCode}
+                discountedPrice={discountedPrice}
+              />
+            ),
+          )}
         </div>
 
         <Container className={classes.tableContainer}>

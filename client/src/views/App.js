@@ -91,6 +91,11 @@ function App() {
             <Route path='/campus_ambassadors' exact component={AsyncCA} />
             <Route path='/wall' exact component={AsyncWall} />
             <Route path='/merchandise' exact component={AsyncMerchandise} />
+            <Route
+              path='/merchandise/referrals/:code'
+              exact
+              component={AsyncMerchandise}
+            />
             <Route path='/tickets' exact component={AsyncTickets} />
             <Route
               path='/tickets/referrals/:code'
