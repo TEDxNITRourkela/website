@@ -27,7 +27,12 @@ function Partner({ DATA, home, main = false }) {
             title={sponsor.hrefTitle}
             key={sponsor.href}
           >
-            <img src={sponsor.img} alt='Sponsor' className={classes.sponsor} />
+            <img
+              src={sponsor.img}
+              alt='Sponsor'
+              className={classes.sponsor}
+              style={{ height: `${sponsor.size}` }}
+            />
           </a>
         ))}
       </div>
