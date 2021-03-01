@@ -3,7 +3,25 @@ import React, { useRef } from 'react';
 import { makeStyles, Typography } from '@material-ui/core';
 import { ReactTypeformEmbed } from 'react-typeform-embed';
 
-function Product({ imgSrc, title, price, description, tshirtCode }) {
+function Product({
+  imgSrc,
+  title,
+  price,
+  description,
+  tshirtCode,
+  discountedPrice,
+}) {
+  // Logic to determine the type of ticket.
+  const referrals = window.location.pathname.split('/');
+  let isReferral;
+  if (
+    referrals &&
+    referrals[1] === 'merchandise' &&
+    referrals[2] === 'referrals'
+  )
+    isReferral = true;
+  else isReferral = false;
+
   const classes = useStyles();
   const typeform = useRef();
 
@@ -25,7 +43,14 @@ function Product({ imgSrc, title, price, description, tshirtCode }) {
             {title}
           </Typography>
           <Typography variant='body1' className={classes.price}>
-            {`₹ ${price}`}
+            {isReferral ? (
+              <>
+                <strike>{`₹ ${price}`}</strike>
+                {` ₹ ${discountedPrice}`}
+              </>
+            ) : (
+              `₹ ${price}`
+            )}
           </Typography>
         </div>
         <Typography variant='body2' className={classes.description}>
@@ -37,8 +62,13 @@ function Product({ imgSrc, title, price, description, tshirtCode }) {
         ref={typeform}
         hideHeaders
         hideFooter
-        // eslint-disable-next-line
-        url={`https://form.typeform.com/to/RbLawI6g?tshirt=${tshirtCode}`}
+        url={
+          isReferral
+            ? // eslint-disable-next-line
+              `https://form.typeform.com/to/RbLawI6g?tshirt=${tshirtCode}&is_referral=true&referral_code=${referrals[3]}&`
+            : // eslint-disable-next-line
+              `https://form.typeform.com/to/RbLawI6g?tshirt=${tshirtCode}&is_referral=false`
+        }
         mode='pop_up'
         popup
         autoOpen={false}

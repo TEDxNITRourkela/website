@@ -13,7 +13,7 @@ function Partner({ DATA, home, main = false }) {
     <div className={classes.wrapper}>
       <div className={classes.titleContainer}>
         <Typography variant='h2' className={classes.title}>
-          {DATA.title}
+          {home ? 'Partners' : DATA.title}
         </Typography>
         <div className={classes.horizontalLine} />
       </div>
