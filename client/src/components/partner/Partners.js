@@ -71,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
   },
   sponsor: {
     margin: '15px 35px',
-    opacity: (main) => (main ? 1 : 0.5),
+    opacity: (main) => (main ? 0.9 : 0.5),
     width: 200,
     height: 'auto',
   },

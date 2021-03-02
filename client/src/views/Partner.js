@@ -39,11 +39,12 @@ function Partner() {
         ))}
       </Helmet>
 
-      {/* <Partners DATA={PARTNER.ZERO} /> */}
-      {/* <Partners DATA={PARTNER.ONE} /> */}
-      {/* <Partners DATA={PARTNER.TWO} /> */}
+      {/* <Partners DATA={PARTNER.ZERO} />
+      <Partners DATA={PARTNER.ONE} />
+      <Partners DATA={PARTNER.TWO} /> */}
       <Partners DATA={PARTNER.FIVE} main />
       <Partners DATA={PARTNER.FOUR} />
+      <Partners DATA={PARTNER.SIX} />
 
       <ContentBanner DATA={PARTNER.CONTENT} wrapContainer />
     </>
