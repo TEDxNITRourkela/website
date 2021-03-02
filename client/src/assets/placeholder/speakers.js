@@ -7,7 +7,12 @@ export const GUESTS = [
     description: [
       'A graduate of ',
       { href: 'http://www.nid.edu/', content: 'NID Ahemdabad' },
-      ', Ashwathy is passionate about projects dealing with design activism, circular economy & the future. She has won numerous accolades, including National Winner of the prestigious James Dyson Award in 2019',
+      ', Ashwathy is passionate about projects dealing with design activism, circular economy & the future. She has won numerous accolades, including National Winner of the prestigious ',
+      {
+        href: 'https://www.jamesdysonaward.org/',
+        content: 'James Dyson Award',
+      },
+      ' in 2019.',
     ],
     shortDescription: 'Winner | James Dyson Award',
     image: SPEAKERS.SPEAKERS.ONE,
@@ -32,7 +37,9 @@ export const GUESTS = [
   {
     name: 'Anup Nandy',
     description: [
-      'Professor Anup Nandy, a researcher in AI & ML area and professor at NIT Rourkela, was one of the few Indian scientists selected to present his research in the momentous 5th BRICS Young Scientist Conclave 2020.',
+      'Professor Anup Nandy, a researcher in AI & ML area and professor at ',
+      { href: 'https://nitrkl.ac.in/', content: 'NIT Rourkela' },
+      ', was one of the few Indian scientists selected to present his research in the momentous 5th BRICS Young Scientist Conclave 2020.',
     ],
     shortDescription: 'Represented India @ 5th BRICS YSC',
     image: SPEAKERS.SPEAKERS.TWO,
@@ -57,7 +64,9 @@ export const GUESTS = [
   {
     name: 'Lisa Russell',
     description: [
-      'Lisa Russell, MPH, is an Emmy-winning filmmaker and art curator. She is a two-time TEDx speaker, Fulbright Specialist and an accomplished presenter along with many other accolades.',
+      'Lisa Russell, MPH, is an ',
+      { href: 'https://emmys.com', content: 'Emmy-winning' },
+      ' filmmaker and art curator. She is a two-time TEDx speaker, Fulbright Specialist and an accomplished presenter along with many other accolades.',
     ],
     shortDescription: 'Winner | Emmy Award 2009',
     image: SPEAKERS.SPEAKERS.THREE,
@@ -112,7 +121,9 @@ export const GUESTS = [
   {
     name: 'Jeremy Philemon',
     description: [
-      'Jeremy has been maintaining the covid19india.org website since its initial push to production, giving access to centralized, reliable data presented with clarity and good faith.',
+      'Jeremy has been maintaining the ',
+      { href: 'https://covid19india.org', content: 'covid19india.org' },
+      ' website since its initial push to production, giving access to centralized, reliable data presented with clarity and good faith.',
     ],
     shortDescription: 'Team led the initiative covid19india.org',
     image: SPEAKERS.SPEAKERS.FIVE,
@@ -147,7 +158,11 @@ export const GUESTS = [
   {
     name: 'Lokesh K. Gurram',
     description: [
-      'Co-founder at Finshots, a popular and emerging finance bulletin, he is an alumnus of IIT Delhi and one of the few people who truly understand the meaning of building revolutionary services and technology.',
+      'Co-founder at ',
+      { href: 'https://finshots.in/', content: 'Finshots' },
+      ', a popular and emerging finance bulletin, he is an alumnus of ',
+      { href: 'https://home.iitd.ac.in/', content: 'IIT Delhi' },
+      ' and one of the few people who truly understand the meaning of building revolutionary services and technology.',
     ],
     shortDescription: 'Co-founder of Ditto by Finshots',
     image: SPEAKERS.SPEAKERS.SIX,

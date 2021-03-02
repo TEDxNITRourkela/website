@@ -22,7 +22,6 @@ function GuestCard({ name, description, image, shortDescription, links }) {
     <div className={classes.root}>
       <div className={cardStyle}>
         <div className={`${classes.common} ${classes.front}`}>
-          {/* <img src={image} alt={name} className={classes.image} /> */}
           <div
             className={classes.imgDiv}
             style={{
