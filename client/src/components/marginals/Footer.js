@@ -63,8 +63,15 @@ function Footer() {
               Address{' '}
             </Typography>
             <Typography className={classes.address} variant='body2'>
-              Student Activity Centre, Sector 1, National Institute of
-              Technology, Rourkela. Odisha-India PIN:769008
+              Student Activity Centre, Sector 1,
+              <a
+                href='https://nitrkl.ac.in'
+                style={{ color: 'white', textDecoration: 'underline' }}
+              >
+                {' '}
+                National Institute of Technology, Rourkela
+              </a>
+              . Odisha-India PIN:769008
             </Typography>
           </div>
         </div>

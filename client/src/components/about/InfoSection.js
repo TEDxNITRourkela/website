@@ -18,26 +18,23 @@ function About({ direction, first, DATA, link, columnReverse = false }) {
     <div className={classes.contentContainer}>
       <Typography variant='h2' className={classes.question}>
         {DATA.QUESTION}
-        {/* eslint-disable-next-line */}
-        <span className={classes.highlight}> {DATA.HIGHLIGHT}</span>
+        <span className={classes.highlight}>{` ${DATA.HIGHLIGHT}`}</span>
       </Typography>
       <Typography variant='body2' className={classes.content}>
         {DATA.CONTENT}
         {!link &&
-          DATA.links.map((Social, index) => (
-            // eslint-disable-next-line max-len
+          DATA.links.map((Social) => (
             <span>
-              {Social.text}
               <a
-                // eslint-disable-next-line react/no-array-index-key
-                key={`${Social.link} ${index}`}
+                key={Social.link}
                 className={classes.link}
                 href={Social.link}
                 target='_blank'
                 rel='noreferrer'
               >
-                {Social.link}
-              </a>
+                {Social.text}
+                {/* eslint-disable-next-line */}
+              </a>{' '}
             </span>
           ))}
       </Typography>
