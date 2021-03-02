@@ -111,7 +111,6 @@ module.exports = (env) => {
     HTMLPlugin,
     CopyPlugin,
     DefinePlugin,
-    BrotliWebpackPlugin,
   ];
 
   config.module = {
@@ -150,6 +149,8 @@ module.exports = (env) => {
 
     config.mode = 'production';
     config.devtool = '';
+
+    config.plugins.push(BrotliWebpackPlugin);
   }
 
   if (isDev) {

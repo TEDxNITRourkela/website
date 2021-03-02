@@ -4,8 +4,11 @@ import { SPEAKERS } from '../img/pages';
 export const GUESTS = [
   {
     name: 'Ashwathy  Satheesan',
-    description:
-      'A graduate of NID Ahemdabad, Ashwathy is passionate about projects dealing with design activism, circular economy & the future. She has won numerous accolades, including National Winner of the prestigious James Dyson Award in 2019',
+    description: [
+      'A graduate of ',
+      { href: 'http://www.nid.edu/', content: 'NID Ahemdabad' },
+      ', Ashwathy is passionate about projects dealing with design activism, circular economy & the future. She has won numerous accolades, including National Winner of the prestigious James Dyson Award in 2019',
+    ],
     shortDescription: 'Winner | James Dyson Award',
     image: SPEAKERS.SPEAKERS.ONE,
     links: [
@@ -28,9 +31,10 @@ export const GUESTS = [
   },
   {
     name: 'Anup Nandy',
-    description:
+    description: [
       'Professor Anup Nandy, a researcher in AI & ML area and professor at NIT Rourkela, was one of the few Indian scientists selected to present his research in the momentous 5th BRICS Young Scientist Conclave 2020.',
-    shortDescription: 'AI & ML Researcher',
+    ],
+    shortDescription: 'Represented India @ 5th BRICS YSC',
     image: SPEAKERS.SPEAKERS.TWO,
     links: [
       {
@@ -52,8 +56,9 @@ export const GUESTS = [
   },
   {
     name: 'Lisa Russell',
-    description:
+    description: [
       'Lisa Russell, MPH, is an Emmy-winning filmmaker and art curator. She is a two-time TEDx speaker, Fulbright Specialist and an accomplished presenter along with many other accolades.',
+    ],
     shortDescription: 'Winner | Emmy Award 2009',
     image: SPEAKERS.SPEAKERS.THREE,
     links: [
@@ -81,9 +86,10 @@ export const GUESTS = [
   },
   {
     name: 'Pranav Khaitan',
-    description:
+    description: [
       'Pranav Khaitan is a senior engineering lead at Google AI, where he has led various R&D projects like Chrome, Youtube. He was also part of the Nobel Peace Prize-winning team in 2020.',
-    shortDescription: 'Senior Engineering Lead at Google AI',
+    ],
+    shortDescription: 'Winning Team of Nobel Peace Prize 2020',
     image: SPEAKERS.SPEAKERS.FOUR,
     links: [
       {
@@ -105,9 +111,10 @@ export const GUESTS = [
   },
   {
     name: 'Jeremy Philemon',
-    description:
+    description: [
       'Jeremy has been maintaining the covid19india.org website since its initial push to production, giving access to centralized, reliable data presented with clarity and good faith.',
-    shortDescription: 'Volunteer @ covid19india.org',
+    ],
+    shortDescription: 'Team led the initiative covid19india.org',
     image: SPEAKERS.SPEAKERS.FIVE,
     links: [
       {
@@ -139,8 +146,9 @@ export const GUESTS = [
   },
   {
     name: 'Lokesh K. Gurram',
-    description:
+    description: [
       'Co-founder at Finshots, a popular and emerging finance bulletin, he is an alumnus of IIT Delhi and one of the few people who truly understand the meaning of building revolutionary services and technology.',
+    ],
     shortDescription: 'Co-founder of Ditto by Finshots',
     image: SPEAKERS.SPEAKERS.SIX,
     links: [
@@ -155,7 +163,7 @@ export const GUESTS = [
         link_name: 'twitter',
       },
       {
-        link: 'https://twitter.com/lokesh_gurram',
+        link: 'https://www.quora.com/profile/Lokesh-Gurram',
         link_type: 'fab fa-quora',
         link_name: 'quora',
       },
@@ -163,28 +171,29 @@ export const GUESTS = [
   },
   {
     name: 'John Doe',
-    description:
+    description: [
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae, sequi amet. Quidem ea laborum facere asperiores, voluptate earum eius doloremque quod? Dolores distinctio delectus at obcaecati vel alias corporis cumque.',
+    ],
     shortDescription: 'Design Guru',
     image: SPEAKERS.SILHOUETTE.SEVEN,
     links: [
       {
-        link: '',
+        link: 'JD1',
         link_type: 'fab fa-linkedin-in',
         link_name: 'linkedin',
       },
       {
-        link: '',
+        link: 'JD2',
         link_type: 'fab fa-twitter',
         link_name: 'twitter',
       },
       {
-        link: '',
+        link: 'JD3',
         link_type: 'fab fa-instagram',
         link_name: 'instagram',
       },
       {
-        link: '',
+        link: 'JD4',
         link_type: 'fab fa-facebook-f',
         link_name: 'facebook',
       },
@@ -192,28 +201,29 @@ export const GUESTS = [
   },
   {
     name: 'John Doe',
-    description:
+    description: [
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae, sequi amet. Quidem ea laborum facere asperiores, voluptate earum eius doloremque quod? Dolores distinctio delectus at obcaecati vel alias corporis cumque.',
+    ],
     shortDescription: 'Design Guru',
     image: SPEAKERS.SILHOUETTE.EIGHT,
     links: [
       {
-        link: '',
+        link: 'JD1a',
         link_type: 'fab fa-linkedin-in',
         link_name: 'linkedin',
       },
       {
-        link: '',
+        link: 'JD1b',
         link_type: 'fab fa-twitter',
         link_name: 'twitter',
       },
       {
-        link: '',
+        link: 'JD1c',
         link_type: 'fab fa-instagram',
         link_name: 'instagram',
       },
       {
-        link: '',
+        link: 'JD1d',
         link_type: 'fab fa-facebook-f',
         link_name: 'facebook',
       },

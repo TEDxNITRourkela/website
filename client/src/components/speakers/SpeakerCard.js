@@ -58,16 +58,29 @@ function GuestCard({ name, description, image, shortDescription, links }) {
             <Typography className={classes.name} variant='h3'>
               {name}
             </Typography>
-
             <Typography className={classes.description} variant='body1'>
-              {description}
+              {description.map((item) =>
+                typeof item === 'string' ? (
+                  <span key={item}>{item}</span>
+                ) : (
+                  <a
+                    key={item.content}
+                    className={`${classes.description} ${classes.dsLinks}`}
+                    href={item.href}
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    {item.content}
+                  </a>
+                ),
+              )}
             </Typography>
           </div>
 
           <div className={classes.linksContainer}>
             {links.map((link, index) => (
               // eslint-disable-next-line
-              <a key={`${link.link} ${index}`} href={link.link} target='_blank'>
+              <a key={link.link} href={link.link} target='_blank'>
                 <i className={`${classes.icons} ${link.link_type}`} />
               </a>
             ))}
@@ -201,5 +214,10 @@ const useStyles = makeStyles(() => ({
     '&:hover': {
       cursor: 'pointer',
     },
+  },
+  dsLinks: {
+    color: '#ffffff',
+    textDecoration: 'underline',
+    fontWeight: 'bold',
   },
 }));
