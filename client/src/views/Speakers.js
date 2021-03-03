@@ -29,6 +29,7 @@ function About() {
 
         {GUESTS.map(({ description, name }) => (
           <meta
+            key={name}
             name='description'
             content={`TEDxNITRourkela Speaker | ${name} |${description}`}
           />
@@ -40,10 +41,9 @@ function About() {
 
         <div className={classes.guestsContainer}>
           {GUESTS.map(
-            ({ name, description, shortDescription, image, links }, index) => (
+            ({ name, description, shortDescription, image, links }) => (
               <GuestCard
-                // eslint-disable-next-line
-                key={index}
+                key={name}
                 name={name}
                 description={description}
                 shortDescription={shortDescription}

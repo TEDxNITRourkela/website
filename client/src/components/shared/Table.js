@@ -31,7 +31,7 @@ function CustomTable({ title = 'Incentives', rows, headings, columns }) {
               {headings.map((heading, index) => (
                 <TableCell
                   // eslint-disable-next-line
-                  key={index}
+                  key={`${heading}-${index}`}
                   // eslint-disable-next-line
                   className={`${classes.tableCell} ${classes.tableCellHeadingRow}`}
                   align='center'
@@ -44,7 +44,7 @@ function CustomTable({ title = 'Incentives', rows, headings, columns }) {
           <TableBody>
             {rows.map((row, index) => (
               // eslint-disable-next-line
-              <TableRow key={index}>
+              <TableRow key={`table-${index}`}>
                 <TableCell
                   className={
                     index !== 4

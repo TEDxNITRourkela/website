@@ -39,7 +39,11 @@ function Footer() {
           <div className={classes.row2row1}>
             <div className={classes.row2column1}>
               {TABS1.map(({ link, name }) => (
-                <Link key={link} to={link} className={classes.linkContainer}>
+                <Link
+                  key={`column1-${link}`}
+                  to={link}
+                  className={classes.linkContainer}
+                >
                   <Typography variant='body1' className={classes.link}>
                     {name}
                   </Typography>
@@ -48,7 +52,11 @@ function Footer() {
             </div>
             <div className={classes.row2column2}>
               {TABS2.map(({ link, name }) => (
-                <Link key={link} to={link} className={classes.linkContainer}>
+                <Link
+                  key={`column2-${link}`}
+                  to={link}
+                  className={classes.linkContainer}
+                >
                   <Typography variant='body1' className={classes.link}>
                     {name}
                   </Typography>

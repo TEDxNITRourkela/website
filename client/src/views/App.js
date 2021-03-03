@@ -58,7 +58,9 @@ function App() {
           {JSON.stringify(breadcrumbsData)}
         </script>
         {merch.map((product) => (
-          <script type='application/ld+json'>{JSON.stringify(product)}</script>
+          <script key={product.sku} type='application/ld+json'>
+            {JSON.stringify(product)}
+          </script>
         ))}
       </Helmet>
 

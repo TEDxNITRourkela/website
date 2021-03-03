@@ -61,7 +61,7 @@ function Navbar({ window: cWindow }) {
       />
       <div className={classes.tabsContainer}>
         {TABS_NAV.slice(0, 7).map(({ link, name }) => (
-          <Link className={classes.tabLink} to={link} key={link}>
+          <Link className={classes.tabLink} to={link} key={`navbar-${link}`}>
             <Typography className={classes.tab} variant='body1'>
               {name}
             </Typography>
@@ -84,7 +84,11 @@ function Navbar({ window: cWindow }) {
           }}
         >
           {TABS_NAV.slice(0, 7).map(({ link, name }) => (
-            <Link className={classes.tabLink} to={link} key={link}>
+            <Link
+              className={classes.tabLink}
+              to={link}
+              key={`hidden-navbar-${link}`}
+            >
               <ListItem>
                 <Typography className={classes.tab} variant='body1'>
                   {name}

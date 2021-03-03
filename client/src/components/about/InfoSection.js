@@ -24,9 +24,8 @@ function About({ direction, first, DATA, link, columnReverse = false }) {
         {DATA.CONTENT}
         {!link &&
           DATA.links.map((Social) => (
-            <span>
+            <span key={Social.link}>
               <a
-                key={Social.link}
                 className={classes.link}
                 href={Social.link}
                 target='_blank'

@@ -5,7 +5,7 @@ import { Typography, Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 // Placeholder
-import { CONTENT } from '../../assets/placeholder/homepage';
+import { CONTENT2 } from '../../assets/placeholder/homepage';
 
 function TedContent() {
   const classes = useStyles();
@@ -15,21 +15,21 @@ function TedContent() {
       <Grid container>
         <Grid item md={6} xs={12} className={classes.titleContainer}>
           <Typography variant='h1' className={classes.question}>
-            {CONTENT.TWO.title}
+            {CONTENT2.TWO.TITLE}
           </Typography>
-          <img className={classes.logo} src={CONTENT.TWO.logo} alt='Logo' />
+          <img className={classes.logo} src={CONTENT2.TWO.LOGO} alt='Logo' />
         </Grid>
         <Grid item md={6} xs={12} className={classes.contentContainer}>
           <Typography variant='body2' className={classes.content}>
-            {CONTENT.TWO.content}
+            {CONTENT2.TWO.CONTENT}
           </Typography>
           <a
-            href={CONTENT.TWO.link}
+            href={CONTENT2.TWO.LINK}
             className={classes.link}
             target='_blank'
             rel='noreferrer'
           >
-            <Typography variant='body2'>{CONTENT.TWO.linkText}</Typography>
+            <Typography variant='body2'>{CONTENT2.TWO.LINKTEXT}</Typography>
           </a>
         </Grid>
       </Grid>

@@ -204,7 +204,7 @@ export const GUESTS = [
     ],
   },
   {
-    name: 'John Doe',
+    name: 'John Doe 2',
     description: [
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae, sequi amet. Quidem ea laborum facere asperiores, voluptate earum eius doloremque quod? Dolores distinctio delectus at obcaecati vel alias corporis cumque.',
     ],
@@ -238,7 +238,7 @@ export const GUESTS = [
     ],
   },
   {
-    name: 'John Doe',
+    name: 'John Doe 1',
     description: [
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae, sequi amet. Quidem ea laborum facere asperiores, voluptate earum eius doloremque quod? Dolores distinctio delectus at obcaecati vel alias corporis cumque.',
     ],
