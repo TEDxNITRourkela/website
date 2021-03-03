@@ -116,19 +116,9 @@ export const GUESTS = [
         link_name: 'linkedin',
       },
       {
-        link: 'https://twitter.com/jeremyjphilemon',
+        link: 'https://twitter.com/jeremyphilemon?s=09',
         link_type: 'fab fa-twitter',
         link_name: 'twitter',
-      },
-      {
-        link: 'https://instagram.com/jeremyphilemon/',
-        link_type: 'fab fa-instagram',
-        link_name: 'instagram',
-      },
-      {
-        link: 'https://www.facebook.com/jeremy.philemon',
-        link_type: 'fab fa-facebook-f',
-        link_name: 'facebook',
       },
       {
         link: 'https://github.com/jeremyphilemon',
