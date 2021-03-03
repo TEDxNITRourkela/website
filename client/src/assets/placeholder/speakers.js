@@ -72,7 +72,12 @@ export const GUESTS = [
     description: [
       'Lisa Russell, MPH, is an ',
       { href: 'https://emmys.com', content: 'Emmy-winning' },
-      ' filmmaker and art curator. She is a two-time TEDx speaker, Fulbright Specialist and an accomplished presenter along with many other accolades.',
+      ' filmmaker and art curator. She is a two-time ',
+      {
+        href: 'https://www.ted.com/about/programs-initiatives/tedx-program',
+        content: 'TEDx',
+      },
+      ' speaker, Fulbright Specialist and an accomplished presenter along with many other accolades.',
     ],
     shortDescription: 'Winner | Emmy Award 2009',
     image: SPEAKERS.SPEAKERS.THREE,
@@ -106,7 +111,12 @@ export const GUESTS = [
   {
     name: 'Pranav Khaitan',
     description: [
-      'Pranav Khaitan is a senior engineering lead at Google AI, where he has led various R&D projects like Chrome, Youtube. He was also part of the Nobel Peace Prize-winning team in 2020.',
+      'Pranav Khaitan is a senior engineering lead at Google AI where he led various R&D projects like Chrome, Youtube. He was also a part of the ',
+      { href: 'https://www.nobelprize.org/', content: 'Nobel Peace Prize' },
+      ' winning team in 2020. He has also been working to solve humanitarian aid problems in partnership with the ',
+      { href: 'https://www.wfp.org/', content: 'UN' },
+      ' and the ',
+      { href: 'https://www.worldbank.org/en/home', content: 'World Bank.' },
     ],
     shortDescription: 'Winning Team of Nobel Peace Prize 2020',
     image: SPEAKERS.SPEAKERS.FOUR,
