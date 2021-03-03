@@ -41,6 +41,8 @@ export const SPEAKERS = Object.freeze({
       'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/speakers/jimy-removebg-preview_hxqrld.png',
     SIX:
       'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/speakers/lokesh-removebg-preview_rmxpfx.png',
+    SEVEN:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/speakers/kabir-cafe_owx0lc.png',
   },
 });
 

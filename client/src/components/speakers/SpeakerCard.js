@@ -4,9 +4,16 @@ import React, { useState } from 'react';
 // Libraries
 import { makeStyles, Typography } from '@material-ui/core';
 
-function GuestCard({ name, description, image, shortDescription, links }) {
+function GuestCard({
+  name,
+  description,
+  image,
+  shortDescription,
+  links,
+  isLongCard: isLong,
+}) {
   const isSpeaker = name !== 'John Doe';
-  const classes = useStyles(isSpeaker);
+  const classes = useStyles({ isSpeaker, isLong });
   const [showFront, setShowFront] = useState(true);
   const [cardStyle, setCardStyle] = useState(classes.card);
 
@@ -109,7 +116,7 @@ export default GuestCard;
 const useStyles = makeStyles(() => ({
   root: {
     height: 350,
-    width: 250,
+    width: (_) => (_.isLong ? 530 : 250),
     backgroundColor: 'transparent',
     borderRadius: '8px',
     perspective: '600px',
@@ -156,8 +163,9 @@ const useStyles = makeStyles(() => ({
     // minHeight: 200,
   },
   imgDiv: {
-    width: 190,
-    height: (isSpeaker) => (isSpeaker ? 190 : 230),
+    width: (_) => (_.isLong ? 400 : 190),
+    // eslint-disable-next-line
+    height: (_) => (_.isSpeaker ? (_.isLong ? 225 : 190) : 230),
     backgroundColor: '#232323',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',

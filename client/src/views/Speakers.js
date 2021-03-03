@@ -41,7 +41,14 @@ function About() {
 
         <div className={classes.guestsContainer}>
           {GUESTS.map(
-            ({ name, description, shortDescription, image, links }) => (
+            ({
+              name,
+              description,
+              shortDescription,
+              image,
+              links,
+              isLongCard,
+            }) => (
               <GuestCard
                 key={name}
                 name={name}
@@ -49,6 +56,7 @@ function About() {
                 shortDescription={shortDescription}
                 image={image}
                 links={links}
+                isLongCard={isLongCard}
               />
             ),
           )}

@@ -16,6 +16,7 @@ export const GUESTS = [
     ],
     shortDescription: 'Winner | James Dyson Award',
     image: SPEAKERS.SPEAKERS.ONE,
+    isLongCard: false,
     links: [
       {
         link: 'https://www.linkedin.com/in/ashwathysatheesan/',
@@ -46,6 +47,7 @@ export const GUESTS = [
     ],
     shortDescription: 'Represented India @ 5th BRICS YSC',
     image: SPEAKERS.SPEAKERS.TWO,
+    isLongCard: false,
     links: [
       {
         link: 'https://www.linkedin.com/in/anup-nandy-14032a178/',
@@ -81,6 +83,7 @@ export const GUESTS = [
     ],
     shortDescription: 'Winner | Emmy Award 2009',
     image: SPEAKERS.SPEAKERS.THREE,
+    isLongCard: false,
     links: [
       {
         link: 'https://www.linkedin.com/in/lisarussellfilms/',
@@ -120,6 +123,7 @@ export const GUESTS = [
     ],
     shortDescription: 'Winning Team of Nobel Peace Prize 2020',
     image: SPEAKERS.SPEAKERS.FOUR,
+    isLongCard: false,
     links: [
       {
         link: 'https://www.linkedin.com/in/pranavkhaitan/',
@@ -150,6 +154,7 @@ export const GUESTS = [
     ],
     shortDescription: 'Team led the initiative covid19india.org',
     image: SPEAKERS.SPEAKERS.FIVE,
+    isLongCard: false,
     links: [
       {
         link: 'https://www.linkedin.com/in/jeremy-philemon-363129121',
@@ -182,6 +187,7 @@ export const GUESTS = [
     ],
     shortDescription: 'Co-founder of Ditto by Finshots',
     image: SPEAKERS.SPEAKERS.SIX,
+    isLongCard: false,
     links: [
       {
         link: 'https://in.linkedin.com/in/lokeshgurram',
@@ -204,12 +210,13 @@ export const GUESTS = [
     ],
   },
   {
-    name: 'John Doe 2',
+    name: 'Kabir Cafe',
     description: [
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae, sequi amet. Quidem ea laborum facere asperiores, voluptate earum eius doloremque quod? Dolores distinctio delectus at obcaecati vel alias corporis cumque.',
     ],
     shortDescription: 'Design Guru',
-    image: SPEAKERS.SILHOUETTE.SEVEN,
+    image: SPEAKERS.SPEAKERS.SEVEN,
+    isLongCard: true,
     links: [
       {
         link: 'JD1',
@@ -238,12 +245,13 @@ export const GUESTS = [
     ],
   },
   {
-    name: 'John Doe 1',
+    name: 'John Doe',
     description: [
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae, sequi amet. Quidem ea laborum facere asperiores, voluptate earum eius doloremque quod? Dolores distinctio delectus at obcaecati vel alias corporis cumque.',
     ],
     shortDescription: 'Design Guru',
     image: SPEAKERS.SILHOUETTE.EIGHT,
+    isLongCard: false,
     links: [
       {
         link: 'JD1a',
