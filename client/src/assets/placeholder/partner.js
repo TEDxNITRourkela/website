@@ -46,12 +46,6 @@ export const PARTNER = Object.freeze({
         hrefTitle: 'ShutterStock',
         size: '100%',
       },
-      {
-        img: PARTNERS.ROURKELA360,
-        href: 'https://rourkela360.business.site/',
-        hrefTitle: 'Rourkela360',
-        size: '80%',
-      },
     ],
   },
   FIVE: {
@@ -62,6 +56,17 @@ export const PARTNER = Object.freeze({
         href: 'https://tatasteel.com',
         hrefTitle: 'TATA Steel',
         size: '100%',
+      },
+    ],
+  },
+  SIX: {
+    title: 'Outreach Partners',
+    partners: [
+      {
+        img: PARTNERS.ROURKELA360,
+        href: 'https://rourkela360.business.site/',
+        hrefTitle: 'Rourkela360',
+        size: '80%',
       },
     ],
   },

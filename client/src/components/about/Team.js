@@ -31,10 +31,9 @@ function Team() {
   const renderTeam = () => {
     switch (stage) {
       case STAGE.DESIGN:
-        return ABOUT.TEAM.DESIGN.map((member, index) => (
+        return ABOUT.TEAM.DESIGN.map((member) => (
           <Profile
-            // eslint-disable-next-line
-            key={`${member.NAME}${index}`}
+            key={`design-team-${member.NAME}`}
             member={member}
             showDesignation={false}
             dark={false}
@@ -42,10 +41,9 @@ function Team() {
           />
         ));
       case STAGE.TECH:
-        return ABOUT.TEAM.TECH.map((member, index) => (
+        return ABOUT.TEAM.TECH.map((member) => (
           <Profile
-            // eslint-disable-next-line
-            key={`${member.NAME}${index}`}
+            key={`tech-team-${member.NAME}`}
             member={member}
             showDesignation={false}
             dark={false}
@@ -53,10 +51,9 @@ function Team() {
           />
         ));
       case STAGE.CURATION:
-        return ABOUT.TEAM.CURATION.map((member, index) => (
+        return ABOUT.TEAM.CURATION.map((member) => (
           <Profile
-            // eslint-disable-next-line
-            key={`${member.NAME}${index}`}
+            key={`curation-team-${member.NAME}`}
             member={member}
             showDesignation={false}
             dark={false}
@@ -64,10 +61,9 @@ function Team() {
           />
         ));
       case STAGE.MANAGEMENT:
-        return ABOUT.TEAM.MANAGEMENT.map((member, index) => (
+        return ABOUT.TEAM.MANAGEMENT.map((member) => (
           <Profile
-            // eslint-disable-next-line
-            key={`${member.NAME}${index}`}
+            key={`management-team-${member.NAME}`}
             member={member}
             showDesignation={false}
             dark={false}
@@ -75,10 +71,9 @@ function Team() {
           />
         ));
       default:
-        return ABOUT.TEAM.DESIGN.map((member, index) => (
+        return ABOUT.TEAM.DESIGN.map((member) => (
           <Profile
-            // eslint-disable-next-line
-            key={`${member.NAME}${index}`}
+            key={`design-team-${member.NAME}`}
             member={member}
             showDesignation={false}
             dark={false}

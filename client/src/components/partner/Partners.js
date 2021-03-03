@@ -2,6 +2,7 @@ import React from 'react';
 
 // Libraries
 import { makeStyles, Container, Typography } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 // Assets
 import { GRAPHICS } from '../../assets/img/graphics';
@@ -36,6 +37,14 @@ function Partner({ DATA, home, main = false }) {
           </a>
         ))}
       </div>
+
+      {home && (
+        <div className={classes.navigator}>
+          <Link to='/partners' style={{ color: '#ffffff' }}>
+            View all Partners
+          </Link>
+        </div>
+      )}
     </div>
   );
 
@@ -71,7 +80,7 @@ const useStyles = makeStyles((theme) => ({
   },
   sponsor: {
     margin: '15px 35px',
-    opacity: (main) => (main ? 1 : 0.5),
+    opacity: (main) => (main ? 0.9 : 0.5),
     width: 200,
     height: 'auto',
   },
@@ -93,5 +102,11 @@ const useStyles = makeStyles((theme) => ({
     height: '1px',
     backgroundColor: '#ffffff',
     opacity: 0.3,
+  },
+  navigator: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignContent: 'center',
+    color: '#ffffff',
   },
 }));

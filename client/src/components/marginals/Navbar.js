@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import {
   Typography,
@@ -15,8 +15,9 @@ import { LOGOS } from '../../assets/img/logos';
 
 const drawerWidth = 250;
 
-function Navbar({ window, showBoxShadow }) {
+function Navbar({ window: cWindow }) {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [showBoxShadow, setShowBoxShadow] = useState(false);
   const classes = useStyles(showBoxShadow);
 
   const handleDrawerToggle = () => {
@@ -24,7 +25,19 @@ function Navbar({ window, showBoxShadow }) {
   };
 
   const container =
-    window !== undefined ? () => window().document.body : undefined;
+    cWindow !== undefined ? () => cWindow().document.body : undefined;
+
+  const toggleVisibility = () => {
+    if (window.pageYOffset > 100) {
+      setShowBoxShadow(true);
+    } else {
+      setShowBoxShadow(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', toggleVisibility);
+  }, []);
 
   return (
     <div className={classes.root}>
@@ -48,7 +61,7 @@ function Navbar({ window, showBoxShadow }) {
       />
       <div className={classes.tabsContainer}>
         {TABS_NAV.slice(0, 7).map(({ link, name }) => (
-          <Link className={classes.tabLink} to={link} key={link}>
+          <Link className={classes.tabLink} to={link} key={`navbar-${link}`}>
             <Typography className={classes.tab} variant='body1'>
               {name}
             </Typography>
@@ -71,7 +84,11 @@ function Navbar({ window, showBoxShadow }) {
           }}
         >
           {TABS_NAV.slice(0, 7).map(({ link, name }) => (
-            <Link className={classes.tabLink} to={link} key={link}>
+            <Link
+              className={classes.tabLink}
+              to={link}
+              key={`hidden-navbar-${link}`}
+            >
               <ListItem>
                 <Typography className={classes.tab} variant='body1'>
                   {name}

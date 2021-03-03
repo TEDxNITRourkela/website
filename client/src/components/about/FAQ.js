@@ -67,8 +67,7 @@ function FAQ() {
   const renderAccordion = () =>
     ABOUT.FAQ.map((faq, index) => (
       <CustomAccordion
-        // eslint-disable-next-line
-        key={`${index}-${faq.QUESTION}`}
+        key={`${faq.QUESTION}`}
         square
         expanded={expanded === `panel${index + 1}`}
         onChange={handleChange(`panel${index + 1}`)}

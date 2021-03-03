@@ -29,21 +29,32 @@ function Partner() {
           <meta
             name='description'
             content={`TEDxNITRourkela | Partner | ${hrefTitle}`}
+            key={hrefTitle}
           />
         ))}
         {PARTNER.FIVE.partners.map(({ hrefTitle }) => (
           <meta
             name='description'
             content={`TEDxNITRourkela | Partner | ${hrefTitle}`}
+            key={hrefTitle}
+          />
+        ))}
+
+        {PARTNER.SIX.partners.map(({ hrefTitle }) => (
+          <meta
+            name='description'
+            content={`TEDxNITRourkela | Partner | ${hrefTitle}`}
+            key={hrefTitle}
           />
         ))}
       </Helmet>
 
-      {/* <Partners DATA={PARTNER.ZERO} /> */}
-      {/* <Partners DATA={PARTNER.ONE} /> */}
-      {/* <Partners DATA={PARTNER.TWO} /> */}
+      {/* <Partners DATA={PARTNER.ZERO} />
+      <Partners DATA={PARTNER.ONE} />
+      <Partners DATA={PARTNER.TWO} /> */}
       <Partners DATA={PARTNER.FIVE} main />
       <Partners DATA={PARTNER.FOUR} />
+      <Partners DATA={PARTNER.SIX} />
 
       <ContentBanner DATA={PARTNER.CONTENT} wrapContainer />
     </>

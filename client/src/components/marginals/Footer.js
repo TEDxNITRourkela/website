@@ -39,7 +39,11 @@ function Footer() {
           <div className={classes.row2row1}>
             <div className={classes.row2column1}>
               {TABS1.map(({ link, name }) => (
-                <Link key={link} to={link} className={classes.linkContainer}>
+                <Link
+                  key={`column1-${link}`}
+                  to={link}
+                  className={classes.linkContainer}
+                >
                   <Typography variant='body1' className={classes.link}>
                     {name}
                   </Typography>
@@ -48,7 +52,11 @@ function Footer() {
             </div>
             <div className={classes.row2column2}>
               {TABS2.map(({ link, name }) => (
-                <Link key={link} to={link} className={classes.linkContainer}>
+                <Link
+                  key={`column2-${link}`}
+                  to={link}
+                  className={classes.linkContainer}
+                >
                   <Typography variant='body1' className={classes.link}>
                     {name}
                   </Typography>
@@ -63,8 +71,15 @@ function Footer() {
               Address{' '}
             </Typography>
             <Typography className={classes.address} variant='body2'>
-              Student Activity Centre, Sector 1, National Institute of
-              Technology, Rourkela. Odisha-India PIN:769008
+              Student Activity Centre, Sector 1,
+              <a
+                href='https://nitrkl.ac.in'
+                style={{ color: 'white', textDecoration: 'underline' }}
+              >
+                {' '}
+                National Institute of Technology, Rourkela
+              </a>
+              . Odisha-India PIN:769008
             </Typography>
           </div>
         </div>
@@ -100,6 +115,7 @@ function Footer() {
           <div className={classes.iconsContainer}>
             <a
               href='https://www.facebook.com/tedxnitrourkela/'
+              aria-label='Facebook'
               target='_blank'
               rel='noreferrer'
             >
@@ -107,6 +123,7 @@ function Footer() {
             </a>
             <a
               href='https://twitter.com/tedxnitr'
+              aria-label='Twitter'
               target='_blank'
               rel='noreferrer'
             >
@@ -114,6 +131,7 @@ function Footer() {
             </a>
             <a
               href='https://www.youtube.com/channel/UCsY55AEkwUHJnbc6TLRB-7g'
+              aria-label='Youtube'
               target='_blank'
               rel='noreferrer'
             >
@@ -121,6 +139,7 @@ function Footer() {
             </a>
             <a
               href='https://in.linkedin.com/company/tedxnitrourkela'
+              aria-label='LinkedIn'
               target='_blank'
               rel='noreferrer'
             >
@@ -128,6 +147,7 @@ function Footer() {
             </a>
             <a
               href='https://www.instagram.com/tedxnitrourkela/'
+              aria-label='Instagram'
               target='_blank'
               rel='noreferrer'
             >

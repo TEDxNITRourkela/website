@@ -138,7 +138,7 @@ const useStyles = makeStyles((theme) => ({
   content: {
     width: '80%',
     fontWeight: theme.typography.fontWeightRegular,
-    fontFamily: 'Roboto',
+    fontFamily: 'Helvetica',
     marginTop: 5,
     marginBottom: 5,
     [theme.breakpoints.down('sm')]: {
@@ -154,7 +154,7 @@ const useStyles = makeStyles((theme) => ({
     width: '80%',
     color: theme.palette.common.white,
     fontWeight: theme.typography.fontWeightRegular,
-    fontFamily: 'Roboto',
+    fontFamily: 'Helvetica',
     textDecoration: 'underline',
     marginBottom: 30,
     [theme.breakpoints.down('sm')]: {
