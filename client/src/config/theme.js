@@ -78,6 +78,7 @@ const theme = createMuiTheme({
       '"Segoe UI Emoji"',
       '"Segoe UI Symbol"',
     ].join(','),
+    fontDisplay: 'swap',
     fontSize: 16,
     fontWeightLight: 300,
     fontWeightRegular: 400,
@@ -86,6 +87,7 @@ const theme = createMuiTheme({
     // Individual Font Styles for each element
     h1: {
       fontFamily: '"Helvetica", "Arial", sans-serif',
+      fontDisplay: 'swap',
       fontWeight: 600,
       fontSize: '3rem',
       lineHeight: '3rem',
@@ -96,6 +98,7 @@ const theme = createMuiTheme({
     },
     h2: {
       fontFamily: '"Helvetica", "Arial", sans-serif',
+      fontDisplay: 'swap',
       fontWeight: 600,
       fontSize: '2.25rem',
       lineHeight: '2.5rem',
@@ -106,6 +109,7 @@ const theme = createMuiTheme({
     },
     h3: {
       fontFamily: '"Helvetica", "Arial", sans-serif',
+      fontDisplay: 'swap',
       fontWeight: 600,
       fontSize: '1.5rem',
       lineHeight: '1.75rem',
@@ -117,6 +121,7 @@ const theme = createMuiTheme({
     // Regular Body
     body1: {
       fontFamily: '"Helvetica", "Arial", sans-serif',
+      fontDisplay: 'swap',
       fontWeight: 500,
       fontSize: '1.25rem',
       lineHeight: '1.75rem',
@@ -128,6 +133,7 @@ const theme = createMuiTheme({
     // MetaData
     body2: {
       fontFamily: '"Helvetica", "Arial", sans-serif',
+      fontDisplay: 'swap',
       fontWeight: 500,
       fontSize: '1rem',
       lineHeight: '1.25rem',

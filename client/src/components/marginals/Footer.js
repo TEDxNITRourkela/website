@@ -107,6 +107,7 @@ function Footer() {
           <div className={classes.iconsContainer}>
             <a
               href='https://www.facebook.com/tedxnitrourkela/'
+              aria-label='Facebook'
               target='_blank'
               rel='noreferrer'
             >
@@ -114,6 +115,7 @@ function Footer() {
             </a>
             <a
               href='https://twitter.com/tedxnitr'
+              aria-label='Twitter'
               target='_blank'
               rel='noreferrer'
             >
@@ -121,6 +123,7 @@ function Footer() {
             </a>
             <a
               href='https://www.youtube.com/channel/UCsY55AEkwUHJnbc6TLRB-7g'
+              aria-label='Youtube'
               target='_blank'
               rel='noreferrer'
             >
@@ -128,6 +131,7 @@ function Footer() {
             </a>
             <a
               href='https://in.linkedin.com/company/tedxnitrourkela'
+              aria-label='LinkedIn'
               target='_blank'
               rel='noreferrer'
             >
@@ -135,6 +139,7 @@ function Footer() {
             </a>
             <a
               href='https://www.instagram.com/tedxnitrourkela/'
+              aria-label='Instagram'
               target='_blank'
               rel='noreferrer'
             >

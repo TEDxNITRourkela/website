@@ -46,7 +46,9 @@ function About({ direction, first, DATA, link, columnReverse = false }) {
             target='_blank'
             rel='noreferrer'
           >
-            Learn More
+            {DATA.HIGHLIGHT
+              ? `Learn More about ${DATA.HIGHLIGHT}`
+              : 'Learn More about TEDxNITRourkela'}
           </Typography>
         </a>
       )}

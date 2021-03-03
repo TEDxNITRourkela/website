@@ -78,8 +78,13 @@ function GuestCard({ name, description, image, shortDescription, links }) {
 
           <div className={classes.linksContainer}>
             {links.map((link, index) => (
-              // eslint-disable-next-line
-              <a key={link.link} href={link.link} target='_blank'>
+              <a
+                key={link.link}
+                href={link.link}
+                target='_blank'
+                rel='noreferrer'
+                aria-label={link.aria_label}
+              >
                 <i className={`${classes.icons} ${link.link_type}`} />
               </a>
             ))}
