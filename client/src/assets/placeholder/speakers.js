@@ -212,35 +212,47 @@ export const GUESTS = [
   {
     name: 'Kabir Cafe',
     description: [
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae, sequi amet. Quidem ea laborum facere asperiores, voluptate earum eius doloremque quod? Dolores distinctio delectus at obcaecati vel alias corporis cumque.',
+      'Kabir Cafe is a Mumbai-based folk fusion band known for taking the voice of the saint Kabir Das across the country through their compositions.  In an era where music is losing its credibility, Kabir Cafe has made sure that they present Kabir’s poetry musically without compromising its beauty. Their song ',
+      {
+        href:
+          'https://open.spotify.com/album/4qsUOnusaOfaWLEVye5ekB?highlight=spotify:track:18dts4OqWOQTGFlMTGodkk',
+        content: '‘Mat Kar Maya ko Ahankar’',
+      },
+      ' for instance, was featured in the hit series, ',
+      {
+        href:
+          'https://www.sonyliv.com/shows/scam-1992-the-harshad-mehta--1700000292',
+        content: '“Scam 1992’',
+      },
+      ', and was widely critically acclaimed.',
     ],
-    shortDescription: 'Design Guru',
+    shortDescription: 'Folk Fusion Band',
     image: SPEAKERS.SPEAKERS.SEVEN,
     isLongCard: true,
     links: [
       {
-        link: 'JD1',
-        link_type: 'fab fa-linkedin-in',
-        link_name: 'linkedin',
-        aria_label: 'LinkedIn',
-      },
-      {
-        link: 'JD2',
+        link: 'https://twitter.com/KabirCafe',
         link_type: 'fab fa-twitter',
         link_name: 'twitter',
         aria_label: 'LinkedIn',
       },
       {
-        link: 'JD3',
+        link: 'https://www.instagram.com/kabircafelive/',
         link_type: 'fab fa-instagram',
         link_name: 'instagram',
         aria_label: 'LinkedIn',
       },
       {
-        link: 'JD4',
-        link_type: 'fab fa-facebook-f',
-        link_name: 'facebook',
-        aria_label: 'LinkedIn',
+        link: 'https://open.spotify.com/artist/2AWF4fUAstzXyJd01JTuS3',
+        link_type: 'fab fa-spotify',
+        link_name: 'spotify',
+        aria_label: 'Spotify',
+      },
+      {
+        link: 'https://www.youtube.com/channel/UCh4HyUdUyM7Na3z_Ls-LmnA',
+        link_type: 'fab fa-youtube',
+        link_name: 'youtube',
+        aria_label: 'Youtube',
       },
     ],
   },

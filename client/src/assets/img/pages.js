@@ -42,7 +42,7 @@ export const SPEAKERS = Object.freeze({
     SIX:
       'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/speakers/lokesh-removebg-preview_rmxpfx.png',
     SEVEN:
-      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/speakers/kabir-cafe_owx0lc.png',
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/speakers/kabir-cafe-bg_mi8xsp.png',
   },
 });
 
