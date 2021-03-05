@@ -11,17 +11,19 @@ export const TICKETS = Object.freeze({
       createData('Base Ticket', 'Entry to Airmeet', '₹ 199'),
       createData(
         'Attendee Kit',
-        'A hamper of goodies sent to your home!',
-        '₹ 322.24',
+        'Goodies sent to your home! (Optional)',
+        '₹ 299',
       ),
+      createData('Convenience Fee', 'Processing Charges', '₹ 29'),
     ],
     ROWS_REFERRAL: [
       createData('Base Ticket', 'Entry to Airmeet', '₹ 199'),
       createData(
         'Attendee Kit',
         'A hamper of goodies sent to your home!',
-        '₹ 218.70',
+        '₹ 199',
       ),
+      createData('Convenience Fee', 'Processing Charges', '₹ 19'),
     ],
   },
 });

@@ -7,34 +7,65 @@ import { makeStyles } from '@material-ui/core/styles';
 // Components
 // import Counter from './Counter';
 import Ticket from '../tickets/Ticket';
+import SpeakerCard from '../speakers/SpeakerCard';
 
 // Assets
 import { VIDEOS } from '../../assets/img/gifs';
 import { GRAPHICS } from '../../assets/img/graphics';
-import { LOGOS } from '../../assets/img/logos';
+import { GUESTS } from '../../assets/placeholder/speakers';
+import { shuffleArray } from '../../utils/shuffleArray';
+// import { LOGOS } from '../../assets/img/logos';
 
 function Index() {
   const classes = useStyles();
+  shuffleArray(GUESTS);
 
   return (
     <div className={classes.wrapper}>
       <div className={classes.container}>
-        <Typography variant='body2' className={classes.content}>
-          TECHNOLOGY . ENTERTAINMENT . DESIGN
-        </Typography>
-        <img
-          className={classes.logo}
-          src={LOGOS.TEDxNITRourkela.LIGHT}
-          alt='Logo'
-          decoding='auto'
-          loading='eager'
-        />
-        <Typography variant='h3' className={classes.topic}>
-          &#8220;Learning from the Past&#8221;
-        </Typography>
-        {/* <Counter /> */}
+        <div className={classes.someContainer}>
+          <Typography variant='body2' className={classes.content}>
+            TECHNOLOGY . ENTERTAINMENT . DESIGN
+          </Typography>
+          {/* <img
+            className={classes.logo}
+            src={LOGOS.TEDxNITRourkela.LIGHT}
+            alt='Logo'
+            decoding='auto'
+            loading='eager'
+          /> */}
+          <Typography variant='h3' className={classes.topic}>
+            &#8220;Learning from the Past&#8221;
+          </Typography>
+          {/* <Counter /> */}
 
-        <Ticket short />
+          <Ticket short />
+        </div>
+
+        <div className={classes.carousel}>
+          {GUESTS.map(
+            ({
+              name,
+              description,
+              shortDescription,
+              image,
+              links,
+              isLongCard,
+            }) => (
+              <div key={name} className={classes.speakerContainer}>
+                <SpeakerCard
+                  key={name}
+                  name={name}
+                  description={description}
+                  shortDescription={shortDescription}
+                  image={image}
+                  links={links}
+                  isLongCard={isLongCard}
+                />
+              </div>
+            ),
+          )}
+        </div>
 
         <div className={classes.scrollDown}>
           <video autoPlay loop muted playsInline className={classes.scrollIcon}>
@@ -71,7 +102,6 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     height: 'calc(100% - 100px)',
     minHeight: '100vh',
-    // width: '100%',
   },
   container: {
     marginTop: '100px',
@@ -79,6 +109,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    width: '100%',
   },
   content: {
     marginTop: '10px',
@@ -141,5 +172,32 @@ const useStyles = makeStyles((theme) => ({
     width: 36,
     height: 36,
     marginBottom: 10,
+  },
+  carousel: {
+    width: '100%',
+    display: 'flex',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    // padding: '40px 20px',
+    overflowX: 'scroll',
+    '-ms-overflow-style': 'none',
+    'scrollbar-width': 'none',
+    '&::-webkit-scrollbar': {
+      display: 'none',
+    },
+  },
+  someContainer: {
+    width: '70%',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+    },
+  },
+  speakerContainer: {
+    margin: '50px 10px',
   },
 }));
