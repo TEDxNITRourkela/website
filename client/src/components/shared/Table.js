@@ -13,8 +13,14 @@ import {
   Paper,
 } from '@material-ui/core';
 
-function CustomTable({ title = 'Incentives', rows, headings, columns }) {
-  const classes = useStyles();
+function CustomTable({
+  title = 'Incentives',
+  rows,
+  headings,
+  columns,
+  padding,
+}) {
+  const classes = useStyles(padding);
 
   return (
     <div className={classes.root}>
@@ -91,7 +97,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'flex-start',
     alignItems: 'center',
     flexDirection: 'column',
-    marginTop: '100px',
+    marginTop: (padding) => (padding ? '100px' : '10px'),
   },
   title: {
     fontFamily: 'Zilla Slab',

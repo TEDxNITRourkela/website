@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 
 // Libraries
-import { makeStyles, Typography } from '@material-ui/core';
+import { Container, makeStyles, Typography } from '@material-ui/core';
 import { Helmet } from 'react-helmet';
 
 // Utilities
@@ -10,11 +10,21 @@ import { analytics } from '../config/firebase';
 
 // Components
 import Ticket from '../components/tickets/Ticket';
+import CustomTable from '../components/shared/Table';
+import GoogleForm from '../components/tickets/GoogleForm';
 
 // Assets
 import { GRAPHICS } from '../assets/img/graphics';
+import { TICKETS } from '../assets/placeholder/tickets';
 
 function Tickets() {
+  // Logic to determine the type of ticket.
+  const referrals = window.location.pathname.split('/');
+  let isReferral;
+  if (referrals && referrals[1] === 'tickets' && referrals[2] === 'referrals')
+    isReferral = true;
+  else isReferral = false;
+
   const classes = useStyles();
 
   useEffect(() => {
@@ -36,14 +46,31 @@ function Tickets() {
         alt='Top Left Graphics'
       />
 
-      <Ticket />
+      <Container className={classes.container}>
+        <div className={classes.left}>
+          <Ticket />
 
-      <a href='https://files.tedxnitrourkela.com/Ticket_TnC.pdf'>
-        <Typography variant='body2' className={classes.terms}>
-          {/* eslint-disable-next-line */}
-          {'* T&Cs Apply'}
-        </Typography>
-      </a>
+          <a href='https://files.tedxnitrourkela.com/Ticket_TnC.pdf'>
+            <Typography variant='body2' className={classes.terms}>
+              {/* eslint-disable-next-line */}
+              {'* T&Cs Apply'}
+            </Typography>
+          </a>
+        </div>
+
+        <div className={classes.right}>
+          <CustomTable
+            title={TICKETS.TITLE}
+            rows={isReferral ? TICKETS.TABLE.ROWS_REFERRAL : TICKETS.TABLE.ROWS}
+            headings={TICKETS.TABLE.HEADINGS}
+            columns={['column2', 'column3']}
+            padding={false}
+          />
+        </div>
+      </Container>
+      <Container className={classes.bottom}>
+        <GoogleForm />
+      </Container>
     </div>
   );
 }
@@ -71,5 +98,32 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 15,
     fontSize: '10px',
     textAlign: 'center',
+  },
+  container: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'column',
+    },
+  },
+  left: {
+    paddingTop: '60px',
+    width: '50%',
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+    },
+  },
+  right: {
+    width: '50%',
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+    },
+  },
+  bottom: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: '40px',
   },
 }));

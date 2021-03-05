@@ -6,9 +6,6 @@ import React, { useEffect } from 'react';
 import { makeStyles, Button } from '@material-ui/core';
 import { SnackbarProvider, useSnackbar } from 'notistack';
 
-// Components
-import GoogleForm from './GoogleForm';
-
 // Assets
 import { TICKETS } from '../../assets/img/pages';
 
@@ -36,7 +33,6 @@ function Tickets({ short }) {
     ? `https://www.instamojo.com/@StudentActivityCenter/${referrals[3]}/`
     : /* eslint-disable-next-line */
       'https://www.instamojo.com/@StudentActivityCenter/l2819ae69330f4c8a8ee450758aa6b022/';
-  // const imageURL = isReferral ? TICKETS.DISCOUNTED : TICKETS.TICKET;
   const imageURL = TICKETS.NOPRICE;
 
   // Snackbar functions
@@ -125,7 +121,6 @@ function Tickets({ short }) {
           {short ? 'Know More' : 'Buy Now'}
         </button>
       </div>
-      {!short && <GoogleForm />}
     </div>
   );
 }
@@ -140,17 +135,22 @@ export default function IntegratedTickets({ short = false }) {
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    width: (short) => (short ? '70%' : '100%'),
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
     backgroundColor: theme.palette.background.default,
     marginTop: (short) => (short ? '0px' : '100px'),
+    [theme.breakpoints.up('md')]: {
+      width: (short) => (short ? '60%' : '100%'),
+    },
+    [theme.breakpoints.down('md')]: {
+      width: '100%',
+    },
   },
   ticketContainer: {
     position: 'relative',
-    width: '65%',
+    width: '95%',
     minHeight: '25vh',
     margin: '50px auto',
     [theme.breakpoints.down('md')]: {
@@ -167,8 +167,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#1a1a1a',
     padding: 'auto 20px',
     color: '#ffffff',
-    minWidth: (short) => (short ? '100px' : '150px'),
-    minHeight: (short) => (short ? '30px' : '40px'),
+    minWidth: (short) => (short ? '100px' : '120px'),
+    minHeight: (short) => (short ? '30px' : '35px'),
     position: 'absolute',
     bottom: '15%',
     right: '15%',
