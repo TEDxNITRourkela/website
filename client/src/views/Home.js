@@ -44,18 +44,6 @@ function Home() {
 
       <Partners DATA={PARTNER.FIVE} home main />
 
-      <Container>
-        <Incentives title='Campus Representative Program' />
-
-        <div className={classes.container}>
-          <Link to='/campus_ambassadors' className={classes.link}>
-            <button type='button' className={classes.button}>
-              Know More
-            </button>
-          </Link>
-        </div>
-      </Container>
-
       {/* <Subscribe /> */}
     </>
   );
@@ -70,27 +58,5 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.default,
     marginTop: '100px',
     position: 'relative',
-  },
-  container: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'column',
-  },
-  button: {
-    marginTop: 50,
-    border: '1px solid #FF2B06',
-    borderRadius: '6px',
-    backgroundColor: '#1a1a1a',
-    padding: 'auto 20px',
-    color: '#ffffff',
-    minWidth: '150px',
-    minHeight: '30px',
-    width: 'auto',
-    fontSize: '16px',
-    '&:hover': {
-      backgroundColor: '#FF2B06',
-      cursor: 'pointer',
-    },
   },
 }));
