@@ -73,7 +73,7 @@
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "dotenv": "^8.2.0",
-    "firebase": "^8.2.4",
+    "firebase": "^8.2.9",
     "history": "4.9.0",
     "notistack": "^1.0.3",
     "react": "^16.13.1",
