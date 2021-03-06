@@ -74,6 +74,12 @@ export const PARTNER = Object.freeze({
         hrefTitle: 'Noticebard',
         size: '20%',
       },
+      {
+        img: PARTNERS.CHALO_ODISHA,
+        href: 'http://chaloodisha.com/',
+        hrefTitle: 'Noticebard',
+        size: '20%',
+      },
     ],
   },
   CONTENT: {

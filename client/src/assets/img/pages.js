@@ -71,6 +71,8 @@ export const PARTNERS = Object.freeze({
     'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/SAVE_20190409_182652-removebg-preview_2_sbqqon.png',
   NOTICEBARD:
     'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/NoticeBard_logo-removebg-preview_e7s7hy.png',
+  CHALO_ODISHA:
+    'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/Chalo_Odisha_Logo-removebg-preview_vwv7f2.png',
 });
 
 export const TICKETS = Object.freeze({

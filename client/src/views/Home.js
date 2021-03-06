@@ -34,6 +34,7 @@ function Home() {
       <Helmet>
         <title>TEDxNITRourkela</title>
         <meta name='title' content='TEDxNITRourkela' />
+        <link rel='canonical' href='https://tedxnitrourkela.com' />
       </Helmet>
 
       {/* <Ticket short /> */}
