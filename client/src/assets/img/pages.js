@@ -1,4 +1,10 @@
 /* eslint-disable */
+export const HOME = Object.freeze({
+  STAGE:
+    'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/home/Frame_234_2_yqqtib.png',
+  LOGO_REVEAL:
+    'https://res.cloudinary.com/tedxnitrourkela/video/upload/assets/pages/home/KvLF7sohcJPEdku3_rgmcp3.mp4',
+});
 
 export const ABOUT = Object.freeze({
   DEFAULT_PROFILE:
@@ -43,6 +49,8 @@ export const SPEAKERS = Object.freeze({
       'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/speakers/lokesh-removebg-preview_rmxpfx.png',
     SEVEN:
       'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/speakers/kabir-cafe-bg_mi8xsp.png',
+    EIGHT:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/speakers/riki-biswas-removebg-preview_mxcqf2.png',
   },
 });
 
@@ -66,4 +74,6 @@ export const TICKETS = Object.freeze({
     'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/tickets/Group_609_1_xx35tj.png',
   DISCOUNTED:
     'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/tickets/Group_609_qxldg3.png',
+  NOPRICE:
+    'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1614946136/assets/pages/tickets/ticket_whx51b.png',
 });

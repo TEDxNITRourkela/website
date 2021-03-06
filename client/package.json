@@ -72,8 +72,9 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
     "dotenv": "^8.2.0",
-    "firebase": "^8.2.4",
+    "firebase": "^8.2.9",
     "history": "4.9.0",
     "notistack": "^1.0.3",
     "react": "^16.13.1",
@@ -81,6 +82,7 @@
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
     "react-loadable": "^5.5.0",
+    "react-material-ui-carousel": "^2.2.1",
     "react-messenger-customer-chat": "^0.8.0",
     "react-redux": "^7.2.1",
     "react-router-dom": "^5.2.0",

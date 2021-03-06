@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 
 // Libraries
 import { Helmet } from 'react-helmet';
-import { makeStyles, Container } from '@material-ui/core';
+import { makeStyles, Container, Typography } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
 // Utilities
@@ -20,6 +20,7 @@ import Incentives from '../components/participate/Incentives';
 // Placeholder
 import { PARTNER } from '../assets/placeholder/partner';
 import { CONTENT2 } from '../assets/placeholder/homepage';
+import { HOME } from '../assets/img/pages';
 
 function Home() {
   const classes = useStyles();
@@ -39,21 +40,26 @@ function Home() {
 
       <Index />
 
+      <Container>
+        <Typography variant='h2' className={classes.title}>
+          TEDxNITRourkela Virtual Stage
+        </Typography>
+        <img
+          src={HOME.STAGE}
+          alt='TEDxNITRourkela Virtual Stage'
+          className={classes.image}
+        />
+      </Container>
+
       <ContentBanner DATA={CONTENT2.TWO} smallLogo wrapContainer />
       <ContentBanner DATA={CONTENT2.ONE} wrapContainer />
 
       <Partners DATA={PARTNER.FIVE} home main />
 
-      <Container>
-        <Incentives title='Campus Representative Program' />
-
-        <div className={classes.container}>
-          <Link to='/campus_ambassadors' className={classes.link}>
-            <button type='button' className={classes.button}>
-              Know More
-            </button>
-          </Link>
-        </div>
+      <Container className={classes.videoContainer}>
+        <video autoPlay loop muted playsInline className={classes.video}>
+          <source src={HOME.LOGO_REVEAL} type='video/mp4' />
+        </video>
       </Container>
 
       {/* <Subscribe /> */}
@@ -71,26 +77,35 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '100px',
     position: 'relative',
   },
-  container: {
+  image: {
+    width: '100%',
+    height: 'auto',
+    borderRadius: '10px',
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+    },
+  },
+  title: {
+    marginTop: '100px',
+    marginBottom: '50px',
+    fontFamily: 'Zilla Slab',
+    fontWeight: 700,
+    textAlign: 'center',
+    color: theme.palette.common.white,
+  },
+  videoContainer: {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    flexDirection: 'column',
+    margin: '100px auto',
+    marginBottom: '50px',
   },
-  button: {
-    marginTop: 50,
-    border: '1px solid #FF2B06',
-    borderRadius: '6px',
-    backgroundColor: '#1a1a1a',
-    padding: 'auto 20px',
-    color: '#ffffff',
-    minWidth: '150px',
-    minHeight: '30px',
-    width: 'auto',
-    fontSize: '16px',
-    '&:hover': {
-      backgroundColor: '#FF2B06',
-      cursor: 'pointer',
+  video: {
+    width: '70%',
+    height: 'auto',
+    borderRadius: '10px',
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
     },
   },
 }));

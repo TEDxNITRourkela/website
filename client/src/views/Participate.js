@@ -51,7 +51,12 @@ function About() {
         />
 
         <div className={classes.buttonContainer}>
-          <button onClick={openForm} type='button' className={classes.button}>
+          <button
+            disabled
+            onClick={openForm}
+            type='button'
+            className={classes.button}
+          >
             Apply Now
           </button>
         </div>
@@ -83,18 +88,14 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
   },
   button: {
-    border: '1px solid #FF2B06',
+    border: '1px solid rgba(255,255,255,0.5)',
     borderRadius: '6px',
     backgroundColor: '#1a1a1a',
     padding: 'auto 20px',
-    color: '#ffffff',
+    color: 'rgba(255,255,255,0.5)',
     minWidth: '150px',
     minHeight: '50px',
     width: 'auto',
     fontSize: '16px',
-    '&:hover': {
-      backgroundColor: '#FF2B06',
-      cursor: 'pointer',
-    },
   },
 }));
