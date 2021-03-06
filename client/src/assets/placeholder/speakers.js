@@ -259,7 +259,7 @@ export const GUESTS = [
   {
     name: 'Riki Biswas',
     description: [
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae, sequi amet. Quidem ea laborum facere asperiores, voluptate earum eius doloremque quod? Dolores distinctio delectus at obcaecati vel alias corporis cumque.',
+      'Mr. Biswas is an alumnus of IITG and co-founder of numerous revolutionary companies, Pointo being one of them. Pointo provides an app-based e-rickshaw booking facility. Rodo, the brainchild of Mr. Biswas, is India’s FIRST dock-less public e-bicycle sharing service that aims for a cleaner, greener, hassle-free environment',
     ],
     shortDescription: 'Co-Founder & CEO of Pointo',
     image: SPEAKERS.SPEAKERS.EIGHT,

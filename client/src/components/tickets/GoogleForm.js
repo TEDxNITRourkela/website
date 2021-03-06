@@ -40,20 +40,26 @@ function Tickets() {
   );
 
   return (
-    <div className={classes.studentContainer}>
-      <Typography variant='h3' className={classes.question}>
-        Are you an NITR student? Apply here!!
+    <div className={classes.container}>
+      <div className={classes.studentContainer}>
+        <Typography variant='h3' className={classes.question}>
+          Are you an NITR student? Apply here!!
+        </Typography>
+        <button
+          onClick={handleOpen}
+          type='button'
+          className={classes.studentButton}
+        >
+          Apply Now
+        </button>
+        <Modal open={open} onClose={handleClose}>
+          {FormBody}
+        </Modal>
+      </div>
+      <Typography variant='body2' className={classes.message}>
+        NITR Students will be able to watch the event live on Youtube after
+        registration.
       </Typography>
-      <button
-        onClick={handleOpen}
-        type='button'
-        className={classes.studentButton}
-      >
-        Apply Now
-      </button>
-      <Modal open={open} onClose={handleClose}>
-        {FormBody}
-      </Modal>
     </div>
   );
 }
@@ -61,7 +67,7 @@ function Tickets() {
 export default Tickets;
 
 const useStyles = makeStyles((theme) => ({
-  studentContainer: {
+  container: {
     minHeight: '100px',
     marginTop: 20,
     marginBottom: (short) => (short ? '20px' : '0px'),
@@ -69,18 +75,24 @@ const useStyles = makeStyles((theme) => ({
     width: '70%',
     backgroundColor: '#232323',
     borderRadius: '16px',
-    zIndex: 1,
     display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    flexDirection: 'column',
+    justifyContent: 'center',
     alignItems: 'center',
     [theme.breakpoints.down('xs')]: {
       width: '80%',
       marginTop: 10,
       minHeight: '120px',
       padding: '12px',
-      flexDirection: 'column',
     },
+  },
+  studentContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: '100%',
+    marginBottom: 10,
   },
   studentButton: {
     border: '1px solid #FF2B06',
@@ -103,6 +115,12 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     fontFamily: 'Zilla Slab',
     color: 'rgba(255,255,255,0.5)',
+  },
+  message: {
+    textAlign: 'left',
+    fontFamily: 'Helvetica',
+    color: 'rgba(255,255,255,0.5)',
+    width: '100%',
   },
   paper: {
     position: 'absolute',

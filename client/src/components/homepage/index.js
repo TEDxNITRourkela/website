@@ -16,9 +16,11 @@ import { GUESTS } from '../../assets/placeholder/speakers';
 import { shuffleArray } from '../../utils/shuffleArray';
 // import { LOGOS } from '../../assets/img/logos';
 
+const GUEST_LIST = GUESTS;
+shuffleArray(GUEST_LIST);
+
 function Index() {
   const classes = useStyles();
-  shuffleArray(GUESTS);
 
   return (
     <div className={classes.wrapper}>
@@ -43,7 +45,7 @@ function Index() {
         </div>
 
         <div className={classes.carousel}>
-          {GUESTS.map(
+          {GUEST_LIST.map(
             ({
               name,
               description,
