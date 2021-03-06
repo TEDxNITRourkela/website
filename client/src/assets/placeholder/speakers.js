@@ -226,7 +226,7 @@ export const GUESTS = [
       },
       ', and was widely critically acclaimed.',
     ],
-    shortDescription: 'Folk Fusion Band',
+    shortDescription: 'Scam 1992 Song Artist',
     image: SPEAKERS.SPEAKERS.SEVEN,
     isLongCard: true,
     links: [

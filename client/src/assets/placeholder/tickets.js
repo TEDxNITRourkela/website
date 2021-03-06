@@ -8,7 +8,7 @@ export const TICKETS = Object.freeze({
   TABLE: {
     HEADINGS: ['Item', 'Description', 'Price'],
     ROWS: [
-      createData('Base Ticket', 'Entry to Airmeet', '₹ 199'),
+      createData('Base Ticket', 'Virtual Eveent Stage(Airmeet)', '₹ 199'),
       createData(
         'Attendee Kit',
         'Goodies sent to your home! (Optional)',
@@ -17,11 +17,11 @@ export const TICKETS = Object.freeze({
       createData('Convenience Fee', 'Processing Charges', '₹ 29'),
     ],
     ROWS_REFERRAL: [
-      createData('Base Ticket', 'Entry to Airmeet', '₹ 199'),
+      createData('Base Ticket', 'Virtual Eveent Stage(Airmeet)', '₹ 199'),
       createData(
         'Attendee Kit',
         'A hamper of goodies sent to your home!',
-        '₹ 199',
+        '₹̶ ̶2̶9̶9̶ ₹ 199',
       ),
       createData('Convenience Fee', 'Processing Charges', '₹ 19'),
     ],

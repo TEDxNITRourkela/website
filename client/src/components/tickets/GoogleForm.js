@@ -57,7 +57,7 @@ function Tickets() {
         </Modal>
       </div>
       <Typography variant='body2' className={classes.message}>
-        NITR Students will be able to watch the event live on Youtube after
+        NITR Students will be able to watch the event live on YouTube after
         registration.
       </Typography>
     </div>
