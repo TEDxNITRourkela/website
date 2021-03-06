@@ -1,4 +1,10 @@
 /* eslint-disable */
+export const HOME = Object.freeze({
+  STAGE:
+    'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/home/Frame_234_2_yqqtib.png',
+  LOGO_REVEAL:
+    'https://res.cloudinary.com/tedxnitrourkela/video/upload/assets/pages/home/KvLF7sohcJPEdku3_rgmcp3.mp4',
+});
 
 export const ABOUT = Object.freeze({
   DEFAULT_PROFILE:
