@@ -1,4 +1,10 @@
 /* eslint-disable */
+import at1 from './images/attendeeKit-1.jpg';
+import at2 from './images/attendeeKit-2.jpg';
+import at4 from './images/attendeeKit-4.jpg';
+import at5 from './images/attendeeKit-5.jpg';
+import at6 from './images/attendeeKit-6.jpg';
+
 export const HOME = Object.freeze({
   STAGE:
     'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/home/Frame_234_2_yqqtib.png',
@@ -82,4 +88,5 @@ export const TICKETS = Object.freeze({
     'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/tickets/Group_609_qxldg3.png',
   NOPRICE:
     'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1614946136/assets/pages/tickets/ticket_whx51b.png',
+  ATTENDEE_KIT: [at1, at2, at4, at5, at6],
 });
