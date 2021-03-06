@@ -27,13 +27,12 @@ function Partner({ DATA, home, main = false }) {
             href={sponsor.href}
             title={sponsor.hrefTitle}
             key={sponsor.href}
+            className={classes.imgContainer}
+            style={{
+              width: `${sponsor.size}`,
+            }}
           >
-            <img
-              src={sponsor.img}
-              alt='Sponsor'
-              className={classes.sponsor}
-              style={{ height: `${sponsor.size}` }}
-            />
+            <img src={sponsor.img} alt='Sponsor' className={classes.sponsor} />
           </a>
         ))}
       </div>
@@ -78,10 +77,16 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  imgContainer: {
+    height: 'auto',
+    margin: '10px 10px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   sponsor: {
-    margin: '15px 35px',
     opacity: (main) => (main ? 0.9 : 0.5),
-    width: 200,
+    width: '90%',
     height: 'auto',
   },
   titleContainer: {

@@ -69,6 +69,8 @@ export const PARTNERS = Object.freeze({
     'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/shutterstock.png',
   ROURKELA360:
     'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/SAVE_20190409_182652-removebg-preview_2_sbqqon.png',
+  NOTICEBARD:
+    'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/NoticeBard_logo-removebg-preview_e7s7hy.png',
 });
 
 export const TICKETS = Object.freeze({
