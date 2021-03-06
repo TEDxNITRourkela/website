@@ -51,6 +51,8 @@ export const SPEAKERS = Object.freeze({
       'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/speakers/kabir-cafe-bg_mi8xsp.png',
     EIGHT:
       'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/speakers/riki-biswas-removebg-preview_mxcqf2.png',
+    NINE:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/speakers/sabhyasachi-patra-removebg-preview_rrx28e.png',
   },
 });
 
