@@ -162,6 +162,7 @@ const useStyles = makeStyles((theme) => ({
   },
   imgContainer: {
     width: '100%',
+    opacity: 0.8,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -169,6 +170,7 @@ const useStyles = makeStyles((theme) => ({
   img: {
     width: '50%',
     height: 'auto',
+    borderRadius: 10,
     [theme.breakpoints.down('sm')]: {
       width: '100%',
     },
