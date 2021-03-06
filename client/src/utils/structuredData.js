@@ -18,6 +18,10 @@ export const eventData = {
   performer: [
     {
       '@type': 'Person',
+      name: 'Kabir Cafe',
+    },
+    {
+      '@type': 'Person',
       name: 'Lisa Russell',
     },
     {
@@ -27,6 +31,26 @@ export const eventData = {
     {
       '@type': 'Person',
       name: 'Ashwathy Satheesan',
+    },
+    {
+      '@type': 'Person',
+      name: 'Pranav Khaitan',
+    },
+    {
+      '@type': 'Person',
+      name: 'Jeremy Philemon',
+    },
+    {
+      '@type': 'Person',
+      name: 'Lokesh K. Gurram',
+    },
+    {
+      '@type': 'Person',
+      name: 'Riki Biswas',
+    },
+    {
+      '@type': 'Person',
+      name: 'Sabyasachi Patra',
     },
   ],
   organizer: {
@@ -68,15 +92,51 @@ export const breadcrumbsData = [
         name: 'TED',
         item: 'https://www.ted.com/about/our-organization',
       },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
       {
         '@type': 'ListItem',
-        position: '4',
-        name: 'TEDx',
-        item: 'https://www.ted.com/about/programs-initiatives/tedx-program',
+        position: '1',
+        name: 'Home',
+        item: 'https://tedxnitrourkela.com/',
       },
       {
         '@type': 'ListItem',
-        position: '5',
+        position: '2',
+        name: 'About',
+        item: 'https://tedxnitrourkela.com/about',
+      },
+      {
+        '@type': 'ListItem',
+        position: '3',
+        name: 'TEDx',
+        item: 'https://www.ted.com/about/programs-initiatives/tedx-program',
+      },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: '1',
+        name: 'Home',
+        item: 'https://tedxnitrourkela.com/',
+      },
+      {
+        '@type': 'ListItem',
+        position: '2',
+        name: 'About',
+        item: 'https://tedxnitrourkela.com/about',
+      },
+      {
+        '@type': 'ListItem',
+        position: '3',
         name: 'TEDxNITRourkela',
         item: 'https://www.ted.com/tedx/events/41324',
       },
@@ -140,6 +200,12 @@ export const breadcrumbsData = [
         name: 'Tickets',
         item: 'https://tedxnitrourkela.com/tickets',
       },
+      {
+        '@type': 'ListItem',
+        position: '2',
+        name: 'Buy Tickets',
+        item: 'https://imjo.in/9FCuMU',
+      },
     ],
   },
   {
@@ -175,6 +241,13 @@ export const breadcrumbsData = [
         position: '2',
         name: 'Merchandise',
         item: 'https://tedxnitrourkela.com/merchandise',
+      },
+      {
+        '@type': 'ListItem',
+        position: '2',
+        name: 'Buy Merchandise',
+        item:
+          'https://zeab1kwexbg.typeform.com/to/RbLawI6g#tshirt=xxxxx&is_referral=xxxxx&referral_code=xxxxx',
       },
     ],
   },
@@ -261,7 +334,8 @@ export const faqData = {
       name: 'What is the price of a single ticket?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'We are pricing the registration tickets at Rs. 500/-',
+        text:
+          'We are pricing the registration tickets at Rs. 199/-. Along with the ticket we have an optional Attendee Kit priced at Rs. 299/-',
       },
     },
     {
@@ -296,7 +370,7 @@ export const logoData = {
 const TSHIRT1 = {
   '@context': 'https://schema.org/',
   '@type': 'Product',
-  name: 'The X-Treme Tee',
+  name: 'TEDxNITRourkela | The X-Treme Tee',
   image: [
     'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/merchandise/X_factor_2_muxcy2.jpg',
   ],
@@ -320,7 +394,7 @@ const TSHIRT1 = {
 const TSHIRT2 = {
   '@context': 'https://schema.org/',
   '@type': 'Product',
-  name: 'The Class-X of 2021',
+  name: 'TEDxNITRourkela | The Class-X of 2021',
   image: [
     'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/merchandise/Class_Of_2021_jg3wn4.jpg',
     'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/merchandise/T-Shirt_Back_LFTP_ddezni.jpg',
@@ -345,7 +419,7 @@ const TSHIRT2 = {
 const TSHIRT3 = {
   '@context': 'https://schema.org/',
   '@type': 'Product',
-  name: 'The NITR@60 Tee',
+  name: 'TEDxNITRourkela | The NITR@60 Tee',
   image: [
     'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/merchandise/NITR_60_1_bkovwe.jpg',
     'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/merchandise/T-Shirt_Back_LFTP_ddezni.jpg',

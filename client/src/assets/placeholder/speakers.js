@@ -286,7 +286,7 @@ export const GUESTS = [
     ],
   },
   {
-    name: 'Sabhyasachi Patra',
+    name: 'Sabyasachi Patra',
     description: [
       'Mr. Patra is an ',
       { href: 'https://ximb.edu.in/', content: 'NIT Rourkela' },
