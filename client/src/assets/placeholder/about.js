@@ -269,8 +269,14 @@ const FAQ = [
   },
   {
     QUESTION: 'What is the price of a single ticket?',
-    ANSWER: 'We are pricing the registration tickets at Rs. 500/-',
+    ANSWER:
+      'We are pricing the registration tickets at Rs. 199/-. Along with the ticket we have an optional Attendee Kit priced at Rs. 299/-',
   },
+  // {
+  //   QUESTION: 'What is the attendee kit?',
+  //   ANSWER:
+  //     'We are pricing the registration tickets at Rs. 199/-. Along with the ticket we have an optional Attendee Kit priced at Rs. 299/-',
+  // },
   {
     QUESTION: 'Why should I attend the event if it’s only virtual?',
     ANSWER:

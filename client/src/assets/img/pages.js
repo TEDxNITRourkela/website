@@ -1,4 +1,10 @@
 /* eslint-disable */
+import at1 from './images/attendeeKit-1.jpg';
+import at2 from './images/attendeeKit-2.jpg';
+import at4 from './images/attendeeKit-4.jpg';
+import at5 from './images/attendeeKit-5.jpg';
+import at6 from './images/attendeeKit-6.jpg';
+
 export const HOME = Object.freeze({
   STAGE:
     'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/home/Frame_234_2_yqqtib.png',
@@ -51,6 +57,8 @@ export const SPEAKERS = Object.freeze({
       'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/speakers/kabir-cafe-bg_mi8xsp.png',
     EIGHT:
       'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/speakers/riki-biswas-removebg-preview_mxcqf2.png',
+    NINE:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/speakers/sabhyasachi-patra-removebg-preview_rrx28e.png',
   },
 });
 
@@ -67,6 +75,10 @@ export const PARTNERS = Object.freeze({
     'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/shutterstock.png',
   ROURKELA360:
     'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/SAVE_20190409_182652-removebg-preview_2_sbqqon.png',
+  NOTICEBARD:
+    'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/NoticeBard_logo-removebg-preview_e7s7hy.png',
+  CHALO_ODISHA:
+    'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/Chalo_Odisha_Logo-removebg-preview_vwv7f2.png',
 });
 
 export const TICKETS = Object.freeze({
@@ -76,4 +88,5 @@ export const TICKETS = Object.freeze({
     'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/tickets/Group_609_qxldg3.png',
   NOPRICE:
     'https://res.cloudinary.com/tedxnitrourkela/image/upload/v1614946136/assets/pages/tickets/ticket_whx51b.png',
+  ATTENDEE_KIT: [at1, at2, at4, at5, at6],
 });

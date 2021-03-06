@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 // Libraries
 import { Container, makeStyles, Typography } from '@material-ui/core';
 import { Helmet } from 'react-helmet';
+import Carousel from 'react-material-ui-carousel';
 
 // Utilities
 import { analytics } from '../config/firebase';
@@ -15,6 +16,7 @@ import GoogleForm from '../components/tickets/GoogleForm';
 
 // Assets
 import { GRAPHICS } from '../assets/img/graphics';
+import { TICKETS as TICKETS_IMG } from '../assets/img/pages';
 import { TICKETS } from '../assets/placeholder/tickets';
 
 function Tickets() {
@@ -71,6 +73,29 @@ function Tickets() {
       <Container className={classes.bottom}>
         <GoogleForm />
       </Container>
+
+      <div className={classes.carouselContainer}>
+        <Typography className={classes.title} variant='h2'>
+          Attendee Kit
+        </Typography>
+        <Container>
+          <Carousel
+            indicators={false}
+            animation='slide'
+            className={classes.carousel}
+          >
+            {TICKETS_IMG.ATTENDEE_KIT.map((at, index) => (
+              <div
+                // eslint-disable-next-line
+                key={`attendee-kit-${index}`}
+                className={classes.imgContainer}
+              >
+                <img className={classes.img} src={at} alt='Attendee Kit' />
+              </div>
+            ))}
+          </Carousel>
+        </Container>
+      </div>
     </div>
   );
 }
@@ -125,5 +150,36 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: '40px',
+  },
+  carouselContainer: {
+    width: '100%',
+    margin: '50px 0px',
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    padding: '50px 0',
+  },
+  carousel: {
+    width: '100%',
+  },
+  imgContainer: {
+    width: '100%',
+    opacity: 0.8,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  img: {
+    width: '50%',
+    height: 'auto',
+    borderRadius: 10,
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+    },
+  },
+  title: {
+    fontFamily: 'Zilla Slab',
+    width: '100%',
+    textAlign: 'center',
+    color: '#fff',
+    marginBottom: 30,
   },
 }));
