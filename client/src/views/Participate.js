@@ -33,6 +33,7 @@ function About() {
         <title>TEDxNITRourkela | Campus Ambassador</title>
         <meta name='title' content='TEDxNITRourkela | Campus Ambassador' />
         <meta name='description' content={PARTICIPATE.INTRO.CONTENT} />
+        <link rel='canonical' href='https://tedxnitrourkela.com/participate' />
       </Helmet>
 
       <Container>

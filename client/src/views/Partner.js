@@ -24,6 +24,7 @@ function Partner() {
       <Helmet>
         <title>TEDxNITRourkela | Partners</title>
         <meta name='title' content='TEDxNITRourkela | Partners' />
+        <link rel='canonical' href='https://tedxnitrourkela.com/partners' />
 
         {PARTNER.ONE.partners.map(({ hrefTitle }) => (
           <meta

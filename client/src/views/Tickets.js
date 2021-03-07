@@ -38,7 +38,7 @@ function Tickets() {
       <Helmet>
         <title>TEDxNITRourkela</title>
         <meta name='title' content='TEDxNITRourkela | Tickets' />
-
+        <link rel='canonical' href='https://tedxnitrourkela.com/tickets' />
         <meta name='description' content='TEDxNIRourkela 2021 Event Tickets.' />
       </Helmet>
 
