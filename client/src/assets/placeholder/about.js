@@ -255,32 +255,32 @@ const FAQ = [
   {
     QUESTION: 'Who’s organizing the event?',
     ANSWER:
-      'We’re a group of students at NIT Rourkela who feel passionate about the TED mission, “Ideas Worth Spreading.”',
+      'TEDxNITRourkela is being organized by a group of passionate students with a drive to promote innovative and revolutionary ideas, in line with the TED mission- Ideas Worth Sharing.',
   },
   {
     QUESTION: 'Will it be an online event?',
     ANSWER:
-      'Yes, due to the pandemic, our event will take place virtually on the Airmeet platform.',
+      'Yes, keeping in mind everyone’s safety and social distancing guidelines due to the COVID19 pandemic, we are hosting the event virtually via AIRMEET.',
   },
   {
     QUESTION: 'How can I attend the event?',
     ANSWER:
-      'Due to the pandemic, our event will take place virtually on the Airmeet platform. Tickets will be available on our website.',
+      'You can book your seat in the tickets sections and join countless others on the 13th of March for an immensely global TEDx Experience.',
   },
   {
     QUESTION: 'What is the price of a single ticket?',
     ANSWER:
       'We are pricing the registration tickets at Rs. 199/-. Along with the ticket we have an optional Attendee Kit priced at Rs. 299/-',
   },
-  // {
-  //   QUESTION: 'What is the attendee kit?',
-  //   ANSWER:
-  //     'We are pricing the registration tickets at Rs. 199/-. Along with the ticket we have an optional Attendee Kit priced at Rs. 299/-',
-  // },
+  {
+    QUESTION: 'What is in the Attendee’s Kit?',
+    ANSWER:
+      'TEDxNITRourkela aims to deliver innovative and groundbreaking ideas that shape our future. To promote our environment’s sustainability and safety, our Attendee’s Kit features Eco-Friendly and Recyclable Calendars and/or Pens. Each month depicting the seasons in watercolor, the seed paper calendar has been made on paper resourced from waste cotton scraps and has seeds of various plants embedded in it. An eco-friendly alternative to an otherwise one-time use product, it is sustainable and carries life in it. When sowed into a flower pot, every leaf of the calendar grows into a beautiful plant, thus creating new life out of waste.',
+  },
   {
     QUESTION: 'Why should I attend the event if it’s only virtual?',
     ANSWER:
-      'Great question! While all our speakers’ talks will be live-streamed on YouTube, the live event will include premium content and interactive experiences that will only be made available via the live event, such as musical performances, stand-ups, and more.',
+      'TEDxNITRourkela is being hosted virtually via Airmeet. Airmeet is a premium all-in-one interactive platform for virtual events with a specially designed social longe to deliver a rich networking experience. Even in a virtual event, youtube to form real connection via meeting countless individuals across the globe, communicating with them in real-time.',
   },
   {
     QUESTION: 'How do I register for regular updates about TEDxNITRourkela?',
@@ -290,7 +290,7 @@ const FAQ = [
   {
     QUESTION: 'Do TEDx speakers or organizers get paid?',
     ANSWER:
-      'No. TEDx events are entirely a volunteer endeavor to bring the best together under one roof.',
+      'No. TEDxNITRourkela is a student-run non-profit event. It is entirely a volunteer endeavor to bring innovative and revolutionary ideas under one roof.',
   },
 ];
 

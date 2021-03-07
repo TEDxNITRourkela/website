@@ -317,7 +317,7 @@ export const faqData = {
       acceptedAnswer: {
         '@type': 'Answer',
         text:
-          'Yes, due to the pandemic, our event will take place virtually on the Airmeet platform.',
+          'Yes, keeping in mind everyone’s safety and social distancing guidelines due to the COVID19 pandemic, we are hosting the event virtually via AIRMEET.',
       },
     },
     {
@@ -326,7 +326,7 @@ export const faqData = {
       acceptedAnswer: {
         '@type': 'Answer',
         text:
-          "Due to the pandemic, our event will take place virtually on the Airmeet platform. Tickets will be available on our <a href='https://tedxnitrourkela.com/tickets'>website</a>.",
+          "You can book your seat in the <a href='https://tedxnitrourkela.com/tickets'>tickets section</a> of our website and join countless others on the 13th of March for an immensely global TEDx Experience.",
       },
     },
     {
@@ -340,11 +340,29 @@ export const faqData = {
     },
     {
       '@type': 'Question',
+      name: 'What is in the Attendee’s Kit?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text:
+          'TEDxNITRourkela aims to deliver innovative and groundbreaking ideas that shape our future. To promote our environment’s sustainability and safety, our Attendee’s Kit features Eco-Friendly and Recyclable Calendars and/or Pens. Each month depicting the seasons in watercolor, the seed paper calendar has been made on paper resourced from waste cotton scraps and has seeds of various plants embedded in it. An eco-friendly alternative to an otherwise one-time use product, it is sustainable and carries life in it. When sowed into a flower pot, every leaf of the calendar grows into a beautiful plant, thus creating new life out of waste.',
+      },
+    },
+    {
+      '@type': 'Question',
       name: 'Why should I attend the event if it is only virtual?',
       acceptedAnswer: {
         '@type': 'Answer',
         text:
-          'Great question! While all our speakers’ talks will be live-streamed on YouTube, the live event will include premium content and interactive experiences that will only be made available via the live event, such as musical performances, stand-ups, and more.',
+          'TEDxNITRourkela is being hosted virtually via Airmeet. Airmeet is a premium all-in-one interactive platform for virtual events with a specially designed social longe to deliver a rich networking experience. Even in a virtual event, youtube to form real connection via meeting countless individuals across the globe, communicating with them in real-time.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I register for regular updates about TEDxNITRourkela?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text:
+          'You can register for our newsletter or follow us on our social media handles.',
       },
     },
     {
@@ -353,7 +371,7 @@ export const faqData = {
       acceptedAnswer: {
         '@type': 'Answer',
         text:
-          'No. TEDx events are entirely a volunteer endeavor to bring the best together under one roof.',
+          'No. TEDxNITRourkela is a student-run non-profit event. It is entirely a volunteer endeavor to bring innovative and revolutionary ideas under one roof.',
       },
     },
   ],

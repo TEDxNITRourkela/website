@@ -3,24 +3,59 @@ import { LOGOS } from '../img/logos';
 import { PARTNERS } from '../img/pages';
 
 export const PARTNER = Object.freeze({
-  ZERO: {
-    title: 'Our Benefactors',
-    partners: [],
-  },
   ONE: {
-    title: 'Our Patrons',
-    partners: [],
+    title: 'Title Sponsor',
+    partners: [
+      {
+        img: PARTNERS.TATA,
+        href: 'https://tatasteel.com',
+        hrefTitle: 'TATA Steel',
+        size: '20%',
+      },
+    ],
   },
   TWO: {
-    title: 'Our Supporters',
-    partners: [],
+    title: 'Digital Media Partner',
+    partners: [
+      {
+        img: PARTNERS.NOTICEBARD,
+        href: 'https://www.noticebard.com/',
+        hrefTitle: 'Noticebard',
+        size: '20%',
+      },
+    ],
   },
   THREE: {
-    title: 'Our Associates',
-    partners: [],
+    title: 'Social Media Partner',
+    partners: [
+      {
+        img: PARTNERS.MY_PURI,
+        href: 'https://www.mypuri.org/',
+        hrefTitle: 'My Puri',
+        size: '20%',
+      },
+      {
+        img: PARTNERS.ROURKELA360,
+        href: 'https://rourkela360.business.site/',
+        hrefTitle: 'Rourkela360',
+        size: '15%',
+      },
+      {
+        img: PARTNERS.CHALO_ODISHA,
+        href: 'http://chaloodisha.com/',
+        hrefTitle: 'Chalo Odisha',
+        size: '15%',
+      },
+      {
+        img: PARTNERS.ODISHA_TRENDING,
+        href: 'https://www.instagram.com/odishatrending/',
+        hrefTitle: 'Odisha Trending',
+        size: '20%',
+      },
+    ],
   },
   FOUR: {
-    title: 'TEDx Partners',
+    title: 'TEDx Partner',
     partners: [
       {
         img: PARTNERS.EVERWALL,
@@ -44,40 +79,6 @@ export const PARTNER = Object.freeze({
         img: PARTNERS.SHUTTERSTOCK,
         href: 'https://shutterstock.com',
         hrefTitle: 'ShutterStock',
-        size: '20%',
-      },
-    ],
-  },
-  FIVE: {
-    title: 'Title Sponsor',
-    partners: [
-      {
-        img: PARTNERS.TATA,
-        href: 'https://tatasteel.com',
-        hrefTitle: 'TATA Steel',
-        size: '20%',
-      },
-    ],
-  },
-  SIX: {
-    title: 'Outreach Partners',
-    partners: [
-      {
-        img: PARTNERS.ROURKELA360,
-        href: 'https://rourkela360.business.site/',
-        hrefTitle: 'Rourkela360',
-        size: '15%',
-      },
-      {
-        img: PARTNERS.NOTICEBARD,
-        href: 'https://www.noticebard.com/',
-        hrefTitle: 'Noticebard',
-        size: '20%',
-      },
-      {
-        img: PARTNERS.CHALO_ODISHA,
-        href: 'http://chaloodisha.com/',
-        hrefTitle: 'Noticebard',
         size: '20%',
       },
     ],

@@ -55,7 +55,7 @@ function Home() {
       <ContentBanner DATA={CONTENT2.TWO} smallLogo wrapContainer />
       <ContentBanner DATA={CONTENT2.ONE} wrapContainer />
 
-      <Partners DATA={PARTNER.FIVE} home main />
+      <Partners DATA={PARTNER.ONE} home main />
 
       <Container className={classes.videoContainer}>
         <video autoPlay loop muted playsInline className={classes.video}>
