@@ -25,14 +25,14 @@ function Partner() {
         <title>TEDxNITRourkela | Partners</title>
         <meta name='title' content='TEDxNITRourkela | Partners' />
 
-        {PARTNER.FOUR.partners.map(({ hrefTitle }) => (
+        {PARTNER.ONE.partners.map(({ hrefTitle }) => (
           <meta
             name='description'
             content={`TEDxNITRourkela | Partner | ${hrefTitle}`}
             key={hrefTitle}
           />
         ))}
-        {PARTNER.FIVE.partners.map(({ hrefTitle }) => (
+        {PARTNER.TWO.partners.map(({ hrefTitle }) => (
           <meta
             name='description'
             content={`TEDxNITRourkela | Partner | ${hrefTitle}`}
@@ -40,7 +40,15 @@ function Partner() {
           />
         ))}
 
-        {PARTNER.SIX.partners.map(({ hrefTitle }) => (
+        {PARTNER.THREE.partners.map(({ hrefTitle }) => (
+          <meta
+            name='description'
+            content={`TEDxNITRourkela | Partner | ${hrefTitle}`}
+            key={hrefTitle}
+          />
+        ))}
+
+        {PARTNER.FOUR.partners.map(({ hrefTitle }) => (
           <meta
             name='description'
             content={`TEDxNITRourkela | Partner | ${hrefTitle}`}
@@ -49,12 +57,10 @@ function Partner() {
         ))}
       </Helmet>
 
-      {/* <Partners DATA={PARTNER.ZERO} />
-      <Partners DATA={PARTNER.ONE} />
-      <Partners DATA={PARTNER.TWO} /> */}
-      <Partners DATA={PARTNER.FIVE} main />
+      <Partners DATA={PARTNER.ONE} main />
+      <Partners DATA={PARTNER.TWO} />
+      <Partners DATA={PARTNER.THREE} />
       <Partners DATA={PARTNER.FOUR} />
-      <Partners DATA={PARTNER.SIX} />
 
       <ContentBanner DATA={PARTNER.CONTENT} wrapContainer />
     </>
