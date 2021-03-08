@@ -28,7 +28,7 @@ function Tickets() {
       <Helmet>
         <title>TEDxNITRourkela</title>
         <meta name='title' content='TEDxNITRourkela' />
-
+        <link rel='canonical' href='https://tedxnitrourkela.com/merchandise' />
         {MERCH.map((product) => (
           <meta
             name='description'

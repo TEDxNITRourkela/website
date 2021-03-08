@@ -26,7 +26,7 @@ function About() {
       <Helmet>
         <title>TEDxNITRourkela | Speakers</title>
         <meta name='title' content='TEDxNITRourkela | Speakers' />
-
+        <link rel='canonical' href='https://tedxnitrourkela.com/speakers' />
         {GUESTS.map(({ description, name }) => (
           <meta
             key={name}
