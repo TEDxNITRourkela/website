@@ -299,7 +299,7 @@ export const faqData = {
       acceptedAnswer: {
         '@type': 'Answer',
         text:
-          'We’re still working towards curating a fantastic experience for all of you. Feel free to keep an eye on our social media channels! Checkout the list of revealed speakers <a href="https://tedxnitrourkela.com/speakers">here</a>',
+          "\u2022 Pranav Khaitan:- An alumnus of NIT Rourkela and a member of the 2020 Nobel Peace price winning team, Senior Engineering lead at Google AI., <br>\u2022 Lisa Russell:- Emmy award winner and an art curator in the UN and WHO., <br>\u2022 Sabyasachi Patra:- Cinematographer and filmmaker, with multiple projects screened at major film festivals worldwide. He’s an alumnus of NIT Rourkela., <br>\u2022 Lokesh K Gurram:- Co-founder at Ditto by Finshots and one of the sharpest financial brains of India. <br>\u2022 Kabir Cafe:- Mumbai-based folk fusion band and their song ‘Mat Kar Maya ko Ahankar’ was featured in Scam1992. <br>\u2022 Prof. Anup Nandy:- Researcher in ML and AI. He was one of the six scientists who represented India at the 5th BRICS Young Scientist Conclave-2020. <br>\u2022 Jeremy Philemon:- One of the brains behind the <a href='https://www.covid19india.org/'>covid19india.org</a> initiative, with more than 1.75 billion hits on the website. <br>\u2022 Ashwathy Satheesan:- Winner of the James Dyson award for her invention -Fleo; a stabilizing pen designed to help people with Parkinson’s. <br>\u2022 Riki Biswas:- Co-founder of numerous revolutionary companies, Pointo, Rado, Solarstair etc.",
       },
     },
     {
