@@ -4,10 +4,10 @@
 import React, { useState } from 'react';
 
 // Libraries
-import { Modal, Backdrop, Fade, Grid } from '@material-ui/core';
+import { Modal, Backdrop, Fade } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
-function GallerySection({ Type, DATA }) {
+function GallerySection({ DATA }) {
   const classes = useStyles();
 
   const [open, setOpen] = useState(false);
@@ -20,6 +20,52 @@ function GallerySection({ Type, DATA }) {
 
   const handleClose = () => {
     setOpen(false);
+  };
+
+  const renderGrid1 = () => {
+    const items1 = [];
+    for (let i = 0; i < DATA.length - (DATA.length % 9); i += 9) {
+      items1.push(
+        <div>
+          <div className={classes.box1}>
+            {renderImage(i)}
+            {renderImage(i + 1)}
+            {renderImage(i + 2)}
+          </div>
+          <div className={classes.box1}>
+            <div style={{ display: 'flex', flexBasis: '66.66%' }}>
+              {renderImage(i + 3)}
+            </div>
+            <div style={{ flexBasis: '33.33%' }} className={classes.box2}>
+              {renderImage(i + 4, 'true')}
+              {renderImage(i + 5, 'true')}
+            </div>
+          </div>
+          <div className={classes.box1}>
+            <div style={{ flexBasis: '33.33%' }} className={classes.box2}>
+              {renderImage(i + 6, 'true')}
+              {renderImage(i + 7, 'true')}
+            </div>
+            <div style={{ display: 'flex', flexBasis: '66.66%' }}>
+              {renderImage(i + 8)}
+            </div>
+          </div>
+        </div>,
+      );
+    }
+    return <div>{items1}</div>;
+  };
+
+  const renderGrid2 = () => {
+    const items2 = [];
+    for (let i = DATA.length - (DATA.length % 9); i < DATA.length; i += 1) {
+      items2.push(
+        <div style={{ display: 'flex', flexBasis: '33.33%' }}>
+          {renderImage(i)}
+        </div>,
+      );
+    }
+    return <div className={classes.box0}>{items2}</div>;
   };
 
   const renderImage = (index, small = 'false') => {
@@ -40,71 +86,20 @@ function GallerySection({ Type, DATA }) {
     );
   };
 
-  const renderGrid = () => {
-    switch (Type) {
-      case 'one':
-        return (
-          <div className={classes.box1}>
-            {renderImage(0)}
-            {renderImage(1)}
-            {renderImage(2)}
-          </div>
-        );
-      case 'two':
-        return (
-          <Grid container>
-            <Grid item xs={8} className={classes.box3}>
-              {renderImage(0)}
-            </Grid>
-            <Grid item xs={4} className={classes.box2}>
-              {renderImage(1, 'true')}
-              {renderImage(2, 'true')}
-            </Grid>
-          </Grid>
-        );
-      case 'three':
-        return (
-          <Grid container>
-            <Grid item xs={4} className={classes.box2}>
-              {renderImage(0, 'true')}
-              {renderImage(1, 'true')}
-            </Grid>
-            <Grid item xs={8}>
-              {renderImage(2)}
-            </Grid>
-          </Grid>
-        );
-      default:
-        return (
-          <div className={classes.box0}>
-            {DATA.map((tile, index) => (
-              <div className={classes.imageContainer}>
-                <img
-                  src={tile.image}
-                  alt={tile.title}
-                  className={classes.image}
-                  onClick={() => handleOpen(index)}
-                />
-              </div>
-            ))}
-          </div>
-        );
-    }
-  };
-
   return (
     <div className={classes.gridContainer}>
-      {renderGrid()}
+      {renderGrid1()}
+      {renderGrid2()}
       <Modal
         open={open}
         onClose={handleClose}
         closeAfterTransition
         BackdropComponent={Backdrop}
         BackdropProps={{
-          timeout: 1000,
+          timeout: 500,
         }}
       >
-        <Fade in={open} timeout={1000}>
+        <Fade in={open} timeout={500}>
           <div className={classes.paper}>
             <img
               src={DATA[activeImage].image}

@@ -34,9 +34,7 @@ function Gallery() {
           <div className={classes.horizontalLine} />
         </div>
       </div>
-      <GallerySection Type='one' DATA={GALLERY.ONE} />
-      <GallerySection Type='two' DATA={GALLERY.TWO} />
-      <GallerySection Type='three' DATA={GALLERY.THREE} />
+      <GallerySection DATA={GALLERY} />
     </div>
   );
 }

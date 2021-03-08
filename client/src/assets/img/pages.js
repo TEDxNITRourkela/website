@@ -101,56 +101,165 @@ export const TICKETS = Object.freeze({
   ATTENDEE_KIT: [at1, at2, at4, at5, at6],
 });
 
-export const GALLERY = Object.freeze({
-  ONE: [
-    {
-      image:
-        'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/ted_o42wz1.jpg',
-      title: 'image2',
-    },
-    {
-      image:
-        'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/people_fj226p.png',
-      title: 'image1',
-    },
-    {
-      image:
-        'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/people_fj226p.png',
-      title: 'image3',
-    },
-  ],
-  TWO: [
-    {
-      image:
-        'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/ted_o42wz1.jpg',
-      title: 'image4',
-    },
-    {
-      image:
-        'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/people_fj226p.png',
-      title: 'image5',
-    },
-    {
-      image:
-        'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/ted_o42wz1.jpg',
-      title: 'image3',
-    },
-  ],
-  THREE: [
-    {
-      image:
-        'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/ted_o42wz1.jpg',
-      title: 'image5',
-    },
-    {
-      image:
-        'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/people_fj226p.png',
-      title: 'image5',
-    },
-    {
-      image:
-        'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/ted_o42wz1.jpg',
-      title: 'image4',
-    },
-  ],
-});
+export const GALLERY = Object.freeze([
+  {
+    image:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/ted_o42wz1.jpg',
+    title: 'image2',
+  },
+  {
+    image:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/people_fj226p.png',
+    title: 'image1',
+  },
+  {
+    image:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/people_fj226p.png',
+    title: 'image3',
+  },
+  {
+    image:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/ted_o42wz1.jpg',
+    title: 'image4',
+  },
+  {
+    image:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/people_fj226p.png',
+    title: 'image5',
+  },
+  {
+    image:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/ted_o42wz1.jpg',
+    title: 'image3',
+  },
+  {
+    image:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/ted_o42wz1.jpg',
+    title: 'image5',
+  },
+  {
+    image:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/people_fj226p.png',
+    title: 'image5',
+  },
+  {
+    image:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/ted_o42wz1.jpg',
+    title: 'image4',
+  },
+  {
+    image:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/ted_o42wz1.jpg',
+    title: 'image4',
+  },
+  {
+    image:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/ted_o42wz1.jpg',
+    title: 'image2',
+  },
+  {
+    image:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/people_fj226p.png',
+    title: 'image1',
+  },
+  {
+    image:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/people_fj226p.png',
+    title: 'image3',
+  },
+  {
+    image:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/ted_o42wz1.jpg',
+    title: 'image4',
+  },
+  {
+    image:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/people_fj226p.png',
+    title: 'image5',
+  },
+  {
+    image:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/ted_o42wz1.jpg',
+    title: 'image3',
+  },
+  {
+    image:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/ted_o42wz1.jpg',
+    title: 'image5',
+  },
+  {
+    image:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/people_fj226p.png',
+    title: 'image5',
+  },
+  {
+    image:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/ted_o42wz1.jpg',
+    title: 'image4',
+  },
+  {
+    image:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/ted_o42wz1.jpg',
+    title: 'image4',
+  },
+  {
+    image:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/ted_o42wz1.jpg',
+    title: 'image2',
+  },
+  {
+    image:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/people_fj226p.png',
+    title: 'image1',
+  },
+  {
+    image:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/people_fj226p.png',
+    title: 'image3',
+  },
+  {
+    image:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/ted_o42wz1.jpg',
+    title: 'image4',
+  },
+  {
+    image:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/people_fj226p.png',
+    title: 'image5',
+  },
+  {
+    image:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/ted_o42wz1.jpg',
+    title: 'image3',
+  },
+  {
+    image:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/ted_o42wz1.jpg',
+    title: 'image5',
+  },
+  {
+    image:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/people_fj226p.png',
+    title: 'image5',
+  },
+  {
+    image:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/ted_o42wz1.jpg',
+    title: 'image4',
+  },
+  {
+    image:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/ted_o42wz1.jpg',
+    title: 'image4',
+  },
+  {
+    image:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/ted_o42wz1.jpg',
+    title: 'image4',
+  },
+  {
+    image:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/about/people_fj226p.png',
+    title: 'image5',
+  },
+]);
