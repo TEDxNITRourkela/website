@@ -52,6 +52,12 @@ export const PARTNER = Object.freeze({
         hrefTitle: 'Odisha Trending',
         size: '20%',
       },
+      {
+        img: PARTNERS.ROURKELA_SHINES,
+        hrefTitle: 'Rourkela Shines',
+        href: 'https://www.instagram.com/rourkelashines/?hl=en',
+        size: '12%',
+      },
     ],
   },
   FOUR: {
