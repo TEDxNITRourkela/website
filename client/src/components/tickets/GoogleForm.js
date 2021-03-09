@@ -52,8 +52,8 @@ function Tickets({ open, setOpen, setModalOpen }) {
         </Modal>
       </div>
       <Typography variant='body2' className={classes.message}>
-        NITR Students will be able to watch the event live on YouTube after
-        registration.
+        Only registered NITR Students will be able to watch the event live on
+        YouTube.
       </Typography>
     </div>
   );

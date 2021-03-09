@@ -1,4 +1,5 @@
 /* eslint-disable no-undef */
+/* eslint-disable max-len */
 import React, { useEffect, useState } from 'react';
 
 // Libraries
@@ -75,7 +76,7 @@ function Tickets() {
         className={classes.button}
         type='button'
       >
-        Become a part on event on Airmeet
+        Become a part of the event at Airmeet
       </button>
     </div>
   );
@@ -150,7 +151,7 @@ function Tickets() {
 
       <Modal
         title='NITR Student Registeration'
-        content='Please choose the relevant option.'
+        content='Please choose the relevant option. Only registered IDs will get to see event live on YouTube'
         actions={modalAction}
         open={modalOpen}
         setOpen={setModalOpen}

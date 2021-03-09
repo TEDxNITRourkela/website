@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 /* eslint-disable no-undef */
 import React, { useEffect } from 'react';
 
@@ -10,7 +9,6 @@ import { SnackbarProvider, useSnackbar } from 'notistack';
 import { TICKETS } from '../../assets/img/pages';
 
 // Utilities
-// import { analytics } from '../../config/firebase';
 import createBrowserHistory from '../../utils/history';
 
 const PAYMENT_STATUS = {
@@ -22,17 +20,6 @@ const PAYMENT_STATUS = {
 };
 
 function Tickets({ short, handlePayment }) {
-  // Logic to determine the type of ticket.
-  // const referrals = window.location.pathname.split('/');
-  // let isReferral;
-  // if (referrals && referrals[1] === 'tickets' && referrals[2] === 'referrals')
-  //   isReferral = true;
-  // else isReferral = false;
-
-  // const paymentLink = isReferral
-  //   ? `https://www.instamojo.com/@StudentActivityCenter/${referrals[3]}/`
-  //   : /* eslint-disable-next-line */
-  //     'https://www.instamojo.com/@StudentActivityCenter/l2819ae69330f4c8a8ee450758aa6b022/';
   const imageURL = TICKETS.NOPRICE;
 
   // Snackbar functions
@@ -74,44 +61,28 @@ function Tickets({ short, handlePayment }) {
       action,
     });
 
-  // Main Payment function
-  // const handlePayment = () => {
-  //   if (Instamojo) {
-  //     /* Configuring Handlers */
-  //     Instamojo.configure({
-  //       handlers: {
-  //         onOpen: onPayOpen,
-  //         onClose: onPayClose,
-  //         onSuccess: onPaySuccess,
-  //         onFailure: onPayFail,
-  //       },
-  //     });
-
-  //     // Log Button Payment Event
-  //     analytics().logEvent('Pay Button Clicked');
-
-  //     Instamojo.open(paymentLink);
-  //   }
-  // };
-
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://js.instamojo.com/v1/checkout.js';
     script.async = true;
 
     document.body.appendChild(script);
-
-    // if (Instamojo) {
-    //   Instamojo.configure({
-    //     handlers: {
-    //       onOpen: onPayOpen,
-    //       onClose: onPayClose,
-    //       onSuccess: onPaySuccess,
-    //       onFailure: onPayFail,
-    //     },
-    //   });
-    // }
   }, []);
+
+  const handlePaymentClick = () => {
+    if (Instamojo) {
+      Instamojo.configure({
+        handlers: {
+          onOpen: onPayOpen,
+          onClose: onPayClose,
+          onSuccess: onPaySuccess,
+          onFailure: onPayFail,
+        },
+      });
+    }
+
+    handlePayment();
+  };
 
   return (
     <div className={classes.container}>
@@ -124,7 +95,9 @@ function Tickets({ short, handlePayment }) {
 
         <button
           onClick={
-            short ? () => createBrowserHistory.push('/tickets') : handlePayment
+            short
+              ? () => createBrowserHistory.push('/tickets')
+              : handlePaymentClick
           }
           type='button'
           className={classes.button}
