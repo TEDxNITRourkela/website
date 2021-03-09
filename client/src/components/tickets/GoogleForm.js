@@ -1,15 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 // Libraries
 import { makeStyles, Typography, Modal } from '@material-ui/core';
 
-function Tickets() {
-  const [open, setOpen] = useState(false);
+function Tickets({ open, setOpen, setModalOpen }) {
   const classes = useStyles();
-
-  const handleOpen = () => {
-    setOpen(true);
-  };
 
   const handleClose = () => {
     setOpen(false);
@@ -46,7 +41,7 @@ function Tickets() {
           Are you an NITR student? Apply here!!
         </Typography>
         <button
-          onClick={handleOpen}
+          onClick={() => setModalOpen(true)}
           type='button'
           className={classes.studentButton}
         >

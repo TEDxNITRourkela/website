@@ -10,7 +10,7 @@ import { SnackbarProvider, useSnackbar } from 'notistack';
 import { TICKETS } from '../../assets/img/pages';
 
 // Utilities
-import { analytics } from '../../config/firebase';
+// import { analytics } from '../../config/firebase';
 import createBrowserHistory from '../../utils/history';
 
 const PAYMENT_STATUS = {
@@ -21,18 +21,18 @@ const PAYMENT_STATUS = {
   INITIATED: 'Payment initiated',
 };
 
-function Tickets({ short }) {
+function Tickets({ short, handlePayment }) {
   // Logic to determine the type of ticket.
-  const referrals = window.location.pathname.split('/');
-  let isReferral;
-  if (referrals && referrals[1] === 'tickets' && referrals[2] === 'referrals')
-    isReferral = true;
-  else isReferral = false;
+  // const referrals = window.location.pathname.split('/');
+  // let isReferral;
+  // if (referrals && referrals[1] === 'tickets' && referrals[2] === 'referrals')
+  //   isReferral = true;
+  // else isReferral = false;
 
-  const paymentLink = isReferral
-    ? `https://www.instamojo.com/@StudentActivityCenter/${referrals[3]}/`
-    : /* eslint-disable-next-line */
-      'https://www.instamojo.com/@StudentActivityCenter/l2819ae69330f4c8a8ee450758aa6b022/';
+  // const paymentLink = isReferral
+  //   ? `https://www.instamojo.com/@StudentActivityCenter/${referrals[3]}/`
+  //   : /* eslint-disable-next-line */
+  //     'https://www.instamojo.com/@StudentActivityCenter/l2819ae69330f4c8a8ee450758aa6b022/';
   const imageURL = TICKETS.NOPRICE;
 
   // Snackbar functions
@@ -75,24 +75,24 @@ function Tickets({ short }) {
     });
 
   // Main Payment function
-  const handlePayment = () => {
-    if (Instamojo) {
-      /* Configuring Handlers */
-      Instamojo.configure({
-        handlers: {
-          onOpen: onPayOpen,
-          onClose: onPayClose,
-          onSuccess: onPaySuccess,
-          onFailure: onPayFail,
-        },
-      });
+  // const handlePayment = () => {
+  //   if (Instamojo) {
+  //     /* Configuring Handlers */
+  //     Instamojo.configure({
+  //       handlers: {
+  //         onOpen: onPayOpen,
+  //         onClose: onPayClose,
+  //         onSuccess: onPaySuccess,
+  //         onFailure: onPayFail,
+  //       },
+  //     });
 
-      // Log Button Payment Event
-      analytics().logEvent('Pay Button Clicked');
+  //     // Log Button Payment Event
+  //     analytics().logEvent('Pay Button Clicked');
 
-      Instamojo.open(paymentLink);
-    }
-  };
+  //     Instamojo.open(paymentLink);
+  //   }
+  // };
 
   useEffect(() => {
     const script = document.createElement('script');
@@ -100,6 +100,17 @@ function Tickets({ short }) {
     script.async = true;
 
     document.body.appendChild(script);
+
+    // if (Instamojo) {
+    //   Instamojo.configure({
+    //     handlers: {
+    //       onOpen: onPayOpen,
+    //       onClose: onPayClose,
+    //       onSuccess: onPaySuccess,
+    //       onFailure: onPayFail,
+    //     },
+    //   });
+    // }
   }, []);
 
   return (
@@ -125,10 +136,10 @@ function Tickets({ short }) {
   );
 }
 
-export default function IntegratedTickets({ short = false }) {
+export default function IntegratedTickets({ short = false, handlePayment }) {
   return (
     <SnackbarProvider maxSnack={3}>
-      <Tickets short={short} />
+      <Tickets short={short} handlePayment={handlePayment} />
     </SnackbarProvider>
   );
 }

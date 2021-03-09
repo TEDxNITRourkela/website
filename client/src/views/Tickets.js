@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 // Libraries
 import { Container, makeStyles, Typography } from '@material-ui/core';
@@ -13,6 +13,7 @@ import { analytics } from '../config/firebase';
 import Ticket from '../components/tickets/Ticket';
 import CustomTable from '../components/shared/Table';
 import GoogleForm from '../components/tickets/GoogleForm';
+import Modal from '../components/shared/Modal';
 
 // Assets
 import { GRAPHICS } from '../assets/img/graphics';
@@ -27,11 +28,57 @@ function Tickets() {
     isReferral = true;
   else isReferral = false;
 
+  const paymentLink = isReferral
+    ? `https://www.instamojo.com/@StudentActivityCenter/${referrals[3]}/`
+    : /* eslint-disable-next-line */
+      'https://www.instamojo.com/@StudentActivityCenter/l2819ae69330f4c8a8ee450758aa6b022/';
+
+  // Component States
+  const [modalOpen, setModalOpen] = useState(false);
+  const [googleFormOpen, setGoogleFormOpen] = useState(false);
+  // const [checkoutOpen, setCheckoutOpen] = useState(false);
+
+  // Button Handlers
+  const handleYoutubeClick = () => {
+    setModalOpen(false);
+    setGoogleFormOpen(true);
+  };
+  const handleAirmeetClick = () => {
+    setModalOpen(false);
+
+    // Log Button Payment Event
+    analytics().logEvent('Pay Button Clicked');
+
+    if (Instamojo) Instamojo.open(paymentLink);
+  };
+
   const classes = useStyles();
 
   useEffect(() => {
     analytics().logEvent('Tickets Page Loaded');
   }, []);
+
+  const modalAction = (
+    <div className={classes.actionsContainer}>
+      <button
+        onClick={handleYoutubeClick}
+        onKeyDown={handleYoutubeClick}
+        className={classes.button}
+        type='button'
+      >
+        Register to watch YouTube Livestream (Free)
+      </button>
+
+      <button
+        onClick={handleAirmeetClick}
+        onKeyDown={handleAirmeetClick}
+        className={classes.button}
+        type='button'
+      >
+        Become a part on event on Airmeet
+      </button>
+    </div>
+  );
 
   return (
     <div className={classes.root}>
@@ -50,7 +97,7 @@ function Tickets() {
 
       <Container className={classes.container}>
         <div className={classes.left}>
-          <Ticket />
+          <Ticket handlePayment={handleAirmeetClick} />
 
           <a href='https://files.tedxnitrourkela.com/Ticket_TnC.pdf'>
             <Typography variant='body2' className={classes.terms}>
@@ -71,7 +118,11 @@ function Tickets() {
         </div>
       </Container>
       <Container className={classes.bottom}>
-        <GoogleForm />
+        <GoogleForm
+          open={googleFormOpen}
+          setOpen={setGoogleFormOpen}
+          setModalOpen={setModalOpen}
+        />
       </Container>
 
       <div className={classes.carouselContainer}>
@@ -96,6 +147,14 @@ function Tickets() {
           </Carousel>
         </Container>
       </div>
+
+      <Modal
+        title='NITR Student Registeration'
+        content='Please choose the relevant option.'
+        actions={modalAction}
+        open={modalOpen}
+        setOpen={setModalOpen}
+      />
     </div>
   );
 }
@@ -181,5 +240,26 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     color: '#fff',
     marginBottom: 30,
+  },
+  actionsContainer: {
+    display: 'flex',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    backgroundColor: 'transparent',
+  },
+  button: {
+    margin: 'auto 10px',
+    border: '1px solid #FF2B06',
+    borderRadius: '6px',
+    backgroundColor: '#1a1a1a',
+    padding: '10px 20px',
+    color: '#ffffff',
+    minWidth: '150px',
+    width: 'auto',
+    fontSize: '14px',
+    '&:hover': {
+      backgroundColor: '#FF2B06',
+      cursor: 'pointer',
+    },
   },
 }));
