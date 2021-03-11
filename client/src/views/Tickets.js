@@ -15,6 +15,7 @@ import Ticket from '../components/tickets/Ticket';
 import CustomTable from '../components/shared/Table';
 import GoogleForm from '../components/tickets/GoogleForm';
 import Modal from '../components/shared/Modal';
+import ContentBanner from '../components/shared/ContentBanner';
 
 // Assets
 import { GRAPHICS } from '../assets/img/graphics';
@@ -126,10 +127,13 @@ function Tickets() {
         />
       </Container>
 
+      <Typography className={classes.title} variant='h2'>
+        Attendee Kit
+      </Typography>
+
+      <ContentBanner DATA={TICKETS.BANNER} />
+
       <div className={classes.carouselContainer}>
-        <Typography className={classes.title} variant='h2'>
-          Attendee Kit
-        </Typography>
         <Container>
           <Carousel
             indicators={false}
@@ -240,7 +244,7 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     textAlign: 'center',
     color: '#fff',
-    marginBottom: 30,
+    marginTop: 30,
   },
   actionsContainer: {
     display: 'flex',
