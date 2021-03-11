@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 
 // Libraries
 import { Helmet } from 'react-helmet';
+import { Container } from '@material-ui/core';
 
 // Utilities
 import { analytics } from '../config/firebase';
@@ -58,12 +59,14 @@ function Partner() {
         ))}
       </Helmet>
 
-      <Partners DATA={PARTNER.ONE} main />
-      <Partners DATA={PARTNER.TWO} />
-      <Partners DATA={PARTNER.THREE} />
-      <Partners DATA={PARTNER.FOUR} />
+      <Container style={{ marginTop: '150px' }}>
+        <Partners DATA={PARTNER.ONE} main />
+        <Partners DATA={PARTNER.TWO} />
+        <Partners DATA={PARTNER.THREE} />
+        <Partners DATA={PARTNER.FOUR} />
 
-      <ContentBanner DATA={PARTNER.CONTENT} wrapContainer />
+        <ContentBanner DATA={PARTNER.CONTENT} wrapContainer />
+      </Container>
     </>
   );
 }

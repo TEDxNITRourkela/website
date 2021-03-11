@@ -102,11 +102,11 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    height: 'calc(100% - 100px)',
+    height: 'calc(100% - 150px)',
     minHeight: '100vh',
   },
   container: {
-    marginTop: '100px',
+    marginTop: '150px',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',

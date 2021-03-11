@@ -67,9 +67,9 @@ export default About;
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
-    minHeight: 'calc(100vh - 100px)',
+    minHeight: 'calc(100vh - 150px)',
     backgroundColor: theme.palette.background.default,
-    marginTop: '100px',
+    marginTop: '150px',
   },
   topLeft: {
     position: 'absolute',
