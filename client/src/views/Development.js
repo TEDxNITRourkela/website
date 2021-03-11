@@ -66,10 +66,10 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
-    minHeight: 'calc(100vh - 100px)',
+    minHeight: 'calc(100vh - 150px)',
     height: '100%',
     backgroundColor: theme.palette.background.default,
-    marginTop: '100px',
+    marginTop: '150px',
   },
   container: {
     marginTop: '30px',

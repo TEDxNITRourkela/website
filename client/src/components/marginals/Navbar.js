@@ -6,8 +6,12 @@ import {
   Drawer,
   ListItem,
   makeStyles,
+  Container,
 } from '@material-ui/core';
 import { Link } from 'react-router-dom';
+
+// Components
+import Counter from '../homepage/Counter';
 
 // Assets
 import { tabs as TABS_NAV } from '../../assets/placeholder/common';
@@ -41,6 +45,23 @@ function Navbar({ window: cWindow }) {
 
   return (
     <div className={classes.root}>
+      <div className={classes.alertContainer}>
+        <Container className={classes.alertSubcontainer}>
+          <Typography className={classes.timer} variant='body2'>
+            {/* eslint-disable-next-line */}
+            Reserve your seat now. Tickets closing in
+          </Typography>
+          <Counter />
+          <Typography
+            className={`${classes.timer} ${classes.bookNow}`}
+            variant='body2'
+          >
+            <Link className={classes.alertLink} to='/tickets'>
+              Book Now
+            </Link>
+          </Typography>
+        </Container>
+      </div>
       <Link to='/' className={classes.logoContainer}>
         <img
           className={classes.logo}
@@ -108,8 +129,9 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
     height: '100px',
+    paddingTop: '20px',
     position: 'fixed',
-    top: 0,
+    top: 30,
     backgroundColor: theme.palette.background.default,
     display: 'flex',
     justifyContent: 'space-around',
@@ -119,6 +141,38 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('md')]: {
       justifyContent: 'space-between',
     },
+  },
+  alertContainer: {
+    position: 'fixed',
+    top: 0,
+    backgroundColor: '#FF2B06',
+    width: '100%',
+    padding: '5px 10px',
+    zIndex: 2,
+  },
+  alertSubcontainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    [theme.breakpoints.down('md')]: {
+      flexDirection: 'column',
+      alignItems: 'flex-start',
+    },
+  },
+  bookNow: {
+    [theme.breakpoints.down('md')]: {
+      display: 'none',
+    },
+  },
+  timer: {
+    color: '#232323',
+    fontWeight: '600',
+    fontFamily: 'Helvetica',
+  },
+  alertLink: {
+    fontWeight: '700',
+    color: '#232323',
+    textDecoration: 'underline',
   },
   logoContainer: {
     width: '250px',

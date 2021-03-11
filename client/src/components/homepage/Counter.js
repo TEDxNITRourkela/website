@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -6,40 +7,42 @@ import Countdown, { zeroPad } from 'react-countdown';
 
 function Counter() {
   const classes = useStyles();
-  const renderer = ({ days, hours, minutes, completed }) => {
+  const renderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
       return <div />;
     }
     return (
-      <div className={classes.counterContainer}>
-        <div className={classes.counterSubContainer}>
-          {/* eslint-disable-next-line */}
-          <span className={classes.counter}>{zeroPad(days)}:</span>
-          <span className={`${classes.counterLabel} ${classes.shiftLeftDays}`}>
+      <span className={classes.counterContainer}>
+        {/* <div className={classes.counterSubContainer}> */}
+        {/* eslint-disable-next-line */}
+        <span className={classes.counter}>{zeroPad(days)}:</span>
+        {/* <span className={`${classes.counterLabel} 
+          ${classes.shiftLeftDays}`}>
             Days
-          </span>
-        </div>
-        <div className={classes.counterSubContainer}>
-          {/* eslint-disable-next-line */}
-          <span className={classes.counter}>{zeroPad(hours)}:</span>
-          <span
+          </span> */}
+        {/* </div> */}
+        {/* <div className={classes.counterSubContainer}> */}
+        {/* eslint-disable-next-line */}
+        <span className={classes.counter}>{zeroPad(hours)}:</span>
+        {/* <span
             className={`${classes.counterLabel}
                   ${classes.shiftLeftHours}`}
           >
             Hours
-          </span>
-        </div>
-        <div className={classes.counterSubContainer}>
-          <span className={classes.counter}>{zeroPad(minutes)}</span>
-          <span className={classes.counterLabel}>Minutes</span>
-        </div>
-      </div>
+          </span> */}
+        {/* </div> */}
+        {/* <div className={classes.counterSubContainer}> */}
+        <span className={classes.counter}>{zeroPad(minutes)}:</span>
+        {/* <span className={classes.counterLabel}>Minutes</span> */}
+        {/* </div> */}
+        <span className={classes.counter}>{zeroPad(seconds)}</span>
+      </span>
     );
   };
 
   return (
-    <div>
-      <Countdown date='2021-03-13T10:30:00Z' renderer={renderer} />
+    <div style={{ display: 'inlineBlock', width: '100px', margin: 'auto 5px' }}>
+      <Countdown date={new Date(1615581000000)} renderer={renderer} />
     </div>
   );
 }
@@ -51,29 +54,29 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'space-around',
     alignItems: 'center',
-    width: '100%',
-    marginTop: '80px',
-    marginBottom: '90px',
-    padding: 0,
+    width: '100px',
+    // marginTop: '80px',
+    // marginBottom: '90px',
+    // padding: 0,
   },
   counterSubContainer: {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'flex-start',
     alignItems: 'center',
-    width: '28%',
+    // width: '28%',
     margin: 0,
     padding: 0,
   },
   counter: {
-    color: '#FFFFFF',
-    fontFamily: 'Digital',
-    fontWeight: 'normal',
-    fontSize: '120px',
-    lineHeight: '120px',
-    textShadow: '0px 0px 6px #0078BC',
+    color: '#232323',
+    fontFamily: 'Helvetica',
+    fontWeight: '600',
+    fontSize: '1rem',
+    lineHeight: '1.25rem',
+    // textShadow: '0px 0px 6px #0078BC',
     [theme.breakpoints.down('sm')]: {
-      fontSize: '50px',
+      fontSize: '0.8rem',
     },
   },
   counterLabel: {
