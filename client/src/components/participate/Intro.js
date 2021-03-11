@@ -3,20 +3,30 @@ import React from 'react';
 // Libraries
 import { makeStyles, Typography } from '@material-ui/core';
 
-// Assets
-import { PARTICIPATE } from '../../assets/placeholder/participate';
-
-function Participate() {
+function Participate({ title, content }) {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
       <Typography className={classes.title} variant='h2'>
-        {PARTICIPATE.INTRO.TITLE}
+        {title}
       </Typography>
-      <Typography className={classes.content} variant='body2'>
-        {PARTICIPATE.INTRO.CONTENT}
-      </Typography>
+
+      {typeof content === 'string' ? (
+        <Typography className={classes.content} variant='body2'>
+          {content}
+        </Typography>
+      ) : (
+        content.map((point) => (
+          <Typography
+            className={classes.content}
+            variant='body2'
+            style={{ marginTop: 20 }}
+          >
+            {point}
+          </Typography>
+        ))
+      )}
 
       <div className={classes.horizontalLine} />
     </div>
@@ -39,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
   },
   content: {
-    fontFamily: 'Zilla Slab',
+    fontFamily: 'Helvetica',
     width: '55%',
     marginTop: '20px',
     textAlign: 'center',

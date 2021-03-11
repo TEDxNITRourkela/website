@@ -38,4 +38,14 @@ export const TICKETS = Object.freeze({
       'Also, it motivates you to plant a tree, contributing to a greener and cleaner environment.',
     ],
   },
+  ATTENDEE_KIT: {
+    TITLE: 'What is the Attendee Kit?',
+
+    CONTENT: [
+      'The attendee kit is hamper of eco-friendly goodies given to all the members attending the event on Airmeet.',
+      "The Kit consists of a calendar which when mixed with soil grow into plants. Instead of throwing away the calendar paper in the Dustbin why not grow a plant from that. Isn't it interesting!! These calendars are made from Seed Papers and each month has different seeds engraved. So you will be able to plant a different tree each month.",
+      'The next item in the Kit is a Recycled Paper Color Pen with a plantable seed made up of recycled paper. The pen that grows, gently push it in a pot with soil and within 7-8 days you can see the plant growing out of it!',
+      'Apart from these, the Kit also has an Eco-Friendly Newspaper Pencil with a plantable seed made up of newspapers. Instead of cutting down trees for wood to shape them into pencils later, this is an eco-friendly solution that uses recycled newspaper to hold graphite within pencils.',
+    ],
+  },
 });

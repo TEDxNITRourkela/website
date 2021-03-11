@@ -37,7 +37,10 @@ function About() {
       </Helmet>
 
       <Container>
-        <Intro />
+        <Intro
+          title={PARTICIPATE.INTRO.TITLE}
+          content={PARTICIPATE.INTRO.CONTENT}
+        />
         <ContentBanner DATA={PARTICIPATE.BANNER} />
         <Incentives />
 

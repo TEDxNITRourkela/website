@@ -16,6 +16,7 @@ import CustomTable from '../components/shared/Table';
 import GoogleForm from '../components/tickets/GoogleForm';
 import Modal from '../components/shared/Modal';
 import ContentBanner from '../components/shared/ContentBanner';
+import Intro from '../components/participate/Intro';
 
 // Assets
 import { GRAPHICS } from '../assets/img/graphics';
@@ -128,10 +129,13 @@ function Tickets() {
       </Container>
 
       <Typography className={classes.title} variant='h2'>
-        Attendee Kit
+        {/* Attendee Kit */}
       </Typography>
 
-      <ContentBanner DATA={TICKETS.BANNER} />
+      <Intro
+        title={TICKETS.ATTENDEE_KIT.TITLE}
+        content={TICKETS.ATTENDEE_KIT.CONTENT}
+      />
 
       <div className={classes.carouselContainer}>
         <Container>
@@ -152,6 +156,8 @@ function Tickets() {
           </Carousel>
         </Container>
       </div>
+
+      <ContentBanner DATA={TICKETS.BANNER} />
 
       <Modal
         title='NITR Student Registeration'
