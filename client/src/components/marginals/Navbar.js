@@ -52,7 +52,10 @@ function Navbar({ window: cWindow }) {
             Reserve your seat now. Tickets closing in
           </Typography>
           <Counter />
-          <Typography className={classes.timer} variant='body2'>
+          <Typography
+            className={`${classes.timer} ${classes.bookNow}`}
+            variant='body2'
+          >
             <Link className={classes.alertLink} to='/tickets'>
               Book Now
             </Link>
@@ -151,7 +154,15 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    // width: 'auto',
+    [theme.breakpoints.down('md')]: {
+      flexDirection: 'column',
+      alignItems: 'flex-start',
+    },
+  },
+  bookNow: {
+    [theme.breakpoints.down('md')]: {
+      display: 'none',
+    },
   },
   timer: {
     color: '#232323',
