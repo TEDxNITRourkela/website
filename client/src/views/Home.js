@@ -58,7 +58,8 @@ function Home() {
       <Partners DATA={PARTNER.ONE} home main />
 
       <Container className={classes.videoContainer}>
-        <video autoPlay loop muted playsInline className={classes.video}>
+        {/* eslint-disable-next-line */}
+        <video controls className={classes.video}>
           <source src={HOME.LOGO_REVEAL} type='video/mp4' />
         </video>
       </Container>
