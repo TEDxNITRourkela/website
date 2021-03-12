@@ -76,7 +76,7 @@ function Tickets() {
         className={classes.button}
         type='button'
       >
-        Register to watch YouTube Livestream (Free)
+        Register to watch YouTube Livestream
       </button>
 
       <button
