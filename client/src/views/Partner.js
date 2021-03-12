@@ -57,6 +57,14 @@ function Partner() {
             key={hrefTitle}
           />
         ))}
+
+        {PARTNER.FIVE.partners.map(({ hrefTitle }) => (
+          <meta
+            name='description'
+            content={`TEDxNITRourkela | Partner | ${hrefTitle}`}
+            key={hrefTitle}
+          />
+        ))}
       </Helmet>
 
       <Container style={{ marginTop: '150px' }}>
@@ -64,6 +72,7 @@ function Partner() {
         <Partners DATA={PARTNER.TWO} />
         <Partners DATA={PARTNER.THREE} />
         <Partners DATA={PARTNER.FOUR} />
+        <Partners DATA={PARTNER.FIVE} />
 
         <ContentBanner DATA={PARTNER.CONTENT} wrapContainer />
       </Container>

@@ -85,6 +85,8 @@ export const PARTNERS = Object.freeze({
     'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/odisha_trending_sndntr.png',
   ROURKELA_SHINES:
     'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/Rourkela_shines-removebg-preview_edahhf.png',
+  OVOTEES:
+    'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/ovotees-removebg-preview_wgiddk.png',
 });
 
 export const TICKETS = Object.freeze({
