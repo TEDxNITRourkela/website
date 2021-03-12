@@ -85,7 +85,7 @@ function Tickets() {
         className={classes.button}
         type='button'
       >
-        Become a part of the event at Airmeet
+        Discounted Airmeet
       </button>
     </div>
   );
@@ -168,7 +168,7 @@ function Tickets() {
 
       <Modal
         title='NITR Student Registeration'
-        content='Please choose the relevant option. Only registered IDs will get to see event live on YouTube'
+        content='Please choose the relevant option. Only registered IDs will get to see event live on YouTube. Get discounted price for Airmeet Event'
         actions={modalAction}
         open={modalOpen}
         setOpen={setModalOpen}
