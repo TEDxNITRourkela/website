@@ -42,7 +42,7 @@ function Counter() {
 
   return (
     <div style={{ display: 'inlineBlock', width: '100px', margin: 'auto 5px' }}>
-      <Countdown date={new Date(1615581000000)} renderer={renderer} />
+      <Countdown date={new Date(1615609800000)} renderer={renderer} />
     </div>
   );
 }

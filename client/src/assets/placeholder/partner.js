@@ -30,7 +30,7 @@ export const PARTNER = Object.freeze({
     partners: [
       {
         img: PARTNERS.MY_PURI,
-        href: 'https://www.mypuri.org/',
+        href: 'https://www.facebook.com/mypuricity/',
         hrefTitle: 'My Puri',
         size: '20%',
       },
