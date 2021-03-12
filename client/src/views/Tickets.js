@@ -47,12 +47,19 @@ function Tickets() {
     setGoogleFormOpen(true);
   };
   const handleAirmeetClick = () => {
-    setModalOpen(false);
-
     // Log Button Payment Event
     analytics().logEvent('Pay Button Clicked');
 
-    if (Instamojo) Instamojo.open(paymentLink);
+    if (Instamojo) {
+      if (modalOpen) {
+        Instamojo.open(
+          'https://www.instamojo.com/@StudentActivityCenter/l06ff4233e530421383ad4dc4ad8c7c3f',
+        );
+      } else {
+        Instamojo.open(paymentLink);
+      }
+      setModalOpen(false);
+    }
   };
 
   const classes = useStyles();
