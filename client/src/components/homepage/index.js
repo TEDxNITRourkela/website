@@ -78,17 +78,6 @@ function Index() {
             />
 
             <div className={classes.buttonContainer}>
-              <a
-                href='https://live.tedxnitrourkela.com'
-                className={classes.button}
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                }}
-              >
-                Join the Event
-              </a>
 
               <button
                 type='button'
@@ -98,6 +87,31 @@ function Index() {
               >
                 Join the Event (NITR Students)
               </button>
+
+              <a
+                href='https://live.tedxnitrourkela.com'
+                className={classes.button}
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  border: '2px solid #FF2B06',
+                }}
+              >
+                Join the Event
+              </a>
+
+              <a
+                href='https://meet.google.com/jqa-xeed-xjc'
+                className={classes.button}
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                Get Support
+              </a>
             </div>
           </div>
 
@@ -279,7 +293,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#1a1a1a',
     padding: '10px 20px',
     color: '#ffffff',
-    minWidth: '150px',
+    minWidth: '220px',
     width: 'auto',
     fontSize: '14px',
     height: '45px',
