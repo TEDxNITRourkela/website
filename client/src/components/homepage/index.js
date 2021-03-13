@@ -40,7 +40,7 @@ function Index() {
       </a>
 
       <a
-        href='https://youtu.be/4H43JgLkx8Q'
+        href='https://youtu.be/1R2S8eJW7Fw'
         className={classes.button}
         type='button'
       >
@@ -78,7 +78,6 @@ function Index() {
             />
 
             <div className={classes.buttonContainer}>
-
               <button
                 type='button'
                 onClick={handleClick}
