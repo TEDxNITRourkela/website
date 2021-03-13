@@ -10,6 +10,8 @@ export const HOME = Object.freeze({
     'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/home/Frame_234_2_yqqtib.png',
   LOGO_REVEAL:
     'https://res.cloudinary.com/tedxnitrourkela/video/upload/assets/pages/home/KvLF7sohcJPEdku3_rgmcp3.mp4',
+  EVENT_LIVE:
+    'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/home/Group_615_c8kwwa.png',
 });
 
 export const ABOUT = Object.freeze({
