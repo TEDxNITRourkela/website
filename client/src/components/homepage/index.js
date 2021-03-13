@@ -109,9 +109,21 @@ function Index() {
                   alignItems: 'center',
                 }}
               >
-                Get Support
+                Get Support / Onspot tickets
               </a>
             </div>
+
+            <Typography
+              variant='body2'
+              style={{
+                color: '#ffffff',
+                opacity: 0.6,
+                fontFamily: 'Zilla Slab',
+                marginTop: 30,
+              }}
+            >
+              Support Channel open from 10am to 6pm (14th March 2021)
+            </Typography>
           </div>
 
           {/* <Ticket short /> */}
