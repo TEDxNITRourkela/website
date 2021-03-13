@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 // Libraries
 import { Typography } from '@material-ui/core';
@@ -6,8 +6,9 @@ import { makeStyles } from '@material-ui/core/styles';
 
 // Components
 // import Counter from './Counter';
-import Ticket from '../tickets/Ticket';
+// import Ticket from '../tickets/Ticket';
 import SpeakerCard from '../speakers/SpeakerCard';
+import Modal from '../shared/Modal';
 
 // Assets
 import { VIDEOS } from '../../assets/img/gifs';
@@ -15,12 +16,38 @@ import { GRAPHICS } from '../../assets/img/graphics';
 import { GUESTS } from '../../assets/placeholder/speakers';
 import { shuffleArray } from '../../utils/shuffleArray';
 // import { LOGOS } from '../../assets/img/logos';
+import { HOME } from '../../assets/img/pages';
 
 const GUEST_LIST = GUESTS;
 shuffleArray(GUEST_LIST);
 
 function Index() {
   const classes = useStyles();
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const handleClick = () => {
+    setModalOpen(true);
+  };
+
+  const modalAction = (
+    <div className={classes.actionsContainer}>
+      <a
+        href='https://live.tedxnitrourkela.com'
+        className={classes.button}
+        type='button'
+      >
+        Join the event on Airmeet
+      </a>
+
+      <a
+        href='https://youtu.be/4H43JgLkx8Q'
+        className={classes.button}
+        type='button'
+      >
+        Watch the event on YouTube
+      </a>
+    </div>
+  );
 
   return (
     <div className={classes.wrapper}>
@@ -41,7 +68,40 @@ function Index() {
           </Typography>
           {/* <Counter /> */}
 
-          <Ticket short />
+          <div className={classes.eventContainer}>
+            <img
+              className={classes.liveEvent}
+              src={HOME.EVENT_LIVE}
+              alt='Logo'
+              decoding='auto'
+              loading='eager'
+            />
+
+            <div className={classes.buttonContainer}>
+              <a
+                href='https://live.tedxnitrourkela.com'
+                className={classes.button}
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                Join the Event
+              </a>
+
+              <button
+                type='button'
+                onClick={handleClick}
+                onKeyDown={handleClick}
+                className={classes.button}
+              >
+                Join the Event (NITR Students)
+              </button>
+            </div>
+          </div>
+
+          {/* <Ticket short /> */}
         </div>
 
         <div className={classes.carousel}>
@@ -89,6 +149,15 @@ function Index() {
         className={`${classes.bottomLeft} `}
         src={GRAPHICS.BOTTOM_LEFT}
         alt='ellipse'
+      />
+
+      <Modal
+        title='NITR Student Event Join'
+        // eslint-disable-next-line
+        content='Please choose the relevant option. The students who bought the ticket can join the event on Airmeet.'
+        actions={modalAction}
+        open={modalOpen}
+        setOpen={setModalOpen}
       />
     </div>
   );
@@ -191,6 +260,7 @@ const useStyles = makeStyles((theme) => ({
   },
   someContainer: {
     width: '70%',
+    minHeight: '400px',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -201,5 +271,48 @@ const useStyles = makeStyles((theme) => ({
   },
   speakerContainer: {
     margin: '50px 10px',
+  },
+  button: {
+    margin: '5px 10px',
+    border: '1px solid #FF2B06',
+    borderRadius: '6px',
+    backgroundColor: '#1a1a1a',
+    padding: '10px 20px',
+    color: '#ffffff',
+    minWidth: '150px',
+    width: 'auto',
+    fontSize: '14px',
+    height: '45px',
+    '&:hover': {
+      backgroundColor: '#FF2B06',
+      cursor: 'pointer',
+    },
+  },
+  liveEvent: {
+    width: '70%',
+    height: 'auto',
+    marginBottom: 50,
+    marginTop: '50px',
+  },
+  buttonContainer: {
+    display: 'flex',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'column',
+    },
+  },
+  eventContainer: {
+    display: 'flex',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    flexDirection: 'column',
+    marginBottom: '50px',
+  },
+  actionsContainer: {
+    display: 'flex',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    flexDirection: 'column',
   },
 }));
