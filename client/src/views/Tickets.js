@@ -31,10 +31,12 @@ function Tickets() {
     isReferral = true;
   else isReferral = false;
 
-  const paymentLink = isReferral
-    ? `https://www.instamojo.com/@StudentActivityCenter/${referrals[3]}/`
-    : /* eslint-disable-next-line */
-      'https://www.instamojo.com/@StudentActivityCenter/l2819ae69330f4c8a8ee450758aa6b022/';
+  // const paymentLink = isReferral
+  //   ? `https://www.instamojo.com/@StudentActivityCenter/${referrals[3]}/`
+  //   : /* eslint-disable-next-line */
+  //     'https://www.instamojo.com/@StudentActivityCenter/l2819ae69330f4c8a8ee450758aa6b022/';
+  const paymentLink =
+    'https://www.instamojo.com/@StudentActivityCenter/l06ff4233e530421383ad4dc4ad8c7c3f/';
 
   // Component States
   const [modalOpen, setModalOpen] = useState(false);
