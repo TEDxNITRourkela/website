@@ -6,12 +6,12 @@ import {
   Drawer,
   ListItem,
   makeStyles,
-  Container,
+  // Container,
 } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
 // Components
-import Counter from '../homepage/Counter';
+// import Counter from '../homepage/Counter';
 
 // Assets
 import { tabs as TABS_NAV } from '../../assets/placeholder/common';
@@ -45,10 +45,9 @@ function Navbar({ window: cWindow }) {
 
   return (
     <div className={classes.root}>
-      <div className={classes.alertContainer}>
+      {/* <div className={classes.alertContainer}>
         <Container className={classes.alertSubcontainer}>
           <Typography className={classes.timer} variant='body2'>
-            {/* eslint-disable-next-line */}
             Reserve your seat now. Tickets closing in
           </Typography>
           <Counter />
@@ -61,7 +60,7 @@ function Navbar({ window: cWindow }) {
             </Link>
           </Typography>
         </Container>
-      </div>
+      </div> */}
       <Link to='/' className={classes.logoContainer}>
         <img
           className={classes.logo}
@@ -131,7 +130,7 @@ const useStyles = makeStyles((theme) => ({
     height: '100px',
     paddingTop: '20px',
     position: 'fixed',
-    top: 30,
+    top: 0,
     backgroundColor: theme.palette.background.default,
     display: 'flex',
     justifyContent: 'space-around',
