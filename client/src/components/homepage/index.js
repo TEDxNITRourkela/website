@@ -40,7 +40,7 @@ function Index() {
       </a>
 
       <a
-        href='https://youtu.be/1R2S8eJW7Fw'
+        href='https://youtu.be/XXOTgfGdVRo'
         className={classes.button}
         type='button'
       >
