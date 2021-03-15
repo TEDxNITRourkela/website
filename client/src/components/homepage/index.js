@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 // Libraries
 import { Typography } from '@material-ui/core';
@@ -8,7 +8,6 @@ import { makeStyles } from '@material-ui/core/styles';
 // import Counter from './Counter';
 // import Ticket from '../tickets/Ticket';
 import SpeakerCard from '../speakers/SpeakerCard';
-import Modal from '../shared/Modal';
 
 // Assets
 import { VIDEOS } from '../../assets/img/gifs';
@@ -23,31 +22,6 @@ shuffleArray(GUEST_LIST);
 
 function Index() {
   const classes = useStyles();
-  const [modalOpen, setModalOpen] = useState(false);
-
-  const handleClick = () => {
-    setModalOpen(true);
-  };
-
-  const modalAction = (
-    <div className={classes.actionsContainer}>
-      <a
-        href='https://live.tedxnitrourkela.com'
-        className={classes.button}
-        type='button'
-      >
-        Join the event on Airmeet
-      </a>
-
-      <a
-        href='https://youtu.be/XXOTgfGdVRo'
-        className={classes.button}
-        type='button'
-      >
-        Watch the event on YouTube
-      </a>
-    </div>
-  );
 
   return (
     <div className={classes.wrapper}>
@@ -76,56 +50,7 @@ function Index() {
               decoding='auto'
               loading='eager'
             />
-
-            <div className={classes.buttonContainer}>
-              <button
-                type='button'
-                onClick={handleClick}
-                onKeyDown={handleClick}
-                className={classes.button}
-              >
-                Join the Event (NITR Students)
-              </button>
-
-              <a
-                href='https://live.tedxnitrourkela.com'
-                className={classes.button}
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  border: '2px solid #FF2B06',
-                }}
-              >
-                Join the Event
-              </a>
-
-              <a
-                href='https://meet.google.com/jqa-xeed-xjc'
-                className={classes.button}
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                }}
-              >
-                Get Support / Onspot tickets
-              </a>
-            </div>
-
-            <Typography
-              variant='body2'
-              style={{
-                color: '#ffffff',
-                opacity: 0.6,
-                fontFamily: 'Zilla Slab',
-                marginTop: 30,
-              }}
-            >
-              Support Channel open from 10am to 6pm (14th March 2021)
-            </Typography>
           </div>
-
           {/* <Ticket short /> */}
         </div>
 
@@ -174,15 +99,6 @@ function Index() {
         className={`${classes.bottomLeft} `}
         src={GRAPHICS.BOTTOM_LEFT}
         alt='ellipse'
-      />
-
-      <Modal
-        title='NITR Student Event Join'
-        // eslint-disable-next-line
-        content='Please choose the relevant option. The students who bought the ticket can join the event on Airmeet.'
-        actions={modalAction}
-        open={modalOpen}
-        setOpen={setModalOpen}
       />
     </div>
   );
@@ -297,35 +213,11 @@ const useStyles = makeStyles((theme) => ({
   speakerContainer: {
     margin: '50px 10px',
   },
-  button: {
-    margin: '5px 10px',
-    border: '1px solid #FF2B06',
-    borderRadius: '6px',
-    backgroundColor: '#1a1a1a',
-    padding: '10px 20px',
-    color: '#ffffff',
-    minWidth: '220px',
-    width: 'auto',
-    fontSize: '14px',
-    height: '45px',
-    '&:hover': {
-      backgroundColor: '#FF2B06',
-      cursor: 'pointer',
-    },
-  },
   liveEvent: {
     width: '70%',
     height: 'auto',
     marginBottom: 50,
     marginTop: '50px',
-  },
-  buttonContainer: {
-    display: 'flex',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-    [theme.breakpoints.down('sm')]: {
-      flexDirection: 'column',
-    },
   },
   eventContainer: {
     display: 'flex',
