@@ -25,7 +25,7 @@ function About() {
     analytics().logEvent('Campus Ambassador Page Loaded');
   }, []);
 
-  const openForm = () => typeform.current.typeform.open();
+  // const openForm = () => typeform.current.typeform.open();
 
   return (
     <div className={classes.root}>
@@ -54,11 +54,11 @@ function About() {
           buttonText='Apply Now!'
         />
 
-        <div className={classes.buttonContainer}>
+        {/* <div className={classes.buttonContainer}>
           <button onClick={openForm} type='button' className={classes.button}>
             Apply Now
           </button>
-        </div>
+        </div> */}
       </Container>
       <img src={GRAPHICS.TOP_LEFT} alt='top left' className={classes.topLeft} />
     </div>
@@ -79,26 +79,26 @@ const useStyles = makeStyles((theme) => ({
     top: 0,
     left: 0,
   },
-  buttonContainer: {
-    width: '100%',
-    marginTop: '50px',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  button: {
-    border: '1px solid rgba(255,255,255,0.5)',
-    borderRadius: '6px',
-    backgroundColor: '#1a1a1a',
-    padding: '0px 20px',
-    color: '#ffffff',
-    minWidth: '150px',
-    minHeight: '50px',
-    width: 'auto',
-    fontSize: '16px',
-    '&:hover': {
-      backgroundColor: '#FF2B06',
-      cursor: 'pointer',
-    },
-  },
+  // buttonContainer: {
+  //   width: '100%',
+  //   marginTop: '50px',
+  //   display: 'flex',
+  //   justifyContent: 'center',
+  //   alignItems: 'center',
+  // },
+  // button: {
+  //   border: '1px solid rgba(255,255,255,0.5)',
+  //   borderRadius: '6px',
+  //   backgroundColor: '#1a1a1a',
+  //   padding: '0px 20px',
+  //   color: '#ffffff',
+  //   minWidth: '150px',
+  //   minHeight: '50px',
+  //   width: 'auto',
+  //   fontSize: '16px',
+  //   '&:hover': {
+  //     backgroundColor: '#FF2B06',
+  //     cursor: 'pointer',
+  //   },
+  // },
 }));
