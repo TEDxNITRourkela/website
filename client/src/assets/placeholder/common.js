@@ -11,10 +11,10 @@ export const tabs = [
     name: 'Partners',
     link: '/partners',
   },
-  {
-    name: 'Tickets',
-    link: '/tickets',
-  },
+  // {
+  //   name: 'Tickets',
+  //   link: '/tickets',
+  // },
   {
     name: 'Participate',
     link: '/campus_ambassadors',
