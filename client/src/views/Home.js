@@ -64,12 +64,14 @@ function Home() {
           <source src={HOME.LOGO_REVEAL} type='video/mp4' />
         </video>
       </Container>
-      <ReactTypeformEmbed
-        style={{ position: 'relative', height: '100vh' }}
-        hideHeaders
-        url='https://form.typeform.com/to/yZUXSe0j'
-        buttonText='Start!'
-      />
+      <Container>
+        <ReactTypeformEmbed
+          style={{ position: 'relative', height: '100vh' }}
+          hideHeaders
+          url='https://form.typeform.com/to/yZUXSe0j'
+          buttonText='Start!'
+        />
+      </Container>
 
       {/* <Subscribe /> */}
     </>
