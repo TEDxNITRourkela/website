@@ -43,6 +43,15 @@ function Home() {
       <Index />
 
       <Container>
+        <ReactTypeformEmbed
+          style={{ position: 'relative', height: '100vh' }}
+          hideHeaders
+          url='https://form.typeform.com/to/yZUXSe0j'
+          buttonText='Start!'
+        />
+      </Container>
+
+      <Container>
         <Typography variant='h2' className={classes.title}>
           TEDxNITRourkela Virtual Stage
         </Typography>
@@ -63,14 +72,6 @@ function Home() {
         <video controls className={classes.video}>
           <source src={HOME.LOGO_REVEAL} type='video/mp4' />
         </video>
-      </Container>
-      <Container>
-        <ReactTypeformEmbed
-          style={{ position: 'relative', height: '100vh' }}
-          hideHeaders
-          url='https://form.typeform.com/to/yZUXSe0j'
-          buttonText='Start!'
-        />
       </Container>
 
       {/* <Subscribe /> */}
