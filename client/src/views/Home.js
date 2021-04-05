@@ -44,7 +44,10 @@ function Home() {
 
       <Container>
         <ReactTypeformEmbed
-          style={{ position: 'relative', height: '100vh' }}
+          style={{
+            position: 'relative',
+            height: '100vh',
+          }}
           hideHeaders
           url='https://form.typeform.com/to/yZUXSe0j'
           buttonText='Start!'
