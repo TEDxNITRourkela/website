@@ -67,6 +67,7 @@ function Tickets() {
                 price={price}
                 tshirtCode={tshirtCode}
                 discountedPrice={discountedPrice}
+                isTshirtClassof2021={name === 'The Class-X of 2021'}
               />
             ),
           )}

@@ -1,3 +1,5 @@
+/* eslint-disable max-len */
+/* eslint-disable no-nested-ternary */
 import React, { useRef } from 'react';
 
 import { makeStyles, Typography } from '@material-ui/core';
@@ -10,6 +12,7 @@ function Product({
   description,
   tshirtCode,
   discountedPrice,
+  isTshirtClassof2021,
 }) {
   // Logic to determine the type of ticket.
   const referrals = window.location.pathname.split('/');
@@ -27,6 +30,22 @@ function Product({
 
   const openForm = () => {
     typeform.current.typeform.open();
+  };
+
+  const determineTypeformUrl = () => {
+    if (isTshirtClassof2021) {
+      if (isReferral) {
+        return `https://form.typeform.com/to/bbDWKgTG?is_referral=true&referral_code=${referrals[3]}&`;
+      }
+
+      return `https://form.typeform.com/to/bbDWKgTG?is_referral=false`;
+    }
+
+    if (isReferral) {
+      return `https://form.typeform.com/to/RbLawI6g?tshirt=${tshirtCode}&is_referral=true&referral_code=${referrals[3]}&`;
+    }
+
+    return `https://form.typeform.com/to/RbLawI6g?tshirt=${tshirtCode}&is_referral=false`;
   };
 
   return (
@@ -62,13 +81,7 @@ function Product({
         ref={typeform}
         hideHeaders
         hideFooter
-        url={
-          isReferral
-            ? // eslint-disable-next-line
-              `https://form.typeform.com/to/RbLawI6g?tshirt=${tshirtCode}&is_referral=true&referral_code=${referrals[3]}&`
-            : // eslint-disable-next-line
-              `https://form.typeform.com/to/RbLawI6g?tshirt=${tshirtCode}&is_referral=false`
-        }
+        url={determineTypeformUrl()}
         mode='pop_up'
         popup
         autoOpen={false}
