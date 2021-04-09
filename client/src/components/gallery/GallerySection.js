@@ -22,11 +22,29 @@ function GallerySection({ DATA }) {
     setOpen(false);
   };
 
+  const renderImage = (index, small = 'false') => {
+    return (
+      <div
+        className={
+          small === 'true' ? classes.imageContainer2 : classes.imageContainer1
+        }
+      >
+        <img
+          key={DATA[index].title}
+          src={DATA[index].image}
+          alt={DATA[index].title}
+          className={classes.image}
+          onClick={() => handleOpen(index)}
+        />
+      </div>
+    );
+  };
+
   const renderGrid1 = () => {
     const items1 = [];
     for (let i = 0; i < DATA.length - (DATA.length % 9); i += 9) {
       items1.push(
-        <div>
+        <div key={DATA[i].title}>
           <div className={classes.box1}>
             {renderImage(i)}
             {renderImage(i + 1)}
@@ -60,30 +78,15 @@ function GallerySection({ DATA }) {
     const items2 = [];
     for (let i = DATA.length - (DATA.length % 9); i < DATA.length; i += 1) {
       items2.push(
-        <div style={{ display: 'flex', flexBasis: '33.33%' }}>
+        <div
+          key={DATA[i].title}
+          style={{ display: 'flex', flexBasis: '33.33%' }}
+        >
           {renderImage(i)}
         </div>,
       );
     }
     return <div className={classes.box0}>{items2}</div>;
-  };
-
-  const renderImage = (index, small = 'false') => {
-    return (
-      <div
-        className={
-          small === 'true' ? classes.imageContainer2 : classes.imageContainer1
-        }
-      >
-        <img
-          key={DATA[index].title}
-          src={DATA[index].image}
-          alt={DATA[index].title}
-          className={classes.image}
-          onClick={() => handleOpen(index)}
-        />
-      </div>
-    );
   };
 
   return (
