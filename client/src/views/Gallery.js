@@ -7,12 +7,15 @@ import { Helmet } from 'react-helmet';
 
 // Utilities
 import { analytics } from '../config/firebase';
+import { shuffleArray } from '../utils/shuffleArray';
 
 // Components
 import GallerySection from '../components/gallery/GallerySection';
 
 // Placeholder
 import { GALLERY } from '../assets/img/pages';
+
+const GALLERY_LIST = shuffleArray(GALLERY);
 
 function Gallery() {
   const classes = useStyles();
@@ -34,7 +37,7 @@ function Gallery() {
           <div className={classes.horizontalLine} />
         </div>
       </div>
-      <GallerySection DATA={GALLERY} />
+      <GallerySection DATA={GALLERY_LIST} />
     </div>
   );
 }
