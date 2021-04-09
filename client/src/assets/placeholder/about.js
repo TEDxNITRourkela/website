@@ -249,8 +249,17 @@ const FAQ = [
   },
   {
     QUESTION: 'Who are the speakers for TEDxNITRourkela?',
-    ANSWER:
-      'We’re still working towards curating a fantastic experience for all of you. Feel free to keep an eye on our social media channels! Checkout our speakers section!',
+    ANSWER: [
+      'Pranav Khaitan:- An alumnus of NIT Rourkela and a member of the 2020 Nobel Peace price winning team, Senior Engineering lead at Google AI.',
+      'Lisa Russell:- Emmy award winner and an art curator in the UN and WHO.',
+      'Sabyasachi Patra:- Cinematographer and filmmaker, with multiple projects screened at major film festivals worldwide. He’s an alumnus of NIT Rourkela.',
+      'Lokesh K Gurram:- Co-founder at Ditto by Finshots and one of the sharpest financial brains of India.',
+      'Kabir Cafe:- Mumbai-based folk fusion band and their song ‘Mat Kar Maya ko Ahankar’ was featured in Scam1992.',
+      'Prof. Anup Nandy:- Researcher in ML and AI. He was one of the six scientists who represented India at the 5th BRICS Young Scientist Conclave-2020.',
+      'Jeremy Philemon:- One of the brains behind the covid19india.org initiative, with more than 1.75 billion hits on the website.',
+      'Ashwathy Satheesan:- Winner of the James Dyson award for her invention -Fleo; a stabilizing pen designed to help people with Parkinson’s.',
+      'Riki Biswas:- Co-founder of numerous revolutionary companies, Pointo, Rado, Solarstair etc.',
+    ],
   },
   {
     QUESTION: 'Who’s organizing the event?',

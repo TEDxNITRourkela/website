@@ -89,9 +89,21 @@ function FAQ() {
           </Typography>
         </CustomAccordionSummary>
         <CustomAccordionDetails>
-          <Typography className={classes.typography} variant='body2'>
-            {faq.ANSWER}
-          </Typography>
+          {typeof faq.ANSWER === 'string' ? (
+            <Typography className={classes.typography} variant='body2'>
+              {faq.ANSWER}
+            </Typography>
+          ) : (
+            <ul>
+              {faq.ANSWER.map((answer) => (
+                <li key={`${answer}`}>
+                  <Typography className={classes.typography} variant='body2'>
+                    {answer}
+                  </Typography>
+                </li>
+              ))}
+            </ul>
+          )}
         </CustomAccordionDetails>
       </CustomAccordion>
     ));

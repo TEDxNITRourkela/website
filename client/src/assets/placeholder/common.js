@@ -28,6 +28,10 @@ export const tabs = [
     link: '/wall',
   },
   {
+    name: 'Gallery',
+    link: '/gallery',
+  },
+  {
     name: 'Events',
     link: '/events',
   },
