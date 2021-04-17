@@ -180,8 +180,8 @@ function Induction() {
         <Fade in={open}>
           <div className={classes.paper}>
             <Typography variant='body1'>
-              Thank you for interest in joining TEDxNITRourkela. Please check
-              your Gmail for further instructions.
+              Thank you for your interest in joining TEDxNITRourkela. Please
+              check your Gmail for further instructions.
             </Typography>
           </div>
         </Fade>
