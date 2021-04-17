@@ -27,11 +27,12 @@ function Induction() {
   });
   const [error, setError] = useState('');
   const [open, setOpen] = useState(false);
+  const [isLoading, setLoading] = useState(false);
 
   const handleChange = (event) => {
     setTeam({ ...team, [event.target.name]: event.target.checked });
   };
-  const classes = useStyles();
+  const classes = useStyles({ isLoading });
 
   const valid = (teams) => {
     let isValid = true;
@@ -59,6 +60,7 @@ function Induction() {
     const fname = name.trim().split(' ').slice(0, 1).join(' ');
     const lname = name.trim().split(' ').slice(1).join(' ');
     if (valid(selected)) {
+      setLoading(true);
       axios
         .post(
           'https://server.tedxnitrourkela.com/induction/new',
@@ -77,21 +79,23 @@ function Induction() {
           },
         )
         .then(() => {
+          setLoading(false);
           setOpen(true);
           setError('');
+          setName('');
+          setEmail('');
+          setTeam({
+            Curation: false,
+            Design: false,
+            Management: false,
+            PR: false,
+            Technical: false,
+          });
         })
         .catch((err) => {
+          setLoading(false);
           setError(err.message.toString());
         });
-      setName('');
-      setEmail('');
-      setTeam({
-        Curation: false,
-        Design: false,
-        Management: false,
-        PR: false,
-        Technical: false,
-      });
     }
   };
 
@@ -155,7 +159,11 @@ function Induction() {
         </div>
         <Button type='submit' className={classes.submitButton}>
           <Typography variant='body1' className={classes.buttonText}>
-            Submit
+            {isLoading ? (
+              <i className='fas fa-circle-notch fa-spin' />
+            ) : (
+              'Submit'
+            )}
           </Typography>
         </Button>
       </form>
@@ -267,7 +275,7 @@ const useStyles = makeStyles((theme) => ({
   submitButton: {
     margin: '0px auto',
     padding: '4px 32px 4px 32px',
-    backgroundColor: 'unset',
+    backgroundColor: ({ isLoading }) => (isLoading ? '#ff0000' : 'unset'),
     borderRadius: 5,
     border: '1px solid #FF0000',
     '&:hover': {
