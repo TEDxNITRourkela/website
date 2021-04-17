@@ -1,5 +1,7 @@
 /* eslint-disable max-len */
 export const INDUCTION = Object.freeze({
+  Message:
+    'Thank you for your interest in joining TEDxNITRourkela. Please check your Gmail(Check spam also) for further instructions sent via mail from ‘info@tedxnitrourkela.com’.',
   TERMS: [
     ' All students of NIT Rourkela are eligible to apply for TEDxNITRClub regardless of age/batch/branch/course.',
     ' All candidates are expected to be able to fluently converse in English and overall have strong communication skills.',

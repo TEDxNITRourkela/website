@@ -15,6 +15,8 @@ import {
 import { makeStyles } from '@material-ui/core/styles';
 import axios from 'axios';
 
+import { INDUCTION } from '../../assets/placeholder/induction';
+
 function Induction() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -179,10 +181,7 @@ function Induction() {
       >
         <Fade in={open}>
           <div className={classes.paper}>
-            <Typography variant='body1'>
-              Thank you for your interest in joining TEDxNITRourkela. Please
-              check your Gmail for further instructions.
-            </Typography>
+            <Typography variant='body1'>{INDUCTION.Message}</Typography>
           </div>
         </Fade>
       </Modal>
