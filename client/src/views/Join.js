@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet';
 import { Container } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { ReactTypeformEmbed } from 'react-typeform-embed';
+import { Widget } from '@typeform/embed-react';
 
 // Utilities
 import { analytics } from '../config/firebase';
@@ -46,16 +46,7 @@ function Join() {
         <Container>
           <Team />
           <Container ref={ref}>
-            <ReactTypeformEmbed
-              style={{
-                position: 'relative',
-                height: '100vh',
-              }}
-              hideHeaders
-              // eslint-disable-next-line max-len
-              url='https://form.typeform.com/to/VytpJUSE'
-              buttonText='Apply!'
-            />
+            <Widget id='VytpJUSE' style={{ height: '70vh' }} />
           </Container>
           <Terms />
         </Container>
