@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 // Libraries
 import { Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import { ReactTypeformEmbed } from 'react-typeform-embed';
 
 // Components
 // import Counter from './Counter';
 // import Ticket from '../tickets/Ticket';
-import SpeakerCard from '../speakers/SpeakerCard';
+// import SpeakerCard from '../speakers/SpeakerCard';
 
 // Assets
 import { VIDEOS } from '../../assets/img/gifs';
@@ -22,6 +23,8 @@ shuffleArray(GUEST_LIST);
 
 function Index() {
   const classes = useStyles();
+  const registerTypeform = useRef();
+  const openForm = () => registerTypeform.current.typeform.open();
 
   return (
     <div className={classes.wrapper}>
@@ -30,13 +33,7 @@ function Index() {
           <Typography variant='body2' className={classes.content}>
             TECHNOLOGY . ENTERTAINMENT . DESIGN
           </Typography>
-          {/* <img
-            className={classes.logo}
-            src={LOGOS.TEDxNITRourkela.LIGHT}
-            alt='Logo'
-            decoding='auto'
-            loading='eager'
-          /> */}
+
           <Typography variant='h3' className={classes.topic}>
             &#8220;Learning from the Past&#8221;
           </Typography>
@@ -51,32 +48,26 @@ function Index() {
               loading='eager'
             />
           </div>
-          {/* <Ticket short /> */}
-        </div>
 
-        <div className={classes.carousel}>
-          {GUEST_LIST.map(
-            ({
-              name,
-              description,
-              shortDescription,
-              image,
-              links,
-              isLongCard,
-            }) => (
-              <div key={name} className={classes.speakerContainer}>
-                <SpeakerCard
-                  key={name}
-                  name={name}
-                  description={description}
-                  shortDescription={shortDescription}
-                  image={image}
-                  links={links}
-                  isLongCard={isLongCard}
-                />
-              </div>
-            ),
-          )}
+          <ReactTypeformEmbed
+            ref={registerTypeform}
+            hideHeaders
+            hideFooter
+            url='https://form.typeform.com/to/EKJxxvNJ'
+            mode='pop_up'
+            popup
+            autoOpen={false}
+            autoClose={100000000}
+            buttonText='Buy'
+            style={{ 'pointer-events': 'none' }}
+          />
+
+          <div className={classes.buttonContainer}>
+            <button onClick={openForm} type='button' className={classes.button}>
+              Register Now
+            </button>
+          </div>
+          {/* <Ticket short /> */}
         </div>
 
         <div className={classes.scrollDown}>
@@ -116,12 +107,13 @@ const useStyles = makeStyles((theme) => ({
     minHeight: '100vh',
   },
   container: {
-    marginTop: '150px',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
+    height: '100vh',
+    position: 'relative',
   },
   content: {
     marginTop: '10px',
@@ -179,6 +171,10 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    position: 'absolute',
+    bottom: '0%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
   },
   scrollIcon: {
     width: 36,
@@ -232,4 +228,60 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     flexDirection: 'column',
   },
+
+  buttonContainer: {
+    width: '100%',
+    marginTop: '20px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  button: {
+    border: '1px solid #FF2B06',
+    borderRadius: '6px',
+    backgroundColor: '#1a1a1a',
+    padding: '0px 20px',
+    color: '#ffffff',
+    minWidth: '150px',
+    minHeight: '50px',
+    width: 'auto',
+    fontSize: '16px',
+    '&:hover': {
+      backgroundColor: '#FF2B06',
+      cursor: 'pointer',
+    },
+  },
 }));
+
+/* <img
+            className={classes.logo}
+            src={LOGOS.TEDxNITRourkela.LIGHT}
+            alt='Logo'
+            decoding='auto'
+            loading='eager'
+          /> */
+
+/* <div className={classes.carousel}>
+          {GUEST_LIST.map(
+            ({
+              name,
+              description,
+              shortDescription,
+              image,
+              links,
+              isLongCard,
+            }) => (
+              <div key={name} className={classes.speakerContainer}>
+                <SpeakerCard
+                  key={name}
+                  name={name}
+                  description={description}
+                  shortDescription={shortDescription}
+                  image={image}
+                  links={links}
+                  isLongCard={isLongCard}
+                />
+              </div>
+            ),
+          )}
+        </div> */

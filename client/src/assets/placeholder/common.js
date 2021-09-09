@@ -15,14 +15,14 @@ export const tabs = [
   //   name: 'Tickets',
   //   link: '/tickets',
   // },
-  {
-    name: 'Participate',
-    link: '/campus_ambassadors',
-  },
-  {
-    name: 'Merch',
-    link: '/merchandise',
-  },
+  // {
+  //   name: 'Participate',
+  //   link: '/campus_ambassadors',
+  // },
+  // {
+  //   name: 'Merch',
+  //   link: '/merchandise',
+  // },
   {
     name: 'Wall',
     link: '/wall',
@@ -31,18 +31,18 @@ export const tabs = [
     name: 'Gallery',
     link: '/gallery',
   },
-  {
-    name: 'Join',
-    link: '/join',
-  },
-  {
-    name: 'Events',
-    link: '/events',
-  },
-  {
-    name: 'Our Community',
-    link: '/community',
-  },
+  // {
+  //   name: 'Join',
+  //   link: '/join',
+  // },
+  // {
+  //   name: 'Events',
+  //   link: '/events',
+  // },
+  // {
+  //   name: 'Our Community',
+  //   link: '/community',
+  // },
 ];
 
 export const temporary = [];
