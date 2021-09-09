@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 // Libraries
 import { Helmet } from 'react-helmet';
@@ -42,7 +42,7 @@ function Home() {
 
       <Index />
 
-      <Container>
+      {/* <Container>
         <ReactTypeformEmbed
           style={{
             position: 'relative',
@@ -52,7 +52,18 @@ function Home() {
           url='https://form.typeform.com/to/yZUXSe0j'
           buttonText='Start!'
         />
-      </Container>
+      </Container> */}
+
+      <ContentBanner DATA={CONTENT2.TWO} smallLogo wrapContainer />
+      <ContentBanner DATA={CONTENT2.ONE} wrapContainer />
+
+      <Partners DATA={PARTNER.ONE} home main />
+
+      {/* <Container className={classes.videoContainer}>
+        <video controls className={classes.video}>
+          <source src={HOME.LOGO_REVEAL} type='video/mp4' />
+        </video>
+      </Container> */}
 
       <Container>
         <Typography variant='h2' className={classes.title}>
@@ -64,19 +75,6 @@ function Home() {
           className={classes.image}
         />
       </Container>
-
-      <ContentBanner DATA={CONTENT2.TWO} smallLogo wrapContainer />
-      <ContentBanner DATA={CONTENT2.ONE} wrapContainer />
-
-      <Partners DATA={PARTNER.ONE} home main />
-
-      <Container className={classes.videoContainer}>
-        {/* eslint-disable-next-line */}
-        <video controls className={classes.video}>
-          <source src={HOME.LOGO_REVEAL} type='video/mp4' />
-        </video>
-      </Container>
-
       {/* <Subscribe /> */}
     </>
   );

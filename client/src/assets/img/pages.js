@@ -11,7 +11,7 @@ export const HOME = Object.freeze({
   LOGO_REVEAL:
     'https://res.cloudinary.com/tedxnitrourkela/video/upload/assets/pages/home/KvLF7sohcJPEdku3_rgmcp3.mp4',
   EVENT_LIVE:
-    'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/home/Group_615_c8kwwa.png',
+    'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/home/Group_615_t6w2nh.png',
 });
 
 export const ABOUT = Object.freeze({
