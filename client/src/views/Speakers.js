@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
 // Libraries
-import { makeStyles, Container } from '@material-ui/core';
+import { makeStyles, Container, Typography } from '@material-ui/core';
 import { Helmet } from 'react-helmet';
 
 // Components
@@ -11,7 +11,7 @@ import GuestCard from '../components/speakers/SpeakerCard';
 import { analytics } from '../config/firebase';
 
 // Assets
-import { GUESTS } from '../assets/placeholder/speakers';
+import { GUESTS, LIVEGUESTS } from '../assets/placeholder/speakers';
 import { GRAPHICS } from '../assets/img/graphics';
 
 function About() {
@@ -37,7 +37,35 @@ function About() {
       </Helmet>
 
       <Container>
-        <h1 className={classes.title}>TEDxNITRourkela 2021 Speakers</h1>
+        <Typography variant='h1' className={classes.title}>
+          TEDxNITRourkelaLIVE 2021
+        </Typography>
+
+        <div className={classes.guestsContainer}>
+          {LIVEGUESTS.map(
+            ({
+              name,
+              description,
+              shortDescription,
+              image,
+              links,
+              isLongCard,
+            }) => (
+              <GuestCard
+                key={name}
+                name={name}
+                description={description}
+                shortDescription={shortDescription}
+                image={image}
+                links={links}
+                isLongCard={isLongCard}
+              />
+            ),
+          )}
+        </div>
+        <Typography variant='h1' className={classes.title}>
+          TEDxNITRourkela 2021
+        </Typography>
 
         <div className={classes.guestsContainer}>
           {GUESTS.map(
@@ -88,11 +116,11 @@ const useStyles = makeStyles((theme) => ({
   title: {
     width: '100%',
     textAlign: 'center',
-    font: 'Zilla Slab',
-    weight: '700',
-    fontSize: '36px',
-    lineHeight: '43px',
+    fontFamily: 'Zilla Slab',
+    fontWeight: 'bold',
     color: '#ffffff',
+    paddingTop: 40,
+    marginBottom: 30,
   },
   topLeft: {
     position: 'absolute',
