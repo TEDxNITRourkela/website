@@ -62,6 +62,10 @@ export const SPEAKERS = Object.freeze({
     NINE:
       'https://res.cloudinary.com/tedxnitrourkela/image/upload/assets/pages/speakers/sabhyasachi-patra-removebg-preview_rrx28e.png',
   },
+  LIVESPEAKERS: {
+    ONE:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/2021-22/TEDxNITRourkelaLive/speakers/Zach_King_2_stntn1.png',
+  },
 });
 
 export const PARTNERS = Object.freeze({

@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 
 // Libraries
 import { Helmet } from 'react-helmet';
-import { Container } from '@material-ui/core';
+import { Container,Typography,makeStyles } from '@material-ui/core';
 
 // Utilities
 import { analytics } from '../config/firebase';
@@ -16,6 +16,7 @@ import ContentBanner from '../components/shared/ContentBanner';
 import { PARTNER } from '../assets/placeholder/partner';
 
 function Partner() {
+  const classes = useStyles();
   useEffect(() => {
     analytics().logEvent('Partner Page Loaded');
   }, []);
@@ -68,6 +69,21 @@ function Partner() {
       </Helmet>
 
       <Container style={{ marginTop: '150px' }}>
+        <div className={classes.titleContainer}>
+          <Typography variant='h2' className={classes.title}>
+            TedxNITRourkelaLIVE 2021
+          </Typography>
+          <div className={classes.horizontalLine} />
+        </div>
+        <Partners DATA={PARTNER.LIVE.ONE} />
+
+        
+        <div className={classes.titleContainer}>
+          <Typography variant='h2' className={classes.title}>
+            TedxNITRourkela 2021
+          </Typography>
+          <div className={classes.horizontalLine} />
+        </div>
         <Partners DATA={PARTNER.ONE} main />
         <Partners DATA={PARTNER.TWO} />
         <Partners DATA={PARTNER.THREE} />
@@ -81,3 +97,27 @@ function Partner() {
 }
 
 export default Partner;
+
+const useStyles = makeStyles((theme) => ({
+  titleContainer: {
+    display: 'flex',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    flexDirection: 'column',
+    margin: '10px 0',
+  },
+  title: {
+    marginBottom: '10px',
+    fontFamily: 'Zilla Slab',
+    fontWeight: 800,
+    paddingTop: 40,
+    textAlign: 'center',
+    color: theme.palette.common.white,
+  },
+  horizontalLine: {
+    width: '80%',
+    height: '1px',
+    backgroundColor: '#ffffff',
+    opacity: 0.3,
+  },
+}));

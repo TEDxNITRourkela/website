@@ -3,6 +3,19 @@ import { LOGOS } from '../img/logos';
 import { PARTNERS } from '../img/pages';
 
 export const PARTNER = Object.freeze({
+  LIVE: {
+    ONE: {
+      title: 'Social Media Partner',
+      partners: [
+        {
+          img: PARTNERS.ROURKELA360,
+          href: 'https://rourkela360.business.site/',
+          hrefTitle: 'Rourkela360',
+          size: '15%',
+        },
+      ],
+    },
+  },
   ONE: {
     title: 'Title Sponsor',
     partners: [

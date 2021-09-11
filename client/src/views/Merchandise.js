@@ -74,7 +74,7 @@ function Tickets() {
         </div>
 
         <Typography variant='body2' className={classes.measurements}>
-          * shirts are out of stock
+          * merchandise coming soon
         </Typography>
 
         <Container className={classes.tableContainer}>
