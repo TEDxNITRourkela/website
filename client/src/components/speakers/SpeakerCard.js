@@ -12,7 +12,7 @@ function GuestCard({
   links,
   isLongCard: isLong,
 }) {
-  const isSpeaker = name !== 'John Doe';
+  const isSpeaker = name !== '';
   const classes = useStyles({ isSpeaker, isLong });
   const [showFront, setShowFront] = useState(true);
   const [cardStyle, setCardStyle] = useState(classes.card);
@@ -47,7 +47,7 @@ function GuestCard({
             </>
           )}
 
-          {showFront && name !== 'John Doe' && (
+          {showFront && name !== '' && (
             <i
               className={`${classes.flipSymbol} fas fa-info-circle`}
               onClick={onClick}

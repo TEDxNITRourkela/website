@@ -1,18 +1,18 @@
 /* eslint-disable max-len */
 /* eslint-disable no-nested-ternary */
-import React, { useRef } from 'react';
+import React from 'react';
 
 import { makeStyles, Typography } from '@material-ui/core';
-import { ReactTypeformEmbed } from 'react-typeform-embed';
+// import { ReactTypeformEmbed } from 'react-typeform-embed';
 
 function Product({
   imgSrc,
   title,
   price,
   description,
-  tshirtCode,
+  // tshirtCode,
   discountedPrice,
-  isTshirtClassof2021,
+  // isTshirtClassof2021,
 }) {
   // Logic to determine the type of ticket.
   const referrals = window.location.pathname.split('/');
@@ -26,27 +26,27 @@ function Product({
   else isReferral = false;
 
   const classes = useStyles();
-  const typeform = useRef();
+  // const typeform = useRef();
 
-  const openForm = () => {
-    typeform.current.typeform.open();
-  };
+  // const openForm = () => {
+  //   typeform.current.typeform.open();
+  // };
 
-  const determineTypeformUrl = () => {
-    if (isTshirtClassof2021) {
-      if (isReferral) {
-        return `https://form.typeform.com/to/bbDWKgTG?is_referral=true&referral_code=${referrals[3]}&`;
-      }
+  // const determineTypeformUrl = () => {
+  //   if (isTshirtClassof2021) {
+  //     if (isReferral) {
+  //       return `https://form.typeform.com/to/bbDWKgTG?is_referral=true&referral_code=${referrals[3]}&`;
+  //     }
 
-      return `https://form.typeform.com/to/bbDWKgTG?is_referral=false`;
-    }
+  //     return `https://form.typeform.com/to/bbDWKgTG?is_referral=false`;
+  //   }
 
-    if (isReferral) {
-      return `https://form.typeform.com/to/RbLawI6g?tshirt=${tshirtCode}&is_referral=true&referral_code=${referrals[3]}&`;
-    }
+  //   if (isReferral) {
+  //     return `https://form.typeform.com/to/RbLawI6g?tshirt=${tshirtCode}&is_referral=true&referral_code=${referrals[3]}&`;
+  //   }
 
-    return `https://form.typeform.com/to/RbLawI6g?tshirt=${tshirtCode}&is_referral=false`;
-  };
+  //   return `https://form.typeform.com/to/RbLawI6g?tshirt=${tshirtCode}&is_referral=false`;
+  // };
 
   return (
     <div className={classes.root}>
@@ -77,7 +77,7 @@ function Product({
         </Typography>
       </div>
 
-      <ReactTypeformEmbed
+      {/* <ReactTypeformEmbed
         ref={typeform}
         hideHeaders
         hideFooter
@@ -92,8 +92,8 @@ function Product({
       <div className={classes.buttonContainer}>
         <button onClick={openForm} type='button' className={classes.button}>
           Buy
-        </button>
-      </div>
+        </button> 
+      </div> */}
     </div>
   );
 }
@@ -103,7 +103,7 @@ export default Product;
 const useStyles = makeStyles(() => ({
   root: {
     width: '360px',
-    height: '550px',
+    height: '500px',
     display: 'flex',
     justifyContent: 'flex-start',
     alignItems: 'center',

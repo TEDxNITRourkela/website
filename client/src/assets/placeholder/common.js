@@ -19,10 +19,10 @@ export const tabs = [
   //   name: 'Participate',
   //   link: '/campus_ambassadors',
   // },
-  // {
-  //   name: 'Merch',
-  //   link: '/merchandise',
-  // },
+  {
+    name: 'Merch',
+    link: '/merchandise',
+  },
   {
     name: 'Wall',
     link: '/wall',
