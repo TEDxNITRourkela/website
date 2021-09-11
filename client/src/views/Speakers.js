@@ -37,7 +37,7 @@ function About() {
       </Helmet>
 
       <Container>
-        <h1 className={classes.title}>Speakers & Performers</h1>
+        <h1 className={classes.title}>TEDxNITRourkela 2021 Speakers</h1>
 
         <div className={classes.guestsContainer}>
           {GUESTS.map(

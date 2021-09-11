@@ -3,7 +3,7 @@ import { SPEAKERS } from '../img/pages';
 
 export const GUESTS = [
   {
-    name: 'Ashwathy  Satheesan',
+    name: '',
     description: [
       'A graduate of ',
       { href: 'http://www.nid.edu/', content: 'NID Ahemdabad' },
@@ -14,8 +14,8 @@ export const GUESTS = [
       },
       ' in 2019.',
     ],
-    shortDescription: 'Winner | James Dyson Award',
-    image: SPEAKERS.SPEAKERS.ONE,
+    shortDescription: '',
+    image: SPEAKERS.SILHOUETTE.ONE,
     isLongCard: false,
     links: [
       {
@@ -39,14 +39,14 @@ export const GUESTS = [
     ],
   },
   {
-    name: 'Anup Nandy',
+    name: '',
     description: [
       'Professor Anup Nandy, a researcher in AI & ML area and professor at ',
       { href: 'https://nitrkl.ac.in/', content: 'NIT Rourkela' },
       ', was one of the few Indian scientists selected to present his research in the momentous 5th BRICS Young Scientist Conclave 2020.',
     ],
-    shortDescription: 'Represented India @ 5th BRICS YSC',
-    image: SPEAKERS.SPEAKERS.TWO,
+    shortDescription: '',
+    image: SPEAKERS.SILHOUETTE.TWO,
     isLongCard: false,
     links: [
       {
@@ -70,7 +70,7 @@ export const GUESTS = [
     ],
   },
   {
-    name: 'Lisa Russell',
+    name: '',
     description: [
       'Lisa Russell, MPH, is an ',
       { href: 'https://emmys.com', content: 'Emmy-winning' },
@@ -81,8 +81,8 @@ export const GUESTS = [
       },
       ' speaker, Fulbright Specialist and an accomplished presenter along with many other accolades.',
     ],
-    shortDescription: 'Winner | Emmy Award 2009',
-    image: SPEAKERS.SPEAKERS.THREE,
+    shortDescription: '',
+    image: SPEAKERS.SILHOUETTE.THREE,
     isLongCard: false,
     links: [
       {
@@ -112,7 +112,7 @@ export const GUESTS = [
     ],
   },
   {
-    name: 'Pranav Khaitan',
+    name: '',
     description: [
       'Pranav Khaitan is a senior engineering lead at Google AI where he led various R&D projects like Chrome, Youtube. He was also a part of the ',
       { href: 'https://www.nobelprize.org/', content: 'Nobel Peace Prize' },
@@ -121,8 +121,8 @@ export const GUESTS = [
       ' and the ',
       { href: 'https://www.worldbank.org/en/home', content: 'World Bank.' },
     ],
-    shortDescription: 'Winning Team of Nobel Peace Prize 2020',
-    image: SPEAKERS.SPEAKERS.FOUR,
+    shortDescription: '',
+    image: SPEAKERS.SILHOUETTE.FOUR,
     isLongCard: false,
     links: [
       {
@@ -146,14 +146,14 @@ export const GUESTS = [
     ],
   },
   {
-    name: 'Jeremy Philemon',
+    name: '',
     description: [
       'Jeremy has been maintaining the ',
       { href: 'https://covid19india.org', content: 'covid19india.org' },
       ' website since its initial push to production, giving access to centralized, reliable data presented with clarity and good faith.',
     ],
-    shortDescription: 'Team led the initiative covid19india.org',
-    image: SPEAKERS.SPEAKERS.FIVE,
+    shortDescription: '',
+    image: SPEAKERS.SILHOUETTE.FIVE,
     isLongCard: false,
     links: [
       {
@@ -177,7 +177,7 @@ export const GUESTS = [
     ],
   },
   {
-    name: 'Lokesh K. Gurram',
+    name: '',
     description: [
       'Co-founder at ',
       { href: 'https://finshots.in/', content: 'Finshots' },
@@ -185,8 +185,8 @@ export const GUESTS = [
       { href: 'https://home.iitd.ac.in/', content: 'IIT Delhi' },
       ' and one of the few people who truly understand the meaning of building revolutionary services and technology.',
     ],
-    shortDescription: 'Co-founder of Ditto by Finshots',
-    image: SPEAKERS.SPEAKERS.SIX,
+    shortDescription: '',
+    image: SPEAKERS.SILHOUETTE.SIX,
     isLongCard: false,
     links: [
       {
@@ -210,7 +210,7 @@ export const GUESTS = [
     ],
   },
   {
-    name: 'Kabir Cafe',
+    name: '',
     description: [
       'Kabir Cafe is a Mumbai-based folk fusion band known for taking the voice of the saint Kabir Das across the country through their compositions.  In an era where music is losing its credibility, Kabir Cafe has made sure that they present Kabir’s poetry musically without compromising its beauty. Their song ',
       {
@@ -226,9 +226,9 @@ export const GUESTS = [
       },
       ', and was widely critically acclaimed.',
     ],
-    shortDescription: 'Scam 1992 Song Artist',
-    image: SPEAKERS.SPEAKERS.SEVEN,
-    isLongCard: true,
+    shortDescription: '',
+    image: SPEAKERS.SILHOUETTE.SEVEN,
+    isLongCard: false,
     links: [
       {
         link: 'https://twitter.com/KabirCafe',
@@ -257,12 +257,12 @@ export const GUESTS = [
     ],
   },
   {
-    name: 'Riki Biswas',
+    name: '',
     description: [
       'Mr. Biswas is an alumnus of IITG and co-founder of numerous revolutionary companies, Pointo being one of them. Pointo provides an app-based e-rickshaw booking facility. Rodo, the brainchild of Mr. Biswas, is India’s FIRST dock-less public e-bicycle sharing service that aims for a cleaner, greener, hassle-free environment',
     ],
-    shortDescription: 'Co-Founder & CEO of Pointo',
-    image: SPEAKERS.SPEAKERS.EIGHT,
+    shortDescription: '',
+    image: SPEAKERS.SILHOUETTE.EIGHT,
     isLongCard: false,
     links: [
       {
@@ -285,56 +285,56 @@ export const GUESTS = [
       },
     ],
   },
-  {
-    name: 'Sabyasachi Patra',
-    description: [
-      'Mr. Patra is an ',
-      { href: 'https://ximb.edu.in/', content: 'NIT Rourkela' },
-      ' alumnus and did his Masters from ',
-      { href: '', content: 'XIMB' },
-      ,
-      '. After years in corporate, he turned his life and started his filming company Wild Tiger Productions. He has been featured in press releases of Adobe Spark, ',
-      {
-        href:
-          'https://www.newindianexpress.com/education/edex/2014/jun/30/Preserving-Wildlife-his-Priority-630148.html',
-        content: 'The New Indian Express',
-      },
-      ' to name a few.',
-    ],
-    shortDescription: 'Wildlife Filmographer | Engineer',
-    image: SPEAKERS.SPEAKERS.NINE,
-    isLongCard: false,
-    links: [
-      {
-        link: 'https://www.linkedin.com/in/sapatra/',
-        link_type: 'fab fa-linkedin-in',
-        link_name: 'linkedin',
-        aria_label: 'LinkedIn',
-      },
-      {
-        link: 'https://www.instagram.com/indiawilds/',
-        link_type: 'fab fa-instagram',
-        link_name: 'instagram',
-        aria_label: 'Instagram',
-      },
-      {
-        link: 'https://www.facebook.com/riki.biswas.52',
-        link_type: 'fab fa-facebook-f',
-        link_name: 'facebook',
-        aria_label: 'Facebook',
-      },
-      {
-        link: 'https://twitter.com/indiawilds',
-        link_type: 'fab fa-twitter',
-        link_name: 'twitter',
-        aria_label: 'Twitter',
-      },
-      {
-        link: 'https://www.indiawilds.com/',
-        link_type: 'fab fa-squarespace',
-        link_name: 'squarespace',
-        aria_label: 'Website',
-      },
-    ],
-  },
+  // {
+  //   name: '',
+  //   description: [
+  //     'Mr. Patra is an ',
+  //     { href: 'https://ximb.edu.in/', content: 'NIT Rourkela' },
+  //     ' alumnus and did his Masters from ',
+  //     { href: '', content: 'XIMB' },
+  //     ,
+  //     '. After years in corporate, he turned his life and started his filming company Wild Tiger Productions. He has been featured in press releases of Adobe Spark, ',
+  //     {
+  //       href:
+  //         'https://www.newindianexpress.com/education/edex/2014/jun/30/Preserving-Wildlife-his-Priority-630148.html',
+  //       content: 'The New Indian Express',
+  //     },
+  //     ' to name a few.',
+  //   ],
+  //   shortDescription: '',
+  //   image: SPEAKERS.SHILHOUTTE.NINE,
+  //   isLongCard: false,
+  //   links: [
+  //     {
+  //       link: 'https://www.linkedin.com/in/sapatra/',
+  //       link_type: 'fab fa-linkedin-in',
+  //       link_name: 'linkedin',
+  //       aria_label: 'LinkedIn',
+  //     },
+  //     {
+  //       link: 'https://www.instagram.com/indiawilds/',
+  //       link_type: 'fab fa-instagram',
+  //       link_name: 'instagram',
+  //       aria_label: 'Instagram',
+  //     },
+  //     {
+  //       link: 'https://www.facebook.com/riki.biswas.52',
+  //       link_type: 'fab fa-facebook-f',
+  //       link_name: 'facebook',
+  //       aria_label: 'Facebook',
+  //     },
+  //     {
+  //       link: 'https://twitter.com/indiawilds',
+  //       link_type: 'fab fa-twitter',
+  //       link_name: 'twitter',
+  //       aria_label: 'Twitter',
+  //     },
+  //     {
+  //       link: 'https://www.indiawilds.com/',
+  //       link_type: 'fab fa-squarespace',
+  //       link_name: 'squarespace',
+  //       aria_label: 'Website',
+  //     },
+  //   ],
+  // },
 ];

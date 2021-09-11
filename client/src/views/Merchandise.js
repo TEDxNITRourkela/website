@@ -26,7 +26,7 @@ function Tickets() {
   return (
     <div className={classes.root}>
       <Helmet>
-        <title>TEDxNITRourkela</title>
+        <title>TEDxNITRourkela | Merchandise</title>
         <meta name='title' content='TEDxNITRourkela' />
         <link rel='canonical' href='https://tedxnitrourkela.com/merchandise' />
         {MERCH.map((product) => (
@@ -72,6 +72,10 @@ function Tickets() {
             ),
           )}
         </div>
+
+        <Typography variant='body2' className={classes.measurements}>
+          * shirts are out of stock
+        </Typography>
 
         <Container className={classes.tableContainer}>
           <CustomTable
