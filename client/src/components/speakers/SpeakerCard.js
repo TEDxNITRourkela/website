@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 // Libraries
 import { makeStyles, Typography } from '@material-ui/core';
 
+import { SPEAKERS } from '../../assets/img/pages';
+
 function GuestCard({
   name,
   description,
@@ -12,7 +14,7 @@ function GuestCard({
   links,
   isLongCard: isLong,
 }) {
-  const isSpeaker = name !== '';
+  const isSpeaker = name !== null;
   const classes = useStyles({ isSpeaker, isLong });
   const [showFront, setShowFront] = useState(true);
   const [cardStyle, setCardStyle] = useState(classes.card);
@@ -26,87 +28,107 @@ function GuestCard({
   };
 
   return (
-    <div className={classes.root}>
-      <div className={cardStyle}>
-        <div className={`${classes.common} ${classes.front}`}>
-          <div
-            className={classes.imgDiv}
-            style={{
-              // eslint-disable-next-line
-              backgroundImage: `linear-gradient(to bottom, transparent, transparent, #232323), url(${image})`,
-            }}
-          />
-          {isSpeaker && (
-            <>
-              <Typography className={classes.frontName} variant='h3'>
-                {name}
-              </Typography>
-              <Typography className={classes.frontDescription} variant='body1'>
-                {shortDescription}
-              </Typography>
-            </>
-          )}
+    <div>
+      {name ? (
+        <div className={classes.root}>
+          <div className={cardStyle}>
+            <div className={`${classes.common} ${classes.front}`}>
+              <div
+                className={classes.imgDiv}
+                style={{
+                  // eslint-disable-next-line
+                  backgroundImage: `linear-gradient(to bottom, transparent, transparent, #232323), url(${image})`,
+                }}
+              />
+              
+              <>
+                <Typography className={classes.frontName} variant='h3'>
+                  {name}
+                </Typography>
+                <Typography
+                  className={classes.frontDescription}
+                  variant='body1'
+                >
+                  {shortDescription}
+                </Typography>
+              </>
+              
+              {showFront && (
+                <i
+                  className={`${classes.flipSymbol} fas fa-info-circle`}
+                  onClick={onClick}
+                  onKeyDown={onClick}
+                  role='button'
+                  tabIndex='0'
+                  aria-label='Rotate Button'
+                />
+              )}
+            </div>
 
-          {showFront && name !== '' && (
-            <i
-              className={`${classes.flipSymbol} fas fa-info-circle`}
-              onClick={onClick}
-              onKeyDown={onClick}
-              role='button'
-              tabIndex='0'
-              aria-label='Rotate Button'
-            />
-          )}
-        </div>
+            <div className={`${classes.common} ${classes.back}`}>
+              <div className={classes.infoContainer}>
+                <Typography className={classes.name} variant='h3'>
+                  {name}
+                </Typography>
+                <Typography className={classes.description} variant='body1'>
+                  {description.map((item) =>
+                    typeof item === 'string' ? (
+                      <span key={item}>{item}</span>
+                    ) : (
+                      <a
+                        key={item.content}
+                        className={`${classes.description} ${classes.dsLinks}`}
+                        href={item.href}
+                        target='_blank'
+                        rel='noreferrer'
+                      >
+                        {item.content}
+                      </a>
+                    ),
+                  )}
+                </Typography>
+              </div>
 
-        <div className={`${classes.common} ${classes.back}`}>
-          <div className={classes.infoContainer}>
-            <Typography className={classes.name} variant='h3'>
-              {name}
-            </Typography>
-            <Typography className={classes.description} variant='body1'>
-              {description.map((item) =>
-                typeof item === 'string' ? (
-                  <span key={item}>{item}</span>
-                ) : (
+              <div className={classes.linksContainer}>
+                {links.map((link, index) => (
                   <a
-                    key={item.content}
-                    className={`${classes.description} ${classes.dsLinks}`}
-                    href={item.href}
+                    key={link.link}
+                    href={link.link}
                     target='_blank'
                     rel='noreferrer'
+                    aria-label={link.aria_label}
                   >
-                    {item.content}
+                    <i className={`${classes.icons} ${link.link_type}`} />
                   </a>
-                ),
-              )}
-            </Typography>
-          </div>
+                ))}
+              </div>
 
-          <div className={classes.linksContainer}>
-            {links.map((link, index) => (
-              <a
-                key={link.link}
-                href={link.link}
-                target='_blank'
-                rel='noreferrer'
-                aria-label={link.aria_label}
-              >
-                <i className={`${classes.icons} ${link.link_type}`} />
-              </a>
-            ))}
+              <i
+                className={`${classes.flipSymbol} far fa-times-circle`}
+                onClick={onClick}
+                onKeyDown={onClick}
+                role='button'
+                tabIndex='0'
+                aria-label='Rotate Button'
+              />
+            </div>
           </div>
-
-          <i
-            className={`${classes.flipSymbol} far fa-times-circle`}
-            onClick={onClick}
-            onKeyDown={onClick}
-            role='button'
-            tabIndex='0'
-            aria-label='Rotate Button'
-          />
         </div>
-      </div>
+      ) : (
+        <div className={classes.root}>
+          <div className={cardStyle}>
+            <div className={`${classes.common} ${classes.front}`}>
+              <div
+                className={classes.imgDiv}
+                style={{
+                  // eslint-disable-next-line
+                  backgroundImage: `linear-gradient(to bottom, transparent, transparent, #232323), url(${SPEAKERS.SILHOUETTE.TWO})`,
+                }}
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
