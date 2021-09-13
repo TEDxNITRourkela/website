@@ -83,6 +83,43 @@ export const LIVEGUESTS = [
       },
     ],
   },
+  {
+    name: 'Jamil Zaki',
+    description: [
+      'Jamil Zaki is a professor at ',
+      {
+        href: 'https://psychology.stanford.edu/people/jamil-zaki',
+        content: 'Stanford University',
+      },
+      'and the director of the Stanford Social Neuroscience Lab. He is the winner of the prestigious Sage Young Scholar and has his writings featured in The New York Times, The Washington Post, The New Yorker, and The Atlantic',
+      
+    ],
+    shortDescription: 'Stanford Director Social Neuroscience Lab',
+    image: SPEAKERS.LIVESPEAKERS.THREE,
+    isLongCard: false,
+    links: [
+      {
+        link: 'https://psychology.stanford.edu/people/jamil-zaki',
+        link_type: 'fas fa-university',
+        link_name: 'University',
+        aria_label: 'University',
+      },
+      {
+        link:
+          'https://twitter.com/zakijam?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor',
+        link_type: 'fab fa-twitter-square',
+        link_name: 'twitter',
+        aria_label: 'Twitter',
+      },
+      {
+        link: 'https://www.linkedin.com/in/jamil-zaki-b0b4a9192',
+        link_type: 'fab fa-linkedin',
+        link_name: 'Linkedin',
+        aria_label: 'Linkedin',
+      },
+    ],
+  },
+  ,
 ];
 
 export const GUESTS = [
