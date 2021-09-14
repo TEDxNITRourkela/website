@@ -92,7 +92,6 @@ export const LIVEGUESTS = [
         content: 'Stanford University',
       },
       'and the director of the Stanford Social Neuroscience Lab. He is the winner of the prestigious Sage Young Scholar and has his writings featured in The New York Times, The Washington Post, The New Yorker, and The Atlantic',
-      
     ],
     shortDescription: 'Stanford Director Social Neuroscience Lab',
     image: SPEAKERS.LIVESPEAKERS.THREE,
@@ -119,7 +118,47 @@ export const LIVEGUESTS = [
       },
     ],
   },
-  ,
+  {
+    name: 'Isha Datar',
+    description: [
+      'Isha Datar, apart from being the Executive Director of ',
+      {
+        href: 'https://new-harvest.org',
+        content: 'New Harvest',
+      },
+      ' has made her mark by emphasizing and focusing on the advancement of cellular agriculture. She has highlighted the opportunities for cutting-edge innovation to farmers, producers, grocery stores, to name a few.',
+    ],
+    shortDescription: 'Executive Director New Harvest',
+    image: SPEAKERS.LIVESPEAKERS.FOUR,
+    isLongCard: false,
+    links: [
+      {
+        link: 'https://new-harvest.org/isha-paper-ten-year-anniversary/',
+        link_type: 'fas fa-globe',
+        link_name: 'website',
+        aria_label: 'Website',
+      },
+      {
+        link: 'https://instagram.com/newharvestorg?utm_medium=copy_link',
+        link_type: 'fab fa-instagram',
+        link_name: 'instagram',
+        aria_label: 'Instagram',
+      },
+      {
+        link:
+          'https://twitter.com/IshaDatar?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor',
+        link_type: 'fab fa-twitter-square',
+        link_name: 'twitter',
+        aria_label: 'Twitter',
+      },
+      {
+        link: 'https://www.linkedin.com/in/ishadatar',
+        link_type: 'fab fa-linkedin',
+        link_name: 'Linkedin',
+        aria_label: 'Linkedin',
+      },
+    ],
+  },
 ];
 
 export const GUESTS = [
