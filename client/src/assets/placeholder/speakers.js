@@ -159,6 +159,46 @@ export const LIVEGUESTS = [
       },
     ],
   },
+  {
+    name: 'Steven Johnson',
+    description: [
+      'Steven Johnson has authored numerous books on the intersection of science, technology, and culture. He is the recipient of ',
+      {
+        href: 'https://newhouse.syr.edu/centers/mirror-awards/',
+        content: 'Newhouse School’s fourth annual Mirror Awards',
+      },
+      ' for his ',
+      {
+        href: 'https://newhouse.syr.edu/centers/mirror-awards/',
+        content: 'TIME magazine',
+      },
+      ' cover article. His writings have been featured in The New York Times, The Wall Street Journal, etc.',
+    ],
+    shortDescription: 'Author | Media Theorist',
+    image: SPEAKERS.LIVESPEAKERS.FIVE,
+    isLongCard: false,
+    links: [
+      {
+        link: 'https://stevenberlinjohnson.com/',
+        link_type: 'fas fa-globe',
+        link_name: 'website',
+        aria_label: 'Website',
+      },
+      {
+        link: 'https://www.facebook.com/stevenjohnsonauthor',
+        link_type: 'fab fa-facebook-f',
+        link_name: 'facebook',
+        aria_label: 'Facebook',
+      },
+      {
+        link:
+          'https://twitter.com/stevenbjohnson?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor',
+        link_type: 'fab fa-twitter-square',
+        link_name: 'twitter',
+        aria_label: 'Twitter',
+      },
+    ],
+  },
 ];
 
 export const GUESTS = [

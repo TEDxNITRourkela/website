@@ -71,6 +71,8 @@ export const SPEAKERS = Object.freeze({
       'https://res.cloudinary.com/tedxnitrourkela/image/upload/2021-22/TEDxNITRourkelaLive/speakers/Jamil_Zaki_zewzqc.png',
     FOUR:
       'https://res.cloudinary.com/tedxnitrourkela/image/upload/2021-22/TEDxNITRourkelaLive/speakers/Isha_Datar_i2acyl.png',
+    FIVE:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/2021-22/TEDxNITRourkelaLive/speakers/Steven_Johnson_2_pks9l9.png',
   },
 });
 
