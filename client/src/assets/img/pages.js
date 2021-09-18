@@ -73,6 +73,10 @@ export const SPEAKERS = Object.freeze({
       'https://res.cloudinary.com/tedxnitrourkela/image/upload/2021-22/TEDxNITRourkelaLive/speakers/Isha_Datar_i2acyl.png',
     FIVE:
       'https://res.cloudinary.com/tedxnitrourkela/image/upload/2021-22/TEDxNITRourkelaLive/speakers/Steven_Johnson_2_pks9l9.png',
+    SIX:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/2021-22/TEDxNITRourkelaLive/speakers/Pardis_Parker_1_ssigeg.png',
+    SEVEN:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/2021-22/TEDxNITRourkelaLive/speakers/FRAME_gd1npb.png',
   },
 });
 
@@ -101,6 +105,10 @@ export const PARTNERS = Object.freeze({
     'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/Rourkela_shines-removebg-preview_edahhf.png',
   OVOTEES:
     'https://res.cloudinary.com/tedxnitrourkela/image/upload/partners/tedx/ovotees-removebg-preview_wgiddk.png',
+  ROURKELA_TIPS:
+    'https://res.cloudinary.com/tedxnitrourkela/image/upload/2021-22/TEDxNITRourkelaLive/partners/RT_LOGO_1_1_rkcddh.jpg',
+  THE_PIONEER:
+    'https://res.cloudinary.com/tedxnitrourkela/image/upload/2021-22/TEDxNITRourkelaLive/partners/Logo_1_lycv7w.jpg',
 });
 
 export const TICKETS = Object.freeze({

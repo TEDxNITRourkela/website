@@ -199,6 +199,84 @@ export const LIVEGUESTS = [
       },
     ],
   },
+  {
+    name: 'Pardis Parker',
+    description: [
+      'Pardis Parker is an award-winning director, writer, actor, and comedian. He has done commendable work in the field of entertainment and has been validated with several prestigious awards and nominations. His acting work has received acclamation from the ',
+      {
+        href: 'https://nsi-canada.ca/',
+        content: 'National Screen Institute of Canada.',
+      },
+    ],
+    shortDescription: 'Award winning Director | Comedian',
+    image: SPEAKERS.LIVESPEAKERS.SIX,
+    isLongCard: false,
+    links: [
+      {
+        link: 'http://www.pardisparker.com/',
+        link_type: 'fas fa-globe',
+        link_name: 'website',
+        aria_label: 'Website',
+      },
+      {
+        link: 'https://www.instagram.com/pardisparker/?hl=en',
+        link_type: 'fab fa-instagram',
+        link_name: 'instagram',
+        aria_label: 'Instagram',
+      },
+      {
+        link: 'https://www.facebook.com/pardisparker',
+        link_type: 'fab fa-facebook-f',
+        link_name: 'facebook',
+        aria_label: 'Facebook',
+      },
+      {
+        link: 'https://twitter.com/pardisparker?lang=en',
+        link_type: 'fab fa-twitter-square',
+        link_name: 'twitter',
+        aria_label: 'Twitter',
+      },
+    ],
+  },
+  {
+    name: 'Jennifer Aaker & Naomi Bagdonas',
+    description: [
+      'Jennifer Aaker and Naomi Bagdonas are psychologists and professors at the ',
+      {
+        href: 'https://www.gsb.stanford.edu/',
+        content: 'Stanford Graduate School of Business.',
+      },
+      ' They have co-authored the bestseller, ',
+      {
+        href: 'https://www.humorseriously.com/',
+        content: '“Humor, Seriously,”',
+      },
+      ' and have given numerous talks. They are best known for their deep knowledge of the importance of humour in business.',
+    ],
+    shortDescription: 'Psychologists & Professors @Stanford',
+    image: SPEAKERS.LIVESPEAKERS.SEVEN,
+    isLongCard: true,
+    links: [
+      {
+        link: 'https://www.gsb.stanford.edu/',
+        link_type: 'fas fa-university',
+        link_name: 'university',
+        aria_label: 'University',
+      },
+      {
+        link: 'https://www.humorseriously.com/',
+        link_type: 'fas fa-book',
+        link_name: 'book',
+        aria_label: 'Book',
+      },
+      {
+        link: 'https://www.youtube.com/watch?v=epWf9SI8MZI&t=9s',
+        link_type: 'fab fa-youtube',
+        link_name: 'youtube',
+        aria_label: 'Youtube',
+      },
+    ],
+  },
 ];
 
 export const GUESTS = [

@@ -13,6 +13,18 @@ export const PARTNER = Object.freeze({
           hrefTitle: 'Rourkela360',
           size: '15%',
         },
+        {
+          img: PARTNERS.ROURKELA_TIPS,
+          href: 'https://www.facebook.com/rkltips/',
+          hrefTitle: 'Rourkela Tips',
+          size: '15%',
+        },
+        {
+          img: PARTNERS.THE_PIONEER,
+          href: 'https://www.dailypioneer.com/',
+          hrefTitle: 'The Pioneer',
+          size: '15%',
+        },
       ],
     },
   },
