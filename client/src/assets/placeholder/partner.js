@@ -17,7 +17,7 @@ export const PARTNER = Object.freeze({
           img: PARTNERS.ROURKELA_TIPS,
           href: 'https://www.facebook.com/rkltips/',
           hrefTitle: 'Rourkela Tips',
-          size: '15%',
+          size: '25%',
         },
         {
           img: PARTNERS.THE_PIONEER,
