@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 
 // Libraries
 import { Helmet } from 'react-helmet';
-import { Container,Typography,makeStyles } from '@material-ui/core';
+import { Container, Typography, makeStyles } from '@material-ui/core';
 
 // Utilities
 import { analytics } from '../config/firebase';
@@ -71,13 +71,12 @@ function Partner() {
       <Container style={{ marginTop: '150px' }}>
         <div className={classes.titleContainer}>
           <Typography variant='h2' className={classes.title}>
-            TedxNITRourkelaLIVE 2021
+            TedxNITRourkelaLive 2021
           </Typography>
           <div className={classes.horizontalLine} />
         </div>
         <Partners DATA={PARTNER.LIVE.ONE} />
 
-        
         <div className={classes.titleContainer}>
           <Typography variant='h2' className={classes.title}>
             TedxNITRourkela 2021
