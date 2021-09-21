@@ -277,6 +277,75 @@ export const LIVEGUESTS = [
       },
     ],
   },
+  {
+    name: 'Jenny Scheinman & Nels Cline & Todd Sickafoose',
+    description: [
+      'Jenny Scheinman is a singer, fiddle player, and songwriter. She has been on numerous ',
+      {
+        href: 'https://www.grammy.com/',
+        content: 'Grammy-winning',
+      },
+      ' recordings.',
+      'Nels Cline is best known as the lead guitarist in the band ',
+      {
+        href: 'https://wilcoworld.net/',
+        content: 'Wilco.',
+      },
+      '. His recording and performing career — spanning jazz, rock, punk, and experimental — is well into its fourth decade.',
+      'Todd Sickafoose is an American jazz and rock musician, composer, and producer. He is a legatee of the ',
+      {
+        href: 'https://www.grammy.com/',
+        content: 'Grammy Award',
+      },
+      ' and ',
+      {
+        href: 'https://www.tonyawards.com/',
+        content: 'Tony Award.',
+      },
+    ],
+    shortDescription:
+      'Top violinists in the DownBeat Critics Poll • Guitarist | Composer • Jazz and Rock musician',
+    image: SPEAKERS.LIVESPEAKERS.EIGHT,
+    isLongCard: true,
+    links: [
+      {
+        link: 'https://www.jennyscheinman.com/',
+        link_type: 'fas fa-globe',
+        link_name: 'website',
+        aria_label: 'Website',
+      },
+      {
+        link: 'https://www.instagram.com/jenny_scheinman/',
+        link_type: 'fab fa-instagram',
+        link_name: 'instagram',
+        aria_label: 'Instagram',
+      },
+      {
+        link: 'https://www.nelscline.com/',
+        link_type: 'fas fa-globe',
+        link_name: 'website',
+        aria_label: 'Website',
+      },
+      {
+        link: 'https://www.instagram.com/nelscline/',
+        link_type: 'fab fa-instagram',
+        link_name: 'instagram',
+        aria_label: 'Instagram',
+      },
+      {
+        link: 'http://www.toddsickafoose.com/',
+        link_type: 'fas fa-globe',
+        link_name: 'website',
+        aria_label: 'Website',
+      },
+      {
+        link: 'https://www.facebook.com/tinyresistors/',
+        link_type: 'fab fa-facebook-f',
+        link_name: 'facebook',
+        aria_label: 'Facebook',
+      },
+    ],
+  },
 ];
 
 export const GUESTS = [

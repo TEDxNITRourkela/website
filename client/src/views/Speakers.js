@@ -38,7 +38,7 @@ function About() {
 
       <Container>
         <Typography variant='h1' className={classes.title}>
-          TEDxNITRourkelaLIVE 2021
+          TEDxNITRourkelaLive 2021
         </Typography>
 
         <div className={classes.guestsContainer}>

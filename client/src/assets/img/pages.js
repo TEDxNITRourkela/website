@@ -77,6 +77,8 @@ export const SPEAKERS = Object.freeze({
       'https://res.cloudinary.com/tedxnitrourkela/image/upload/2021-22/TEDxNITRourkelaLive/speakers/Pardis_Parker_1_ssigeg.png',
     SEVEN:
       'https://res.cloudinary.com/tedxnitrourkela/image/upload/2021-22/TEDxNITRourkelaLive/speakers/FRAME_gd1npb.png',
+    EIGHT:
+      'https://res.cloudinary.com/tedxnitrourkela/image/upload/2021-22/TEDxNITRourkelaLive/speakers/Group_16_otphec.png',
   },
 });
 
