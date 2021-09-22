@@ -110,7 +110,7 @@ export const PARTNERS = Object.freeze({
   ROURKELA_TIPS:
     'https://res.cloudinary.com/tedxnitrourkela/image/upload/2021-22/TEDxNITRourkelaLive/partners/RT_LOGO_1_1_rkcddh.jpg',
   THE_PIONEER:
-    'https://res.cloudinary.com/tedxnitrourkela/image/upload/2021-22/TEDxNITRourkelaLive/partners/Logo_1_lycv7w.jpg',
+    'https://res.cloudinary.com/tedxnitrourkela/image/upload/2021-22/TEDxNITRourkelaLive/partners/thePioneer_oasmzn.png',
 });
 
 export const TICKETS = Object.freeze({
