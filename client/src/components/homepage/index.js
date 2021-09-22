@@ -35,7 +35,7 @@ function Index() {
           </Typography>
 
           <Typography variant='h3' className={classes.topic}>
-            &#8220;Learning from the Past&#8221;
+            &#8220;The case for Optimism&#8221;
           </Typography>
           {/* <Counter /> */}
 

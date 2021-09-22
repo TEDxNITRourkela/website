@@ -85,7 +85,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
   },
   sponsor: {
-    opacity: (main) => (main ? 0.9 : 0.5),
+    opacity: (main) => (main ? 1 : 1),
     width: '90%',
     height: 'auto',
   },

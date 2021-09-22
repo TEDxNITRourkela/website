@@ -5,6 +5,17 @@ import { PARTNERS } from '../img/pages';
 export const PARTNER = Object.freeze({
   LIVE: {
     ONE: {
+      title: 'Print Partner',
+      partners: [
+        {
+          img: PARTNERS.THE_PIONEER,
+          href: 'https://www.dailypioneer.com/',
+          hrefTitle: 'Rourkela360',
+          size: '25%',
+        },
+      ],
+    },
+    TWO: {
       title: 'Social Media Partner',
       partners: [
         {
@@ -18,12 +29,6 @@ export const PARTNER = Object.freeze({
           href: 'https://www.facebook.com/rkltips/',
           hrefTitle: 'Rourkela Tips',
           size: '25%',
-        },
-        {
-          img: PARTNERS.THE_PIONEER,
-          href: 'https://www.dailypioneer.com/',
-          hrefTitle: 'The Pioneer',
-          size: '15%',
         },
       ],
     },

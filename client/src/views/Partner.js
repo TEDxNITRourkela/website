@@ -71,11 +71,12 @@ function Partner() {
       <Container style={{ marginTop: '150px' }}>
         <div className={classes.titleContainer}>
           <Typography variant='h2' className={classes.title}>
-            TedxNITRourkelaLive 2021
+            TEDxNITRourkelaLive 2021
           </Typography>
           <div className={classes.horizontalLine} />
         </div>
         <Partners DATA={PARTNER.LIVE.ONE} />
+        <Partners DATA={PARTNER.LIVE.TWO} />
 
         <div className={classes.titleContainer}>
           <Typography variant='h2' className={classes.title}>
